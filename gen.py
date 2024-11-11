@@ -2,6 +2,7 @@ import os, json
 from data_model import Language, Task, generate_prompts
 
 input_file = "./tasks.json"
+output_dir = "./prompts"
 
 # read main file
 input_data = None
@@ -9,8 +10,12 @@ input_data = None
 with open(input_file, 'r') as f_in:
     input_data = json.load(f_in)
 
+# create output directories
+os.makedirs(name=output_dir, exist_ok=True)
+
 for key in input_data.keys():
     out_file = f"{key}_prompts.json"
+    out_file = os.path.join(output_dir, out_file)
 
     prompts = []
     

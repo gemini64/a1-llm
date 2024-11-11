@@ -1,3 +1,6 @@
+# project specific
+*.tsv
+prompts/
 
 # --- macOS ---
 # General
