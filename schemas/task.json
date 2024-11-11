@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/task.json",
+    "title": "Task",
+    "description": "A linguistics writing task.",
+    "type": "object",
+    "properties": {
+        "language": {
+            "enum": ["English", "Italian", "Russian"],
+            "description": "The task target language.",
+            "default": "Italian"
+        },
+        "template": {
+            "type": "string",
+            "description": "A python string template that describes the task.",
+            "default": ""
+        },
+        "targs": {
+            "type": ["object", "null"],
+            "additionalProperties": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "description": "An object encoding optional kwargs to interpolate",
+            "default": null
+        },
+        "context": {
+            "type": ["string", "null"],
+            "description": "Additional task context data. Gets appended at the end of the task template.",
+            "default": null
+        }
+    },
+    "required": ["language", "template", "targs", "context"]
+}

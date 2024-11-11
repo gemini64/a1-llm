@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/report.json",
+    "title": "Validation Report",
+    "description": "An LLM Constraints/Completion report.",
+    "type": "object",
+    "properties": {
+        "constraints_compliant": {
+            "type": "boolean",
+            "description": "True if the LLM generated completion is linguistics-constraints compliant."
+        },
+        "grammar_compliant": {
+            "type": "boolean",
+            "description": "True if the LLM generated completion is grammatically correct."
+        },
+        "length_compliant": {
+            "type": "boolean",
+            "description": "True if the LLM generated completion respects the length requirements."
+        },
+        "grammar_errors": {
+            "type": "array",
+            "description": "A list of grammatical errors present in the LLM generated completion.",
+            "items": { "$ref": "#/$defs/grammar_error" }
+        },
+        "constraints_errors": {
+            "type": "array",
+            "description": "A list of errors in constraints compliance present in the LLM generated completion.",
+            "items": { "$ref": "#/$defs/constraints_error" }
+        }
+    },
+    "required": ["constraints_compliant", "grammar_compliant", "length_compliant" ],
+    "$defs": {
+        "constraints_error": {
+            "type": "object",
+            "properties": {
+                "position": {
+                    "type": "integer",
+                    "description": "An integer character position that locates the constraints compliance error within the LLM completion."
+                },
+                "kind": {
+                    "enum": [ "syntax", "grammar" ],
+                    "description": "The class of the constraint that was not met, can be either syntax or grammar."
+                },
+                "pos": {
+                    "enum": ["noun", "pronoun", "adjective", "adverb", "verb", "preposition", "conjunction", "interjection" ],
+                    "description": "The part-of-speech object of the constraint that was not met. This property should be set only for errors with 'kind' = 'grammar'."
+                },
+                "designation": {
+                    "type": "string",
+                    "description": "A brief textual description of the constraints compliance error."
+                }
+            },
+            "required": ["position", "kind", "designation"]
+        },
+        "grammar_error": {
+            "type": "object",
+            "properties": {
+                "position": {
+                    "type": "integer",
+                    "description": "An integer character position that locates the grammatical error within the LLM completion."
+                },
+                "designation": {
+                    "type": "string",
+                    "description": "A brief textual description of the grammatical error."
+                }
+            },
+            "required": ["position", "designation"]
+        }
+    }
+}
