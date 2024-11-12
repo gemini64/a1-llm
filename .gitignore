@@ -1,6 +1,7 @@
 # project specific
 *.tsv
 prompts/
+test/
 
 # --- macOS ---
 # General

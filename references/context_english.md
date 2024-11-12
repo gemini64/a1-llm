@@ -1,3 +1,5 @@
+Adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.
+```
 # Grammar
 - Nouns: singular, regular plural and possessive forms
 - Pronouns: personal (subject and object), possessive, demonstrative and interrogative (limited to: who, what, which)
@@ -52,3 +54,4 @@ Simple clauses are defined based on the following components:
 - Nouns formed using a base noun + one of the following affixes:
     - prefixes: un- (e.g. unwell), mis- (e.g. misspell), re- (e.g. re-use)
     - suffixes: -ness (e.g. loudness), -hood (e.g. manhood), -like (e.g. childlike), -ish (e.g. oldish), -ly (e.g. loudly)
+```

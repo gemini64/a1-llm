@@ -62,10 +62,9 @@ message_template = """Check if the following text:
 ```
 {input_text}
 ```
-is using exclusively the morphosintactic structures listes in the inventory attached below:
-```
+is using exclusively the morphosintactic structures listed in the inventory attached below.
+
 {inventory}
-```
 Respond following the attached JSON structure:
 ```
 {{

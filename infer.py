@@ -97,7 +97,7 @@ for prompt in df["prompts"]:
         try:
             response = client.generate(prompt=prompt, temperature=temperature, top_p=top_p).generated_text
         except Exception as exc:
-            print(f"Error: Something went wrong while connecting to lorax server")
+            print(f"Error: Something went wrong while connecting to lorax server\n\nException: {exc}")
             exit(2)
     else:
         response = chain.invoke(input={
