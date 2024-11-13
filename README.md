@@ -3,6 +3,7 @@
 ## Contents
 - `references/*`: Markdown/plain-text language inventories.
 - `schemas/*`: JSON schemas describing Task and Eval objects. Useful for data validation.
+- `shots/*`: A list of labeled examples (in JSON format) to provide for the LLM-driven evaluation.
 - `eval.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation. Returns an extendend TSV file as output.
 - `infer.py`: Inference script. Given a list of user prompts in JSON format, forwards them to a LLM and returns a TSV prompts/completions file as output.
 - `gen.py`: Given a set of tasks, generates and returns the related prompts.
