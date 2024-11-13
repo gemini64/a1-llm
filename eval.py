@@ -1,4 +1,4 @@
-import os, argparse
+import os, argparse, json
 import pandas as pd
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -19,17 +19,25 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="an input tsv file")
 parser.add_argument("inventory", help="a plain-text file containing the inventory to cross-check")
+parser.add_argument('-s', '--shots', help="(optional) a json file with some examples")
 parser.add_argument('-o', '--output', help="(optional) output file")
 
 # validate arguments
 args = parser.parse_args()
 
 input_file = args.input
+shots_file = args.shots
 inventory_file = args.inventory
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_eval.tsv"
 
+
+# validate arguments
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
     print("Error: the input file does not exist or is not a supported format!")
+    exit(2)
+
+if ((not (shots_file is None)) and (not (os.path.isfile(shots_file) and (os.path.splitext(shots_file)[-1].lower() == ".json")))):
+    print("Error: the shots file does not exist or is not a supported format!")
     exit(2)
 
 if (not (os.path.isfile(inventory_file))):
@@ -45,6 +53,12 @@ df = pd.read_csv(input_file, sep="\t", header=0, encoding="utf-8")
 
 with open(inventory_file, "r", encoding="utf-8") as inventory_in:
     inventory = inventory_in.read()
+
+messages = []
+if not (shots_file is None):
+    with open(shots_file, "r", encoding="utf-8") as shots_in:
+        data = json.load(shots_in)
+        messages = list(map(lambda x: (x["role"], x["content"]), data))
 
 # model setup
 model = "gpt-4o"
@@ -72,10 +86,9 @@ Respond following the attached JSON structure:
 }}
 ```"""
 
+messages.append(("user", message_template))
 prompt_template = ChatPromptTemplate.from_messages(
-    [
-        ("user", message_template)
-    ]
+    messages=messages
 )
 
 # tools

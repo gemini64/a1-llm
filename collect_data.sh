@@ -5,7 +5,9 @@ PROMPTS_DIR="./prompts";
 OUTPUT_DIR="./results";
 LORAX_URL="http://127.0.0.1:8080";
 PY_SCRIPT="./infer.py";
-PY_SCRIPT_OPTIONS="-l";
+PY_SCRIPT_OPTIONS="-l"; # use the -g flag to infer using groq
+GROQ_KEY=""
+GROQ_MODEL_NAME=""
 
 # colors for readability
 GREEN='\033[0;32m';
@@ -19,9 +21,11 @@ echo -e "${LIGHT_BLUE}[1/3]${NC} - ${GREEN}Activating venv${NC}";
 source ./.venv/bin/activate;
 
 # set-up directories
-echo -e "${LIGHT_BLUE}[2/3]${NC} - ${GREEN}Setting-up filesystem and variables${NC}";
+echo -e "${LIGHT_BLUE}[2/3]${NC} - ${GREEN}Setting-up filesystem and env variables${NC}";
 mkdir -p "${OUTPUT_DIR}";
 export LORAX_ENDPOINT="${LORAX_URL}";
+export GROQ_API_KEY="${GROQ_KEY}";
+export GROQ_MODEL="${GROQ_MODEL_NAME}";
 
 # run script
 echo -e "${LIGHT_BLUE}[3/3]${NC} - ${GREEN}Running script${NC}";

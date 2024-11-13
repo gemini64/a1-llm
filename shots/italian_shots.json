@@ -1,0 +1,42 @@
+[
+    {
+        "role": "user",
+        "content": "Check if the following text:\n```\nCiao! Sono a Marrakech e ho visitato il souk. È un posto incredibile e colorato. Ho comprato spezie e tè. Vorrei che tu fossi qui con me. Ti mando un abbraccio!\n```\nis using exclusively the morphosintactic structures listed in the inventory attached below.\n\nNouns, adjectives, adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.\n```\n# Grammatica\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n- per i verbi indicati, la coniugazione attiva ai seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)\n\n# Sintassi\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```\nRespond following the attached JSON structure:\n```\n{{\n    \"compliant\": <true/false>,\n}}\n```"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n{{\n    \"compliant\": false\n}}\n```"
+    },
+    {
+        "role": "user",
+        "content": "Check if the following text:\n```\nCiao! Sono a Firenze e ho visitato il Duomo. È bellissimo! Ho mangiato gelato e pasta, e voglio vedere la Galleria degli Uffizi domani. Ti mando un abbraccio e spero che tu stia bene. A presto!\n```\nis using exclusively the morphosintactic structures listed in the inventory attached below.\n\nNouns, adjectives, adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.\n```\n# Grammatica\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n- per i verbi indicati, la coniugazione attiva ai seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)\n\n# Sintassi\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```\nRespond following the attached JSON structure:\n```\n{{\n    \"compliant\": <true/false>,\n}}\n```"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n{{\n    \"compliant\": false\n}}\n```"
+    },
+    {
+        "role": "user",
+        "content": "Check if the following text:\n```\nMi sveglio alle sette e bevo un caffè. Poi vado in ufficio e lavoro su progetti. Se ho tempo, faccio una pausa pranzo. Alla sera torno a casa e mi rilasso.\n```\nis using exclusively the morphosintactic structures listed in the inventory attached below.\n\nNouns, adjectives, adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.\n```\n# Grammatica\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n- per i verbi indicati, la coniugazione attiva ai seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)\n\n# Sintassi\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```\nRespond following the attached JSON structure:\n```\n{{\n    \"compliant\": <true/false>,\n}}\n```"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n{{\n    \"compliant\": false\n}}\n```"
+    },
+    {
+        "role": "user",
+        "content": "Check if the following text:\n```\nCerto! Vai dritto per due isolati, poi gira a sinistra. Troverai il parco sulla destra. Se hai bisogno di aiuto, chiedi a qualcuno. Buona passeggiata!\n```\nis using exclusively the morphosintactic structures listed in the inventory attached below.\n\nNouns, adjectives, adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.\n```\n# Grammatica\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n- per i verbi indicati, la coniugazione attiva ai seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)\n\n# Sintassi\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```\nRespond following the attached JSON structure:\n```\n{{\n    \"compliant\": <true/false>,\n}}\n```"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n{{\n    \"compliant\": false\n}}\n```"
+    },
+    {
+        "role": "user",
+        "content": "Check if the following text:\n```\nDomenica scorsa sono stato in biblioteca. Ho trovato un libro interessante e ho passato ore a leggerlo. Se ami la lettura, devi visitare questo posto! Puoi scoprire nuovi mondi e rilassarti.\n```\nis using exclusively the morphosintactic structures listed in the inventory attached below.\n\nNouns, adjectives, adverbs, prepositions, conjunctions and interjections have been omitted as there is no specific limitation on their usage.\n```\n# Grammatica\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n- per i verbi indicati, la coniugazione attiva ai seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)\n\n# Sintassi\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```\nRespond following the attached JSON structure:\n```\n{{\n    \"compliant\": <true/false>,\n}}\n```"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n{{\n    \"compliant\": true\n}}\n```"
+    }
+]
