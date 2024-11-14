@@ -1,4 +1,4 @@
-import json, os
+import json, os, argparse
 import pandas as pd
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -8,6 +8,35 @@ from langchain_core.output_parsers import JsonOutputParser
 # load local settings
 if (os.getenv("PY_ENV") == "DEVELOPMENT"):
     load_dotenv()
+
+# setup argparse
+parser = argparse.ArgumentParser(
+    prog='eval_separate_items',
+    description='Given a list of prompts/completions and a set of tests, performs an LLM-based evaluation.')
+
+parser.add_argument("input", help="an input tsv file")
+parser.add_argument("tests", help="a json file containing the evaluation tests to perform")
+parser.add_argument('-o', '--output', help="(optional) output file")
+
+# validate arguments
+args = parser.parse_args()
+
+input_file = args.input
+tests_file = args.tests
+output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_eval_separate_items.tsv"
+
+# validate arguments
+if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
+    print("Error: the input file does not exist or is not a supported format!")
+    exit(2)
+
+if ((not (tests_file is None)) and (not (os.path.isfile(tests_file) and (os.path.splitext(tests_file)[-1].lower() == ".json")))):
+    print("Error: the shots file does not exist or is not a supported format!")
+    exit(2)
+
+if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file)))):
+    print(f"Error: an output file with path '{output_file}' already exists!")
+    exit(2)
 
 # setup model
 temperature = 0.0
@@ -25,7 +54,7 @@ message_template = """Check wheter the following text:
 ```
 {text}
 ```
-{condition}
+{test}
 Respond following the attached JSON structure:
 ```
 {{
@@ -43,29 +72,23 @@ chat_template = ChatPromptTemplate.from_messages(
 parser = JsonOutputParser() | (lambda x : x["compliant"])
 chain = chat_template | llm | parser
 
-# load data
-input_file = "./test/italian_results.tsv"
-output_file = "./test/italian_eval_separate_items.tsv"
-
 df = pd.read_csv(input_file, header=0, sep="\t", encoding="utf-8")
-
 completions = df["completions"]
 
-# load eval conditions
-eval_file = "./test/eval_conditions_italian.json"
-eval_conditions = []
+# load eval tests
+eval_tests = {}
 
-with open(eval_file, "r", encoding="utf-8") as eval_in:
-    eval_conditions = json.load(eval_in)
+with open(tests_file, "r", encoding="utf-8") as tests_in:
+    eval_tests = json.load(tests_in)
 
 # check conditions and collect eval data
-for key, value in eval_conditions.items():
+for key, value in eval_tests.items():
     eval_data = []
 
     for text in completions:
         result = chain.invoke(
             input={
-                "condition": value,
+                "test": value,
                 "text": text
             }
         )
