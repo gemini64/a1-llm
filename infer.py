@@ -128,7 +128,7 @@ for prompt in df["prompts"]:
         response = completion.choices[0].message.content
         
         # this is to keep the requests within the free tier token limits
-        time.sleep(5)
+        time.sleep(30)
     else:
         response = chain.invoke(input={
             "user_input": prompt

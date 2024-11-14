@@ -7,7 +7,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser, JsonOutputToolsParser
 from pydantic import BaseModel, Field
 
-
 # load env secrets
 if (os.getenv("PY_ENV") == "DEVELOPMENT"):
     load_dotenv()
