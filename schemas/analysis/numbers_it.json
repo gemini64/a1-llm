@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/numbers_it.json",
+    "title": "Numbers",
+    "description": "A list of numbers",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a number",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The number extracted"
+            },
+            "kind": {
+                "enum": ["ordinale", "cardinale"],
+                "description": "The number kind"
+            }
+        },
+        "required": ["text", "kind"]
+    }
+}

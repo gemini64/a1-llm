@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/verbs_it.json",
+    "title": "Verbs",
+    "description": "A list of verbs",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a verb and its morphological features",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The verb extracted"
+            },
+            "lemma": {
+                "type": "string",
+                "description": "The base form of the main verb (eg. ho bevuto -> bere)"
+            },
+            "person":
+            {
+                "enum": ["first", "second", "third"],
+                "description": "The verb person"
+            },
+            "number":
+            {
+                "enum": ["singular", "plural"],
+                "description": "The verb number"
+            },
+            "mood": {
+                "enum": ["indicativo", "congiuntivo", "condizionale", "imperativo", "infinito", "participio", "gerundio"],
+                "description": "The verb mood, following italian language moods"
+            },
+            "tense": {
+                "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
+                "description": "The verb tense, following italian language tenses"
+            },
+            "voice": {
+                "enum": ["attiva", "passiva"],
+                "description": "The verb voice, following italian language voices"
+            },
+            "regular": {
+                "type": "boolean",
+                "description": "true if the main verb is a regular verb"
+            }
+            
+        },
+        "required": ["text", "lemma", "mood", "tense", "voice", "regular"]
+    }
+}

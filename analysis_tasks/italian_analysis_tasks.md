@@ -1,0 +1,245 @@
+# Pronouns
+Given the following part-of-speech (POS) tagged text:
+```
+{input}
+```
+Extract and analyze the contained pronouns.
+
+Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
+```json
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/pronouns_it.json",
+    "title": "Pronouns",
+    "description": "A list of pronouns",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a pronoun",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The pronoun extracted"
+            },
+            "kind": {
+                "enum": ["personale", "relativo", "possessivo", "dimostrativo", "indefinito", "interrogativo", "esclamativo", "qualificativo", "numerale"],
+                "description": "The pronoun kind, based on the italian language pronouns categories"
+            }
+        },
+        "required": ["text", "kind"]
+    }
+}
+```
+---
+# Verbs
+Given the following part-of-speech (POS) tagged text:
+```
+{input}
+```
+Extract and analyze the contained verbs.
+
+If the verbs "avere" and "essere" are tagged as auxiliary verbs (AUX), they
+should be analyzed with their primary verb and listed as a single item.
+
+Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
+```json
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/verbs_it.json",
+    "title": "Verbs",
+    "description": "A list of verbs",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a verb and its morphological features",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The verb extracted"
+            },
+            "lemma": {
+                "type": "string",
+                "description": "The base form of the main verb (eg. ho bevuto -> bere)"
+            },
+            "person":
+            {
+                "enum": ["first", "second", "third"],
+                "description": "The verb person"
+            },
+            "number":
+            {
+                "enum": ["singular", "plural"],
+                "description": "The verb number"
+            },
+            "mood": {
+                "enum": ["indicativo", "congiuntivo", "condizionale", "imperativo", "infinito", "participio", "gerundio"],
+                "description": "The verb mood, following italian language moods"
+            },
+            "tense": {
+                "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
+                "description": "The verb tense, following italian language tenses"
+            },
+            "voice": {
+                "enum": ["attiva", "passiva"],
+                "description": "The verb voice, following italian language voices"
+            },
+            "regular": {
+                "type": "boolean",
+                "description": "true if the main verb is a regular verb"
+            }
+            
+        },
+        "required": ["text", "lemma", "mood", "tense", "voice", "regular"]
+    }
+}
+```
+---
+# Numbers
+Given the following part-of-speech (POS) tagged text:
+```
+{input}
+```
+Extract and analyze any number contained, indipendently from its function within the
+source text.
+
+Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
+```json
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/numbers_it.json",
+    "title": "Numbers",
+    "description": "A list of numbers",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a number",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The number extracted"
+            },
+            "kind": {
+                "enum": ["ordinale", "cardinale"],
+                "description": "The number kind"
+            }
+        },
+        "required": ["text", "kind"]
+    }
+}
+```
+---
+# Syntactical analysis
+Perform an "analisi logica del periodo" on the following text:
+```
+{input}
+```
+The expected output is a JSON object conforming to the schema attached below. No additional comment or data is required.
+```json
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/syntactical_analysis_it_v2.json",
+    "title": "Syntactical Analysis",
+    "type": "object",
+    "description": "Represents the syntactical analysis of an italian text of arbitrary length.",
+    "properties": {
+        "text": {
+            "type": "string",
+            "description": "The full, unedited text that is being analyzed."
+        },
+        "sentences": {
+            "type": "array",
+            "description": "An array of sentences extracted from the text.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "content": {
+                        "type": "string",
+                        "description": "The text of the sentence."
+                    },
+                    "type": {
+                        "enum": [
+                            "semplice",
+                            "complessa",
+                            "composta"
+                        ],
+                        "description": "The type of sentence."
+                    },
+                    "clauses": {
+                        "type": "object",
+                        "description": "The clauses within the sentence.",
+                        "properties": {
+                            "main_clause": {
+                                "type": "object",
+                                "description": "The main clause.",
+                                "properties": {
+                                    "content": {
+                                        "type": "string",
+                                        "description": "The text of the clause."
+                                    },
+                                    "function": {
+                                        "enum": ["dichiarativa", "interrogativa", "esclamativa", "desiderativa", "volitiva", "concessiva", "potenziale", "dubitativa", "iussiva", "esclamativa"],
+                                        "description": "The clause function."
+                                    }
+                                },
+                                "required": ["content", "function"]
+                            },
+                            "coordinate_clauses": {
+                                "type": "array",
+                                "description": "The coordinate clauses contained within the sentence.",
+                                "items": {
+                                    "type": "object",
+                                    "description": "A coordinate clause.",
+                                    "properties": {
+                                        "content": {
+                                            "type": "string",
+                                            "description": "The text of the clause."
+                                        },
+                                        "type": {
+                                            "enum": ["copulativa", "avversativa", "conclusiva", "correlativa", "disgiuntiva", "esplicativa"],
+                                            "description": "The clause type."
+                                        }
+                                    },
+                                    "required": ["content", "type"]
+                                }
+                            },
+                            "subordinate_clauses": {
+                                "type": "array",
+                                "description": "The subordinate clauses contained within the sentence.",
+                                "items": {
+                                    "type": "object",
+                                    "description": "A subordinate clause.",
+                                    "properties": {
+                                        "content": {
+                                            "type": "string",
+                                            "description": "The text of the clause."
+                                        },
+                                        "function": {
+                                            "enum": ["aggiuntiva", "avversativa", "causale", "comparativa", "concessiva", "condizionale", "consecutiva", "dichiarativa", "eccettuativa", "esclusiva", "finale", "incidentale", "interrogativa", "limitativa", "modale", "oggettiva", "relativa", "soggettiva", "temporale"],
+                                            "description": "The clause function."
+                                        },
+                                        "rank": {
+                                            "type": "integer",
+                                            "description": "The subordinate rank of the clause."
+                                        }
+                                    },
+                                    "required": ["content", "function", "rank"]
+                                }
+                            }
+                        },
+                        "required": ["main_clause", "coordinate_clauses", "subordinate_clauses"]
+                    }
+                },
+                "required": [
+                    "content",
+                    "type",
+                    "clauses"
+                ]
+            }
+        }
+    },
+    "required": [
+        "text",
+        "sentences"
+    ]
+}
+```

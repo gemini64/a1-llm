@@ -1,0 +1,201 @@
+import subprocess, spacy, json
+from enum import Enum
+from abc import ABC, abstractmethod
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_openai import ChatOpenAI
+
+# configuration parameters - all tagging methods
+OAI_MODEL = "gpt-4o"
+SPACY_USE_GPU = True
+TINT_EXE = "./tools/tint/tint.sh"
+TINT_PARAMS = ""
+
+# LLM bases tagging prompt
+TAGGING_PROMPT = """Given the following text:
+```
+{input}
+```
+Tag every word (and punctuation mark) with the corresponding part-of-speech (POS) tag.
+
+Respond with a JSON output, following the schema defined below.
+```json
+{{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/postagged_text.json",
+    "title": "POS-tagged text",
+    "description": "Represents a POS-tagged text of arbitrary length",
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "description": "A POS-tagged word/symbol/punctuation mark",
+        "properties": {{
+            "text": {{
+                "type": "string",
+                "description": "The POS-tagged word/sybol/punctuation mark"
+            }},
+            "pos": {{
+                "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
+                "description": "The universal POS tag associated with the tagged text"
+            }}
+        }},
+        "required": ["text", "pos"]
+    }}
+}}
+```
+"""
+
+class Language(str, Enum):
+    """Available languages"""
+    IT = "Italian"
+    EN = "English"
+    RU = "Russian"
+
+class TAGMethod(str, Enum):
+    """POS Tagging methods
+    Note that Tint is available only for Italian text"""
+    LLM = "LLM"
+    SPACY = "Spacy"
+    TINT = "Tint"
+
+class POSTagger():
+    """A part-of-speech tagger.
+    
+    Requires a target language and a tagging method
+    specification"""
+    def __init__(self, language: Language = Language.IT, method: TAGMethod = TAGMethod.LLM) -> None:
+        self._language = language
+        self._method = method
+        
+        self._init_tagger()
+
+    def _init_tagger(self) -> None:
+        if((not (self._language == Language.IT)) and (self._method == TAGMethod.TINT)):
+            raise RuntimeError("ERROR! Tint backend for POS-tagging is supported only for Italian language")
+        
+        match self._method:
+            case TAGMethod.LLM:
+                self._tagger = LLMTagger()
+            case TAGMethod.SPACY:
+                self._tagger = SpacyTagger(self._language)
+            case TAGMethod.TINT:
+                self._tagger = TintTagger()
+            case _:
+                pass
+        
+        
+    def tag_text(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = self._tagger.tag(input)
+        return results
+    
+
+class Tagger(ABC):
+    
+    @abstractmethod
+    def tag(self, input: str) -> list[dict[str, str]]:
+        pass
+
+
+class LLMTagger(Tagger):
+    """An openai LLM based part-of-speech tagger"""
+    def __init__(self, temperature: float = 0, top_p = 0.95, prompt: str = TAGGING_PROMPT) -> None:
+        self._temperature = temperature
+        self._top_p = top_p
+        self._prompt = prompt
+
+        self._init_llm()
+
+    def _init_llm(self) -> None:
+        self._llm = ChatOpenAI(
+            model=OAI_MODEL,
+            temperature=self._temperature,
+            top_p=self._top_p
+        )
+
+        self._prompt_template = ChatPromptTemplate.from_messages(
+            [
+                ("user", self._prompt)
+            ]
+        )
+
+        self._chain = self._prompt_template | self._llm | JsonOutputParser()
+
+    # overriding interface method
+    def tag(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = self._chain.invoke(
+            input={
+                "input": input
+            }
+        )
+
+        return results
+    
+class SpacyTagger(Tagger):
+    """A spacy based part-of-speech tagger.
+    
+    Requires a target language specification."""
+    def __init__(self, language: Language, use_gpu: bool = SPACY_USE_GPU) -> None:
+        self._language = language
+        self._use_gpu = use_gpu
+
+        self._init_nlp()
+
+    def _init_nlp(self) -> None:
+        if self._use_gpu:
+            spacy.prefer_gpu()
+
+        match self._language:
+            case Language.IT:
+                self._nlp = spacy.load("it_core_news_lg")
+            case Language.EN:
+                self._nlp = spacy.load("en_core_web_trf")
+            case Language.RU:
+                self._nlp = spacy.load("ru_core_news_lg")
+            case _:
+                pass
+
+    # overriding interface method
+    def tag(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = []
+
+        # tag input data nlp(input)
+        doc = self._nlp(input)
+
+        for token in doc:
+            results.append({
+                "text": token.text,
+                "pos": token.pos_
+            })
+
+        return results
+    
+class TintTagger(Tagger):
+    """A tint-based part-of-speech tagger.
+    
+    Requires a tint binary to be available in local
+    configuration path exe"""
+    def __init__(self, exe: str = TINT_EXE, params: str = TINT_PARAMS):
+        self._exe = exe
+        self._params = params
+
+    # overriding interface method
+    def tag(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = []
+        
+        proc = subprocess.run(args = [ self._exe ], input=input, encoding="utf-8", stdout=subprocess.PIPE)
+        tint_out = proc.stdout
+
+        tint_obj = json.loads(tint_out)
+
+        for sentence in tint_obj["sentences"]:
+            for token in sentence["tokens"]:
+                results.append({
+                    "text": token["word"],
+                    "pos": token["ud_pos"]
+                })
+        
+        return results

@@ -13,7 +13,7 @@ if (os.getenv("PY_ENV") == "DEVELOPMENT"):
 
 # setup argparse
 parser = argparse.ArgumentParser(
-    prog='eval',
+    prog='eval_boolean',
     description='Given a list of prompts/completions, performs an LLM-based binary evaluation.')
 
 parser.add_argument("input", help="an input tsv file")
