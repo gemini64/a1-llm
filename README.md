@@ -1,13 +1,20 @@
 # A1 LLM
 
 ## Contents
-- `references/*`: Markdown/plain-text language inventories.
-- `schemas/*`: JSON schemas describing Task and Eval objects. Useful for data validation.
-- `shots/*`: A list of labeled examples (in JSON format) to provide for the LLM-driven evaluation.
-- `eval.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation. Returns an extendend TSV file as output.
+- `analysis_tasks/*`: JSON/MD Italian analysis tasks (see **eval_rulebased_it.py**)
+- `eval_tasks/*`: JSON/MD boolean evaluation tasks (see **eval_boolean_tests.py**)
+- `inventories/*`: Markdown/plain-text language inventories.
+- `schemas/*`: JSON schemas describing various objects. Used for prompting and data validation.
+- `shots/*`: A list of labeled examples (in JSON format) to provide for the LLM-driven evaluation (see **eval_boolean.py**).
+- `tools/*`: External binary tools.
+- `eval_boolean.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation. Returns an extendend TSV file as output.
+- `eval_boolean_test.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation based on a set of evaluation tasks. Returns an extendend TSV file as output.
+- `eval_rulebased_it.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based evaluation based on grammar/syntactical rules. Only for italian text evaluation.
 - `infer.py`: Inference script. Given a list of user prompts in JSON format, forwards them to a LLM and returns a TSV prompts/completions file as output.
 - `gen.py`: Given a set of tasks, generates and returns the related prompts.
 - `data_model.py`: Pydantic defined data models.
+- `parsers.py`: Parsers to validate analysis data based on grammar/syntactical rules.
+- `pos_tagger/py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
 - `tasks.json`: A collection of Task objects. See the task.json schema for more info. Used to generate prompts.
 - `install.sh`: Simple install script. Sets up the python environment, installs requirements and generates the prompt lists for all languages.
 - `collect_data.sh`: A bash script to collect inference data from lorax hosted LLMs in batches.
