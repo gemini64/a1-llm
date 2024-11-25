@@ -5,7 +5,7 @@ ENV_TARGET="./.env";
 GEN_SCRIPT="./gen.py"
 TOOLS_DIR="./tools";
 TINT_PKG="./tint.tar.gz";
-TINT_BINARY="https://dhsite.fbk.eu/tint-release/0.3/tint-0.3-complete.tar.gz";
+TINT_URL="https://dhsite.fbk.eu/tint-release/0.3/tint-0.3-complete.tar.gz";
 
 # colors for readability
 GREEN='\033[0;32m';
