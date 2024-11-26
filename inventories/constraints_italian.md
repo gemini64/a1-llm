@@ -1,0 +1,12 @@
+- Nouns, adjectives, adverbs, prepositions, conjunctions, and interjections may be used without limitations.
+- Pronouns: Only personal, possessive, demonstrative, interrogative, and indefinite pronouns are allowed.
+- Numerals: Cardinal numbers may be used without limitation. Ordinal numbers must be limited to range 1-3.
+- Verbs: essere, avere, volere, potere, dovere, and regular Italian verbs are allowed. Any other irregular verb is forbidden.
+- Verbs may only be conjugated in active voice.
+- Verbs may only be conjugated in the following moods and tenses:
+    - Indicativo: presente e passato prossimo
+    - Infinito: presente
+    - Imperativo: presente (only 2nd singular and plural persons)
+- Simple clauses may only assume declarative, volitive (using imperative mood), or interrogative functions.
+- Coordinate clauses may only be copulative, adversative, or declarative.
+- Subordinate clauses may only assume causal, temporal, final (in implicit form), hypothetical (introduced by 'se'), or relative functions.
