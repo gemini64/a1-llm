@@ -1,0 +1,42 @@
+- Adverbs, Prepositions, Conjunctions, and Interjections: These may be used without limitations.
+- Nouns: singular, regular plural and possessive forms are allowed. Irregular plural nouns are forbidden.
+- Pronouns: personal, possessive, interrogative (who, what, and which only), and demonstrative pronouns are allowed. Any other types of pronouns are forbidden.
+- Adjectives: qualitative (base form, regular comparative, and regular superlative), interrogative, and possessive adjectives are allowed. Irregular adjective forms are forbidden.
+- Verbs: modal verbs (can and will), regular, and irregular verbs are allowed. Any other verbs are forbidden.
+- Verbs conjugation (finite forms): only the following finite forms are allowed:
+    - indicative: present simple, past simple, present perfect, present continuous, and past continuous
+    - imperative
+- Verbs conjugation (non-finite forms): only the following non-finite forms are allowed:
+    - present participle
+    - past participle
+    - infinitive
+- Verbs conjugation (voices): verbs in indicative present simple and indicative past simple may be conjugated in either active or passive voice. In all other cases, verbs must be conjugated in active voice.
+- Simple clauses: allowed without limitations.
+- Compound sentences: allowed only if composed of simple clauses joined using and or but.
+- Complex sentences: allowed only if the main clause verb is in the present tense.
+- Simple clauses composition: may include combinations of the following phrase types:
+    - Noun phrases
+    - Verb phrases
+    - Adjectival phrases
+    - Adverbial phrases
+- Noun phrases: allowed structures include:
+    - A noun
+    - A pronoun
+    - A gerund
+    - A determiner (which can be: an article, demonstrative, possessive, indefinite, or interrogative adjective)  + noun
+    - A determiner + (adverb) +  adjective + noun
+- Verb phrases: allowed structures include:
+    - Intransitive verb
+    - Transitive verb + noun phrase
+    - Verb + adjective
+    - Verb to be + noun phrase
+    - Verbs to be/ to have/ to do/ modal verbs + not (+ verb)
+    - Verb to do + not + infinitive
+    - Modal verb + infinitive
+- Adjectival phrases: allowed structures include:
+    - Adjective
+    - Adverb of degree + adjective
+- Adverbial phrases: allowed structures include:
+    - Adverb
+    - Adverb of degree + adverb
+    - Preposition + noun phrase
