@@ -39,9 +39,9 @@ Check every sentence of the input text against the constraints.
 
 # Paraphrasing:
 - A paraphrase has to preserve the original meaning and tone as closely as possible.
-- A paraphrase may only contain morpho-syntactical constructs that conform to the given constraints.
-- A paraphrase has to replace every non-conformant morpho-syntactical structure with an equivalent constraints conformant alternative.
-- If a non-conformant morpho-syntactical structure cannot be replaced with an equivalent constraints conformant alternative, it should be removed.
+- A paraphrase may only contain morpho-syntactic constructs that conform to the given constraints.
+- A paraphrase has to replace every non-conformant morpho-syntactic structure with an equivalent constraints conformant alternative.
+- If a non-conformant morpho-syntactic structure cannot be replaced with an equivalent constraints conformant alternative, it should be removed.
 
 # Constraints:
 {constraints}"""
