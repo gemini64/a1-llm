@@ -6,7 +6,8 @@
 - `inventories/*`: Markdown/plain-text language inventories.
 - `schemas/*`: JSON schemas describing various objects. Used for prompting and data validation.
 - `shots/*`: A list of labeled examples (in JSON format) to provide for the LLM-driven evaluation (see **eval_boolean.py**).
-- `tools/*`: External binary tools.
+- `tools/*`: External binary tools (generated upon project setup).
+- `prompts/*`: Contains user prompts (generated upon project setup).
 - `eval_boolean.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation. Returns an extendend TSV file as output.
 - `eval_boolean_test.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based binary (true/false) evaluation based on a set of evaluation tasks. Returns an extendend TSV file as output.
 - `eval_rulebased_it.py`: Evaluation script. Takes a prompts/completions TSV and perform an LLM-based evaluation based on grammar/syntactical rules. Only for italian text evaluation.
@@ -14,7 +15,7 @@
 - `gen.py`: Given a set of tasks, generates and returns the related prompts.
 - `data_model.py`: Pydantic defined data models.
 - `parsers.py`: Parsers to validate analysis data based on grammar/syntactical rules.
-- `pos_tagger/py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
+- `pos_tagger.py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
 - `tasks.json`: A collection of Task objects. See the task.json schema for more info. Used to generate prompts.
 - `install.sh`: Simple install script. Sets up the python environment, installs requirements and generates the prompt lists for all languages.
 - `collect_data.sh`: A bash script to collect inference data from lorax hosted LLMs in batches.
@@ -33,8 +34,10 @@ To activate the **python venv**, assuming you're either on a macOS or Linux host
 source ./.venv/bin/activate
 ```
 
+**Note:** some modules (e.g. spacy) were installed and configured to use NVIDIA Cuda as backend.
+
 ### Setting API Keys and Connection URLs
-To run the **inference** and **evaluation** script you will need to set the **OPENAI_API_KEY**, **GROQ_API_KEY**, **GROQ_MODEL** and **LORAX_ENDPOINT** environment variables (depending on the LLM models you will use).
+To run the **inference** and **evaluation** scripts you will need to set the **OPENAI_API_KEY**, **GROQ_API_KEY**, **GROQ_MODEL** and **LORAX_ENDPOINT** environment variables (depending on the LLM models you will use).
 
 To do this you can either:
 1. Set them manually (`export VAR="value"`)
@@ -43,7 +46,7 @@ To do this you can either:
 export PY_ENV="DEVELOPMENT"
 ```
 ## Inference
-The inference script `infer.py` is a simple cli utility. By default it uses gpt4-o to collect data. Authentication happens via api key using the langchain openai module.
+The inference script `infer.py` is a simple cli utility. By default it uses gpt-4o to collect data. Authentication happens via api key using the langchain openai module.
 
 To use a **lorax-server**/**groq** hosted model, call the script using the `-l` or `-g` flags.
 ```
@@ -65,7 +68,7 @@ options:
 ```
 
 ### Collecting data in batches (lorax/groq)
-A bash script is available to collect inference data using groq/lorax-hosted models in batches for all languages.
+A bash script is available to collect inference data using groq/lorax-hosted models in batches.
 
 #### Lorax
 To use the `collect_data.sh` script:

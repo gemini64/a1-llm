@@ -34,7 +34,7 @@ def generate_prompts(task: Task) -> list[str]:
         prompts.append(prompt)
 
     # add context, if applicable
-    if(task.context):
+    if(task.context and task.context != ""):
         prompts = list(map(lambda x: f"""{x}\n\n{task.context}""", prompts))
 
     return prompts

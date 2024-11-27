@@ -78,7 +78,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 model = "gpt-4o"
 temperature = 0
 top_p = 0.95
-max_iterations = 50
+max_iterations = 50 # upper bound to paraphrase iterations
 
 llm = ChatOpenAI(
     model=model,
@@ -86,7 +86,10 @@ llm = ChatOpenAI(
     top_p=top_p
 )
 
-# set up parser
+# Output parser (takes an AIMessage as input)
+#
+# Basically extract the first element enclosed in []
+# from the LLM response
 parser = lambda x : (re.findall(r'\[(.*?)\]', x.content))[0]
 
 # set up chain
@@ -96,15 +99,18 @@ paraphrases = []
 iterations = []
 messages = []
 
+# iterate over texts
 for completion in completions:
     current = completion
     message_session = []
     iteration = None
 
+    # paraphrase until LLM output is unchanged
+    # or max iterations number is reached
     for i in range(1,max_iterations):
         iteration = i
     
-        # push user message
+        # push user message to session log
         message_session.append(
             {
                 "role": "user",
@@ -112,7 +118,7 @@ for completion in completions:
             }
         )
 
-        # append
+        # invoke model
         results = chain.invoke(
             input={
                 "input_text": current,
@@ -120,7 +126,7 @@ for completion in completions:
             }
         )
 
-        # push assistant
+        # push assistant message to session log
         message_session.append(
             {
                 "role": "assistant",
@@ -128,8 +134,9 @@ for completion in completions:
             }
         )
 
+        # parse completion and check if output text
+        # is unchanged
         assistant_response = parser(results)
-
         if (assistant_response == current):
             break
         else:
@@ -140,7 +147,7 @@ for completion in completions:
     iterations.append(iteration)
     messages.append(message_session)
 
-# now we add data columns to original df
+# add data columns to original df
 df.insert(len(df.columns), "paraphrases", paraphrases)
 df.insert(len(df.columns), "iterations", iterations)
 df.insert(len(df.columns), "messages", list(map(lambda x: json.dumps(x, ensure_ascii=False), messages)))
