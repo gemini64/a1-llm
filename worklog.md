@@ -216,8 +216,53 @@ The final output contains a set of boolean labels that tell if the text respects
 
 #### Observation
 - While this approach was found to be a lot more robust than the boolean LLM based evaluation, it is strongly based on the content of our italian invetory.
-- There are still open issues regarding the syntactical analysis phase.
-- Grammatical/Morphological analysis is still carried out using a LLM. We observed that the output quality of the POS tagging module can influence the quality of the LLM output data (specifically on verbs analyisis)
+- Open issues regarding the syntactical analysis phase.
+- Grammatical/Morphological analysis is still carried out using a LLM. We observed that the output quality of the POS tagging module can influence the quality of the LLM output data (specifically on verbs analyisis).
 - While tint generally seems to perform better in Italian text tagging tasks, no rigourous comparison between the tagging methods was performed at the moment of writing
 
 ## F.2 - Constraints based paraphrasing
+The following sections briefly describe what was done regarding our secodary study focus i.e. Generation of text without any linguistics constraints and LLM based iterative paraphrasing to transform the original text to conform to A1 Language inventories specification
+
+### Core Concept
+The core concept behind this approach can be described as follows:
+1. Take an arbitrary complex text, generated with/without linguistics constraints
+2. Ask the model to check, for every sentence, if the constraints we want to validate are satisfied.
+    - If satisfied: keep text as is
+    - If not satisfied: transform the original text to satisfy the given constraints
+
+This process can be performed iteratively. When the input text matches the model's output, then we can hypothesize that the transformed text is constraints conformant.
+
+### Current Iteration
+In the current iteration we're using a highly structured prompt (following ideas taken from meta-prompting prompt engineering approach) and ask the model to apply chain-of-thought to formulate their response.
+
+```
+# Task:
+Check if the given text complies with the constraints provided; generate a paraphrase when necessary.
+
+# Original Text:
+{input_text}
+
+# Constraints checking:
+Check every sentence againts ALL constraints given.
+- If it violates no constraint, keep it as is.
+- If it violates one or more constraints, paraphrase or remove it.
+
+# Paraphrasing:
+- A paraphrase has to preserve the original semantic meaning and minimize information loss.
+- A paraphrase has to replace every non-constraints conformant element with an equivalent conformant alternative.
+- If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the original text should be removed.
+
+# Output format:
+Provide a step-by-step reasoning to elaborate your answer. The expected final output consists of the transformed text, enclosed in <angle brackets>.
+
+# Constraints:
+{constraints}
+```
+
+**Issues:** To extract and iterate over the transformed text, we are currently asking the model to use specific delimiters to enclose its final response (this is non-optional as the response also contains all the model's reasoning steps).
+
+The code that parses the model's response uses basic ReGEX expression to extract the tranformed text. This means that depending on how closely the model is able to follow the instructios given, the whole iteration process may fail or succeed.
+
+#### Observations
+- This approach is not specific to the structure or content of the inventory used.
+- Can use prompting techniques such as meta-prompting and chain-of-thought.
