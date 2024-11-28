@@ -12,10 +12,10 @@ if (os.getenv("PY_ENV") == "DEVELOPMENT"):
 # setup argparse
 parser = argparse.ArgumentParser(
     prog='eval_boolean_tests',
-    description='Given a list of prompts/completions and a set of tests, performs an LLM-based evaluation.')
+    description='Given a list of prompts/completions (TSV) and a set of tests, performs an LLM-based evaluation.')
 
 parser.add_argument("input", help="an input tsv file")
-parser.add_argument("tests", help="a json file containing the evaluation tests to perform")
+parser.add_argument("tests", help="a json file containing evaluation tests to perform")
 parser.add_argument('-o', '--output', help="(optional) output file")
 
 # validate arguments
@@ -56,7 +56,7 @@ message_template = """Check wheter the following text:
 ```
 {test}
 Respond following the attached JSON structure:
-```
+```json
 {{
     "compliant": <true/false>,
 }}

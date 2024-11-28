@@ -1,6 +1,7 @@
 import itertools
 from enum import Enum
 from pydantic import BaseModel
+from typing import Optional
 
 class Language(str, Enum):
     IT = 'Italian'
@@ -12,7 +13,7 @@ class Task(BaseModel):
     language: Language = Language.IT
     template: str = ""
     targs: dict[str, list[str]] = None
-    context: str = None
+    context: Optional[str] = None # allow null value
 
 def generate_prompts(task: Task) -> list[str]:
     """Given a Task instance, uses its template and optional
@@ -33,8 +34,8 @@ def generate_prompts(task: Task) -> list[str]:
         prompt = task.template
         prompts.append(prompt)
 
-    # add context, if applicable
-    if(task.context and task.context != ""):
+    # append context, if applicable
+    if(task.context):
         prompts = list(map(lambda x: f"""{x}\n\n{task.context}""", prompts))
 
     return prompts

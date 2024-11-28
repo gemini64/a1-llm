@@ -49,8 +49,6 @@ completions = df["completions"]
 user_message = """# Task:
 Check if the given text complies with the constraints provided; generate a paraphrase when necessary.
 
-Provide a step-by-step reasoning to elaborate your answer. The expected final output consists of the transformed text, enclosed in square brackets.
-
 # Original Text:
 {input_text}
 
@@ -63,6 +61,9 @@ Check every sentence againts ALL constraints given.
 - A paraphrase has to preserve the original semantic meaning and minimize information loss.
 - A paraphrase has to replace every non-constraints conformant element with an equivalent conformant alternative.
 - If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the original text should be removed.
+
+# Output format:
+Provide a step-by-step reasoning to elaborate your answer. The expected final output consists of the transformed text, enclosed in <angle brackets>.
 
 # Constraints:
 {constraints}"""
@@ -90,7 +91,7 @@ llm = ChatOpenAI(
 #
 # Basically extract the first element enclosed in []
 # from the LLM response
-parser = lambda x : (re.findall(r'\[(.*?)\]', x.content))[0]
+parser = lambda x : (re.findall(r'\<(.*?)\>', x.content))[0]
 
 # set up chain
 chain = prompt_template | llm
@@ -136,11 +137,15 @@ for completion in completions:
 
         # parse completion and check if output text
         # is unchanged
-        assistant_response = parser(results)
-        if (assistant_response == current):
+        try:
+            assistant_response = parser(results)
+            if (assistant_response == current):
+                break
+            else:
+                current = assistant_response
+        except:
+            current = "ERROR! Malformed assistant response!"
             break
-        else:
-            current = assistant_response
 
     # push data for insertion
     paraphrases.append(current)
