@@ -1,15 +1,12 @@
 - Adverbs, Prepositions, Conjunctions, and Interjections: These may be used without limitations.
-- Nouns: singular, regular plural and possessive forms are allowed. Irregular plural nouns are forbidden.
+- Nouns: singular, regular plural and possessive forms are allowed. Irregular plural noun forms are forbidden.
 - Pronouns: personal, possessive, interrogative (who, what, and which only), and demonstrative pronouns are allowed. Any other types of pronouns are forbidden.
 - Adjectives: qualitative (base form, regular comparative, and regular superlative), interrogative, and possessive adjectives are allowed. Irregular adjective forms are forbidden.
-- Verbs: modal verbs (can and will), regular, and irregular verbs are allowed. Any other verbs are forbidden.
-- Verbs conjugation (finite forms): only the following finite forms are allowed:
+- Verbs: modal verbs can and will are allowed, all other modal verbs are forbidden. All other verbs are allowed.
+- Verbs (finite forms): only the following finite forms are allowed:
     - indicative: present simple, past simple, present perfect, present continuous, and past continuous
     - imperative
-- Verbs conjugation (non-finite forms): only the following non-finite forms are allowed:
-    - present participle
-    - past participle
-    - infinitive
+- Verbs (non-finite forms): all the non-finite forms are allowed
 - Verbs conjugation (voices): verbs in indicative present simple and indicative past simple may be conjugated in either active or passive voice. In all other cases, verbs must be conjugated in active voice.
 - Simple clauses: allowed without limitations.
 - Compound sentences: allowed only if composed of simple clauses joined using and or but.
