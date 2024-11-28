@@ -221,7 +221,7 @@ The final output contains a set of boolean labels that tell if the text respects
 - While tint generally seems to perform better in Italian text tagging tasks, no rigourous comparison between the tagging methods was performed at the moment of writing
 
 ## F.2 - Constraints based paraphrasing
-The following sections briefly describe what was done regarding our secodary study focus i.e. Generation of text without any linguistics constraints and LLM based iterative paraphrasing to transform the original text to conform to A1 Language inventories specification
+The following sections briefly describe what was done regarding our secodary study focus i.e. Generation of text without any linguistics constraints and LLM based iterative paraphrasing to transform the original text to conform to A1 Language inventories specifications.
 
 ### Core Concept
 The core concept behind this approach can be described as follows:
@@ -261,7 +261,9 @@ Provide a step-by-step reasoning to elaborate your answer. The expected final ou
 
 **Issues:** To extract and iterate over the transformed text, we are currently asking the model to use specific delimiters to enclose its final response (this is non-optional as the response also contains all the model's reasoning steps).
 
-The code that parses the model's response uses basic ReGEX expression to extract the tranformed text. This means that depending on how closely the model is able to follow the instructios given, the whole iteration process may fail or succeed.
+The code that parses the model's response uses basic ReGEX expressions to extract the tranformed text.
+
+This means that depending on how closely the model is able to follow the instructions given, the whole iteration process may fail or succeed.
 
 #### Observations
 - This approach is not specific to the structure or content of the inventory used.
