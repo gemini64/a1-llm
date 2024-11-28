@@ -3,6 +3,7 @@
 prompts/
 test/
 tools/
+utils/
 tint.tar.gz
 
 # --- macOS ---
