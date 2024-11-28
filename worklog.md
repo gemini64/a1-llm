@@ -16,7 +16,7 @@ The CEFR framework defines only a list of language production (oral/written) and
 
 Specifics about the morpho-syntactic structures a learner of a given level has to know depend on the specific language and may also depend on their course program.
 
-To formulate a set of suitable tasks we focused primarily on the "receptive (written)" items listed for the A1 level. A complete list is available [here](https://docs.google.com/document/d/1b42g0Jf0bsDng8b3Alx4XeyjpWfw1F5pkZ7YKi06lbU).
+To formulate a set of suitable tasks we focused primarily on the "receptive (written)" items listed for the A1 level. A complete list, extracted from the CEFR Companion Volume, is available [here](https://docs.google.com/document/d/1b42g0Jf0bsDng8b3Alx4XeyjpWfw1F5pkZ7YKi06lbU).
 
 We defined 4 tasks:
 - Writing a postcard
@@ -24,9 +24,9 @@ We defined 4 tasks:
 - Giving directions to a passerby
 - Writing a brief social media post
 
-Each task we proposed was inspired from a specific item listed in the CEFR inventory. Pointers and additional information is available in this [document](https://docs.google.com/document/d/1eqdsPgBh1bsrBlbUPx1yYgrikcze4nYq_iNBtX3RFwU).
+Each task we proposed was inspired from a specific item listed in the CEFR inventory. Additional information is available in this [document](https://docs.google.com/document/d/1eqdsPgBh1bsrBlbUPx1yYgrikcze4nYq_iNBtX3RFwU).
 
-Additionally, to add some variety to our prompts, we decided to parametrize the 'theme' of the writing taks (e.g. the 'post theme' for the social media post writing task).
+To add some variety to our prompts, we decided to parametrize the 'theme' of the writing taks (e.g. the 'post theme' for the social media post writing task).
 
 By parametrizing the writing tasks 'theme' we were able to build a set of ~100 prompts to submit and then evaluate.
 
@@ -35,18 +35,18 @@ As stated in the previous section, the CEFR framework does not define which moph
 
 To build our language inventories we sourced a variety of documents from various language teaching/training entities. When applicable, we selected the morpho-syntactic elements listed as 'language reception' objectives for A1 learners.
 
-The inventories we built and added as context to our writing prompts list every grammatical and syntactical element that can be used to complete the writing task proposed.
+The inventories we built and used to guide our writing tasks list every grammatical and syntactical element that can be used to complete the task proposed.
 
-The inventories are language specific and have been edited:
+Inventories are language specific and an effort has been made:
 - to remove redundant element
-- to follow a precise hierachical structure (this was done mainly for information clarity's sake and as a general prompt-engineering good practice, basically we tried to list and organize inventory items in hierarchical markdown lists)
+- to follow a precise hierachical structure (mainly for information clarity's sake and as a general prompt-engineering good practice, basically we tried to list and organize inventory items in hierarchical markdown lists)
 
 See this [document](https://docs.google.com/document/d/11e0GFoavUTXkjSIVbYkgDbfPdKL7Jjy0qdq9vmepLP0) for additional details.
 
 ### Manual evaluation
-As a first evaluation step, we used gpt-4o to generate the completitions for 12 prompts for each language. These completitions were manually checked and evaluated with a boolean (conforms to constraints/does not conform to constraints) label.
+As a first evaluation step, we used gpt-4o to generate completitions for 12 prompts (for each language). These completitions were manually checked and evaluated with a boolean (conforms to constraints/does not conform to constraints) label.
 
-Additionally a list of errors in constraints compliance was added to evaluation samples that were found to be non-constraints conformant.
+Additionally, specifics about errors in constraints compliance were listed when applicable.
 
 This manual evaluation procedure was performed on:
 - text generated using prompts in (taget language) for generation of text in (target language). see this [directory](https://drive.google.com/drive/folders/14vfWPtB0h00aFxoFeTBXtoZW6FM-CUgf?usp=drive_link)
@@ -54,7 +54,7 @@ This manual evaluation procedure was performed on:
 
 #### Observations
 - No major difference in completions quality was observed when prompting the model in english
-- The model was found to perform worse in italian and russian text writing tasks
+- The model was found to perform (generally) worse in italian and russian writing tasks
 
 ### Automatic boolean evaluation
 To automate the evaluation procedure we tried to make a LLM perform the inverse tasks, i.e.
@@ -83,23 +83,35 @@ The data collected is available [here](https://drive.google.com/drive/folders/1-
 #### Observations
 By building a confusion matrix using the manual evaluation data as ground truth we found out that giving examples to the model, does not seem to improve the classification accuracy.
 
+|                | TP | TN | FP | FN | Accuracy          | Precision         | Recall            |
+| -------------- | -- | -- | -- | -- | ----------------- | ----------------- | ----------------- |
+| 0 Shots        | 11 | 1  | 24 | 0  | 0.333333333333333 | 0.314285714285714 | 1                 |
+| 5 Shots        | 9  | 5  | 20 | 2  | 0.388888888888889 | 0.310344827586207 | 0.818181818181818 |
+| 6 Shots Mixed  | 11 | 4  | 21 | 0  | 0.416666666666667 | 0.34375           | 1                 |
+| 15 Shots Mixed | 11 | 3  | 22 | 0  | 0.388888888888889 | 0.333333333333333 | 1                 |
+
+| Samples | 36 |
+| ------- | -- |
+| P       | 11 |
+| N       | 25 |
+
 Additionally we observed a quite high false positive rate.
 
-Even considering the low amount of data on which this analysis was performed and the possible presence of biases in the set of samples we chose, we can speculate that this specific task may be too difficult for a LLM.
+Even considering the low amount of data on which this analysis was performed and the possible presence of biases in the set of samples we chose, we can speculate that this task may be too difficult for a LLM.
 
 ### Automatic rule-based evaluation
-Focusing only on Italian, we also tested a rule-based evaluation system.
+(Only on Italian) We also tested a rule-based evaluation system.
 
-The main idea behind this approach was to separate the text analysis and evaluation processes.
+The main idea behind this approach was to separate the text analysis (grammatical/syntactical features extraction) and the evaluation processes.
 
-Starting from the italian inventory we tried to define a user prompt to, separately, analyze each part-of-speech present in our inventory.
+Starting from our Italian inventory we tried to define a user prompt to analyze each part-of-speech present in our inventory.
 
-For example:
-- Pronouns -> Extract the pronouns contained in the input text and find out their catagory
-- Verbs -> Extract all verbs and annotate their morphological features
+Examples:
+- **Pronouns:** Extract the pronouns contained in the input text and find out their catagory
+- **Verbs:** Extract all verbs and annotate their morphological features
 ...
 
-A general idea of how this solution works is described in the following sections.
+A general of how this solution works is described in the following sections.
 
 #### Step 1 - POS Tagging
 We found out that, even for basic grammar analysis tasks (e.g. pronouns extraction and categorization), gpt-4o struggles a lot on italian text.
@@ -142,30 +154,6 @@ The final output of this module is a JSON array containing each word of the orig
     {
         "text": "isolati",
         "pos": "NOUN"
-    },
-    {
-        "text": ",",
-        "pos": "PUNCT"
-    },
-    {
-        "text": "poi",
-        "pos": "ADV"
-    },
-    {
-        "text": "gira",
-        "pos": "VERB"
-    },
-    {
-        "text": "a",
-        "pos": "ADP"
-    },
-    {
-        "text": "sinistra",
-        "pos": "NOUN"
-    },
-    {
-        "text": ".",
-        "pos": "PUNCT"
     }
 ]
 ```
