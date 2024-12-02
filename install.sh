@@ -6,6 +6,14 @@ GEN_SCRIPT="./gen.py"
 TOOLS_DIR="./tools";
 TINT_PKG="./tint.tar.gz";
 TINT_URL="https://dhsite.fbk.eu/tint-release/0.3/tint-0.3-complete.tar.gz";
+REQUIREMENTS_LINUX="./requirements.txt"
+REQUIREMENTS_DARWIN="./requirements_darwin.txt"
+
+# check os
+if ! ( [[ "$OSTYPE" == "linux-gnu"* ]] | [[ "$OSTYPE" == "darwin"* ]] ); then
+    echo "Error! Unsupported OS";
+    exit 2;
+fi
 
 # colors for readability
 GREEN='\033[0;32m';
@@ -27,7 +35,11 @@ source "${PY_VENV}"/bin/activate;
 
 # other requirements
 echo -e "${LIGHT_BLUE}[3/5]${NC} - ${GREEN}Installing requirements${NC}";
-pip install -r requirements.txt;
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    pip install -r "${REQUIREMENTS_LINUX}";
+else
+    pip install -r "${REQUIREMENTS_DARWIN}";
+fi
 
 # generate prompts
 echo -e "${LIGHT_BLUE}[4/5]${NC} - ${GREEN}Generating user prompts${NC}";
