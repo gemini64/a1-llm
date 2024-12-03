@@ -1,7 +1,7 @@
-- Nouns, adjectives, adverbs, prepositions, conjunctions, and interjections may be used without limitations.
+- Nouns, Adjectives, Adverbs, Prepositions, Conjunctions, and Interjections: These may be used without limitations.
 - Pronouns: Only personal, possessive, demonstrative, interrogative, and indefinite pronouns are allowed.
 - Numerals: Cardinal numbers may be used without limitation. Ordinal numbers must be limited to range 1-3.
-- Verbs: essere, avere, volere, potere, dovere, and regular Italian verbs are allowed. Any other irregular verb is forbidden.
+- Verbs: essere, avere, volere, potere, dovere, and regular Italian verbs are allowed. Any other irregular verbs are forbidden.
 - Verbs may only be conjugated in active voice.
 - Verbs may only be conjugated in the following moods and tenses:
     - Indicativo: presente e passato prossimo
