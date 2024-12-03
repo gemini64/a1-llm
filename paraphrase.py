@@ -1,8 +1,9 @@
-import os, re, json,argparse
+import os, re, json, time, argparse
 from dotenv import load_dotenv
 import pandas as pd
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 
 # load keys from local settings file
 if (os.getenv("PY_ENV") == "DEVELOPMENT"):
@@ -17,6 +18,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
 parser.add_argument("constraints", help="a plain-text file containing the linguistics constraints to evaluate against")
 parser.add_argument('-o', '--output', help="(optional) output file")
+parser.add_argument('-g', '--groq', action='store_true', help="run on groq cloud")
 
 # validate arguments
 args = parser.parse_args()
@@ -24,6 +26,7 @@ args = parser.parse_args()
 input_file = args.input
 constraints_file = args.constraints
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_paraphrases.tsv"
+use_groq = args.groq
 
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
     print("Error: the input file does not exist or is not a supported format!")
@@ -53,13 +56,13 @@ Check if the given text complies with the constraints provided; generate a parap
 {input_text}
 
 # Constraints checking:
-Check every sentence againts ALL constraints given.
+Check each sentence againts ALL constraints given.
 - If it violates no constraint, keep it as is.
 - If it violates one or more constraints, paraphrase or remove it.
 
 # Paraphrasing:
 - A paraphrase has to preserve the original semantic meaning and minimize information loss.
-- A paraphrase has to replace every non-constraints conformant element with an equivalent conformant alternative.
+- A paraphrase has to replace each non-constraints conformant element with an equivalent conformant alternative.
 - If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the original text should be removed.
 
 # Output format:
@@ -81,17 +84,26 @@ temperature = 0
 top_p = 0.95
 max_iterations = 50 # upper bound to paraphrase iterations
 
-llm = ChatOpenAI(
-    model=model,
-    temperature=temperature,
-    top_p=top_p
-)
+if use_groq:
+    llm = ChatGroq(
+        model=os.getenv("GROQ_MODEL"),
+        temperature=temperature,
+        model_kwargs={
+            "top_p": top_p
+        }
+    )
+else:
+    llm = ChatOpenAI(
+        model=model,
+        temperature=temperature,
+        top_p=top_p
+    )
 
 # Output parser (takes an AIMessage as input)
 #
 # Basically extract the first element enclosed in []
 # from the LLM response
-parser = lambda x : (re.findall(r'\<(.*?)\>', x.content))[0]
+parser = lambda x : (re.findall(r'<([^<>]*?)>', x.content))[0]
 
 # set up chain
 chain = prompt_template | llm
@@ -126,6 +138,10 @@ for completion in completions:
                 "constraints": constraints
             }
         )
+
+        # keep within token limits if we are using groq
+        if use_groq:
+            time.sleep(30)
 
         # push assistant message to session log
         message_session.append(

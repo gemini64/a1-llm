@@ -17,10 +17,11 @@ parser = argparse.ArgumentParser(
 
 # add args
 parser.add_argument('input', help="an input json file")
-parser.add_argument('-l', '--lorax', action='store_true')
-parser.add_argument('-g', '--groq', action='store_true')
+parser.add_argument('-l', '--lorax', action='store_true', help="run inference using lorax-client")
+parser.add_argument('-g', '--groq', action='store_true', help="run inference using groq cloud")
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-s', '--samples', help="(optional) the number of samples to collect [0-100]", type=int, default=100)
+parser.add_argument('-t', '--temperature', help="(optional) model temperature setting [0.0-1.0]", type=float, default=0.0)
 
 # validate args
 args = parser.parse_args()
@@ -30,6 +31,7 @@ use_lorax = args.lorax
 use_groq = args.groq
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_output.tsv"
 samples = max(0, min(args.samples, 100))
+temperature = max(0, min(args.temperature, 1.0))
 
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".json"))):
     print("Error: the input file does not exist or is not a supported format!")
@@ -68,7 +70,6 @@ for key in data.keys():
 df = pd.DataFrame(data={"prompts": prompts})
 
 # model params
-temperature = 0.0
 top_p = 0.95
 
 # init llm - lorax
