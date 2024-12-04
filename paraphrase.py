@@ -1,6 +1,7 @@
 import os, re, json, time, argparse
 from dotenv import load_dotenv
 import pandas as pd
+from parsers import regex_message_parser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -16,11 +17,12 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
-parser.add_argument("constraints", help="a plain-text file containing the linguistics constraints to evaluate against")
+parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistics constraints to evaluate against", required=True)
 parser.add_argument('-o', '--output', help="(optional) output file")
-parser.add_argument('-g', '--groq', action='store_true', help="run on groq cloud")
+parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
 
 # validate arguments
+# --- Note that only a minimum path valudation is performed
 args = parser.parse_args()
 
 input_file = args.input
@@ -78,7 +80,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     ]
 )
 
-# set up llm
+# set up llm - here we are using langchain for both services
 model = "gpt-4o"
 temperature = 0
 top_p = 0.95
@@ -99,15 +101,9 @@ else:
         top_p=top_p
     )
 
-# Output parser (takes an AIMessage as input)
-#
-# Basically extract the first element enclosed in []
-# from the LLM response
-parser = lambda x : (re.findall(r'<([^<>]*?)>', x.content))[0]
-
 # set up chain
 chain = prompt_template | llm
-
+pattern = "<([^>]+)>"
 paraphrases = []
 iterations = []
 messages = []
@@ -139,10 +135,6 @@ for completion in completions:
             }
         )
 
-        # keep within token limits if we are using groq
-        if use_groq:
-            time.sleep(30)
-
         # push assistant message to session log
         message_session.append(
             {
@@ -151,17 +143,18 @@ for completion in completions:
             }
         )
 
+        # keep within token limits if we are using groq
+        if use_groq:
+            time.sleep(30)
+
         # parse completion and check if output text
         # is unchanged
-        try:
-            assistant_response = parser(results)
-            if (assistant_response == current):
-                break
-            else:
-                current = assistant_response
-        except:
-            current = "ERROR! Malformed assistant response!"
+        message_content = regex_message_parser(results, pattern)
+        if (message_content is None or message_content == current):
+            current = "ERROR! regex did not match" if message_content is None else current
             break
+        else:
+            current = message_content
 
     # push data for insertion
     paraphrases.append(current)

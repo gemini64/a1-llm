@@ -1,6 +1,7 @@
 import os, re, json, time, argparse, spacy
 from dotenv import load_dotenv
 import pandas as pd
+from parsers import regex_parser, strip_string
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -59,18 +60,18 @@ constraints = ""
 with open(constraints_file, "r", encoding="utf-8") as f_in:
     constraints = f_in.read()
 
-df = pd.read_csv(input_file, sep="\t", encoding="utf-8", header=0, nrows=1)
+df = pd.read_csv(input_file, sep="\t", encoding="utf-8", header=0)
 completions = df["completions"]
 
 # set up prompt
 user_message = """# Task:
-Check if the given sentence complies with the constraints provided; generate a paraphrase if necessary.
+Check if the given sentence complies with the constraints provided; generate a paraphrase when necessary.
 
 # Original Sentence:
 {input_text}
 
 # Constraints checking:
-Check the sentence againts ALL constraints given.
+Check the given sentence againts ALL constraints.
 - If it violates no constraint, keep it as is.
 - If it violates one or more constraints, paraphrase it.
 
@@ -112,13 +113,10 @@ else:
         top_p=top_p
     )
 
-# Output parser (takes an AIMessage as input)
-#
-# Basically extract the first element enclosed in []
-# from the LLM response
-parser = lambda x : (re.findall(r'<([^<>]*?)>', x.content))[0]
-
 # set up chain
+pattern = "<([^>]+)>"
+parser = regex_parser(regex=pattern)
+
 chain = prompt_template | llm | parser
 
 paraphrases = []
@@ -128,13 +126,13 @@ iterations = []
 for completion in completions:
     # split sentences
     documents = nlp(completion)
-    sentences = list(documents.sents)
+    sentences = [sent.text for sent in documents.sents]
 
     iter_counter = 0
     output_text = []
 
     for sentence in sentences:
-        current = sentence
+        current = strip_string(sentence)
         iteration = None
 
         # paraphrase until LLM output is unchanged
@@ -150,13 +148,20 @@ for completion in completions:
                 }
             )
 
+            # this is just a test to see if we can reduce iterations
+            results = strip_string(results)
+
+            # print("---")
+            # print(f"original: '{current}'")
+            # print(f"paraph: '{results}'")
+
             # keep within token limits if we are using groq
             if use_groq:
                 time.sleep(30)
 
-            # parse completion and check if output text
-            # is unchanged
-            if (results == current):
+            # check if output text is unchanged
+            if (results is None or results == current):
+                current = "Error! regex did not match" if results is None else current
                 break
             else:
                 current = results
@@ -168,7 +173,7 @@ for completion in completions:
 
     # push data for insertion
     paraphrases.append(" ".join(output_text))
-    iterations.append(iteration)
+    iterations.append(iter_counter)
 
 # add data columns to original df
 df.insert(len(df.columns), "paraphrases", paraphrases)

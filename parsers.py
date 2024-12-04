@@ -1,4 +1,6 @@
-import copy
+import copy, re
+from functools import partial
+from langchain_core.messages import AIMessage
 from pos_tagger import POSTagger, Language, TAGMethod
 
 # Eval template
@@ -186,3 +188,36 @@ def parse_italian_analysis(input: dict) -> bool:
                     results["error_messages"].append(subordinate_clause_conditional_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
 
     return results
+
+
+def regex_message_parser(message: AIMessage, regex: str) -> str | None:
+    """Given a langchain AIMessage and a
+    regular expression, tries to find matches
+    in the model's reponse, then if any are found
+    return the first matching group"""
+    message_content = message.content
+
+    match = re.search(fr"{regex}", message_content)
+
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+def regex_parser(regex: str) -> partial[str]:
+    """Partial regex_message_parser application.
+    Can be chained with a langchain llm invoke sequence"""
+    return partial(regex_message_parser, regex=regex)
+
+def strip_string(input: str) -> str:
+    """Takes a string as input. Uses regular
+    expressions to remove traling and leading white
+    spaces + substitutes any newline sequence with
+    a (1) white space. Returns the transformed text"""
+    transformed = input
+    transformed = re.sub(r'^\s*', '', transformed)
+    transformed = re.sub(r'\s*$', '', transformed)
+    transformed = re.sub(r' +', ' ',transformed)
+    transformed = re.sub(r'\n+', ' ',transformed)
+
+    return transformed
