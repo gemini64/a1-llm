@@ -22,7 +22,7 @@ parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
 
 # validate arguments
-# --- Note that only a minimum path valudation is performed
+# --- Note that only a minimum path validation is performed
 args = parser.parse_args()
 
 input_file = args.input
