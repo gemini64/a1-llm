@@ -38,8 +38,9 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the contained verbs.
 
-If the verbs "avere" and "essere" are tagged as auxiliary verbs (AUX), they
-should be analyzed with their primary verb and listed as a single item.
+If 'essere' and 'avere' are used as auxiliary verbs ('AUX' tag), check if they accompany one or more main verbs.
+
+If this is the case, they should be analyzed and listed as a single item (e.g. "ho mangiato e poi dormito" -> "ho mangiato" and "ho dormito").
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -82,14 +83,9 @@ Respond with a structured JSON array conforming to the schema attached below. No
             "voice": {
                 "enum": ["attiva", "passiva"],
                 "description": "The verb voice, following italian language voices"
-            },
-            "regular": {
-                "type": "boolean",
-                "description": "true if the main verb is a regular verb"
             }
-            
         },
-        "required": ["text", "lemma", "mood", "tense", "voice", "regular"]
+        "required": ["text", "lemma", "mood", "tense", "voice" ]
     }
 }
 ```
