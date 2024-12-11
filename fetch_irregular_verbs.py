@@ -25,7 +25,7 @@ def query(request, host):
             break
         last_continue = result['continue']
 
-output_file = "./italian_irregular_verbs.json"
+output_file = "./inventories/italian_irregular_verbs.json"
 
 web_host = "https://en.wiktionary.org/w/api.php"
 req_params = {

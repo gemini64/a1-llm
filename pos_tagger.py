@@ -37,9 +37,46 @@ Respond with a JSON output, following the schema defined below.
             "pos": {{
                 "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
                 "description": "The universal POS tag associated with the tagged text"
-            }}
+            }},
         }},
         "required": ["text", "pos"]
+    }}
+}}
+```
+"""
+
+TAGGING_PROMPT_WITH_LEMMA = """Given the following text:
+```
+{input}
+```
+Tag every word (and punctuation mark) with the corresponding part-of-speech (POS) tag.
+
+Respond with a JSON output, following the schema defined below.
+```json
+{{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/postagged_text.json",
+    "title": "POS-tagged text",
+    "description": "Represents a POS-tagged text of arbitrary length",
+    "type": "array",
+    "items": {{
+        "type": "object",
+        "description": "A POS-tagged word/symbol/punctuation mark",
+        "properties": {{
+            "text": {{
+                "type": "string",
+                "description": "The POS-tagged word/sybol/punctuation mark"
+            }},
+            "pos": {{
+                "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
+                "description": "The universal POS tag associated with the tagged text"
+            }},
+            "pos": {{
+                "type": "string"
+                "description": "The base lemma."
+            }},
+        }},
+        "required": ["text", "pos", "lemma"]
     }}
 }}
 ```
@@ -136,9 +173,10 @@ class SpacyTagger(Tagger):
     """A spacy based part-of-speech tagger.
     
     Requires a target language specification."""
-    def __init__(self, language: Language, use_gpu: bool = SPACY_USE_GPU) -> None:
+    def __init__(self, language: Language = Language.IT, use_gpu: bool = SPACY_USE_GPU, include_lemma: bool = False) -> None:
         self._language = language
         self._use_gpu = use_gpu
+        self._include_lemma = include_lemma
 
         self._init_nlp()
 
@@ -165,10 +203,18 @@ class SpacyTagger(Tagger):
         doc = self._nlp(input)
 
         for token in doc:
-            results.append({
+            if self._include_lemma:
+                results.append({
+                    "text": token.text,
+                    "pos": token.pos_,
+                    "lemma": token.lemma_
+                })
+            else:
+                results.append({
                 "text": token.text,
                 "pos": token.pos_
             })
+
 
         return results
     
@@ -177,9 +223,10 @@ class TintTagger(Tagger):
     
     Requires a tint binary to be available in local
     configuration path exe"""
-    def __init__(self, exe: str = TINT_EXE, params: str = TINT_PARAMS):
+    def __init__(self, exe: str = TINT_EXE, params: str = TINT_PARAMS, include_lemma = False):
         self._exe = exe
         self._params = params
+        self._include_lemma = include_lemma
 
     # overriding interface method
     def tag(self, input: str) -> list[dict[str, str]]:
@@ -193,9 +240,16 @@ class TintTagger(Tagger):
 
         for sentence in tint_obj["sentences"]:
             for token in sentence["tokens"]:
-                results.append({
-                    "text": token["word"],
-                    "pos": token["ud_pos"]
-                })
+                if (self._include_lemma):
+                    results.append({
+                        "text": token["word"],
+                        "pos": token["ud_pos"],
+                        "lemma": token["lemma"]
+                    })
+                else:
+                    results.append({
+                        "text": token["word"],
+                        "pos": token["ud_pos"]
+                    })
         
         return results

@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/paraphrases.json",
+    "title": "Paraphrases",
+    "description": "A list of sentence paraphrases.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "A sentence paraphrase.",
+        "properties": {
+            "original": {
+                "type": "string",
+                "description": "The full raw-text of the original sentence."
+            },
+            "paraphrase": {
+                "type": "string",
+                "description": "The sentence paraphrase."
+            }
+        },
+        "required": [ "original", "paraphrase" ]
+    }
+}

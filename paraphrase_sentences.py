@@ -1,7 +1,7 @@
 import os, re, json, time, argparse, spacy
 from dotenv import load_dotenv
 import pandas as pd
-from parsers import regex_parser, strip_string
+from agent_tools import regex_parser, strip_string, ANGLE_REGEX_PATTERN
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -114,8 +114,7 @@ else:
     )
 
 # set up chain
-pattern = "<([^>]+)>"
-parser = regex_parser(regex=pattern)
+parser = regex_parser(regex=ANGLE_REGEX_PATTERN)
 
 chain = prompt_template | llm | parser
 
@@ -149,7 +148,7 @@ for completion in completions:
             )
 
             # this is just a test to see if we can reduce iterations
-            results = strip_string(results)
+            results = strip_string(results) if results is not None else results
 
             # print("---")
             # print(f"original: '{current}'")

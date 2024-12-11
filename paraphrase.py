@@ -1,7 +1,7 @@
 import os, re, json, time, argparse
 from dotenv import load_dotenv
 import pandas as pd
-from parsers import regex_message_parser
+from agent_tools import regex_message_parser, ANGLE_REGEX_PATTERN
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -103,7 +103,6 @@ else:
 
 # set up chain
 chain = prompt_template | llm
-pattern = "<([^>]+)>"
 paraphrases = []
 iterations = []
 messages = []
@@ -149,7 +148,7 @@ for completion in completions:
 
         # parse completion and check if output text
         # is unchanged
-        message_content = regex_message_parser(results, pattern)
+        message_content = regex_message_parser(results, ANGLE_REGEX_PATTERN)
         if (message_content is None or message_content == current):
             current = "ERROR! regex did not match" if message_content is None else current
             break
