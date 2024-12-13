@@ -1,7 +1,7 @@
 import os, re, json, time, argparse
 from dotenv import load_dotenv
 import pandas as pd
-from agent_tools import regex_message_parser, ANGLE_REGEX_PATTERN
+from agent_tools import regex_parser, ANGLE_REGEX_PATTERN
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -84,7 +84,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 model = "gpt-4o"
 temperature = 0
 top_p = 0.95
-max_iterations = 50 # upper bound to paraphrase iterations
+max_iterations = 10 # upper bound to paraphrase iterations
 
 if use_groq:
     llm = ChatGroq(
@@ -148,7 +148,7 @@ for completion in completions:
 
         # parse completion and check if output text
         # is unchanged
-        message_content = regex_message_parser(results, ANGLE_REGEX_PATTERN)
+        message_content = regex_parser(results, ANGLE_REGEX_PATTERN)
         if (message_content is None or message_content == current):
             current = "ERROR! regex did not match" if message_content is None else current
             break

@@ -25,7 +25,7 @@ def regex_parser(message: AIMessage, regex: str) -> str | None:
 def regex_message_parser(regex: str) -> partial[str | None]:
     """Partial regex_parser application.
     Can be chained with a langchain sequences."""
-    return partial(regex_message_parser, regex=regex)
+    return partial(regex_parser, regex=regex)
 
 def json_message_parser(message: AIMessage):
     """Tries to load JSON object encoded in an AI Message.

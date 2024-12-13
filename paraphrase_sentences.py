@@ -1,7 +1,7 @@
 import os, re, json, time, argparse, spacy
 from dotenv import load_dotenv
 import pandas as pd
-from agent_tools import regex_parser, strip_string, ANGLE_REGEX_PATTERN
+from agent_tools import regex_message_parser, strip_string, ANGLE_REGEX_PATTERN
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -43,16 +43,19 @@ if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.ab
     print(f"Error: an output file with path '{output_file}' already exists!")
     exit(2)
 
-if (not (language == "italian" or language == "english")):
+if (not (language in set(['italian', 'english', 'russian']))):
     print(f"Error: '{language}' is not a supported sentence tokenizer language!")
     exit(2)
 
 # load spacy and setup sentence tokenizer
 spacy.prefer_gpu = True
-if language == 'italian':
-    nlp = spacy.load("it_core_news_lg")
-else:
-    nlp = spacy.load("en_core_web_trf")
+match language:
+    case 'italian':
+        nlp = spacy.load("it_core_news_lg")
+    case 'english':
+        nlp = spacy.load("en_core_web_trf")
+    case _:
+        nlp = spacy.load("ru_core_news_lg")
 
 
 # load data
@@ -96,7 +99,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 model = "gpt-4o"
 temperature = 0
 top_p = 0.95
-max_iterations = 50 # upper bound to paraphrase iterations
+max_iterations = 10 # upper bound to paraphrase iterations
 
 if use_groq:
     llm = ChatGroq(
@@ -114,7 +117,7 @@ else:
     )
 
 # set up chain
-parser = regex_parser(regex=ANGLE_REGEX_PATTERN)
+parser = regex_message_parser(regex=ANGLE_REGEX_PATTERN)
 
 chain = prompt_template | llm | parser
 
