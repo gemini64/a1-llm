@@ -338,7 +338,7 @@ The prompt we used is very similar to the one attached in the previous section, 
 #### Observations
 To get an idea on recurring issues/error in paraphrases we manually reviewed a set of 12 paraphrases in Italian and Russian, comparing the two methods (full-text paraphrasing and sentence-by-sentence).
 
-The Italian annotations are available [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn) and the Russian annotations [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn).
+The Italian annotations are available [here](https://docs.google.com/spreadsheets/d/1VFGowGpYmdtNCS8_tlWsWSrVpbMbNS1C/edit?usp=drive_link&ouid=111186755018075460643&rtpof=true&sd=true) and the Russian annotations [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn).
 
 We observed:
 - (Italian) No performance gain/loss between the two methods. Also paraphrases quality seems overall unaffected by the method used.
