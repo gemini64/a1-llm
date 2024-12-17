@@ -14,9 +14,9 @@ To define a set of suitable writing tasks we referenced the CEFR Companion Volum
 
 The CEFR framework defines only a list of language production (oral/written) and reception (oral/written) objectives.
 
-Morpho-syntactic items a learner should be able to use are language specific and may also depend on the specific course program.
+Morpho-syntactic items a learner should be able to use are specific to the language and may also vary between language courses programs.
 
-We focused primarily on the 'receptive (written)' items listed for the A1 level. A complete list, extracted from the CEFR Companion Volume, is available [here](https://docs.google.com/document/d/1b42g0Jf0bsDng8b3Alx4XeyjpWfw1F5pkZ7YKi06lbU).
+We focused primarily on the 'receptive (written)' items listed for A1 proficiency level. A complete itemized list, extracted from the CEFR Companion Volume, is available [here](https://docs.google.com/document/d/1b42g0Jf0bsDng8b3Alx4XeyjpWfw1F5pkZ7YKi06lbU).
 
 We defined 4 tasks:
 - Writing a postcard
@@ -24,67 +24,67 @@ We defined 4 tasks:
 - Giving directions to a passerby
 - Writing a brief social media post
 
-Each task proposed was inspired from a specific item listed in the CEFR inventory. Additional information is available in this [document](https://docs.google.com/document/d/1eqdsPgBh1bsrBlbUPx1yYgrikcze4nYq_iNBtX3RFwU).
+Each task proposed was inspired from an item listed in the CEFR inventory. Detailed information is presented in this [document](https://docs.google.com/document/d/1eqdsPgBh1bsrBlbUPx1yYgrikcze4nYq_iNBtX3RFwU).
 
-To add some variety to our prompts, we parametrized the writing taks 'theme' (e.g. the 'post theme' for the social media post writing task).
+To add some variety to our prompts, we parametrized the writing task 'theme' (e.g. the 'city from where the postcard was written from' for the postcard writing task).
 
-By parametrizing the writing tasks 'theme' we were able to build a set of ~100 prompts to submit and then evaluate.
+By parametrizing the 'theme' we were able to build a set of ~100 user prompts to submit and then evaluate.
 
 ### Linguistics constraints
 As stated in the previous section, the CEFR framework does not define which mopho-syntactic language features a learner should know and be able to use.
 
-To build our language inventories we sourced a variety of documents from  language teaching/training entities. When applicable, we selected the morpho-syntactic elements listed as 'language reception' objectives for A1 learners.
+To build our language inventories we sourced a variety of documents from language teaching/training entities. When applicable, we selected the morpho-syntactic elements listed as 'language reception' objectives for A1 learners.
 
-The inventories we assembled list every grammatical and syntactical element that can be used to complete the task proposed.
+The inventories we assembled list every grammatical and syntactical element that can be used to complete the writing task proposed.
 
-Inventories are language specific. An effort has been made:
+Inventories are language specific. An effort was made:
 - to remove redundant element
-- to present information in a hierachical fashion (mainly for information clarity's sake and as a general prompt-engineering good practice, basically we tried to list and organize inventory items in hierarchical markdown lists)
+- to present information in a hierachical fashion (mainly for information clarity's sake. This is also an overall sound prompt engineering convention.)
 
-See this [document](https://docs.google.com/document/d/11e0GFoavUTXkjSIVbYkgDbfPdKL7Jjy0qdq9vmepLP0) for additional details.
+This [document](https://docs.google.com/document/d/11e0GFoavUTXkjSIVbYkgDbfPdKL7Jjy0qdq9vmepLP0) offers a complete picture in regards to sources used and inventories content.
 
-### Manual evaluation
-We used gpt-4o to generate completions for 12 prompts (12 x language). These completions were manually checked and evaluated with a boolean (conforms to constraints/does not conform to constraints) label.
+### (First) Manual evaluation
+We used gpt-4o to generate completions for 12 prompts (actually 36, 12 for each language). These completions were manually reviewed an labeled with a boolean value (conform to constraints/not conform to constraints).
 
-Specifics about errors in constraints compliance were listed when applicable.
+When applicable, detailed information about compliance errors was also annotated.
 
-This manual evaluation procedure was performed on:
-- text generated using prompts in (taget language) for generation of text in (target language). see this [directory](https://drive.google.com/drive/folders/14vfWPtB0h00aFxoFeTBXtoZW6FM-CUgf?usp=drive_link)
-- text generated using prompts in english for generation of text in (taget language). see this [directory](https://drive.google.com/drive/folders/1QclYd9l9z23QXJ4dwGq8kT40Hi7Y-_Se?usp=drive_link)
-
-#### Observations
-- No major difference in completions quality was observed when prompting the model in english
-- The model was found to perform (generally) worse in italian and russian writing tasks
-
-### Wide-sample Manual Evaluation
-After collecting completions for our 100 prompt samples across all three languages and using three different models (gpt-4o, Mixtral 8x7b and Llama 3.1), We performed a second manual evaluation on a wider data-sample.
-
-**Note:** Mixtral 8x7b was not trained on Russian. Mixtral output was manually annotated only for Italian and English.
-
-The manually annotated data is available in the following drive [directory](https://drive.google.com/drive/u/0/folders/1hCjmNpQX-DOgpWBZ8gYeX0v_E6N2oymZ).
+The manual evaluation was performed on:
+- Text generated using prompts in (taget language) for generation of text in (target language). Annotations available [here](https://drive.google.com/drive/folders/14vfWPtB0h00aFxoFeTBXtoZW6FM-CUgf?usp=drive_link)
+- Text generated using prompts in English for generation of text in (taget language). Annotations available [here](https://drive.google.com/drive/folders/1QclYd9l9z23QXJ4dwGq8kT40Hi7Y-_Se?usp=drive_link)
 
 #### Observations
-- Both Mixtral an gpt-4o reach a 24% constraint compliance rate (on 25 samples) for Italian. LLama is the worst performing model on Italian writing tasks and only reaches 16% positive rate.
-- All model generally perform better on English writing tasks. LLama specifically reaches a 100% positive rate, followed by mixtral (84%) and gpt-4o (68%)
-- All model perform generally worse on Russian writing tasks (below 20% positive rate). This may be due size of Russian input the models we chose were trained on (sadly no data about language training data split has been shared publicly by meta and openai).
+- Prompting the model in English did not improve/deteriorate completions quality.
+- Overall the model used (gpt-4o) seemed to perform better (i.e. adhere better to linguistics constraints) in English writing tasks.
+
+### (Second) Manual Evaluation
+After collecting completions for our 100 user prompt samples across all three languages and using three different models (gpt-4o, Mixtral 8x7b and Llama 3.1), we performed a second manual evaluation on a wider data sample (25 completions for each language, on all 3 models we collected data for).
+
+**Note:** Mixtral 8x7b was not trained on Russian. Mixtral output was annotated only for Italian and English.
+
+The manually annotated data is available [here](https://drive.google.com/drive/u/0/folders/1hCjmNpQX-DOgpWBZ8gYeX0v_E6N2oymZ).
+
+#### Observations
+- Mixtral an gpt-4o reach a 24% constraint compliance rate (on 25 samples) on Italian writing tasks. Llama is the worst performing model on Italian writing tasks and reaches a 16% compliance rate.
+- All models perform better on English writing tasks. LLama reaches a 100% compliance rate, followed by Mixtral (84%) and gpt-4o (68%).
+- All models perform worse on Russian writing tasks (> 20% compliance rate). This may be attributable to training dataset size for Russian language (sadly no data about training data language split has been released by Meta and OpenAI).
 
 ### Automatic boolean evaluation
-To automate the evaluation procedure we tried to make a LLM perform the inverse tasks, i.e.
+As a first approach to automatic evaluation, we tried to make a LLM perform the inverse tasks, i.e.
 
 ```
 Given this {text} and {language inventory}, check if the input text conforms to the given linguistics constraints.
 ```
 
-And basically associate each completion with a boolean compliant/non-compliant label.
+Expecting a boolean conform/non-conform output (similarly to what we did for manual completions annotation).
 
-We tested this approach on the same 12 prompts/completions couples and noticed very poor results (language-independent generalized issue).
+We tested this approach on the same 12 prompts/completions couples and noticed very poor results (compared to our manual annnotations).
 
 #### Giving the model some examples (shots)
-To check if the poor classification performance we observed could be solved by giving the model some examples (shots), we took another 5 (5 x language) prompts/completition couples and performed another round of manual evaluation.
+To check if the poor classification performance could be solved by giving the model some examples (shots), we took another 5 (5 x language) prompts/completition couples and performed another round of manual evaluation.
 
-These 15 samples were used to build a set of labeled examples to give the model.
+These 15 samples were then used to build a set of labeled examples to give to the model.
 
-We then re-collected evaluation data for our 12 manually checked examples in:
+We then re-collected evaluation data for our 12 manually annotated examples in:
 - 0 shots context
 - 5 shots context (using only examples in (target language))
 - 6 shots mixed language context
@@ -93,7 +93,7 @@ We then re-collected evaluation data for our 12 manually checked examples in:
 The data collected is available [here](https://drive.google.com/drive/folders/1-jmvOUAvZ3w4FACjZtOV1zc5qUcKxXiB?usp=drive_link).
 
 #### Observations
-The confusion matrix build using the manual evaluation labels as ground truth suggests that giving examples to the model, does not improve classification accuracy.
+The confusion matrix built using the manual evaluation labels as ground truth suggests that giving examples to the model, does not improve classification accuracy.
 
 |                | TP | TN | FP | FN | Accuracy          | Precision         | Recall            |
 | -------------- | -- | -- | -- | -- | ----------------- | ----------------- | ----------------- |
@@ -107,30 +107,30 @@ The confusion matrix build using the manual evaluation labels as ground truth su
 | P       | 11 |
 | N       | 25 |
 
-Even considering the low amount of data we collected and the possible presence of biases in the set of samples we chose, we can speculate that this task may be too difficult for a LLM.
+Even considering the low amount of data and the possible presence of biases in the set of examples we chose, we can speculate that this task may be too difficult for a LLM.
 
-### Automatic rule-based evaluation
-(Only on Italian) We also tested a rule-based evaluation approach.
+### Rule-based evaluation (Italian)
+We also tested a rule-based evaluation approach.
 
-Core idea: separate the text analysis (grammatical/syntactical features extraction) and evaluation processes.
+**Core idea:** separate the text analysis (morpho-syntactic features extraction) and evaluation processes.
 
-Starting from our Italian inventory we tried to define a set of user prompts to analyze (separately)e ach part-of-speech listed in our inventory.
+Starting from our Italian inventory we tried to define a set of user prompts to analyze (separately) each part-of-speech.
 
 Examples:
 - **Pronouns:** Extract the pronouns contained in the input text and find out their catagory
 - **Verbs:** Extract all verbs and annotate their morphological features
 ...
 
-A general idea on how this solution was implemented is described in the following sections.
+A general idea on how this solution was then implemented is described in the following sections.
 
 #### Step 1 - POS Tagging
-We found out that, even for basic grammar analysis tasks (e.g. pronouns extraction and categorization), gpt-4o struggles a lot on Italian text.
+We found out that, even for basic linguistics analysis tasks (e.g. pronouns extraction and categorization), gpt-4o struggles a lot on Italian text.
 
 To aid the model in morpho-syntactical analysis tasks we tried to pre-process the input text with a part-of-speech tagging module.
 
 We tested 3 POS tagging methods:
-- (Spacy)[https://spacy.io/] (a multi-lingua NLP python library)
-- LLM-aided analysis (using a specific user prompt)
+- (Spacy)[https://spacy.io/] (a multi-lingual NLP python library)
+- LLM-driven analysis (using a specific user prompt)
 - (Tint)[https://dh.fbk.eu/research/tint/] (this italian-specific NLP tool is based on stanza)
 
 The final output of this pre-process step is a JSON array containing each word of the original text along with its POS tag (see universal POS tags [HERE](https://universaldependencies.org/u/pos/)).
@@ -173,10 +173,11 @@ Using the tagged text as input, we defined a set of user prompt to analyze and e
 
 The prompts used, in a 0 shots context, are POS specific but overall very similar in structure.
 
-Given the tagged text as input, we ask the model to analyze a specific POS (e.g. only verbs) and extract relevant grammatical/morphological information.
+Given the tagged text as input, we ask the model to analyze a specific POS (e.g. verbs) and extract relevant grammatical/morphological information.
 
-A JSON schema is given as context and the request is to return a JSON object (or array) conformant to the given schema.
+A JSON schema is given as context and the request is to return a JSON object (or array) conform to the schema given.
 
+An example for numbers:
 ```
 Given the following part-of-speech (POS) tagged text:
 
@@ -211,63 +212,61 @@ Respond with a structured JSON array conforming to the schema attached below. No
 ```
 
 #### Step 3 - (Syntax) Information extraction
-To validate Italian syntactical constraints we basically needed an analisi logica del periodo on the input text.
+To validate Italian syntactical constraints we basically needed an 'analisi logica del periodo' on the input text.
 
-The approach we followed is similar to the one described in the previous section.
+The approach we chose is similar to the one described in the previous sections.
 
 In this case the prompt contains the original, untagged text.
 
-A complex JSON schema representing an analisi logica del periodo of a text of arbirary length is given as context and used to explain to the model the expected output format.
+A complex JSON schema representing an 'analisi logica del periodo' of a text of arbirary length is given as context and used to explain to the model the expected output format.
 
 Information we try to extract include:
-- Clauses contained in a sentence
-- Clauses kinds (main/coord/sub)
+- Clauses contained in each sentence.
+- Clauses kinds (main/coord./sub.).
 - Clauses functions/types
 - Subordination rank (where applicable)
 
 #### Step 4 - Evaluation
-The result of the previous 3 steps is an 'analysis document' in JSON format.
+The results of the previous 3 steps are combined in a JSON formatted 'analysis document'.
 
 Validation is carried out by statically parsing this JSON object via code.
 
 The final output contains a set of boolean labels that tell:
-- If the text respects all constraints.
-- If it respects specifically the constraint sets on verbs, pronouns, numbers and syntax.
-- A list of descriptive error messages if the input is found to be non-compliant.
+- If the input text respects all constraints present in the given inventory.
+- If it respects specifically constraint sets on verbs, pronouns, numbers and syntax.
+- A list of descriptive error messages (text) if the input is found to be non-compliant.
 
 #### (Note) Dealing with Italian Irregular Verbs
-_This issue is explained in-depth in the second part of this worklog._
+_This issue is explained in-depth in the second section of this worklog_
 
-Gpt-4o specifically was found to be widely unreliable in dealing with Italian Regular Verbs (in 0 shot classification scenarios).
+gpt-4o was found to be widely unreliable in dealing with Italian regular verbs (0 shots classification scenario).
 
-As a solution to this problem we opted for a lexicographic comparison with a list of known Italian Irregular Verbs.
-
-This is the solution that we ultimately chose for the automated evaluation methodology discussed in the previous sections.
+To solve this issue we opted for a lexicographic comparison with a list of known Italian irregular verbs. The final implementation uses this approach to check for verbs regularity.
 
 #### Observation
-- While this approach was found to be more robust than the boolean LLM based evaluation, it is strongly based on the content and structure of our italian invetory (language dependent).
-- There are some open issues in regards to Italian syntax analysis (No standard practices/conventions to carry out an 'Analsi Logica del Periodo').
-- Grammatical/Morphological analysis is still carried out using an LLM. The output quality of the POS tagging module can greatly influence the overall reliability of this automated evaluation system.
-- No comparison was made to find out which POS tagging method is more reliable. Tint seems to perform better on Italian texts but no statistical analysis was performed.
+- This approach was found to be more robust than the boolean LLM based evaluation, however is strongly based on the content and structure of our italian invetory (language dependent).
+- There are some open issues regarding Italian syntax analysis (no standard practices/conventions for 'analsi logica del periodo').
+- Grammatical/morphological analysis is still carried out using an LLM. Additionally the output quality of the POS tagging module can greatly influence the overall reliability of this automated evaluation system (as a whole, ndr).
+- No statistical analysis was performed to find out which POS tagging performs better.
 
 ## F.2 - Constraints based paraphrasing
-The following sections briefly describe what was done regarding our secodary study focus i.e. iterative paraphrasing of text to fit within constraints of a given linguistics inventory.
+The following sections briefly describe what was done in regards to our secodary study focus i.e. iterative paraphrasing of text to fit within constraints of a given linguistics inventory.
 
 ### Core Idea
 The core idea behind this approach can be described as follows:
-1. Take an arbitrary complex text, generated with/without linguistics constraints
+1. Take an arbitrary complex text, generated with/without linguistics constraints.
 2. Ask the model to check, for every sentence, if the constraints we want to validate are satisfied.
-    - If satisfied: keep text as is
-    - If not satisfied: transform the original text to satisfy the given constraints
+    - If satisfied: keep text as is.
+    - If not satisfied: transform the original text to satisfy the given constraints.
 
-This process can then be performed iteratively until no further changes are needed to make the text fit in our constraints lists
+This process can then be performed iteratively until no further changes are needed to make the text fit in our constraints lists (this is the de-facto exit condition of our implementation).
 
 ### First Iteration
-We decided to use a highly structured prompt (following ideas taken from meta-prompting prompt engineering techinques) and ask the model to apply chain-of-thought to formulate their response.
+We used a highly structured prompt (following ideas taken from meta-prompting prompt engineering approach) and ask the model to apply chain-of-thought to formulate their response.
 
-This was found to be a necessity to make the model actually consider all constrainst listed as context.
+Asking for a CoT was found to be a necessity to make the model to orderly consider all constrainst listed.
 
-Additionally, manual analysis of the model's CoT generated response, gives insights about linguistics elements the model fails to catalogue or understand properly.
+Additionally, manual analysis of the model's CoT, gives insights about linguistics elements the model fails to understand properly.
 
 ```
 # Task:
@@ -293,7 +292,7 @@ Provide a step-by-step reasoning to elaborate your answer. The expected final ou
 {constraints}
 ```
 
-**Issues:** To extract and iterate over the transformed text, we are currently asking the model to use specific delimiters to enclose its final response (this is non-optional as the response also contains all the model's reasoning steps).
+**Issues:** To extract and iterate over the transformed text, we ask  the model to use specific delimiters to enclose its final response (this is non-optional as the response also contains all the model's reasoning steps).
 
 The code that parses the model's response uses basic ReGEX expressions to extract the tranformed text.
 
@@ -302,7 +301,7 @@ This means that depending on how closely the model is able to follow the instruc
 #### Reviewing Inventories
 To formulate this 'rewriting' task as a constraints lead paraphrasis, we reviewed our linguistics inventories.
 
-We originally wrote them as a list of morpho-syntactic 'items', so to fit within our paraphrasing prompt, we had to rewrite them as lists of instructions on allowed/non-allowed items.
+We originally wrote them as a list of morpho-syntactic 'items', so to fit within our paraphrasing prompts, we had to rewrite them as lists of instructions on allowed/non-allowed items.
 
 No specific strategy was implemented to carry out this manual revision. We generally tried to optimize our constraints list for structure and clarity, using OpenAI's playground to informally check for issues and reword complex/unclear sentences.
 
@@ -323,38 +322,38 @@ An example on how the italian inventory was processed:
 ```
 
 ### Sentence-By-Sentence paraphrasing
-We informally observed a tendency in looping over paraphrases of irregular verbs (for Italian inputs) and, in some cases, the lack of attention on some constraints presented in sequence in our inventories.
+We informally observed a tendency in looping over paraphrasis of irregular verbs (for Italian inputs) and, in some cases, the lack of attention on some constraints sequencially listed in our inventories.
 
-Also, as a language independent issue, we noticed a general lack of logical 'soundness' in the paraphrases proposed by the model (i.e. bad, unnatural, or overall unsound substitutions).
+Also, as a widespread issue, we noticed a general lack of logical 'soundness' in the paraphrases proposed by the model (i.e. bad, unnatural, or overall unsound substitutions).
 
-A preliminary analysis on output data using our first system iteration (on English language) is available [here](https://docs.google.com/spreadsheets/d/1h16vICpQyBoTFmUQGMzBrDeMCXLTKZYFmPumB-rRVZc/edit?gid=2129388210#gid=2129388210).
+A preliminary analysis on output data using our first implementation (on English language) is available [here](https://docs.google.com/spreadsheets/d/1h16vICpQyBoTFmUQGMzBrDeMCXLTKZYFmPumB-rRVZc/edit?gid=2129388210#gid=2129388210).
 
-Assuming an issue with input length, we also tested a sentence-by-sentence paraphrasing approach.
+We assumed an issue with input length, so we also tested a sentence-by-sentence paraphrasing approach.
 
-The prompt we used is very similar to the one attached in the previous section, therefore it is not included here.
+The prompt we used is very similar to the one attached to the previous section, therefore it is not included here.
 
-**Note:** Sentencizing was carried out using spacy (for all languages). This is a simple NLP task and no issue was observed across the data we analyzed.
+**Note:** Sentencizing was carried out using spacy (for all languages). This is a simple NLP task and no issue was observed across analyzed data.
 
 #### Observations
-To get an idea on recurring issues/error in paraphrases we manually reviewed a set of 12 paraphrases in Italian and Russian, comparing the two methods (full-text paraphrasing and sentence-by-sentence).
+To get an idea on recurring paraphrasing issues, we manually checked a set of 12 paraphrases in Italian and Russian, comparing the two methods (full-text paraphrasing and sentence-by-sentence).
 
 The Italian annotations are available [here](https://docs.google.com/spreadsheets/d/1VFGowGpYmdtNCS8_tlWsWSrVpbMbNS1C/edit?usp=drive_link&ouid=111186755018075460643&rtpof=true&sd=true) and the Russian annotations [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn).
 
 We observed:
 - (Italian) No performance gain/loss between the two methods. Also paraphrases quality seems overall unaffected by the method used.
 - (Italian) A generalized difficulty in checking and paraphrasing irregular verbs. Also (less severe) a difficulty in correctly identifying tenses and moods (within our allowed/not-allowed verbs constraints).
-- (Russian) A similar issue in checking for irregular verbs.
+- (Russian) A similar issue in cataloguing regular/irregular verbs.
 - (Russian) A noticeable improvement in paraphrases quality using the sentence-by-sentence approach.
 - (Both) Overall a lack of quality, and in some cases logical unsoundness, in proposed paraphrases.
 
 ### Dealing with irregular Verbs (Italian)
-Our preliminary analysis of paraphrases for Italian texts revealed a widespread issue in dealing and identifiying irregular verbs.
+Our preliminary analysis of paraphrases for Italian texts revealed a widespread issue in dealing with irregular verbs.
 
 A quick test revealed, at least for gpt-4o, a lack of understanding about the concept of regular/irregular verbs in 0 shots contexts.
 
-The best results in dealing with irregular verbs by prompting a model, where:
+We saw the best results in dealing with irregular when:
 - By using a specific 'meta-prompting' style instructions list describing a complete procedure to check for irregular italian verbs. In 0 shots contexts the model is still unable to recognize verbs that present minor 'irregularities' (e.g. 'Assistere'). An example is attached below
-- By including a list of known irregular verbs as context in our user prompt (note that this approach, while functional)
+- By including a list of known irregular verbs as context in our user prompt (note that this approach, while functional consumes a lot of input tokens)
 
 ```
 Check if the following Italian verb is regular or irregular.
@@ -387,18 +386,18 @@ Include your reasoning process in your response. The final expected output is a 
 ```
 
 ### Lexicographic Analysis
-Considering the issues described above, we decided to try to manage irregular verbs 'outside' of the LLM constraints analysis/paraphrasing loop.
+Considering the issues described in the previous section, we decided to try to manage irregular verbs 'outside' of the LLM constraints analysis/paraphrasing loop.
 
-We built a list of known irregular verbs by querying WiKitionary for items catalogued under "Italian Irregular Verbs", see this [url](https://en.wiktionary.org/wiki/Category:Italian_irregular_verbs).
+We built a list of known irregular verbs by querying Wikitionary for items catalogued under "Italian Irregular Verbs", see this [url](https://en.wiktionary.org/wiki/Category:Italian_irregular_verbs).
 
 The result is a 8K token length list. To optimize token usage we opted for a static lexicographic comparision.
 
-Briefly, the module used to check for irregular verbs presence in our input texts performs the following steps:
+Briefly, the module used to check for irregular verbs presence performs the following steps:
 - POS tagging (using one of the following: Spacy, Tint, or a LLM prompted with a specific user prompt) and lemmatization
 - Selection of elements tagged as VERB
 - Comparison of their lemma with our known-irregulars list
 
-Results quality seems to vary a lot depending on the POS tagging method used.
+Results quality seems to vary a lot between POS tagging method.
 
 ### Implementation
 The irregular verbs analysis described above was implemented in a 2-Steps Paraphrasing system.
@@ -407,12 +406,12 @@ We decided to separate the analysis task in two sub-tasks
 - **error detection:** By prompting an LLM to just check, sentence-by-sentence, for errors in constraints adherence (given a linguistics constraints list as context).
 - **error correction:** By using the error list returned from the first analysis step to effectively paraphrase, within the boundaries defined by the same constraints lists, unconformant items.
 
-The constraints on irregular verbs is not checked during the error detection process and is delegated to a module, based on a POS tagger, that enriches the first analysis step output with additional info about irregular verbs (where applicable).
+The constraints on irregular verbs are not checked during the error detection process and this operation was delegated to a module, based on a POS tagger, that enriches the first analysis outputs with additional info about irregular verbs (if any are present).
 
 A schema is attached below for clarity.
 ![image](./res/diagram-multistep.png). 
 
 #### Observation
-While this solution, depending on the POS-Tagging method used, deals better with irregular verbs detection and substitution, we observed no improvements in subsitutions **logical soundness**.
+While this solution deals better with irregular verbs detection and substitution, we observed no improvements in subsitutions **logical soundness**.
 
-We can hypothesize a lack of understanding on what constitutes a **paraphrase that preserve the original semantic meaning and minimize information loss** from the LLM we tested.
+We can hypothesize a lack of understanding on what constitutes a **paraphrase that preserve the original semantic meaning and minimize information loss**. Note that at the moment of writing in-depth analysis (on a small subset of data) was performed only on gpt-4o.
