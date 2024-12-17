@@ -299,29 +299,120 @@ The code that parses the model's response uses basic ReGEX expressions to extrac
 
 This means that depending on how closely the model is able to follow the instructions given, the whole iteration process may fail or succeed.
 
-### Sentence-By-Sentence paraphrasing
-We informally observed a tendency in looping over paraphrasis of irregular verbs (for Italian input texts) and in some cases the lack of attention on some constraints present in our inventories.
+#### Reviewing Inventories
+To formulate this 'rewriting' task as a constraints lead paraphrasis, we reviewed our linguistics inventories.
 
-Also, as a language independent issue, we noticed a general lack of logical 'soundness' in the paraphrases formulated by the model (i.e. bad or overall unsound substitutions).
+We originally wrote them as a list of morpho-syntactic 'items', so to fit within our paraphrasing prompt, we had to rewrite them as lists of instructions on allowed/non-allowed items.
+
+No specific strategy was implemented to carry out this manual revision. We generally tried to optimize our constraints list for structure and clarity, using OpenAI's playground to informally check for issues and reword complex/unclear sentences.
+
+An example on how the italian inventory was processed:
+```
+- Nouns, Adjectives, Adverbs, Prepositions, Conjunctions, and Interjections: These may be used without limitations.
+- Pronouns: Only personal, possessive, demonstrative, interrogative, and indefinite pronouns are allowed.
+- Numerals: Cardinal numbers may be used without limitation. Ordinal numbers must be limited to range 1-3.
+- Verbs: essere, avere, volere, potere, dovere, and regular Italian verbs are allowed. Any other irregular verbs are forbidden.
+- Verbs have to be conjugated in active voice.
+- Verbs have to be conjugated strictly in the following moods and tense combinations:
+    - Indicativo: presente e passato prossimo
+    - Infinito: presente
+    - Imperativo: presente (only 2nd singular and plural persons)
+- Simple clauses may only assume declarative, volitive (using imperative mood), or interrogative functions.
+- Coordinate clauses may only be copulative, adversative, or declarative.
+- Subordinate clauses may only assume causal, temporal, final (in implicit form), hypothetical (introduced by 'se'), or relative functions.
+```
+
+### Sentence-By-Sentence paraphrasing
+We informally observed a tendency in looping over paraphrases of irregular verbs (for Italian inputs) and, in some cases, the lack of attention on some constraints presented in sequence in our inventories.
+
+Also, as a language independent issue, we noticed a general lack of logical 'soundness' in the paraphrases proposed by the model (i.e. bad, unnatural, or overall unsound substitutions).
 
 A preliminary analysis on output data using our first system iteration (on English language) is available [here](https://docs.google.com/spreadsheets/d/1h16vICpQyBoTFmUQGMzBrDeMCXLTKZYFmPumB-rRVZc/edit?gid=2129388210#gid=2129388210).
 
-Assuming a difficulty with input length, we also tested a sentence-by-sentence paraphrasing approach. The prompt is very similar to the one attached in the previous section, therefore it is not included here.
+Assuming an issue with input length, we also tested a sentence-by-sentence paraphrasing approach.
 
-**Note:** Sentencizing was carried out using spacy for all languages.
+The prompt we used is very similar to the one attached in the previous section, therefore it is not included here.
+
+**Note:** Sentencizing was carried out using spacy (for all languages). This is a simple NLP task and no issue was observed across the data we analyzed.
 
 #### Observations
-To get an idea about recurring issues/error in paraphrases we manually reviewed a set of 12 paraphrases in Italian and Russian, comparing the two methods (full-text paraphrasing and sentence-by-sentence).
+To get an idea on recurring issues/error in paraphrases we manually reviewed a set of 12 paraphrases in Italian and Russian, comparing the two methods (full-text paraphrasing and sentence-by-sentence).
 
-The Italian annotations are available [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn) and the annotation for Russian are available [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn).
+The Italian annotations are available [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn) and the Russian annotations [here](https://drive.google.com/drive/u/0/folders/10AVAk_LPsTgfrOY0oMPCoJt0eEnh1pgn).
 
 We observed:
-- (Italian) No performance gain/loss between the two methods. Also we noticed that paraphrases quality seems overall unaffected by the method used.
-- (Italian) A generalized difficulty in checking and paraphrasing irregular verbs. Also (less severe) a difficulty in correctly identifying tenses and moods.
-- (Russian) A similar issue in checking for irregular verbs
-- (Russian) A noticeable improvement in paraphrases quality using the sentence-by-sentence approach
+- (Italian) No performance gain/loss between the two methods. Also paraphrases quality seems overall unaffected by the method used.
+- (Italian) A generalized difficulty in checking and paraphrasing irregular verbs. Also (less severe) a difficulty in correctly identifying tenses and moods (within our allowed/not-allowed verbs constraints).
+- (Russian) A similar issue in checking for irregular verbs.
+- (Russian) A noticeable improvement in paraphrases quality using the sentence-by-sentence approach.
 - (Both) Overall a lack of quality, and in some cases logical unsoundness, in proposed paraphrases.
 
 ### Dealing with irregular Verbs (Italian)
 Our preliminary analysis of paraphrases for Italian texts revealed a widespread issue in dealing and identifiying irregular verbs.
 
+A quick test revealed, at least for gpt-4o, a lack of understanding about the concept of regular/irregular verbs in 0 shots contexts.
+
+The best results in dealing with irregular verbs by prompting a model, where:
+- By using a specific 'meta-prompting' style instructions list describing a complete procedure to check for irregular italian verbs. In 0 shots contexts the model is still unable to recognize verbs that present minor 'irregularities' (e.g. 'Assistere'). An example is attached below
+- By including a list of known irregular verbs as context in our user prompt (note that this approach, while functional)
+
+```
+Check if the following Italian verb is regular or irregular.
+
+---
+{verb}
+---
+
+Procedure:
+1. Find the verb's lemma (e.g. 'ho mangiato' -> mangiare).
+2. Choose a known regular verb belonging to the same conjugation. Known regular verbs include:
+  - 1st conj. ('are') -> 'cantare'
+  - 2nd conj. ('ere') -> 'ricevere'
+  - 3rd conj. ('ire') -> 'partire'
+3. Conjugate both verbs in all finite and non-finite moods.
+4. Compare the results to define if the given verb is regular or irregular. Italian irregular verb may present one or more of the following patterns:
+  - root changes when conjugated in some mood/tense combinations.
+  - suffix changes (when compared to a regular verb of the same conjugation) in some mood/tense combinations.
+  - unpredictable thematic modifications when conjugated in some mood/tense combinations.
+  
+Output format:
+Include your reasoning process in your response. The final expected output is a boolean value telling if the given verb is/isn't regular. Reference the following JSON template:
+
+---
+{
+	'verb' : '<the verb analyzed>',
+	'regular': <true/false>
+}
+---
+```
+
+### Lexicographic Analysis
+Considering the issues described above, we decided to try to manage irregular verbs 'outside' of the LLM constraints analysis/paraphrasing loop.
+
+We built a list of known irregular verbs by querying WiKitionary for items catalogued under "Italian Irregular Verbs", see this [url](https://en.wiktionary.org/wiki/Category:Italian_irregular_verbs).
+
+The result is a 8K token length list. To optimize token usage we opted for a static lexicographic comparision.
+
+Briefly, the module used to check for irregular verbs presence in our input texts performs the following steps:
+- POS tagging (using one of the following: Spacy, Tint, or a LLM prompted with a specific user prompt) and lemmatization
+- Selection of elements tagged as VERB
+- Comparison of their lemma with our known-irregulars list
+
+Results quality seems to vary a lot depending on the POS tagging method used.
+
+### Implementation
+The irregular verbs analysis described above was implemented in a 2-Steps Paraphrasing system.
+
+We decided to separate the analysis task in two sub-tasks
+- **error detection:** By prompting an LLM to just check, sentence-by-sentence, for errors in constraints adherence (given a linguistics constraints list as context).
+- **error correction:** By using the error list returned from the first analysis step to effectively paraphrase, within the boundaries defined by the same constraints lists, unconformant items.
+
+The constraints on irregular verbs is not checked during the error detection process and is delegated to a module, based on a POS tagger, that enriches the first analysis step output with additional info about irregular verbs (where applicable).
+
+A schema is attached below for clarity.
+![image](./res/diagram-multistep.png). 
+
+#### Observation
+While this solution, depending on the POS-Tagging method used, deals better with irregular verbs detection and substitution, we observed no improvements in subsitutions **logical soundness**.
+
+We can hypothesize a lack of understanding on what constitutes a **paraphrase that preserve the original semantic meaning and minimize information loss** from the LLM we tested.
