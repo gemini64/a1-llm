@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/nouns_en.json",
+    "title": "Nouns",
+    "description": "A list of nouns",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes the linguistics features of a noun.",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The noun extracted."
+            },
+            "number": {
+                "enum": ["singular", "plural"],
+                "description": "The noun number."
+            },
+            "possessive": {
+                "type": "boolean",
+                "description": "True if the noun is in possessive form (e.g. boy's)."
+            },
+            "regular": {
+                "type": "boolean",
+                "description": "True if the noun has a regular plural form."
+            }
+        },
+        "required": ["text", "number", "possessive", "regular"]
+    }
+}

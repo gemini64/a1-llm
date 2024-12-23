@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/pronouns_en.json",
+    "title": "Pronouns",
+    "description": "A list of pronouns",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes the linguistics features of a pronoun.",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The pronoun extracted."
+            },
+            "kind": {
+                "enum": [ "personal", "reflexive", "possessive", "reciprocal", "relative", "interrogative", "demonstrative", "indefinite" ],
+                "description": "The pronoun kind, based on the English language pronouns categories."
+            }
+        },
+        "required": ["text", "kind"]
+    }
+}

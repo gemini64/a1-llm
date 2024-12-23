@@ -5,6 +5,7 @@ test/
 tools/
 utils/
 tint.tar.gz
+reference/
 
 # --- macOS ---
 # General

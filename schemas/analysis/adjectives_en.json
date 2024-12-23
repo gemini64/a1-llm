@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/adjectives_en.json",
+    "title": "Adjectives",
+    "description": "A list of adjectives",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes the linguistics features of an adjective.",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The adjective extracted."
+            },
+            "degree": {
+                "enum": ["positive", "comparative", "superlative"],
+                "description": "The adjective degree."
+            },
+            "irregular": {
+                "type": "boolean",
+                "description": "True if the adjective is irregular (i.e. if its comparative and superlative forms do not follow standard formation patterns and/or present thematic changes when compared to the adjective base form)."
+            },
+            "function": {
+                "enum": ["descriptive", "interrogative", "possessive", "other"],
+                "description": "The adjective function. It should be labeled as ' other ' if it cannot be cataloged as descriptive, interrogative or possessive."
+            }
+        },
+        "required": ["text", "function"]
+    }
+}
