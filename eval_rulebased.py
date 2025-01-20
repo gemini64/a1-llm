@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from pos_tagger import POSTagger, Language, TAGMethod
-from parsers import parse_italian_analysis
+from parsers import parse_italian_analysis, parse_english_analysis
 
 # load secrets
 if(os.getenv("PY_ENV") == "DEVELOPMENT"):
@@ -14,10 +14,11 @@ if(os.getenv("PY_ENV") == "DEVELOPMENT"):
 # setup argparse
 parser = argparse.ArgumentParser(
     prog='eval_rulebased_it',
-    description='performs a series of analysis and evaluation tasks on (italian) text using an oai LLM')
+    description='performs a series of analysis and evaluation tasks on (italian/english) text using an oai LLM')
 
 parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
 parser.add_argument("tasks", help="a JSON file containing analysis tasks to perform")
+parser.add_argument("-l", "--language", help="the language to validate constraints against", required=True)
 parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')
 parser.add_argument('-o', '--output', help="(optional) output file")
 
@@ -27,6 +28,7 @@ args = parser.parse_args()
 input_file = args.input
 tasks_file = args.tasks
 analysis_only = args.analysis
+input_language = args.language
 output_file = args.output if args.output != None else (f"{os.path.splitext(input_file)[0]}_analysis.tsv" if analysis_only else f"{os.path.splitext(input_file)[0]}_eval.tsv")
 
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
@@ -39,6 +41,10 @@ if (not (os.path.isfile(tasks_file) and (os.path.splitext(tasks_file)[-1].lower(
 
 if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file)))):
     print(f"Error: an output file with path '{output_file}' already exists!")
+    exit(2)
+
+if (not input_language in set(["italian", "english"])):
+    print(f"Error: '{input_language}' is not a supported language to validate against!")
     exit(2)
 
 completions = None
@@ -62,7 +68,11 @@ llm = ChatOpenAI(
 )
 
 # set up pos tagger
-tagger = POSTagger(language=Language.IT, method=TAGMethod.TINT)
+match input_language:
+    case "italian":
+        tagger = POSTagger(language=Language.IT, method=TAGMethod.TINT)
+    case _:
+        tagger = POSTagger(language=Language.EN, method=TAGMethod.SPACY)
 
 # analyze data
 analysis_data = []
@@ -117,7 +127,13 @@ if analysis_only:
 # Step 2 - Rule-based evaluation
 eval_data = []
 for elem in analysis_data:
-    results = parse_italian_analysis(elem)
+    
+    match input_language:
+        case "italian":
+            results = parse_italian_analysis(elem)
+        case _:
+            results = parse_english_analysis(elem)
+
     eval_data.append(results)
 
 # now, we select all keys and set everyting for data insertion

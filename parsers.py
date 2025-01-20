@@ -2,8 +2,10 @@ import copy
 from pos_tagger import POSTagger, Language, TAGMethod
 from agent_tools import is_regular_it_verb
 
+# --- italian
+
 # Eval template
-italian_eval_report = {
+italian_eval_template = {
     "conform": True,
     "pronouns_conform": True,
     "numbers_conform": True,
@@ -38,8 +40,8 @@ coordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type'
 subordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which is outside of the specifications of the A1 inventory."""
 subordinate_clause_conditional_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which is allowed according to the A1 inventory, however it does not seem to be introduced by 'se', which is a requirement."""
 
-def parse_italian_analysis(input: dict) -> bool:
-    results = copy.deepcopy(italian_eval_report)
+def parse_italian_analysis(input: dict) -> dict:
+    results = copy.deepcopy(italian_eval_template)
     """Given a text analysis report, performs a
     rule-based evaluation to check if the italian A1
     invetory constraints are satisfied."""
@@ -182,5 +184,167 @@ def parse_italian_analysis(input: dict) -> bool:
                     results["syntax_conform"] = False
 
                     results["error_messages"].append(subordinate_clause_conditional_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
+
+    return results
+
+# --- english
+
+# Eval template
+english_eval_template = {
+    "conform": True,
+    "nouns_conform": True,
+    "pronouns_conform": True,
+    "adjectives_conform": True,
+    "verbs_conform": True,
+    "error_messages": []
+}
+
+english_allowed_pronouns = ["personal", "possessive", "interrogative", "demonstrative"]
+english_allowed_interrogative_pronouns = ["who", "what", "which"]
+english_allowed_adjectives = [ "descriptive", "interrogative", "possessive"]
+english_allowed_modals = ["can", "will"]
+
+# here we use the mood as key to simplify checks
+english_allowed_finite_conj = {
+    "indicative": [('present', 'simple'), ('present', 'perfect'), ('present', 'continous'), ('past', 'simple'), ('past', 'continous')],
+    "imperative": []
+}
+
+english_allowed_passive_voice_conj = {
+    "indicative": [('present', 'simple'), ('past', 'simple')]
+}
+
+english_noun_irregular_error_message = "The noun '{text}' has an irregular plural form, which is not allowed according to the A1 inventory noun specs."
+english_pronoun_category_error = "The pronoun '{text}' belongs to the '{kind}' category. This pronoun category does not belong to the A1 inventory"
+english_pronoun_interrogative_error = "The pronoun '{text}' is an interrogative pronoun, however only 'who', 'what' and 'which' are allowed according to the A1 inventory pronoun specs."
+english_adjective_irregular_error = "The adjective '{text}', with 'degree' = '{degree}', is an irregular adjective. This is not allowed according to the A1 inventory adjective specs."
+english_adjective_category_error = "The adjective '{text}' has a function outside of the A1 inventory allowed set ('descriptive', 'interrogative', 'possessive')."
+english_finite_conj_error = "The verb '{text}' is conjugated in a mood x tense x aspect combination outside of the A1 verbs specs."
+english_finite_voice_error = "The verb '{text}' is in 'voice' = '{voice}', however its mood x tense x aspect combination is not allowed in passive voice, according to the A1 inventory."
+english_modal_verb_error = "The verb '{text}', includes the modal '{auxiliary}'. This is not one of the allowed A1 inventory modal verbs."
+
+def parse_english_analysis(input: dict) -> dict:
+    results = copy.deepcopy(english_eval_template)
+    """Given a text analysis report, performs a
+    rule-based evaluation to check if the english A1
+    invetory constraints are satisfied."""
+
+    # check nouns
+    for noun in input["nouns"]:
+        text = noun["text"].lower()
+        number = noun["number"].lower()
+        possessive = noun["possessive"]
+        regular = noun["regular"]
+
+        # 1 - check if noun is plural + irregular
+        if (number == "plural" and (not regular)):
+            results["conform"] = False
+            results["noun_conform"] = False
+
+            results["error_messages"].append(english_noun_irregular_error_message.format(text = text))
+
+    # check pronouns
+    for pronoun in input["pronouns"]:
+        text = pronoun["text"].lower()
+        kind = pronoun["kind"].lower()
+
+        # 1 - check if pronoun category is allowed
+        if (not (kind in set(english_allowed_pronouns))):
+            results["conform"] = False
+            results["pronouns_conform"] = False
+
+            results["error_messages"].append(english_pronoun_category_error.format(text = text, kind = kind))
+
+        # 2 - check if interrogative pronoun is within allowed list
+        if (kind == "interrogative" and (not (text in set(english_allowed_interrogative_pronouns)))):
+            results["conform"] = False
+            results["pronouns_conform"] = False
+
+            results["error_messages"].append(english_pronoun_interrogative_error.format(text = text))
+    
+    # check adjectives
+    for adjective in input["adjectives"]:
+        text = adjective["text"].lower()
+        function = adjective["function"].lower()
+
+        # 1 - check if function is within allowed categories
+        if (not (function in set(english_allowed_adjectives))):
+            results["conform"] = False
+            results["adjectives_conform"] = False
+
+            results["error_messages"].append(english_adjective_category_error.format(text = text))
+        
+        # 2 - if function is descriptive, also check degree and regularity
+        if (function == "descriptive"):
+
+            degree = adjective["degree"].lower()
+            irregular = adjective["irregular"]
+
+            if (irregular):
+                results["conform"] = False
+                results["adjectives_conform"] = False
+
+                results["error_messages"].append(english_adjective_irregular_error.format(text = text, degree = degree))
+
+
+    # check verbs
+    for verb in input["verbs"]:
+        text = verb["text"].lower()
+        lemma = verb["lemma"].lower()
+        modal = verb["modal"]
+        finite = verb["finite"]
+
+        # 1 - Check modal verbs
+        if (modal):
+
+            print(f"---{text}\n{lemma}\n{verb.get('auxiliary')}\n---")
+
+            auxiliary = verb.get("auxiliary")
+            auxiliary = lemma if auxiliary is None else auxiliary.lower()
+
+            if (not (auxiliary in set(english_allowed_modals))):
+                results["conform"] = False
+                results["verbs_conform"] = False
+
+                results["error_messages"].append(english_modal_verb_error.format(text = text, auxiliary=auxiliary))
+        
+        # 2 - finite verbs forms
+        if (finite):
+
+            voice = verb["voice"].lower()
+            mood = verb["mood"].lower()
+            tense = verb.get("tense")
+            aspect = verb.get("aspect")
+
+            # 2A - Conj
+            if (mood in english_allowed_finite_conj.keys()):
+                if(not mood == "imperative"):
+                    if(not ((tense, aspect) in set(english_allowed_finite_conj[mood]))):
+                        results["conform"] = False
+                        results["verbs_conform"] = False
+
+                        results["error_messages"].append(english_finite_conj_error.format(text = text))
+            else:
+                results["conform"] = False
+                results["verbs_conform"] = False
+
+                results["error_messages"].append(english_finite_conj_error.format(text = text))
+
+
+            # 2B - Voice
+            if (voice == "passive"):
+                if (mood in english_allowed_passive_voice_conj.keys()):
+                    if (not((tense, aspect) in set(english_allowed_passive_voice_conj[mood]))):
+                        results["conform"] = False
+                        results["verbs_conform"] = False
+
+                        results["error_messages"].append(english_finite_voice_error.format(text = text, voice=voice))
+                
+                else:
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(english_finite_voice_error.format(text = text, voice=voice))
+            
 
     return results

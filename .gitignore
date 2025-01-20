@@ -6,6 +6,7 @@ tools/
 utils/
 tint.tar.gz
 reference/
+datasets/
 
 # --- macOS ---
 # General
