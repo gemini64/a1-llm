@@ -13,10 +13,10 @@ if(os.getenv("PY_ENV") == "DEVELOPMENT"):
 
 # setup argparse
 parser = argparse.ArgumentParser(
-    prog='eval_rulebased_it',
-    description='performs a series of analysis and evaluation tasks on (italian/english) text using an oai LLM')
+    prog='eval_rulebased',
+    description='performs a series of analysis and evaluation tasks on (italian/english) texts using an oai LLM')
 
-parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
+parser.add_argument("input", help="a TSV file containing the texts to evaluate")
 parser.add_argument("tasks", help="a JSON file containing analysis tasks to perform")
 parser.add_argument("-l", "--language", help="the language to validate constraints against", required=True)
 parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')

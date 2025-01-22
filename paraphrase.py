@@ -13,20 +13,22 @@ if (os.getenv("PY_ENV") == "DEVELOPMENT"):
 # set up parser
 parser = argparse.ArgumentParser(
     prog="paraphrase",
-    description="Given a set of prompts/completions as input, performs a set of text transformations to make the input text conform to a given list of linguistics constraints."
+    description="Given a set of texts as input, performs a set of text transformations to make the input text conform to a given list of linguistics constraints."
 )
 
-parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
-parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistics constraints to evaluate against", required=True)
+parser.add_argument("input", help="a TSV file containing the texts to paraphrase")
+parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistics constraints to paraphrase against", required=True)
+parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
 
 # validate arguments
-# --- Note that only a minimum path validation is performed
+# --- Note that only minimum path validation is performed
 args = parser.parse_args()
 
 input_file = args.input
 constraints_file = args.constraints
+column_label = args.label
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_paraphrases.tsv"
 use_groq = args.groq
 
@@ -42,13 +44,21 @@ if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.ab
     print(f"Error: an output file with path '{output_file}' already exists!")
     exit(2)
 
-# load data
+# --- load and preprocess data
 constraints = ""
 with open(constraints_file, "r", encoding="utf-8") as f_in:
     constraints = f_in.read()
 
 df = pd.read_csv(input_file, sep="\t", encoding="utf-8", header=0)
-completions = df["completions"]
+
+# check if submitted label exists
+if column_label not in df:
+    print(f"Error: no column named '{column_label}' exists in '{input_file}'!")
+    exit(2)
+
+# now we drop unneded columns and rename
+df = df[[column_label]]
+df.rename(columns={column_label :'inputs'}, inplace=True)
 
 # set up prompt
 user_message = """# Task:
@@ -108,8 +118,9 @@ iterations = []
 messages = []
 
 # iterate over texts
-for completion in completions:
-    current = completion
+input_texts = df['inputs']
+for input_text in input_texts:
+    current = input_text
     message_session = []
     iteration = None
 

@@ -12,10 +12,11 @@ if (os.getenv("PY_ENV") ==  "DEVELOPMENT"):
 # set up parser
 parser = argparse.ArgumentParser(
     prog="paraphrase_multistep_it",
-    description="Given a set of prompts/completions as input, performs a set of text transformations to make the input text conform to a given list of linguistics constraints."
+    description="Given a set of texts as input, performs a set of text transformations to make the input text conform to a given list of linguistics constraints."
 )
 
-parser.add_argument("input", help="a TSV file containing the text completions to evaluate")
+parser.add_argument("input", help="a TSV file containing the texts to paraphrase")
+parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-o', '--output', help="(optional) output file")
 
 # validate arguments
@@ -23,6 +24,7 @@ parser.add_argument('-o', '--output', help="(optional) output file")
 args = parser.parse_args()
 
 input_file = args.input
+column_label = args.label
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_paraphrases_multistep_it.tsv"
 
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
@@ -35,6 +37,15 @@ if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.ab
 
 # --- load data
 df = pd.read_csv(input_file, sep="\t", encoding="utf-8", header=0)
+
+# check if submitted label exists
+if column_label not in df:
+    print(f"Error: no column named '{column_label}' exists in '{input_file}'!")
+    exit(2)
+
+# now we drop unneded columns and rename
+df = df[[column_label]]
+df.rename(columns={column_label :'inputs'}, inplace=True)
 
 max_iterations = 10
 constraints_file = "./inventories/constraints_italian.md"
@@ -166,16 +177,16 @@ correction_template = ChatPromptTemplate.from_messages(
 control_chain = control_template | llm | json_message_parser
 correction_chain = correction_template | llm | json_message_parser
 
-# --- fetch completions from input data
-completions = df["completions"]
+# --- fetch texts from input data
+input_texts = df["inputs"]
 paraphrases = []
 iterations = []
 
 # iterate
-for completion in completions:
+for input_text in input_texts:
     
     counter = 0
-    text = completion
+    text = input_text
 
     for i in range (1, max_iterations):
         counter = i

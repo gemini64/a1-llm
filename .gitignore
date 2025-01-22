@@ -6,6 +6,8 @@ tools/
 utils/
 tint.tar.gz
 reference/
+datasets/merlin/data
+datasets/wiki/*.json
 
 # --- macOS ---
 # General
