@@ -2,7 +2,7 @@ import os, re
 import pandas as pd
 
 ###
-# Extracts data from tatoeba italian sentences datasets
+# Extracts data from tatoeba italian sentences dataset
 # with (optional) selection filters
 #
 # See the following link:

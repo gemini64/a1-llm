@@ -11,7 +11,7 @@ Nouns, adjectives, adverbs, prepositions, conjunctions and interjections have be
     - indicativo passato prossimo
     - infinito presente
     - imperativo (forma attiva e negativa alla 2a persona singolare e plurale)
-
+    - condizionale presente (esclusivamente del verbo 'volere' nella sola prima persona singolare)
 # Sintassi
 - le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative
 - le proposizioni complesse coordinate copulative, avversative e dichiarative

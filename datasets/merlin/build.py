@@ -2,6 +2,17 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+###
+# Extracts data from merlin solr XML files ('merlin-solr-v1.1.zip')
+# (Optionally) applies selection filters to retrieved data
+#
+# See the following link:
+#     https://gitlab.inf.unibz.it/commul/merlin-platform/merlin-solr
+#
+# Expected input path:
+#     './data/*.xml'
+###
+
 def extract_fields_from_xml(xml_file: str, field_names: list[str] = []) -> dict:
     """
     Extract specified fields from an XML file.
@@ -74,9 +85,10 @@ def process_xml_files(input_dir: str, field_names: list[str] = []) -> pd.DataFra
     return df
 
 # --- flags
-input_dir = "./data"
+input_dir = "./data" # input directory
 output_file = "./output.tsv"
 
+# extracted properties
 fields = [
     "_test_level_cefr",
     "_rating_coherence",
@@ -95,8 +107,8 @@ fields = [
 # all cefr levels
 # cefr_l = [ "A1", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C2" ]
 
-filter_overall_rating = True
-filter_grammatical_accuracy = True
+filter_overall_rating = True # if true, filters out records on the basis of overall CEFR rating
+filter_grammatical_accuracy = True # if true, filters out records on the basis of rated grammatical accuracy
 
 set_overall_rating = [ "B1", "B1+", "B2", "B2+", "C1", "C2" ]
 set_grammatical_accuracy = [ "B2", "B2+", "C1", "C2" ]

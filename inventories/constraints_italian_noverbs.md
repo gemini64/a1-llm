@@ -6,6 +6,7 @@
     - Indicativo: presente e passato prossimo
     - Infinito: presente
     - Imperativo: presente (only 2nd singular and plural persons)
+    - Condizionale: presente (only the verb 'volere' and eclusively in the first singular person i.e. 'vorrei')
 - Simple clauses may only assume declarative, volitive (using imperative mood), or interrogative functions.
 - Coordinate clauses may only be copulative, adversative, or declarative.
 - Subordinate clauses may only assume causal, temporal, final (in implicit form), hypothetical (introduced by 'se'), or relative functions.
