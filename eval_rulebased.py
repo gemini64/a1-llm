@@ -18,7 +18,8 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="a TSV file containing the texts to evaluate")
 parser.add_argument("tasks", help="a JSON file containing analysis tasks to perform")
-parser.add_argument("-l", "--language", help="the language to validate constraints against", required=True)
+parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True)
+parser.add_argument("-l", "--label", )
 parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')
 parser.add_argument('-o', '--output', help="(optional) output file")
 

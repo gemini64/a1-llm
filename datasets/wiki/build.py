@@ -3,6 +3,13 @@ from time import sleep
 from bs4 import BeautifulSoup
 import pandas as pd
 
+###
+# Crawls a list of wiki pages (from any wikimedia foundation portal)
+# and fetches summaries for supplied articles.abs
+#
+# (Optionally) applies selection filters to retrieved data
+###
+
 def strip_quotes(input: str) -> str:
     """Takes a string and uses regex pattern matching
     to remove wikipedia style quotes."""

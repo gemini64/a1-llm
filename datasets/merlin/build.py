@@ -4,7 +4,7 @@ from pathlib import Path
 
 ###
 # Extracts data from merlin solr XML files ('merlin-solr-v1.1.zip')
-# (Optionally) applies selection filters to retrieved data
+# (Optionally) applies sselection filters to retrieved data
 #
 # See the following link:
 #     https://gitlab.inf.unibz.it/commul/merlin-platform/merlin-solr

@@ -4,7 +4,7 @@ from agent_tools import is_regular_it_verb
 
 # --- italian
 
-# Eval template
+# --- template
 italian_eval_template = {
     "conform": True,
     "pronouns_conform": True,
@@ -14,31 +14,33 @@ italian_eval_template = {
     "error_messages": []
 }
 
-allowed_pronouns_categories = ["personale", "possessivo", "dimostrativo", "interrogativo", "indefinito"]
-allowed_ordinal_numbers = ["primo", "prima", "primi", "prime", "secondo", "seconda", "secondi", "seconde", "terzo", "terza", "terzi", "terze", "1°", "2°", "3°","1′", "2′", "3′"]
-allowed_voices = ["attiva"]
-allowed_mood_tense_combinations = {
+# --- control references
+italian_allowed_pronouns_categories = [ "personale", "possessivo", "dimostrativo", "interrogativo", "indefinito" ]
+italian_allowed_ordinal_numbers = ["primo", "prima", "primi", "prime", "secondo", "seconda", "secondi", "seconde", "terzo", "terza", "terzi", "terze", "1°", "2°", "3°","1′", "2′", "3′"]
+italian_allowed_voices = ["attiva"]
+italian_allowed_mood_tense_combinations = {
     "indicativo": ["presente", "passato prossimo"],
     "infinito": ["presente"],
-    "imperativo": ["presente"]
+    "imperativo": ["presente"],
+    "condizionale": ["presente"]
 }
 
-allowed_main_clauses = ["dichiarativa", "volitiva", "interrogativa"]
-allowed_coordinate_clauses = ["copulativa", "avversativa", "esplicativa"]
-allowed_subordinate_clauses = ["causale", "temporale", "finale", "condizionale", "relativa"]
+italian_allowed_main_clauses = ["dichiarativa", "volitiva", "interrogativa"]
+italian_allowed_coordinate_clauses = ["copulativa", "avversativa", "esplicativa"]
+italian_allowed_subordinate_clauses = ["causale", "temporale", "finale", "condizionale", "relativa"]
 
-# Error messages
-pronouns_error_message = """The input text contains the pronoun '{text}' with 'kind' = '{kind}'. This pronoun category does not belong to the A1 inventory."""
-numbers_error_message = """The input text contains the ordinal number '{text}' which is outside of the A1 inventory allowed range for ordinal numbers."""
-verbs_regular_error_message = """The input text contains the verb '{lemma}', (ref -> '{text}') which is an irregular verb."""
-verbs_voice_error_message = """The input text contains the verb '{text}' which has 'voice' = 'passiva'."""
-verbs_mood_tense_imperative_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}', 'person' = '{person}' and 'number' = '{number}'. This combination is outside of the verbs specifications listed in the A1 inventory."""
-verbs_mood_tense_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}' and 'tense' = '{tense}'. This combination is outside of the verbs specifications listed in the A1 inventory."""
-main_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which is outside of the specifications of the A1 inventory."""
-main_clause_volitive_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which is allowed according to the A1 inventory, however it does not seem to contain a verb in 'imperative' mood, which is a requirement."""
-coordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a coordinate clause '{coordinate_clause_text}' with 'type' = '{coordinate_clause_type}', which is outside of the specifications of the A1 inventory."""
-subordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which is outside of the specifications of the A1 inventory."""
-subordinate_clause_conditional_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which is allowed according to the A1 inventory, however it does not seem to be introduced by 'se', which is a requirement."""
+# --- Error messages
+italian_pronouns_error_message = """The input text contains the pronoun '{text}' with 'kind' = '{kind}'. This pronoun category does not belong to the A1 inventory."""
+italian_numbers_error_message = """The input text contains the ordinal number '{text}', which falls outside of the A1 inventory allowed range."""
+italian_verbs_regular_error_message = """The input text contains the verb '{lemma}', (ref -> '{text}') which is an irregular verb."""
+italian_verbs_voice_error_message = """The input text contains the verb '{text}' which has 'voice' = 'passiva'."""
+italian_verbs_mood_tense_p_n_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}', 'person' = '{person}' and 'number' = '{number}'. This combination falls outside of the verbs specifications listed in the A1 inventory."""
+italian_verbs_mood_tense_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}' and 'tense' = '{tense}'. This combination falls outside of the verbs specifications listed in the A1 inventory."""
+italian_main_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which falls outside of the specifications of the A1 inventory."""
+italian_main_clause_volitive_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which is allowed according to the A1 inventory, however it does not seem to contain a verb in 'imperative' mood, which is a requirement."""
+italian_coordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a coordinate clause '{coordinate_clause_text}' with 'type' = '{coordinate_clause_type}', which falls outside of the specifications of the A1 inventory."""
+italian_subordinate_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which falls outside of the specifications of the A1 inventory."""
+italian_subordinate_clause_conditional_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a subordinate clause '{subordinate_clause_text}' with 'function' = '{subordinate_clause_function}', which is allowed according to the A1 inventory, however it does not seem to be introduced by 'se', which is a requirement."""
 
 def parse_italian_analysis(input: dict) -> dict:
     results = copy.deepcopy(italian_eval_template)
@@ -52,11 +54,11 @@ def parse_italian_analysis(input: dict) -> dict:
         kind = pronoun["kind"].lower()
 
         # 1 - pronoun outside of allowed categories
-        if (not (kind in set(allowed_pronouns_categories))):
+        if (not (kind in set(italian_allowed_pronouns_categories))):
             results["conform"] = False
             results["pronouns_conform"] = False
 
-            results["error_messages"].append(pronouns_error_message.format(text = text, kind = kind))
+            results["error_messages"].append(italian_pronouns_error_message.format(text = text, kind = kind))
     
     # check numbers
     for number in input["numbers"]:
@@ -65,11 +67,11 @@ def parse_italian_analysis(input: dict) -> dict:
 
         # 1 - Number is ordinal and outside of allowed range
         if (kind == "ordinale"):
-            if (not (kind in set(allowed_ordinal_numbers))):
+            if (not (kind in set(italian_allowed_ordinal_numbers))):
                 results["conform"] = False
                 results["numbers_conform"] = False
 
-                results["error_messages"].append(numbers_error_message.format(text = text))
+                results["error_messages"].append(italian_numbers_error_message.format(text = text))
     
     # check verbs
     for verb in input["verbs"]:
@@ -84,36 +86,53 @@ def parse_italian_analysis(input: dict) -> dict:
             results["conform"] = False
             results["verbs_conform"] = False
 
-            results["error_messages"].append(verbs_regular_error_message.format(text = text, lemma=lemma))
+            results["error_messages"].append(italian_verbs_regular_error_message.format(text = text, lemma=lemma))
         
         # 2 - Main verb is not in active voice
-        if (not (voice in set(allowed_voices))):
+        if (not (voice in set(italian_allowed_voices))):
             results["conform"] = False
             results["verbs_conform"] = False
 
-            results["error_messages"].append(verbs_voice_error_message.format(text = text))
+            results["error_messages"].append(italian_verbs_voice_error_message.format(text = text))
 
         # 3 - Verb is conjugated in a mood/tense combination out of inventory
         ## Note: if in imperative mood, also have to check person
-        if mood == "imperativo":
-            if (not verb["person"].lower() == "second"):
-                results["conform"] = False
-                results["verbs_conform"] = False
+        match mood:
+            case "imperativo":
+                person = verb["person"].lower()
+                number = verb["number"].lower()
 
-                results["error_messages"].append(verbs_mood_tense_imperative_error_message.format(text = text, mood = mood, person = verb["person"], number = verb["number"]))
-
-        else:
-            if (not (mood in set(allowed_mood_tense_combinations.keys()))):
-                results["conform"] = False
-                results["verbs_conform"] = False
-
-                results["error_messages"].append(verbs_mood_tense_error_message.format(text = text, mood = mood, tense = tense))
-            else:
-                if (not( tense in set(allowed_mood_tense_combinations[mood]))):
+                if ( person is not "second" ):
                     results["conform"] = False
                     results["verbs_conform"] = False
 
-                    results["error_messages"].append(verbs_mood_tense_error_message.format(text = text, mood = mood, tense = tense))
+                    results["error_messages"].append(italian_verbs_mood_tense_p_n_error_message.format(text = text, mood = mood, person = person, number = number))
+
+            case "condizionale":
+                person = verb["person"].lower()
+                number = verb["number"].lower()
+
+                if ((lemma is not "volere") or
+                    (tense not in italian_allowed_mood_tense_combinations["condizionale"]) or
+                    (person is not "first") or
+                    (number is not "singular") ):
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(italian_verbs_mood_tense_p_n_error_message.format(text = text, mood = mood, person = person, number = number))
+
+            case _:
+                if (mood not in set(italian_allowed_mood_tense_combinations.keys())):
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(italian_verbs_mood_tense_error_message.format(text = text, mood = mood, tense = tense))
+                else:
+                    if (tense not in set(italian_allowed_mood_tense_combinations[mood])):
+                        results["conform"] = False
+                        results["verbs_conform"] = False
+
+                        results["error_messages"].append(italian_verbs_mood_tense_error_message.format(text = text, mood = mood, tense = tense))
 
     # syntax
     for sentence in input["syntactical_analysis"]["sentences"]:
@@ -126,11 +145,11 @@ def parse_italian_analysis(input: dict) -> dict:
         main_clause_text = main_clause["content"]
         main_clause_function = main_clause["function"].lower()
 
-        if (not(main_clause_function in set(allowed_main_clauses))):
+        if (main_clause_function not in set(italian_allowed_main_clauses)):
             results["conform"] = False
             results["syntax_conform"] = False
 
-            results["error_messages"].append(main_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, main_clause_text=main_clause_text, main_clause_function=main_clause_function))
+            results["error_messages"].append(italian_main_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, main_clause_text=main_clause_text, main_clause_function=main_clause_function))
 
         # 1A - Check verb within volitive clause
         if (main_clause_function == "volitiva"):
@@ -151,29 +170,29 @@ def parse_italian_analysis(input: dict) -> dict:
                 results["conform"] = False
                 results["syntax_conform"] = False
 
-                results["error_messages"].append(main_clause_volitive_error_message.format(type=sentence_type, sentence_text=sentence_text, main_clause_text=main_clause_text, main_clause_function=main_clause_function))
+                results["error_messages"].append(italian_main_clause_volitive_error_message.format(type=sentence_type, sentence_text=sentence_text, main_clause_text=main_clause_text, main_clause_function=main_clause_function))
 
         # 2 - Coordinate clauses outside of allowed types
         for coordinate_clause in sentence_clauses["coordinate_clauses"]:
             coordinate_clause_text = coordinate_clause["content"]
             coordinate_clause_type = coordinate_clause["type"].lower()
 
-            if (not(coordinate_clause_type in set(allowed_coordinate_clauses))):
-                results["conforintransitive_conform"] = False
+            if (coordinate_clause_type not in set(italian_allowed_coordinate_clauses)):
+                results["conform"] = False
+                results["syntax_conform"] = False
 
-                results["error_messages"].append(coordinate_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, coordinate_clause_text=coordinate_clause_text, coordinate_clause_type=coordinate_clause_type))
-        
+                results["error_messages"].append(italian_coordinate_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, coordinate_clause_text=coordinate_clause_text, coordinate_clause_type=coordinate_clause_type))  
 
         # 3 - Subordinate clauses outside of allowed functions
         for subordinate_clause in sentence_clauses["subordinate_clauses"]:
             subordinate_clause_text = subordinate_clause["content"]
             subordinate_clause_function = subordinate_clause["function"].lower()
 
-            if (not(subordinate_clause_function in set(allowed_subordinate_clauses))):
+            if (subordinate_clause_function not in set(italian_allowed_subordinate_clauses)):
                 results["conform"] = False
                 results["syntax_conform"] = False
 
-                results["error_messages"].append(subordinate_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
+                results["error_messages"].append(italian_subordinate_clause_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
 
             # 3A - Conditinal subordinate clauses additional check
             if (subordinate_clause_function == "condizionale"):
@@ -183,7 +202,7 @@ def parse_italian_analysis(input: dict) -> dict:
                     results["conform"] = False
                     results["syntax_conform"] = False
 
-                    results["error_messages"].append(subordinate_clause_conditional_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
+                    results["error_messages"].append(italian_subordinate_clause_conditional_error_message.format(type=sentence_type, sentence_text=sentence_text, subordinate_clause_text=subordinate_clause_text, subordinate_clause_function=subordinate_clause_function))
 
     return results
 

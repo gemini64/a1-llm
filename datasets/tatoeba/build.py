@@ -3,7 +3,7 @@ import pandas as pd
 
 ###
 # Extracts data from tatoeba italian sentences dataset
-# with (optional) selection filters
+# (Optionally) applies selection filters to retrieved data
 #
 # See the following link:
 #     https://tatoeba.org/en/downloads
