@@ -5,11 +5,11 @@ import pandas as pd
 # Extracts data from tatoeba italian sentences dataset
 # (Optionally) applies selection filters to retrieved data
 #
-# See the following link:
+# Input data is available here:
 #     https://tatoeba.org/en/downloads
 #
 # Used exports are:
-#     - Detailed Sentences (sentences_detailed.tsv)
+#     - Detailed Sentences [ITA] (sentences_detailed.tsv)
 #     - User skill level per language (users.tsv)
 ###
 

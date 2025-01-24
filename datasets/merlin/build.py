@@ -3,13 +3,13 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ###
-# Extracts data from merlin solr XML files ('merlin-solr-v1.1.zip')
-# (Optionally) applies sselection filters to retrieved data
+# Extracts data from Merlin solr XML files ('merlin-solr-v1.1.zip')
+# (Optionally) applies selection filters to retrieved data
 #
-# See the following link:
+# Input data is available here:
 #     https://gitlab.inf.unibz.it/commul/merlin-platform/merlin-solr
 #
-# Expected input path:
+# Expected input data:
 #     './data/*.xml'
 ###
 
@@ -56,6 +56,9 @@ def process_xml_files(input_dir: str, field_names: list[str] = []) -> pd.DataFra
         input_dir (str): Directory containing XML files
         output_file (str): Path to output TSV file
         field_names (list): List of field names to extract
+
+    Returns:
+        DataFrame: Pandas DataFrame with extracted data
     """
     # Get list of XML files
     xml_files = list(Path(input_dir).glob('*.xml'))
@@ -86,7 +89,7 @@ def process_xml_files(input_dir: str, field_names: list[str] = []) -> pd.DataFra
 
 # --- flags
 input_dir = "./data" # input directory
-output_file = "./output.tsv"
+output_file = "./output.tsv" # output path
 
 # extracted properties
 fields = [

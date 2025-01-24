@@ -5,14 +5,21 @@ import pandas as pd
 
 ###
 # Crawls a list of wiki pages (from any wikimedia foundation portal)
-# and fetches summaries for supplied articles.abs
+# and fetches summaries for supplied articles.
 #
 # (Optionally) applies selection filters to retrieved data
 ###
 
 def strip_quotes(input: str) -> str:
     """Takes a string and uses regex pattern matching
-    to remove wikipedia style quotes."""
+    to remove wikipedia style quotes.
+    
+    Args:
+        input (str): The string to process
+    
+    Returns:
+        str: The transformed string
+    """
     text = input
     text = re.sub(r'\[\d+\]', '', text)  # Remove reference numbers
     text = re.sub(r'\s+', ' ', text)      # Normalize whitespace
@@ -20,10 +27,16 @@ def strip_quotes(input: str) -> str:
     return text.strip()
 
 def get_wiki_page_summary(url: str) -> str | None:
-    """Given a wikipedia **url**, fetches the content of the
-    article summary.
-    
-    _Note:_ Only text from p elements is returned"""
+    """Given a wikipedia url, fetches and return
+    the content of the article summary.
+
+    Args:
+        url (str): A wikimedia article url
+
+    Returns:
+        str | None: Plain text extracted from the
+        article summery section
+    """
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -51,7 +64,14 @@ def get_wiki_page_summary(url: str) -> str | None:
 def crawl_wiki_pages(
     base_urls: list[str]) -> pd.DataFrame:
     """Crawls multiple Wikipedia pages and returns their summaries
-    in a pandas DataFrame."""
+    in a pandas DataFrame.
+    
+    Args:
+        base_urls (list): A list of Wikimedia article urls
+        
+    Returns:
+        DataFrame: A Pandas DataFrame containing extracted data
+    """
     dataset = []
     
     for url in base_urls:

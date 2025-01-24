@@ -6,11 +6,17 @@ def fetch_pages_in_category(
     endpoint: str = "https://it.wikipedia.org", # the enpoint to query
     category_name: str = "Gatti", # a category name
     max_pages: int | None = None) -> list[str]: # an upper limit to fetched pages
-    """Uses wikimedia API to get a **max_pages** number
-    of page urls from a specific **category_name** category.
+    """Uses wikimedia API to extract page urls from a
+    specified category.
 
-    Should work on any **endpoint** that implements the wikimedia
-    query API."""
+    Args:
+        endpoind (str): A wikimedia portal to forward requests to
+        category_name (str): The specific category to query pages from
+        max_pages (int | None): (Optinal) A numeric upper limit to fetched pages
+
+    Returns:
+        list: The list of fetched page urls
+    """
     # Base parameters for the API
     params = {
         "action": "query",
