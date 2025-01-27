@@ -108,7 +108,7 @@ class POSTagger():
 
     def _init_tagger(self) -> None:
         if((not (self._language == Language.IT)) and (self._method == TAGMethod.TINT)):
-            raise RuntimeError("ERROR! Tint backend for POS-tagging is supported only for Italian language")
+            raise RuntimeError("ERROR! Tint POS-Tagging backend supports Italian only!")
         
         match self._method:
             case TAGMethod.LLM:

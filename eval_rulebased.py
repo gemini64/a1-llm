@@ -21,6 +21,7 @@ parser.add_argument("tasks", help="a JSON file containing analysis tasks to perf
 parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')
+parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
 parser.add_argument('-o', '--output', help="(optional) output file")
 
 # validate arguments
@@ -29,6 +30,7 @@ args = parser.parse_args()
 input_file = args.input
 tasks_file = args.tasks
 analysis_only = args.analysis
+syntax_analysis = args.syntax
 input_language = args.postagger
 column_label = args.label
 output_file = args.output if args.output != None else (f"{os.path.splitext(input_file)[0]}_analysis.tsv" if analysis_only else f"{os.path.splitext(input_file)[0]}_eval.tsv")
@@ -105,21 +107,22 @@ for text in input_texts:
         report[key] = results
     
     # run syntax tasks
-    for key, value in tasks["syntax"].items():
-        prompt = ChatPromptTemplate.from_messages(
-            [
-                ("user", value)
-            ]
-        )
-        chain = prompt | llm | JsonOutputParser()
+    if syntax_analysis:
+        for key, value in tasks["syntax"].items():
+            prompt = ChatPromptTemplate.from_messages(
+                [
+                    ("user", value)
+                ]
+            )
+            chain = prompt | llm | JsonOutputParser()
 
-        results = chain.invoke(
-            input={
-                "input": text
-            }
-        )
+            results = chain.invoke(
+                input={
+                    "input": text
+                }
+            )
 
-        report[key] = results
+            report[key] = results
     
     analysis_data.append(report)
 
@@ -137,13 +140,13 @@ for elem in analysis_data:
     
     match input_language:
         case "italian":
-            results = parse_italian_analysis(elem)
+            results = parse_italian_analysis(elem, syntax_analysis)
         case _:
-            results = parse_english_analysis(elem)
+            results = parse_english_analysis(elem, syntax_analysis)
 
     eval_data.append(results)
 
-# now, we select all keys and set everyting for data insertion
+# now, we select all keys and set up everyting for data insertion
 output_keys = list(eval_data[0].keys())
 output_structure = { key: [] for key in output_keys }
 
