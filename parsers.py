@@ -33,7 +33,8 @@ italian_pronouns_error_message = """The input text contains the pronoun '{text}'
 italian_numbers_error_message = """The input text contains the ordinal number '{text}', which falls outside of the A1 inventory allowed range."""
 italian_verbs_regular_error_message = """The input text contains the verb '{lemma}', (ref -> '{text}') which is an irregular verb."""
 italian_verbs_voice_error_message = """The input text contains the verb '{text}' which has 'voice' = 'passiva'."""
-italian_verbs_mood_tense_p_n_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}', 'person' = '{person}' and 'number' = '{number}'. This combination falls outside of the verb specifications listed in the A1 inventory."""
+italian_verbs_mood_p_n_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}', 'person' = '{person}' and 'number' = '{number}'. This combination falls outside of the verb specifications listed in the A1 inventory."""
+italian_verbs_mood_tense_p_n_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}', tense = '{tense}', 'person' = '{person}' and 'number' = '{number}'. This combination falls outside of the verb specifications listed in the A1 inventory."""
 italian_verbs_mood_tense_error_message = """The input text contains the verb '{text}', which has 'mood' = '{mood}' and 'tense' = '{tense}'. This combination falls outside of the verb specifications listed in the A1 inventory."""
 italian_main_clause_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which falls outside of the specifications of the A1 inventory."""
 italian_main_clause_volitive_error_message = """The sentence '{sentence_text}' (with 'type' = '{type}') contains a main clause '{main_clause_text}' with 'function' = '{main_clause_function}', which is allowed according to the A1 inventory, however it does not seem to contain a verb in 'imperative' mood, which is a requirement."""
@@ -102,24 +103,24 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
                 person = verb["person"].lower()
                 number = verb["number"].lower()
 
-                if ( person is not "second" ):
+                if ( person != "second" ):
                     results["conform"] = False
                     results["verbs_conform"] = False
 
-                    results["error_messages"].append(italian_verbs_mood_tense_p_n_error_message.format(text = text, mood = mood, person = person, number = number))
+                    results["error_messages"].append(italian_verbs_mood_p_n_error_message.format(text = text, mood = mood, person = person, number = number))
 
             case "condizionale":
                 person = verb["person"].lower()
                 number = verb["number"].lower()
 
-                if ((lemma is not "volere") or
+                if ((lemma != "volere") or
                     (tense not in italian_allowed_mood_tense_combinations["condizionale"]) or
-                    (person is not "first") or
-                    (number is not "singular") ):
+                    (person != "first") or
+                    (number != "singular") ):
                     results["conform"] = False
                     results["verbs_conform"] = False
 
-                    results["error_messages"].append(italian_verbs_mood_tense_p_n_error_message.format(text = text, mood = mood, person = person, number = number))
+                    results["error_messages"].append(italian_verbs_mood_tense_p_n_error_message.format(text = text, mood = mood, tense = tense, person = person, number = number))
 
             case _:
                 if (mood not in set(italian_allowed_mood_tense_combinations.keys())):
@@ -149,7 +150,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
             main_clause_text = main_clause["content"]
             main_clause_function = main_clause["function"].lower()
 
-            if (main_clause_function not in set(italian_allowed_main_clauses)):
+            if (main_clause_function not in italian_allowed_main_clauses):
                 results["conform"] = False
                 results["syntax_conform"] = False
 
@@ -181,7 +182,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
                 coordinate_clause_text = coordinate_clause["content"]
                 coordinate_clause_type = coordinate_clause["type"].lower()
 
-                if (coordinate_clause_type not in set(italian_allowed_coordinate_clauses)):
+                if (coordinate_clause_type not in italian_allowed_coordinate_clauses):
                     results["conform"] = False
                     results["syntax_conform"] = False
 
@@ -273,14 +274,14 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
         kind = pronoun["kind"].lower()
 
         # 1 - check if pronoun category is allowed
-        if (not (kind in set(english_allowed_pronouns))):
+        if (kind not in english_allowed_pronouns):
             results["conform"] = False
             results["pronouns_conform"] = False
 
             results["error_messages"].append(english_pronoun_category_error.format(text = text, kind = kind))
 
         # 2 - check if interrogative pronoun is within allowed list
-        if (kind == "interrogative" and (not (text in set(english_allowed_interrogative_pronouns)))):
+        if (kind == "interrogative" and (text not in english_allowed_interrogative_pronouns)):
             results["conform"] = False
             results["pronouns_conform"] = False
 
@@ -292,7 +293,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
         function = adjective["function"].lower()
 
         # 1 - check if function is within allowed categories
-        if (not (function in set(english_allowed_adjectives))):
+        if (function not in english_allowed_adjectives):
             results["conform"] = False
             results["adjectives_conform"] = False
 
@@ -304,7 +305,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
             degree = adjective["degree"].lower()
             irregular = adjective["irregular"]
 
-            if (irregular):
+            if (irregular and (degree != "positive")):
                 results["conform"] = False
                 results["adjectives_conform"] = False
 
@@ -321,12 +322,10 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
         # 1 - Check modal verbs
         if (modal):
 
-            print(f"---{text}\n{lemma}\n{verb.get('auxiliary')}\n---")
-
             auxiliary = verb.get("auxiliary")
             auxiliary = lemma if auxiliary is None else auxiliary.lower()
 
-            if (not (auxiliary in set(english_allowed_modals))):
+            if (auxiliary not in english_allowed_modals):
                 results["conform"] = False
                 results["verbs_conform"] = False
 
@@ -372,6 +371,6 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
 
     # --- syntax
     if (check_syntax):
-        pass 
+        pass
 
     return results

@@ -19,8 +19,8 @@ LANGUAGE="english";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag
-GROQ_KEY=""
-GROQ_MODEL_NAME=""
+GROQ_KEY="[REMOVED]"
+GROQ_MODEL_NAME="llama-3.3-70b-versatile"
 
 # colors for readability
 GREEN='\033[0;32m';
