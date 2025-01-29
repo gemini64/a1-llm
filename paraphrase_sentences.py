@@ -1,7 +1,7 @@
 import os, re, json, time, argparse, spacy
 from dotenv import load_dotenv
 import pandas as pd
-from agent_tools import regex_message_parser, strip_string, ANGLE_REGEX_PATTERN
+from agent_tools import regex_message_parser, strip_string, ANGLE_REGEX_PATTERN, token_usage_message_parser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -20,8 +20,9 @@ parser.add_argument("input", help="a TSV file containing the texts to paraphrase
 parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistics constraints to paraphrase against", required=True)
 parser.add_argument("-s", "--sentencizer", help="the language used to initialize the sentencizer", type=str, required=True)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
+parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-o', '--output', help="(optional) output file")
-parser.add_argument('-g', '--groq', action='store_true', help="(optinal) run on groq cloud")
+parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
 
 # validate arguments
 args = parser.parse_args()
@@ -31,6 +32,7 @@ constraints_file = args.constraints
 output_file = args.output if args.output != None else f"{os.path.splitext(input_file)[0]}_paraphrases_sentences.tsv"
 use_groq = args.groq
 language = args.sentencizer
+log_debug_data = args.debug
 column_label = args.label
 
 if (not (os.path.isfile(input_file) and (os.path.splitext(input_file)[-1].lower() == ".tsv"))):
@@ -74,7 +76,7 @@ if column_label not in df:
 
 # now we drop unneded columns and rename
 df = df[[column_label]]
-df.rename(columns={column_label :'inputs'}, inplace=True)
+df.rename(columns={column_label :'texts'}, inplace=True)
 
 # set up prompt
 user_message = """# Task:
@@ -91,6 +93,7 @@ Check the given sentence againts ALL constraints.
 # Paraphrasing:
 - A paraphrase has to preserve the original semantic meaning and minimize information loss.
 - A paraphrase has to replace each non-constraints conformant element with an equivalent conformant alternative.
+- If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the non conformant text should be removed.
 
 # Output format:
 Provide a step-by-step reasoning to elaborate your answer. The expected final output consists of the transformed sentence, enclosed in <angle brackets>.
@@ -127,31 +130,46 @@ else:
     )
 
 # set up chain
-parser = regex_message_parser(regex=ANGLE_REGEX_PATTERN)
+message_parser = regex_message_parser(regex=ANGLE_REGEX_PATTERN)
+token_parser = token_usage_message_parser
 
-chain = prompt_template | llm | parser
+chain = prompt_template | llm
 
 paraphrases = []
+tokens = []
 iterations = []
+messages = []
 
 # iterate over texts
-input_texts = df["inputs"]
+input_texts = df["texts"]
 for input_text in input_texts:
     # split sentences
     documents = nlp(input_text)
-    sentences = [sent.text for sent in documents.sents]
+    sentences = [strip_string(sent.text) for sent in documents.sents]
 
-    iter_counter = 0
-    output_text = []
+    session_text = []
+    session_messages = []
+    session_iterations = []
+    session_tokens = 0
+    
 
     for sentence in sentences:
-        current = strip_string(sentence)
-        iteration = None
+        current = sentence
+        sent_iter = None
+        sent_messages = []
 
         # paraphrase until LLM output is unchanged
         # or max iterations number is reached
         for i in range(1,max_iterations):
-            iteration = i
+            sent_iter = i
+
+            # push user message to session log
+            sent_messages.append(
+                {
+                    "role": "user",
+                    "content": current
+                }
+            )
 
             # invoke model
             results = chain.invoke(
@@ -161,32 +179,53 @@ for input_text in input_texts:
                 }
             )
 
-            # this is just a test to see if we can reduce iterations
-            results = strip_string(results) if results is not None else results
+            # push assistant message to session log
+            sent_messages.append(
+                {
+                    "role": "assistant",
+                    "content": results.content
+                }
+            )
+
+            # extract response and update token usage data
+            model_output = message_parser(results)
+            session_tokens += token_parser(results)
+            
+            # sanitize output to avoid 
+            model_output = strip_string(model_output) if model_output is not None else model_output
 
             # keep within token limits if we are using groq
             if use_groq:
                 time.sleep(30)
 
             # check if output text is unchanged
-            if (results is None or results == current):
-                current = "Error! regex did not match" if results is None else current
+            if (model_output is None or model_output == current):
+                current = "ERROR" if model_output is None else current
                 break
             else:
-                current = results
+                current = model_output
 
         # update results
-        output_text.append(current)
-        iter_counter += iteration
+        session_text.append(current)
+        session_iterations.append(sent_iter)
+        session_messages.append(sent_messages)
 
 
     # push data for insertion
-    paraphrases.append(" ".join(output_text))
-    iterations.append(iter_counter)
+    paraphrases.append(" ".join(session_text) if "ERROR" not in session_text else "ERROR")
+    iterations.append(session_iterations)
+    tokens.append(session_tokens)
+    messages.append(session_messages)
 
 # add data columns to original df
 df.insert(len(df.columns), "paraphrases", paraphrases)
-df.insert(len(df.columns), "iterations", iterations)
+
+# log additional debug data
+if (log_debug_data):
+    df.insert(len(df.columns), "iterations", list(map(lambda x: json.dumps(x, ensure_ascii=False), iterations)))
+    df.insert(len(df.columns), "total_iterations", list(map(lambda x: sum(x), iterations)))
+    df.insert(len(df.columns), "tokens", tokens)
+    df.insert(len(df.columns), "messages", list(map(lambda x: json.dumps(x, ensure_ascii=False), messages)))
 
 # and finally write out our results
 df.to_csv(output_file, sep="\t", index=False, encoding="utf-8")

@@ -6,6 +6,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from pos_tagger import POSTagger, Language, TAGMethod
 from parsers import parse_italian_analysis, parse_english_analysis
+from langchain_community.callbacks.manager import get_openai_callback
 
 # load secrets
 if(os.getenv("PY_ENV") == "DEVELOPMENT"):
@@ -22,6 +23,7 @@ parser.add_argument("-p", "--postagger", help="the language to validate constrai
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')
 parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
+parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-o', '--output', help="(optional) output file")
 
 # validate arguments
@@ -32,6 +34,7 @@ tasks_file = args.tasks
 analysis_only = args.analysis
 syntax_analysis = args.syntax
 input_language = args.postagger
+log_debug_data = args.debug
 column_label = args.label
 output_file = args.output if args.output != None else (f"{os.path.splitext(input_file)[0]}_analysis.tsv" if analysis_only else f"{os.path.splitext(input_file)[0]}_eval.tsv")
 
@@ -64,6 +67,10 @@ if column_label not in df:
     print(f"Error: no column named '{column_label}' exists in '{input_file}'!")
     exit(2)
 
+# now we drop unneded columns and rename
+df = df[[column_label]]
+df.rename(columns={column_label :'texts'}, inplace=True)
+
 # set up model
 model = "gpt-4o"
 temperature = 0
@@ -84,31 +91,16 @@ match input_language:
 
 # analyze data
 analysis_data = []
-input_texts = df[column_label]
+tokens = []
+
+input_texts = df['texts']
 for text in input_texts:
     report = {}
     tagged_text = tagger.tag_text(text)
 
-    # run grammar tasks
-    for key, value in tasks["grammar"].items():
-        prompt = ChatPromptTemplate.from_messages(
-            [
-                ("user", value)
-            ]
-        )
-        chain = prompt | llm | JsonOutputParser()
-
-        results = chain.invoke(
-            input={
-                "input": json.dumps(tagged_text)
-            }
-        )
-
-        report[key] = results
-    
-    # run syntax tasks
-    if syntax_analysis:
-        for key, value in tasks["syntax"].items():
+    with get_openai_callback() as cb:
+        # run grammar tasks
+        for key, value in tasks["grammar"].items():
             prompt = ChatPromptTemplate.from_messages(
                 [
                     ("user", value)
@@ -118,13 +110,34 @@ for text in input_texts:
 
             results = chain.invoke(
                 input={
-                    "input": text
+                    "input": json.dumps(tagged_text)
                 }
             )
 
             report[key] = results
+        
+        # run syntax tasks
+        if syntax_analysis:
+            for key, value in tasks["syntax"].items():
+                prompt = ChatPromptTemplate.from_messages(
+                    [
+                        ("user", value)
+                    ]
+                )
+                chain = prompt | llm | JsonOutputParser()
+
+                results = chain.invoke(
+                    input={
+                        "input": text
+                    }
+                )
+
+                report[key] = results
+        
+        tokens.append(cb.total_tokens)
     
     analysis_data.append(report)
+
 
 # add analysis data to dataframe
 df.insert(len(df.columns), "analysis_data", list(map(lambda x : json.dumps(x, ensure_ascii=False), analysis_data)))
@@ -156,6 +169,10 @@ for elem in eval_data:
 
 for key, value in output_structure.items():
     df.insert(len(df.columns), key, value)
+
+# add token usage data
+if (log_debug_data):
+    df.insert(len(df.columns), "tokens", tokens)
 
 # write out
 df.to_csv(output_file, sep="\t", index=False, encoding="utf-8")

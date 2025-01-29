@@ -1,7 +1,7 @@
 #!/bin/bash
 # script variables
-INPUT_DATA="./datasets/tatoeba/output_tatoeba_small_en.tsv";
-OUTPUT_DIR="./english_test_min";
+INPUT_DATA="./it_10_sentences.tsv";
+OUTPUT_DIR="./it_10_sentences";
 PARAPHRASE_OUTPUT="paraphrases.tsv";
 EVAL_OUTPUT="eval.tsv";
 
@@ -9,18 +9,18 @@ PARAPHRASE_COL_LABEL="text";
 EVAL_COL_LABEL="paraphrases";
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
-PARAPHRASE_FLAGS="";
-PARAPHRASE_CONSTRAINTS="./inventories/constraints_english_grammar_only.md";
+PARAPHRASE_FLAGS="-d";
+PARAPHRASE_CONSTRAINTS="./inventories/constraints_italian_grammar_only.md";
 
 EVAL_SCRIPT="./eval_rulebased.py";
-EVAL_FLAGS="";
-EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
-LANGUAGE="english";
+EVAL_FLAGS="-d";
+EVAL_TASKS="./analysis_tasks/italian_analysis_tasks.json";
+LANGUAGE="italian";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag
-GROQ_KEY="[REMOVED]"
-GROQ_MODEL_NAME="llama-3.3-70b-versatile"
+GROQ_KEY="";
+GROQ_MODEL_NAME="";
 
 # colors for readability
 GREEN='\033[0;32m';
@@ -42,9 +42,9 @@ export GROQ_MODEL="${GROQ_MODEL_NAME}";
 # paraphrase
 echo -e "${LIGHT_BLUE}[3/4]${NC} - ${GREEN}Paraphrase${NC}";
 if [ -z "${PARAPHRASE_FLAGS}" ]; then
-    python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}";
+    python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}";
 else
-    python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}" "${PARAPHRASE_FLAGS}";
+    python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}" "${PARAPHRASE_FLAGS}";
 fi
 
 # paraphrase
@@ -57,4 +57,4 @@ fi
 
 # exit
 deactivate;
-echo -e "${LIGHT_BLUE}[DONE]${NC} - ${GREEN}See output in '$OUTPUT_DIR'${NC}"
+echo -e "${LIGHT_BLUE}[DONE]${NC} - ${GREEN}See output in '$OUTPUT_DIR'${NC}";

@@ -40,6 +40,18 @@ def json_message_parser(message: AIMessage):
     else:
         return {}
 
+def token_usage_message_parser(message: AIMessage) -> int | None:
+    """Given an AI Message, return the total token consumed
+    by that call."""
+    metadata = message.response_metadata
+    results = None
+
+    if metadata:
+        token_usage = metadata.get('token_usage')
+        results = token_usage.get('total_tokens')
+
+    return results
+
 def strip_string(input: str) -> str:
     """Takes a string as input. Uses regular
     expressions to remove traling and leading white

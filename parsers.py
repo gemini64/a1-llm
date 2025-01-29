@@ -264,7 +264,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
         # 1 - check if noun is plural + irregular
         if (number == "plural" and (not regular)):
             results["conform"] = False
-            results["noun_conform"] = False
+            results["nouns_conform"] = False
 
             results["error_messages"].append(english_noun_irregular_error_message.format(text = text))
 
