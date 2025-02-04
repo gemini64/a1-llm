@@ -1,5 +1,6 @@
 # project specific
 *.tsv
+*.csv
 prompts/
 test/
 tools/

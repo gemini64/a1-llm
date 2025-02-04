@@ -1,7 +1,7 @@
 #!/bin/bash
 # script variables
-INPUT_DATA="./it_10_sentences.tsv";
-OUTPUT_DIR="./it_10_sentences";
+INPUT_DATA="./en_12_sentences.tsv";
+OUTPUT_DIR="./en_12_sentences";
 PARAPHRASE_OUTPUT="paraphrases.tsv";
 EVAL_OUTPUT="eval.tsv";
 
@@ -10,12 +10,12 @@ EVAL_COL_LABEL="paraphrases";
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
 PARAPHRASE_FLAGS="-d";
-PARAPHRASE_CONSTRAINTS="./inventories/constraints_italian_grammar_only.md";
+PARAPHRASE_CONSTRAINTS="./inventories/constraints_english_grammar_only.md";
 
 EVAL_SCRIPT="./eval_rulebased.py";
 EVAL_FLAGS="-d";
-EVAL_TASKS="./analysis_tasks/italian_analysis_tasks.json";
-LANGUAGE="italian";
+EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
+LANGUAGE="english";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag
