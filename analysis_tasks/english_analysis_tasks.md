@@ -120,7 +120,10 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the contained verbs.
 
-Auxiliary verbs (AUX) should be analyzed and listed with the main verb they accompany (e.g. I've thought).
+Be particularly careful when analyzing auxiliary verbs:
+- **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
+- **modals:** if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. "can swim").
+- **perfect gerunds**: this non-finite verb form is formed by "having" + "past participle" (this is the main verb). Analyze and list perfect gerunds as a single item (e.g. "having swum").
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -136,7 +139,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The verb analyzed."
+                "description": "The verb analyzed (written as it appears in the original text)."
             },
             "lemma": {
                 "type": "string",
@@ -168,10 +171,10 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "voice": {
                 "enum": [ "active", "passive"],
-                "description": "The verb voice (only for finite verb forms)."
+                "description": "The verb voice."
             },
             "verb_form": {
-                "enum": [ "infinitive", "gerund", "participle" ],
+                "enum": [ "infinitive", "simple gerund", "perfect gerund", "present participle", "past participle" ],
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },

@@ -10,7 +10,7 @@
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The verb analyzed."
+                "description": "The verb analyzed (written as it appears in the original text)."
             },
             "lemma": {
                 "type": "string",
@@ -42,10 +42,10 @@
             },
             "voice": {
                 "enum": [ "active", "passive"],
-                "description": "The verb voice (only for finite verb forms)."
+                "description": "The verb voice."
             },
             "verb_form": {
-                "enum": [ "infinitive", "gerund", "participle" ],
+                "enum": [ "infinitive", "simple gerund", "perfect gerund", "present participle", "past participle" ],
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },
