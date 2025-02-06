@@ -49,6 +49,6 @@
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },
-        "required": [ "text", "lemma", "modal", "finite" ]
+        "required": [ "text", "lemma", "modal", "finite", "voice" ]
     }
 }

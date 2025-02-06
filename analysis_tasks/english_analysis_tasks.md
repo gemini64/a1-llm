@@ -122,7 +122,8 @@ Extract and analyze the contained verbs.
 
 Be particularly careful when analyzing auxiliary verbs:
 - **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
-- **modals:** if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. "can swim").
+- **modals**: if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. "can swim").
+- **multiple auxiliary verbs**: some verb forms may include multiple auxiliary verbs. This is the case, for example for the "future perfect continous", where we have both the modal "will" and the verb "to be". In cases where multiple auxiliary verbs accompany a main verb, if a modal verb is used, list only the lemma of the modal auxiliary verb (e.g. "will have been" should list just "will" as auxiliary).
 - **perfect gerunds**: this non-finite verb form is formed by "having" + "past participle" (this is the main verb). Analyze and list perfect gerunds as a single item (e.g. "having swum").
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
@@ -178,7 +179,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },
-        "required": [ "text", "lemma", "modal", "finite" ]
+        "required": [ "text", "lemma", "modal", "finite", "voice" ]
     }
 }
 ```
