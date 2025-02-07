@@ -21,7 +21,7 @@ parser.add_argument("input", help="a TSV file containing the texts to evaluate")
 parser.add_argument("tasks", help="a JSON file containing analysis tasks to perform")
 parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
-parser.add_argument('-a', '--analysis', help="(optional) skip evaluation, perform analysis only", action='store_true')
+parser.add_argument('-a', '--analysis', help="(optional) perform analysis only", action='store_true')
 parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-o', '--output', help="(optional) output file")
@@ -50,7 +50,7 @@ if (os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.ab
     print(f"Error: an output file with path '{output_file}' already exists!")
     exit(2)
 
-if (not input_language in set(["italian", "english"])):
+if (not input_language in set([ "italian", "english", "russian" ])):
     print(f"Error: '{input_language}' is not a supported language to validate against!")
     exit(2)
 
@@ -86,8 +86,10 @@ llm = ChatOpenAI(
 match input_language:
     case "italian":
         tagger = POSTagger(language=Language.IT, method=TAGMethod.TINT)
-    case _:
+    case "english":
         tagger = POSTagger(language=Language.EN, method=TAGMethod.SPACY)
+    case "russian":
+        tagger = POSTagger(language=Language.RU, method=TAGMethod.SPACY)
 
 # analyze data
 analysis_data = []
@@ -154,8 +156,10 @@ for elem in analysis_data:
     match input_language:
         case "italian":
             results = parse_italian_analysis(elem, syntax_analysis)
-        case _:
+        case "english":
             results = parse_english_analysis(elem, syntax_analysis)
+        case "russian":
+            results = None # to implement
 
     eval_data.append(results)
 

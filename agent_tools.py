@@ -5,6 +5,7 @@ from pos_tagger import TintTagger, LLMTagger, TAGGING_PROMPT_WITH_LEMMA
 
 JSON_REGEX_PATTERN =  r"```json\n([\s\S]*?)```"
 ANGLE_REGEX_PATTERN =  r"<([^>]+)>"
+TEXT_TAG_REGEX_PATTERN = r"<text[^>]*>((?:(?!</text>)[\s\S])*)</text>"
 ITALIAN_IRREGULAR_VERBS = "./inventories/italian_irregular_verbs.json"
 ITALIAN_ALLOWED_IRREGULARS = [ "esserci", "essere", "esservi", "avercela", "avere", "averla", "aversela", "volercene", "volerci", "volere", "volerne", "volersi", "potere", "dovere" ]
 
