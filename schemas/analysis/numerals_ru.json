@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/numerals_ru.json",
+    "title": "Numerals",
+    "description": "A list of numerals",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a numeral",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The numeral extracted"
+            },
+            "kind": {
+                "enum": ["ordinal", "cardinal", "collective"],
+                "description": "The numeral kind"
+            },
+            "case": {
+                "enum": ["Nominative", "Genitive", "Dative", "Accusative",
+                "Instrumental", "Prepositional"],
+                "description": "The numeral case"
+            }
+        },
+        "required": ["text", "kind"]
+    }
+}

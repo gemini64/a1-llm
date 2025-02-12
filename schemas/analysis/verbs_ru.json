@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/verbs_ru.json",
+    "title": "Verbs",
+    "description": "A list of verbs",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a verb and its morphological features",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The verb extracted"
+            },
+            "reflexive": {
+                "type": "boolean",
+                "description": "true is the verb ends in -ся/cь"
+            },
+            "lemma": {
+                "type": "string",
+                "description": "The base form of the main verb (eg. читаю -> читать). For the reflexive verbs, remove -cя/-cь"
+            },
+            "finite": {
+                "type": "boolean",
+                "description": "true if the verb is conjugated in a finite form"
+            },
+            "non-finite forms": {
+                "enum": ["инфинитив", "причастие", "деепричастие"],
+                "description": "only for non-finite verb forms"
+            },
+
+            "conjugation class": {
+                "enum": ["Second-conjugation verbs in -ить, like 'жалить - жалят'",
+                "Second-conjugation verbs in -ать/-ять/-еть, like 'видеть - видят'",
+                "First-conjugation verbs in -ать/-ять/-еть, like 'читать - читаю', 'жалеть - жалею'", 
+                "First-conjugation verbs in -овать/-eвать, like 'рисовать - рисую'",
+                "First-conjugation verbs in -нуть, like 'тянуть - тяну'",
+                "First-conjugation verbs in a changing consonant + -ать and -у/-ю ending in the first person like 'сказать - скажу'",
+                "First-conjugation verbs in -ать with added vowel in stem and -у/-ю ending in the first person like 'брать - беру'",
+                "First-conjugation verbs in -ать/-ять with regular stem and -у/-ю ending in the first person, like 'ждать - жду",
+                "First-conjugation verbs in -сть/-сти, like 'упасть - упаду', 'мести - мету'", 
+                "First-conjugation verbs in -чь, like 'течь - теку', 'мочь - могу'", 
+                "First-conjugation verbs in -оть, like 'колоть - колю'",
+                "First-conjugation verbs in -ереть losing stem vowel, like 'тереть - тру'",
+                "First-conjugation verbs in -ить losing stem vowel, like 'пить - пью'",
+                "First-conjugation verbs in -ить/-ыть/-уть that have stem vowel + -ют ending like 'дуть - дую', 'петь - пою'",
+                "First-conjugation verbs in -авать, like 'давать - даю'",
+                "First-conjugation verbs in -ти, like 'идти - иду'",
+                "First-conjugation verbs in -ехать, like 'приехать - приеду'",
+                "First-conjugation irregular verbs with differen endings and with major stem change, like 'обнять - обниму', 'есть - ем', 'жать - жму'"
+        ],
+                "description": "The verbs of the same conjugation class have similar endings when conjugated. Conjugate the lemma and then look for the closest conjugation pattern in the list"
+            },
+
+            "mood": {
+                "enum": ["изъявительное", "повелительное", "сослагательное"],
+                "description": "The verb mood, following Russian language moods"
+            },
+            "tense": {
+                "enum": ["past", "present", "future"],
+                "description": "The verb tense, following Russian language tenses"
+            },
+            "voice": {
+                "enum": ["действительный", "страдательный"],
+                "description": "The verb voice, following russian language voices"
+            }
+        },
+        "required": ["text", "lemma", "mood", "tense", "voice" ]
+    }
+}
