@@ -1,4 +1,6 @@
-import subprocess, spacy, json
+import subprocess, spacy, json, stanza
+from stanza import DownloadMethod
+from udpipe2_client import process_text
 from enum import Enum
 from abc import ABC, abstractmethod
 from langchain_core.prompts import ChatPromptTemplate
@@ -7,9 +9,15 @@ from langchain_openai import ChatOpenAI
 
 # configuration parameters - all tagging methods
 OAI_MODEL = "gpt-4o"
-SPACY_USE_GPU = True
+USE_GPU = True
 TINT_EXE = "./tools/tint/tint.sh"
 TINT_PARAMS = ""
+
+# configuration parameters - udpipe
+UDPIPE_SERVER="http://localhost:8001"
+UDPIPE_EN_MODEL="en_atis"
+UDPIPE_IT_MODEL="it_parlamint"
+UDPIPE_RU_MODEL="ru_syntagrus"
 
 # LLM bases tagging prompt
 TAGGING_PROMPT = """Given the following text:
@@ -94,6 +102,8 @@ class TAGMethod(str, Enum):
     LLM = "LLM"
     SPACY = "Spacy"
     TINT = "Tint"
+    STANZA = "Stanza"
+    UDPIPE = "UDPipe"
 
 class POSTagger():
     """A part-of-speech tagger.
@@ -115,8 +125,12 @@ class POSTagger():
                 self._tagger = LLMTagger()
             case TAGMethod.SPACY:
                 self._tagger = SpacyTagger(self._language)
+            case TAGMethod.STANZA:
+                self._tagger = StanzaTagger(self._language)
             case TAGMethod.TINT:
                 self._tagger = TintTagger()
+            case TAGMethod.UDPIPE:
+                self._tagger = UDPipeTagger(self._language)
             case _:
                 pass
         
@@ -173,7 +187,7 @@ class SpacyTagger(Tagger):
     """A spacy based part-of-speech tagger.
     
     Requires a target language specification."""
-    def __init__(self, language: Language = Language.IT, use_gpu: bool = SPACY_USE_GPU, include_lemma: bool = False) -> None:
+    def __init__(self, language: Language = Language.IT, use_gpu: bool = USE_GPU, include_lemma: bool = False) -> None:
         self._language = language
         self._use_gpu = use_gpu
         self._include_lemma = include_lemma
@@ -213,6 +227,97 @@ class SpacyTagger(Tagger):
                 results.append({
                 "text": token.text,
                 "pos": token.pos_
+            })
+
+
+        return results
+
+class StanzaTagger(Tagger):
+    """A stanza based part-of-speech tagger.
+    
+    Requires a target language specification."""
+    def __init__(self, language: Language = Language.IT, use_gpu: bool = USE_GPU, include_lemma: bool = False) -> None:
+        self._language = language
+        self._include_lemma = include_lemma
+        self._use_gpu = use_gpu
+        self._init_nlp()
+
+    def _init_nlp(self) -> None:
+        match self._language:
+            case Language.IT:
+                self._nlp = stanza.Pipeline('it', processors='tokenize,pos,lemma', use_gpu=self._use_gpu, download_method=DownloadMethod.REUSE_RESOURCES)
+            case Language.EN:
+                self._nlp = stanza.Pipeline('en', processors='tokenize,pos,lemma', use_gpu=self._use_gpu, download_method=DownloadMethod.REUSE_RESOURCES)
+            case Language.RU:
+                self._nlp = stanza.Pipeline('ru', processors='tokenize,pos,lemma', use_gpu=self._use_gpu, download_method=DownloadMethod.REUSE_RESOURCES)
+            case _:
+                pass
+
+    # overriding interface method
+    def tag(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = []
+
+        # tag input data nlp(input)
+        doc = self._nlp(input)
+
+        for sentence in doc.sentences:
+            for word in sentence.words:
+                if self._include_lemma:
+                    results.append({
+                        "text": word.text,
+                        "pos": word.pos,
+                        "lemma": word.lemma
+                    })
+                else:
+                    results.append({
+                    "text": word.text,
+                    "pos": word.pos
+                })
+
+
+        return results
+
+class UDPipeTagger(Tagger):
+    """An UDPipe based part-of-speech tagger.
+    
+    Requires a target language specification."""
+    def __init__(self, language: Language = Language.IT, server_url: str = UDPIPE_SERVER, include_lemma: bool = False) -> None:
+        self._language = language
+        self._server_url = server_url
+        self._include_lemma = include_lemma
+        self._init_nlp()
+
+    def _init_nlp(self) -> None:
+        match self._language:
+            case Language.IT:
+                self._nlp = lambda x : process_text(self._server_url, UDPIPE_IT_MODEL, x)
+            case Language.EN:
+                self._nlp = lambda x : process_text(self._server_url, UDPIPE_EN_MODEL, x)
+            case Language.RU:
+                self._nlp = lambda x : process_text(self._server_url, UDPIPE_RU_MODEL, x)
+            case _:
+                pass
+
+    # overriding interface method
+    def tag(self, input: str) -> list[dict[str, str]]:
+        """Returns a POS tagged text from a given string input."""
+        results = []
+
+        # tag input data nlp(input)
+        words = self._nlp(input)
+
+        for word in words:
+            if self._include_lemma:
+                results.append({
+                    "text": word["text"],
+                    "pos": word["pos"],
+                    "lemma": word["lemma"]
+                })
+            else:
+                results.append({
+                "text": word["text"],
+                "pos": word["pos"]
             })
 
 

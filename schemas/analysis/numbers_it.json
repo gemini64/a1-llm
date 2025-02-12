@@ -14,7 +14,7 @@
             },
             "kind": {
                 "enum": ["ordinale", "cardinale"],
-                "description": "The number kind"
+                "description": "Specifies whether the number represents a position (ordinale, e.g., 'primo', 'secondo', '3°') or a quantity (cardinale, e.g., '1', 'due')"
             }
         },
         "required": ["text", "kind"]

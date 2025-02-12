@@ -68,7 +68,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
 
         # 1 - Number is ordinal and outside of allowed range
         if (kind == "ordinale"):
-            if (kind not in italian_allowed_ordinal_numbers):
+            if (text not in italian_allowed_ordinal_numbers):
                 results["conform"] = False
                 results["numbers_conform"] = False
 

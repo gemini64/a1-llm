@@ -5,6 +5,8 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the contained pronouns.
 
+These have been tagged with the pos "PRON". Include every item that corresponds to this specification, even multiple occurrences.
+
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
 {
@@ -36,7 +38,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the contained verbs.
+Extract and analyze ALL the contained verbs.
 
 Be particularly careful when dealing with auxiliary verbs:
 - **essere/avere**: when used as auxiliary verbs, analyze and list them along with the principal verb they accompany (e.g. "ho mangiato" should be listed as a "passato prossimo").
@@ -97,8 +99,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze any number contained, indipendently from its function within the
-source text.
+Extract and analyze EVERY number contained. The specific pos tag associated is unimportant, every word that coincides with a number, either cardinal or numeral, should be listed and analyzed.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -118,7 +119,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "kind": {
                 "enum": ["ordinale", "cardinale"],
-                "description": "The number kind"
+                "description": "Specifies whether the number represents a position (ordinale, e.g., 'primo', 'secondo', '3°') or a quantity (cardinale, e.g., '1', 'due')"
             }
         },
         "required": ["text", "kind"]

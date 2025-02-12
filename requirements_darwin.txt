@@ -19,6 +19,7 @@ cymem==2.0.10
 dataclasses-json==0.6.7
 DAWG-Python==0.7.2
 distro==1.9.0
+emoji==2.14.1
 en_core_web_trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl#sha256=272a31e9d8530d1e075351d30a462d7e80e31da23574f1b274e200f3fff35bf5
 filelock==3.16.1
 frozenlist==1.5.0
@@ -67,6 +68,7 @@ packaging==24.2
 pandas==2.2.3
 preshed==3.0.9
 propcache==0.2.1
+protobuf==5.29.3
 pydantic==2.10.2
 pydantic-settings==2.6.1
 pydantic_core==2.27.1
@@ -93,6 +95,7 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 SQLAlchemy==2.0.35
 srsly==2.4.8
+stanza==1.10.1
 sympy==1.13.1
 tenacity==9.0.0
 thinc==8.3.2

@@ -5,6 +5,8 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the contained nouns.
 
+These have been tagged either with the pos "NOUN" or "PROPN". Include every item that corresponds to this specification, even multiple occurrences.
+
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
 {
@@ -31,7 +33,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "regular": {
                 "type": "boolean",
-                "description": "True if the noun has a regular plural form."
+                "description": "True if the noun follows standard English pluralization rules (typically adding -s or -es), false for irregular forms (e.g. child/children, foot/feet)."
             }
         },
         "required": ["text", "number", "possessive", "regular"]
@@ -45,6 +47,8 @@ Given the following part-of-speech (POS) tagged text:
 {input}
 ```
 Extract and analyze the contained pronouns.
+
+These have been tagged with the pos "PRON". Include every item that corresponds to this specification, even multiple occurrences.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -78,6 +82,8 @@ Given the following part-of-speech (POS) tagged text:
 {input}
 ```
 Extract and analyze the contained adjectives.
+
+These have been tagged with the pos "ADJ". Include every item that corresponds to this specification, even multiple occurrences.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -118,7 +124,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the contained verbs.
+Extract and analyze ALL the contained verbs.
 
 Be particularly careful when analyzing auxiliary verbs:
 - **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
