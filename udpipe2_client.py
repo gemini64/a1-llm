@@ -84,10 +84,20 @@ def process(args, data):
 
     return response["result"]
 
-def process_text(server_url: str, model: str, data: str) -> list[dict[str,str]]:
-    """Simplified process function call, sets up default
-    arguments and takes only a server url, a model to use
-    and the text to tag."""
+def process_text(server_url: str, model: str, data: str) -> list[dict]:
+    """
+    Simplified process function call, sets up default
+    arguments.
+    
+    Parameters:
+        server_url: str -> the server hosting UDPipe-2
+        model: str -> the model name (used for tagging, tokenization, ...)
+        text: str -> the text to tag
+    
+    Returns:
+        list[dict] -> A list containing each word present in the original
+        text with its POS and LEMMA
+    """
     arguments = ARGS = {
         "model": model,
         "tokenizer": "",
@@ -110,14 +120,14 @@ def process_text(server_url: str, model: str, data: str) -> list[dict[str,str]]:
     return results
 
 def conllu_to_dict(data: str) -> list[dict[str,str]]:
-    """Takes a conllu formatted text and
-    returns the list of tagged words with just the
-    raw text, lemma and pos attributes"""
-
+    """
+    Takes a conllu formatted text and
+    returns a list containing each word present in the original
+    text with its POS and LEMMA.
+    """
     text_lines = data.split("\n")
     words = [x for x in text_lines if len(x) > 0]
     words = [x for x in words if x[0].isdigit()]
-    print(words)
 
     results = []
     for word in words:

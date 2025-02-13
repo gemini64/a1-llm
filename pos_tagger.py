@@ -46,39 +46,6 @@ Respond with a JSON output, following the schema defined below.
                 "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
                 "description": "The universal POS tag associated with the tagged text"
             }},
-        }},
-        "required": ["text", "pos"]
-    }}
-}}
-```
-"""
-
-TAGGING_PROMPT_WITH_LEMMA = """Given the following text:
-```
-{input}
-```
-Tag every word (and punctuation mark) with the corresponding part-of-speech (POS) tag.
-
-Respond with a JSON output, following the schema defined below.
-```json
-{{
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "/schemas/postagged_text.json",
-    "title": "POS-tagged text",
-    "description": "Represents a POS-tagged text of arbitrary length",
-    "type": "array",
-    "items": {{
-        "type": "object",
-        "description": "A POS-tagged word/symbol/punctuation mark",
-        "properties": {{
-            "text": {{
-                "type": "string",
-                "description": "The POS-tagged word/sybol/punctuation mark"
-            }},
-            "pos": {{
-                "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
-                "description": "The universal POS tag associated with the tagged text"
-            }},
             "pos": {{
                 "type": "string"
                 "description": "The base lemma."
@@ -150,7 +117,8 @@ class Tagger(ABC):
 
 class LLMTagger(Tagger):
     """An openai LLM based part-of-speech tagger"""
-    def __init__(self, temperature: float = 0, top_p = 0.95, prompt: str = TAGGING_PROMPT) -> None:
+    def __init__(self, include_lemma: bool = False, temperature: float = 0, top_p = 0.95, prompt: str = TAGGING_PROMPT) -> None:
+        self._include_lemma = include_lemma
         self._temperature = temperature
         self._top_p = top_p
         self._prompt = prompt
@@ -180,6 +148,11 @@ class LLMTagger(Tagger):
                 "input": input
             }
         )
+
+        # remove lemma key
+        if not self._include_lemma:
+            for elem in results:
+                if 'lemma' in elem: del elem['lemma']
 
         return results
     
@@ -217,17 +190,14 @@ class SpacyTagger(Tagger):
         doc = self._nlp(input)
 
         for token in doc:
+            token_dict = {}
+            token_dict["text"] = token.text
+            token_dict["pos"] = token.pos_
+
             if self._include_lemma:
-                results.append({
-                    "text": token.text,
-                    "pos": token.pos_,
-                    "lemma": token.lemma_
-                })
-            else:
-                results.append({
-                "text": token.text,
-                "pos": token.pos_
-            })
+                token_dict["lemma"] = token.lemma_
+
+            results.append(token_dict)
 
 
         return results
@@ -263,18 +233,14 @@ class StanzaTagger(Tagger):
 
         for sentence in doc.sentences:
             for word in sentence.words:
-                if self._include_lemma:
-                    results.append({
-                        "text": word.text,
-                        "pos": word.pos,
-                        "lemma": word.lemma
-                    })
-                else:
-                    results.append({
-                    "text": word.text,
-                    "pos": word.pos
-                })
+                token_dict = {}
+                token_dict["text"] = word.text
+                token_dict["pos"] = word.pos
 
+                if self._include_lemma:
+                    token_dict["lemma"] = word.lemma
+
+                results.append(token_dict)
 
         return results
 
@@ -308,18 +274,14 @@ class UDPipeTagger(Tagger):
         words = self._nlp(input)
 
         for word in words:
-            if self._include_lemma:
-                results.append({
-                    "text": word["text"],
-                    "pos": word["pos"],
-                    "lemma": word["lemma"]
-                })
-            else:
-                results.append({
-                "text": word["text"],
-                "pos": word["pos"]
-            })
+            token_dict = {}
+            token_dict["text"] = word["text"]
+            token_dict["pos"] = word["pos"]
 
+            if self._include_lemma:
+                token_dict["lemma"] = word["lemma"]
+
+            results.append(token_dict)
 
         return results
     
@@ -345,16 +307,14 @@ class TintTagger(Tagger):
 
         for sentence in tint_obj["sentences"]:
             for token in sentence["tokens"]:
-                if (self._include_lemma):
-                    results.append({
-                        "text": token["word"],
-                        "pos": token["ud_pos"],
-                        "lemma": token["lemma"]
-                    })
-                else:
-                    results.append({
-                        "text": token["word"],
-                        "pos": token["ud_pos"]
-                    })
-        
+
+                token_dict = {}
+                token_dict["text"] = token["word"]
+                token_dict["pos"] = token["ud_pos"]
+
+                if self._include_lemma:
+                    token_dict["lemma"] = token["lemma"]
+
+                results.append(token_dict)
+
         return results
