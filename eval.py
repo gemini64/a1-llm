@@ -198,9 +198,7 @@ def main():
         eval_data = []
 
         for analysis_report in analysis_data:
-            print(analysis_report)
             eval_report = evaluator(analysis_report)
-            print(eval_report)
             eval_data.append(eval_report)
  
         # Add results to df

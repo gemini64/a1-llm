@@ -6,22 +6,22 @@ PY_ENV="./.venv"
 SKIP_PARAPHRASE=false; # set to true to skip par
 SKIP_EVAL=false; # set to true to skip eval
 
-INPUT_DATA="./it_10_sentences.tsv";
-OUTPUT_DIR="./it_10_sentences";
-PARAPHRASE_OUTPUT="paraphrases.tsv"; # set to input file path if you're skipping par
+INPUT_DATA="./en_2_sentences.tsv"; # this is the file that gets passed to paraphrase.py
+OUTPUT_DIR="./en_2_sentences";
+PARAPHRASE_OUTPUT="paraphrase.tsv"; # set to input file path if you're skipping par
 EVAL_OUTPUT="eval.tsv";
 
-PARAPHRASE_COL_LABEL="text";
-EVAL_COL_LABEL="paraphrases";
+PARAPHRASE_COL_LABEL="text"; # the column that contains the text to paraphrase
+EVAL_COL_LABEL="paraphrases"; # the column that contains the text to evaluate
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
 PARAPHRASE_FLAGS="-d";
-PARAPHRASE_CONSTRAINTS="./inventories/constraints_italian_grammar_only.md";
+PARAPHRASE_CONSTRAINTS="./inventories/constraints_english_grammar_only.md";
 
 EVAL_SCRIPT="./eval.py";
 EVAL_FLAGS="-d";
-EVAL_TASKS="./analysis_tasks/italian_analysis_tasks.json";
-LANGUAGE="italian";
+EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
+LANGUAGE="english";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag
@@ -40,21 +40,21 @@ echo -e "${LIGHT_BLUE}[1/5]${NC} - ${GREEN}Activating venv${NC}";
 source "${PY_ENV}/bin/activate";
 
 # set-up directories
-echo -e "${LIGHT_BLUE}[2/5]${NC} - ${GREEN}Setting-up filesystem and env variables${NC}";
+echo -e "${LIGHT_BLUE}[2/5]${NC} - ${GREEN}Setting-up filesystem${NC}";
 mkdir -p "${OUTPUT_DIR}";
 
 # set groq env variables
 echo -e "${LIGHT_BLUE}[3/5]${NC} - ${GREEN}Setting-up groq cloud env variables${NC}";
-if [ ! -z "${GROQ_KEY}" ] then
+if [ ! -z "${GROQ_KEY}" ]; then
     export GROQ_API_KEY="${GROQ_KEY}";
 fi
-if [ ! -z "${GROQ_MODEL}" ] then
+if [ ! -z "${GROQ_MODEL}" ]; then
     export GROQ_MODEL="${GROQ_MODEL_NAME}";
 fi
 
 # paraphrase
 echo -e "${LIGHT_BLUE}[4/5]${NC} - ${GREEN}Paraphrase${NC}";
-if [ ${SKIP_PARAPHRASE} ]; the
+if [ "${SKIP_PARAPHRASE}" = true ]; then
     echo -e "Skipped paraphrase";
 else
     if [ -z "${PARAPHRASE_FLAGS}" ]; then
@@ -66,7 +66,7 @@ fi
 
 # eval
 echo -e "${LIGHT_BLUE}[5/5]${NC} - ${GREEN}Evaluation${NC}";
-if [ ${SKIP_EVAL} ]; the
+if [ "${SKIP_EVAL}" = true ]; then
     echo -e "Skipped eval";
 else
     if [ -z "${EVAL_FLAGS}" ]; then
