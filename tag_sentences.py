@@ -1,6 +1,15 @@
 import os, json
 from pos_tagger import POSTagger, Language, TAGMethod
 
+###
+# An utility script to test available POS tagging methods.
+#
+# input_file -> a JSON string list containing text to tag
+# output_file -> a JSON file containing the tagged text
+#
+# Note: remember to specify a language (italian, russian, english).
+###
+
 # --- params
 input_file = "./input.json" # a json list of strings to process
 output_file = "./output.json" # output

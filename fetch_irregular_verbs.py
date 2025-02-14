@@ -1,5 +1,12 @@
 import requests, os, json
 
+###
+# An Utility script that fetches Italian
+# irregular verbs from Wikitionary
+#
+# output -> a JSON string list
+###
+
 def query(request, host):
     """Recursively queries hosts that conform to wikimedia
     php web API specs. See also this for more info

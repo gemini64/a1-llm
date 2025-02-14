@@ -7,19 +7,27 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_openai import ChatOpenAI
 
-# configuration parameters - all tagging methods
+# --- configuration defaults
+# LLM Tagger
 OAI_MODEL = "gpt-4o"
+OAI_TEMPERATURE = 0.0
+OAI_TOP_P = 0.95
+
+# Stanza and Spacy (Note, will default to CPU if
+# no GPU processor is available)
 USE_GPU = True
+
+# Tint
 TINT_EXE = "./tools/tint/tint.sh"
 TINT_PARAMS = ""
 
-# configuration parameters - udpipe
+# UDPipe 
 UDPIPE_SERVER="http://localhost:8001"
 UDPIPE_EN_MODEL="en_atis"
 UDPIPE_IT_MODEL="it_parlamint"
 UDPIPE_RU_MODEL="ru_syntagrus"
 
-# LLM bases tagging prompt
+# LLM Tagger prompt
 TAGGING_PROMPT = """Given the following text:
 ```
 {input}
@@ -57,6 +65,7 @@ Respond with a JSON output, following the schema defined below.
 ```
 """
 
+# --- exported enums
 class Language(str, Enum):
     """Available languages"""
     IT = "Italian"
@@ -64,9 +73,8 @@ class Language(str, Enum):
     RU = "Russian"
 
 class TAGMethod(str, Enum):
-    """POS Tagging methods
-    Note that Tint is available only for Italian text"""
-    LLM = "LLM"
+    """POS Tagging methods"""
+    LLM = "LLM" # support only Italian
     SPACY = "Spacy"
     TINT = "Tint"
     STANZA = "Stanza"
@@ -77,9 +85,10 @@ class POSTagger():
     
     Requires a target language and a tagging method
     specification"""
-    def __init__(self, language: Language = Language.IT, method: TAGMethod = TAGMethod.LLM) -> None:
+    def __init__(self, language: Language = Language.IT, method: TAGMethod = TAGMethod.LLM, include_lemma: bool = False) -> None:
         self._language = language
         self._method = method
+        self._include_lemma = include_lemma
         
         self._init_tagger()
 
@@ -89,15 +98,15 @@ class POSTagger():
         
         match self._method:
             case TAGMethod.LLM:
-                self._tagger = LLMTagger()
+                self._tagger = LLMTagger(include_lemma=self._include_lemma)
             case TAGMethod.SPACY:
-                self._tagger = SpacyTagger(self._language)
+                self._tagger = SpacyTagger(language=self._language, include_lemma=self._include_lemma)
             case TAGMethod.STANZA:
-                self._tagger = StanzaTagger(self._language)
+                self._tagger = StanzaTagger(language=self._language, include_lemma=self._include_lemma)
             case TAGMethod.TINT:
-                self._tagger = TintTagger()
+                self._tagger = TintTagger(include_lemma=self._include_lemma)
             case TAGMethod.UDPIPE:
-                self._tagger = UDPipeTagger(self._language)
+                self._tagger = UDPipeTagger(language=self._language, include_lemma=self._include_lemma)
             case _:
                 pass
         
@@ -117,8 +126,9 @@ class Tagger(ABC):
 
 class LLMTagger(Tagger):
     """An openai LLM based part-of-speech tagger"""
-    def __init__(self, include_lemma: bool = False, temperature: float = 0, top_p = 0.95, prompt: str = TAGGING_PROMPT) -> None:
+    def __init__(self, include_lemma: bool = False, model : str = OAI_MODEL, temperature: float = OAI_TEMPERATURE, top_p = OAI_TEMPERATURE, prompt: str = TAGGING_PROMPT) -> None:
         self._include_lemma = include_lemma
+        self._model = model
         self._temperature = temperature
         self._top_p = top_p
         self._prompt = prompt
@@ -127,7 +137,7 @@ class LLMTagger(Tagger):
 
     def _init_llm(self) -> None:
         self._llm = ChatOpenAI(
-            model=OAI_MODEL,
+            model=self._model,
             temperature=self._temperature,
             top_p=self._top_p
         )
@@ -290,7 +300,7 @@ class TintTagger(Tagger):
     
     Requires a tint binary to be available in local
     configuration path exe"""
-    def __init__(self, exe: str = TINT_EXE, params: str = TINT_PARAMS, include_lemma = False):
+    def __init__(self, exe: str = TINT_EXE, params: str = TINT_PARAMS, include_lemma: bool = False):
         self._exe = exe
         self._params = params
         self._include_lemma = include_lemma

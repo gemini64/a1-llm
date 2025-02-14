@@ -1,7 +1,0 @@
-{
-    "pronouns_compliant": "contains only pronouns listed in the following inventory (if any):\n```\n- pronomi personali (sia con la funzione di soggetto che di complemento), possessivi, dimostrativi, interrogativi e indefiniti\n```",
-    "numbers_compliant": "contains only numbers listed in the following inventory (if any):\n```\n- numeri cardinali e ordinali (limitati a: primo, secondo, terzo)\n```",
-    "verbs_compliant": "contains only verbs listed in the following inventory (if any):\n```\n- i verbi ausiliari: essere e avere\n- i verbi modali: volere, potere e dovere\n- i verbi regolari\n```",
-    "verbs_conj_compliant": "contains only verbs conjugated following these constraints:\n```\n- per tutti i verbi, la coniugazione attiva in uno dei seguenti tempi e modi:\n    - indicativo presente\n    - indicativo passato prossimo\n    - infinito presente\n    - imperativo (forma attiva/negativa alla 2a persona singolare/plurale)\n```",
-    "syntax_compliant": "contains only simple clauses/sentences of types listed in the following inventory:\n```\n- le proposizioni semplici dichiarative, volitive (esclusivamente con l'imperativo) e interrogative\n- le proposizioni complesse coordinate copulative, avversative e dichiarative\n- le proposizioni complesse subordinate causali, temporali, finali in forma implicita, ipotetiche (introdotte da 'se') e relative\n```"
-}

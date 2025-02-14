@@ -84,18 +84,18 @@ def process(args, data):
 
     return response["result"]
 
-def process_text(server_url: str, model: str, data: str) -> list[dict]:
+def process_text(server_url: str, model: str, data: str) -> list[dict[str,str]]:
     """
     Simplified process function call, sets up default
     arguments.
     
-    Parameters:
-        server_url: str -> the server hosting UDPipe-2
-        model: str -> the model name (used for tagging, tokenization, ...)
-        text: str -> the text to tag
+    Args:
+        server_url (str): The server hosting UDPipe-2
+        model (str): The model name (used for tagging, tokenization, ...)
+        text (str): The text to tag
     
     Returns:
-        list[dict] -> A list containing each word present in the original
+        list[dict[str,str]]: A dict list containing each word present in the original
         text with its POS and LEMMA
     """
     arguments = ARGS = {
@@ -108,22 +108,29 @@ def process_text(server_url: str, model: str, data: str) -> list[dict]:
         "output": "conllu"
     }
 
-    # convert to anonymous obj
+    # convert to anonymous obj - the original method expects
+    # an object not a dict
     Object = lambda **kwargs: type("Object", (), kwargs)()
     arguments = Object(**ARGS)
 
-    # send request
+    # send request - using original client method
     response = process(arguments, data)
 
-    # convert format
+    # convert format - from conllu (default) to dict
     results = conllu_to_dict(response)
     return results
 
 def conllu_to_dict(data: str) -> list[dict[str,str]]:
     """
-    Takes a conllu formatted text and
-    returns a list containing each word present in the original
-    text with its POS and LEMMA.
+    Takes a conllu formatted tagging report and
+    converts it in a list of [words + pos] dicts.
+
+    Args:
+        data (str): The conllu data to convert
+
+    Returns:
+        list[dict[str,str]]: A dict list containing each word present in the original
+        text with its POS and LEMMA
     """
     text_lines = data.split("\n")
     words = [x for x in text_lines if len(x) > 0]
