@@ -1,7 +1,7 @@
 import re, json
 from functools import partial
 from langchain_core.messages import AIMessage
-from pos_tagger import TintTagger, LLMTagger, TAGGING_PROMPT_WITH_LEMMA
+from pos_tagger import TintTagger, LLMTagger
 
 JSON_REGEX_PATTERN =  r"```json\n([\s\S]*?)```"
 ANGLE_REGEX_PATTERN =  r"<([^>]+)>"
@@ -70,7 +70,7 @@ def check_irregular_it_verbs(input: list[dict]) -> list[dict]:
     sentences = input
     error_message_template = """Use of the verb '{verb}' which is irregular."""
     
-    #tagger = LLMTagger(prompt=TAGGING_PROMPT_WITH_LEMMA)
+    #tagger = LLMTagger(include_lemma=True)
     tagger = TintTagger(include_lemma=True)
 
     for sentence in sentences:
