@@ -1,0 +1,148 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/noun_case_meaning_ru.json",
+    "title": "noun case meanings",
+    "description": "A list of nouns",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a noun",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The noun extracted"
+            },
+            "case": {
+                "enum": ["Nominative", "Genitive", "Dative", "Accusative",
+                "Instrumental", "Prepositional"],
+                "description": "The noun case"
+            },
+
+            "case_general_meaning": {
+                "enum": ["subjective: there is an action, a state, or a situtation that comes from the noun", 
+                "objective: there is an action directed at the noun", 
+                "attributive: there is a relation of the noun to another object, action, state, or situation",
+                "necessary informational completion: the meaning of the case as a separate unit cannot be determined",
+                "vocative expression"],
+                "meaning": "following the definitions, report the main noun case meaning. The case meaning doesn't always match the syntactic function of the noun."
+            },
+            "nominative_subjective_meaning": {
+                "enum":["субъект активного действия", "субъект состояния", "носитель признака", "наличие предмета/события"],
+                "meaning": "choose from these meanings if noun is in Nominative with subjective general meaning"
+            },
+            "nominative_objective_meaning": {
+                "enum": ["предмет обладания", "предмет необходимости", "предмет (лицо) в пассивной конструкции"],
+                "meaning": "choose from these meanings if the noun is in Nominative with objective general meaning"
+            },
+            "nominative_attributive_meaning": {
+                "enum": ["характеристика лица/предмета", "дополнительное название лица, звание или титул",
+                "общая идентификация лица/предмета", "сравнение после союза 'чем'"],
+                "meaning": "choose from these meanings if the noun is in Nominative with attributive general meaning"
+            },
+            "nominative_necessary_informational_completion_meaning": {
+                "enum": ["персональная идентификация лица/предмета", "дата"],
+                "meaning": "choose from these meanings if the noun is in Nominative with necessary informational completion general meaning"
+            },
+            "nominative_vocative_expression": {
+                "type": "bool",
+                "description": "true if the noun is a vocative expression"
+            },
+            
+            "genitive_subjective_meaning": {
+                "enum": ["субъект действия", "отсутствие лица (предмета)"],
+                "meaning": "choose from these meanings if the noun is in Genitive with subjective general meaning"
+            },
+            "genitive_objective_meaning": {
+                "enum": ["объект желания", "объект действия", "объект сравнения", "лицо, которое испытывает состояние"],
+                "meaning": "choose from these meanings if the noun is in Genitive with objective general meaning"
+            },
+            "genitive_attributive_meaning": {
+                "enum": ["определение предмета (без предлога)", "определение предмета (c предлогами)", 
+                "обозначение части целого, меры", "описание предмета через признак", "место предмета/действия", 
+                "с предлогом от: удаление от объекта / лица; лицо как исходный пункт движения; лицо-отправитель",
+                "с предлогами от... до: расстояние",  "причина", "время действия", "причина действия"],
+                "meaning": "choose from these meanings if the noun is in Genitive with attributive general meaning"
+            },
+            "genitive_necessary_informational_completion_meaning": {
+                "enum": ["падеж обусловлен глагольным управлением", "обозначение количества в сочетании с числительным",
+                "точная дата действия", "месяц в дате"],
+                "meaning": "choose from these meanings if the noun is in Genitive with necessary informational completion general meaning"
+            },
+
+            "dative_subjective_meaning": {
+                "enum": ["лицо как субъект действия", "лицо как субъект состояния",
+                "лицо (предмет), о возрасте которого идет речь"],
+                "meaning": "choose from these meanings if the noun is in Dative with subjective general meaning"
+            },
+            "dative_objective_meaning": {
+                "enum": ["адресат действия", "объект действия"],
+                "meaning": "choose from these meanings if the noun is in Dative with objective general meaning"
+            },
+            "dative_attributive_meaning": {
+                "enum": ["предмет, к которому направлено движение (к)", "лицо как цель движения (к)",
+                "место движения лица (предмета) (по)", "средство связи (по)", "определение (по)", "причина (благодаря)",
+                "время регулярно повторяющегося действия (по)", "принадлежность"],
+                "meaning": "choose from these meanings if the noun is in Dative with attributive general meaning"
+            },
+            "dative_necessary_informational_completion_meaning": {
+                "enum": ["падеж обусловлен глагольным управлением"],
+                "meaning": "choose from these meanings if the noun is in Dative with necessary informational completion general meaning"
+            },
+            
+            "accusative_subjective_meaning": {
+                "enum": ["логический субъект при глаголе 'звать'", "лицо как субъект состояния", "количество, мера"],
+                "meaning": "choose from these meanings if the noun is in Accusative with subjective general meaning"
+            },
+            "accusative_objective_meaning": {
+                "enum": ["лицо (предмет) как объект действия", "предмет речи, мысли"],
+                "meaning": "choose from these meanings if the noun is in Accusative with objective general meaning"
+            },
+            "accusative_attributive_meaning": {
+                "enum": ["время действия", "направление движения", "уступка",
+                "количественная характеристика действия", "цель действия", "приблизительное расстояние, количество"],
+                "meaning": "choose from these meanings if the noun is in Accusative with attributive general meaning"
+            },
+            "accusative_necessary_informational_completion_meaning": {
+                "enum": ["падеж обусловлен глагольным управлением"],
+                "meaning": "choose from these meanings if the noun is in Accusative with necessary informational completion general meaning"
+            },
+            "instrumental_subjective_meaning": {
+                "enum": ["производитель действия (в пассивных конструкциях)"],
+                "meaning": "choose from these meanings if the noun is in Instrumental with subjective general meaning"
+            },
+            "instrumental_objective_meaning": {
+                "enum": ["объект действия с глаголом 'заниматься'","объект действия с другими глаголами",
+                "орудие, средство действия"],
+                "meaning": "choose from these meanings if the noun is in Instrumental with objective general meaning"
+            },
+            "instrumental_attributive_meaning": {
+                "enum": ["характеристика лица, предмета (при глаголах быть, стать, являться и др.)", "совместность",
+                "местонахождение", "время действия", "определение предмета", "определение лица", 
+                "образ, способ действия", "цель", "орудие, средство действия"],
+                "meaning": "choose from these meanings if the noun is in Instrumental with attributive general meaning"
+            },
+            "instrumental_necessary_informational_completion_meaning": {
+                "enum": ["падеж обусловлен глагольным управлением"],
+                "meaning": "choose from these meanings if the noun is in Instrumental with necessary informational completion general meaning"
+            },
+            
+            "prepositional_subjective_meaning": {
+                "enum": [],
+                "meaning": "choose from these meanings if the noun is in Prepositional with subjective general meaning"
+            },
+            "prepositional_objective_meaning": {
+                "enum": ["объект речи, мысли","объект действия"],
+                "meaning": "choose from these meanings if the noun is in Prepositional with objective general meaning"
+            },
+            "prepositional_attributive_meaning": {
+                "enum": ["место", "время", "условие", "средство передвижения", "определение"],
+                "meaning": "choose from these meanings if the noun is in Prepositional with attributive general meaning"
+            },
+            "prepositional_necessary_informational_completion_meaning": {
+                "enum": ["падеж обусловлен глагольным управлением"],
+                "meaning": "choose from these meanings if the noun is in Prepositional with necessary informational completion general meaning"
+            }
+        },
+        "required": ["text", "case", "meaning"]
+    }
+}
