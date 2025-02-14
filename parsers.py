@@ -303,9 +303,9 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
         if (function == "descriptive"):
 
             degree = adjective["degree"].lower()
-            irregular = adjective["irregular"]
+            regular = adjective["regular"]
 
-            if (irregular and (degree != "positive")):
+            if (not regular and (degree != "positive")):
                 results["conform"] = False
                 results["adjectives_conform"] = False
 

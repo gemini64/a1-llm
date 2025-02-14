@@ -85,8 +85,22 @@ Extract and analyze the contained adjectives.
 
 These have been tagged with the pos "ADJ". Include every item that corresponds to this specification, even multiple occurrences.
 
-Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
-```json
+Be especially careful when analyzing adjectives' regularity:
+- **comparative form**: Regular adjectives form their comparative either by:
+  - Adding 'more' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'more capable'). In these cases, the adjective will be directly preceded by 'more' in the provided input List and analyze them as a single item.
+  - Adding the suffix '-er/r' (typically for 1 syllable words, e.g. 'fast' -> 'faster')
+
+- **superlative form**: Regular adjectives form their superlative either by:
+  - Adding 'most' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'most capable'). In these cases, the adjective will be directly preceded by 'most' in the provided input. List and analyze them as a single item
+  - Adding the suffix '-est/st' (typically for 1 syllable words, e.g. 'fast' -> 'fastest')
+
+- **irregular adjectives**: Some adjectives don't follow these patterns. They can be irregular in two ways:
+  1. Complete irregularity: All forms are different (e.g. 'good' -> 'better' -> 'best', 'bad' -> 'worse' -> 'worst')
+  2. Partial irregularity: Using standard suffixes but with stem changes (e.g. 'far' -> 'further' -> 'furthest')
+
+- **edge cases (more/most)**: 'more' and 'most' may also be used standalone as the comparative and superlative irregular forms of 'many/much'. Be extra attentive and check if any other adjective directly follows them or if they are indeed used as standalone
+
+Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.```json
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "/schemas/adjectives_en.json",
@@ -105,9 +119,9 @@ Respond with a structured JSON array conforming to the schema attached below. No
                 "enum": ["positive", "comparative", "superlative"],
                 "description": "The adjective degree."
             },
-            "irregular": {
+            "regular": {
                 "type": "boolean",
-                "description": "True if the adjective is irregular (i.e. if its comparative and superlative forms do not follow standard formation patterns and/or present thematic changes when compared to the adjective base form)."
+                "description": "True if the adjective follows standard English formation patterns for its comparative and superlative forms."
             },
             "function": {
                 "enum": ["descriptive", "interrogative", "possessive", "other"],

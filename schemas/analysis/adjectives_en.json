@@ -16,9 +16,9 @@
                 "enum": ["positive", "comparative", "superlative"],
                 "description": "The adjective degree."
             },
-            "irregular": {
+            "regular": {
                 "type": "boolean",
-                "description": "True if the adjective is irregular (i.e. if its comparative and superlative forms do not follow standard formation patterns and/or present thematic changes when compared to the adjective base form)."
+                "description": "True if the adjective follows standard English formation patterns for its comparative and superlative forms."
             },
             "function": {
                 "enum": ["descriptive", "interrogative", "possessive", "other"],
