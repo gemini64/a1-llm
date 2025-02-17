@@ -13,8 +13,6 @@ Be especially careful when analyzing nouns' regularity:
   - **nouns ending in -s, -sh, -ch, -x, -z**: add -es (e.g. 'box/boxes', 'church/churches', 'buzz/buzzes')
   - **nouns ending in consonant + -y**: change the 'y' to 'i' and add '-es' (e.g. 'story/stories')
   - **nouns ending in vowel + -y**: just add -s (e.g. 'day/days')
-  - **most nouns ending in -f/fe**: replace the 'f/fe' with 'v' and add '-es' (e.g. 'knife/knives', 'leaf/leaves')
-    - exceptions: some -f endings just add -s (e.g. 'roof/roofs', 'chief/chiefs')
   - **nouns ending in -o**: 
     - after a consonant: usually add '-es' (e.g. 'tomato/tomatoes', 'hero/heroes')
     - after a vowel: add '-s' (e.g. 'radio/radios', 'studio/studios')
@@ -22,6 +20,8 @@ Be especially careful when analyzing nouns' regularity:
 - **irregular nouns**: irregular English nouns form their plurals in unique ways:
   - **internal vowel change**: (e.g. 'man/men', 'woman/women', 'foot/feet', 'tooth/teeth')
   - **-en endings**: (e.g. 'child/children', 'ox/oxen')
+  - **most nouns ending in -f/fe**: replace the 'f/fe' with 'v' and add '-es' (e.g. 'knife/knives', 'leaf/leaves')
+    - exceptions: some -f endings just add -s (e.g. 'roof/roofs', 'chief/chiefs')
   - **same form**: some nouns have identical singular and plural forms (e.g. 'sheep', 'deer', 'fish')
   - **foreign origin**: some retain their original language plurals (e.g. 'criterion/criteria', 'phenomenon/phenomena')
 
@@ -82,7 +82,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The pronoun extracted."
+                "description": "The pronoun exactly as it appears in the text"
             },
             "kind": {
                 "enum": [ "personal", "reflexive", "possessive", "reciprocal", "relative", "interrogative", "demonstrative", "indefinite" ],
@@ -131,7 +131,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The adjective extracted."
+                "description": "The adjective exactly as it appears in the text."
             },
             "degree": {
                 "enum": ["positive", "comparative", "superlative"],
@@ -143,7 +143,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "function": {
                 "enum": ["descriptive", "interrogative", "possessive", "other"],
-                "description": "The adjective function. It should be labeled as ' other ' if it cannot be cataloged as descriptive, interrogative or possessive."
+                "description": "The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive."
             }
         },
         "required": ["text", "function"]

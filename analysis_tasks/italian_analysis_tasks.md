@@ -3,9 +3,9 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the contained pronouns.
+Extract and analyze the pronouns it contains.
 
-These have been tagged with the pos "PRON". Include every item that corresponds to this specification, even multiple occurrences.
+Look for words tagged as "PRON" in the given input. List all pronoun instances, including repeated occurrences.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -21,11 +21,11 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The pronoun extracted"
+                "description": "The pronoun exactly as it appears in the text"
             },
             "kind": {
                 "enum": ["personale", "relativo", "possessivo", "dimostrativo", "indefinito", "interrogativo", "esclamativo", "qualificativo", "numerale"],
-                "description": "The pronoun kind, based on the italian language pronouns categories"
+                "description": "The pronoun kind, based on the Italian language pronouns categories"
             }
         },
         "required": ["text", "kind"]
@@ -38,7 +38,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze ALL the contained verbs.
+Extract and analyze ALL the verbs it contains.
 
 Be particularly careful when dealing with auxiliary verbs:
 - **essere/avere**: when used as auxiliary verbs, analyze and list them along with the principal verb they accompany (e.g. "ho mangiato" should be listed as a "passato prossimo").
@@ -60,7 +60,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The verb extracted"
+                "description": "The verb exactly as it appears in the text"
             },
             "lemma": {
                 "type": "string",
@@ -78,15 +78,15 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "mood": {
                 "enum": ["indicativo", "congiuntivo", "condizionale", "imperativo", "infinito", "participio", "gerundio"],
-                "description": "The verb mood, following italian language moods"
+                "description": "The verb mood, following Italian language verb moods"
             },
             "tense": {
                 "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
-                "description": "The verb tense, following italian language tenses"
+                "description": "The verb tense, following Italian language verb tenses"
             },
             "voice": {
                 "enum": ["attiva", "passiva"],
-                "description": "The verb voice, following italian language voices"
+                "description": "The verb voice, following Italian language verb voices"
             }
         },
         "required": ["text", "lemma", "mood", "tense", "voice" ]
@@ -99,7 +99,25 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze EVERY number contained. The specific pos tag associated is unimportant, every word that coincides with a number, either cardinal or numeral, should be listed and analyzed.
+Extract and analyze EVERY number it contains.
+
+The specific POS tag associated with words representing numbers in the given input is unimportant. List all number instances, including repeated occurrences.
+
+Numbers in Italian text appear in two main categories:
+1. **Ordinal numbers (ordinali)**: Numbers that express position or rank in a sequence. They appear in these forms:
+   - Written in text: primo, secondo, terzo, quarto, etc.
+   - Roman numerals: I, II, III, IV, V, etc.
+   - Digits with ordinal markers: 1°, 1ª, 2°, 2ª, etc.
+   - Compound forms: ventunesimo (21°), quarantaduesimo (42°), etc.
+2. **Cardinal numbers (cardinali)**: Numbers that express quantity or amount. They appear in these forms:
+   - Written in text: uno, due, tre, quattro, etc.
+   - Written in digits: 1, 2, 3, 4, etc.
+   - Compound forms: ventuno (21), quarantadue (42), etc.
+
+Important notes:
+- The same number can be ordinal or cardinal depending on its form and context (e.g., "1" is cardinal but "1°" is ordinal)
+- Some words like "primo" can appear in non-ordinal contexts (e.g., "di primo mattino") - consider the context
+- Compound numbers follow the same rules whether written in text or digits
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -115,11 +133,11 @@ Respond with a structured JSON array conforming to the schema attached below. No
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The number extracted"
+                "description": "The number exactly as it appears in the text"
             },
             "kind": {
                 "enum": ["ordinale", "cardinale"],
-                "description": "Specifies whether the number represents a position (ordinale, e.g., 'primo', 'secondo', '3°') or a quantity (cardinale, e.g., '1', 'due')"
+                "description": "Specifies whether the number is cardinal (quantity) or ordinal (position/rank)"
             }
         },
         "required": ["text", "kind"]

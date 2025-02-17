@@ -10,11 +10,11 @@
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The number extracted"
+                "description": "The number exactly as it appears in the text"
             },
             "kind": {
                 "enum": ["ordinale", "cardinale"],
-                "description": "Specifies whether the number represents a position (ordinale, e.g., 'primo', 'secondo', '3°') or a quantity (cardinale, e.g., '1', 'due')"
+                "description": "Specifies whether the number is cardinal (quantity) or ordinal (position/rank)"
             }
         },
         "required": ["text", "kind"]

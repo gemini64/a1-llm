@@ -10,7 +10,7 @@
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The verb extracted"
+                "description": "The verb exactly as it appears in the text"
             },
             "lemma": {
                 "type": "string",
@@ -28,15 +28,15 @@
             },
             "mood": {
                 "enum": ["indicativo", "congiuntivo", "condizionale", "imperativo", "infinito", "participio", "gerundio"],
-                "description": "The verb mood, following italian language moods"
+                "description": "The verb mood, following Italian language verb moods"
             },
             "tense": {
                 "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
-                "description": "The verb tense, following italian language tenses"
+                "description": "The verb tense, following Italian language verb tenses"
             },
             "voice": {
                 "enum": ["attiva", "passiva"],
-                "description": "The verb voice, following italian language voices"
+                "description": "The verb voice, following Italian language verb voices"
             }
         },
         "required": ["text", "lemma", "mood", "tense", "voice" ]

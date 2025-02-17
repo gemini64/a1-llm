@@ -10,7 +10,7 @@
         "properties": {
             "text": {
                 "type": "string",
-                "description": "The adjective extracted."
+                "description": "The adjective exactly as it appears in the text."
             },
             "degree": {
                 "enum": ["positive", "comparative", "superlative"],
@@ -22,7 +22,7 @@
             },
             "function": {
                 "enum": ["descriptive", "interrogative", "possessive", "other"],
-                "description": "The adjective function. It should be labeled as ' other ' if it cannot be cataloged as descriptive, interrogative or possessive."
+                "description": "The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive."
             }
         },
         "required": ["text", "function"]
