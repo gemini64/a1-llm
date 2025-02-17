@@ -55,9 +55,9 @@ def load_pos_tagger(language):
     tagger = None
     match language:
         case "italian":
-            tagger = POSTagger(language=Language.IT, method=TAGMethod.TINT)
+            tagger = POSTagger(language=Language.IT, method=TAGMethod.STANZA)
         case "english":
-            tagger = POSTagger(language=Language.EN, method=TAGMethod.SPACY)
+            tagger = POSTagger(language=Language.EN, method=TAGMethod.STANZA)
         case "russian":
             tagger = POSTagger(language=Language.RU, method=TAGMethod.SPACY)
         case _:
