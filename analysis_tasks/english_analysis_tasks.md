@@ -5,6 +5,8 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the nouns it contains.
 
+Look for words tagged as "NOUN" or "PROPN" in the given input. List all noun instances, including repeated occurrences.
+
 Be especially careful when analyzing nouns' regularity:
 - **regular nouns**: regular English nouns follow the following pluralization rules:
   - **general rule**: add -s to form the plural (e.g. 'book/books')
