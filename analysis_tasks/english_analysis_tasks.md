@@ -5,7 +5,23 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the nouns it contains.
 
-Look for words tagged as either "NOUN" or "PROPN" in the given input. List all noun instances, including repeated occurrences.
+Be especially careful when analyzing nouns' regularity:
+- **regular nouns**: regular English nouns follow the following pluralization rules:
+  - **general rule**: add -s to form the plural (e.g. 'book/books')
+  - **nouns ending in -s, -sh, -ch, -x, -z**: add -es (e.g. 'box/boxes', 'church/churches', 'buzz/buzzes')
+  - **nouns ending in consonant + -y**: change the 'y' to 'i' and add '-es' (e.g. 'story/stories')
+  - **nouns ending in vowel + -y**: just add -s (e.g. 'day/days')
+  - **most nouns ending in -f/fe**: replace the 'f/fe' with 'v' and add '-es' (e.g. 'knife/knives', 'leaf/leaves')
+    - exceptions: some -f endings just add -s (e.g. 'roof/roofs', 'chief/chiefs')
+  - **nouns ending in -o**: 
+    - after a consonant: usually add '-es' (e.g. 'tomato/tomatoes', 'hero/heroes')
+    - after a vowel: add '-s' (e.g. 'radio/radios', 'studio/studios')
+    - some exceptions exist (e.g. 'piano/pianos', 'photo/photos')
+- **irregular nouns**: irregular English nouns form their plurals in unique ways:
+  - **internal vowel change**: (e.g. 'man/men', 'woman/women', 'foot/feet', 'tooth/teeth')
+  - **-en endings**: (e.g. 'child/children', 'ox/oxen')
+  - **same form**: some nouns have identical singular and plural forms (e.g. 'sheep', 'deer', 'fish')
+  - **foreign origin**: some retain their original language plurals (e.g. 'criterion/criteria', 'phenomenon/phenomena')
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -33,7 +49,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "regular": {
                 "type": "boolean",
-                "description": "True if the noun follows standard English pluralization rules (typically adding -s or -es), false for irregular forms (e.g. child/children, foot/feet)."
+                "description": "True if the noun follows standard English pluralization rules."
             }
         },
         "required": ["text", "number", "possessive", "regular"]

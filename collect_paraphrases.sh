@@ -6,13 +6,13 @@ PY_ENV="./.venv"
 SKIP_PARAPHRASE=false; # set to true to skip par
 SKIP_EVAL=false; # set to true to skip eval
 
-INPUT_DATA="./en_2_sentences.tsv"; # this is the file that gets passed to paraphrase.py
-OUTPUT_DIR="./en_2_sentences";
-PARAPHRASE_OUTPUT="paraphrase.tsv"; # set to input file path if you're skipping par
+INPUT_DATA="./en_12_sentences.tsv"; # this is the file that gets passed to paraphrase.py
+OUTPUT_DIR="./en_12_sentences";
+PARAPHRASE_OUTPUT="${OUTPUT_DIR}/paraphrase.tsv"; # set to input file path if you're skipping par
 EVAL_OUTPUT="eval.tsv";
 
 PARAPHRASE_COL_LABEL="text"; # the column that contains the text to paraphrase
-EVAL_COL_LABEL="paraphrases"; # the column that contains the text to evaluate
+EVAL_COL_LABEL="paraphrases"; # the column that contains the text to evaluate, default is "paraphrases"
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
 PARAPHRASE_FLAGS="-d";
@@ -58,9 +58,9 @@ if [ "${SKIP_PARAPHRASE}" = true ]; then
     echo -e "Skipped paraphrase";
 else
     if [ -z "${PARAPHRASE_FLAGS}" ]; then
-        python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}";
+        python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${PARAPHRASE_OUTPUT}";
     else
-        python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}" ${PARAPHRASE_FLAGS};
+        python "${PARAPHRASE_SCRIPT}" "${INPUT_DATA}" -c "${PARAPHRASE_CONSTRAINTS}" -l "${PARAPHRASE_COL_LABEL}" -s "${LANGUAGE}" -o "${PARAPHRASE_OUTPUT}" ${PARAPHRASE_FLAGS};
     fi
 fi
 
@@ -70,9 +70,9 @@ if [ "${SKIP_EVAL}" = true ]; then
     echo -e "Skipped eval";
 else
     if [ -z "${EVAL_FLAGS}" ]; then
-        python "${EVAL_SCRIPT}" "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}" -t "${EVAL_TASKS}" -p "${LANGUAGE}" -l "${EVAL_COL_LABEL}" -o "${OUTPUT_DIR}/${EVAL_OUTPUT}";
+        python "${EVAL_SCRIPT}" "${PARAPHRASE_OUTPUT}" -t "${EVAL_TASKS}" -p "${LANGUAGE}" -l "${EVAL_COL_LABEL}" -o "${OUTPUT_DIR}/${EVAL_OUTPUT}";
     else
-        python "${EVAL_SCRIPT}" "${OUTPUT_DIR}/${PARAPHRASE_OUTPUT}" -t "${EVAL_TASKS}" -p "${LANGUAGE}" -l "${EVAL_COL_LABEL}" -o "${OUTPUT_DIR}/${EVAL_OUTPUT}" ${EVAL_FLAGS};
+        python "${EVAL_SCRIPT}" "${PARAPHRASE_OUTPUT}" -t "${EVAL_TASKS}" -p "${LANGUAGE}" -l "${EVAL_COL_LABEL}" -o "${OUTPUT_DIR}/${EVAL_OUTPUT}" ${EVAL_FLAGS};
     fi
 fi
 

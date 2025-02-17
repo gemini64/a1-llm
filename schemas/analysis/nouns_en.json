@@ -22,7 +22,7 @@
             },
             "regular": {
                 "type": "boolean",
-                "description": "True if the noun follows standard English pluralization rules (typically adding -s or -es), false for irregular forms (e.g. child/children, foot/feet)."
+                "description": "True if the noun follows standard English pluralization rules."
             }
         },
         "required": ["text", "number", "possessive", "regular"]
