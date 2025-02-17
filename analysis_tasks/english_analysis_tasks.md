@@ -146,7 +146,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
                 "description": "The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive."
             }
         },
-        "required": ["text", "function"]
+        "required": ["text", "function", "degree", "regular"]
     }
 }
 ```

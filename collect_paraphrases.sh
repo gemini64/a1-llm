@@ -6,8 +6,8 @@ PY_ENV="./.venv"
 SKIP_PARAPHRASE=false; # set to true to skip par
 SKIP_EVAL=false; # set to true to skip eval
 
-INPUT_DATA="./en_12_sentences.tsv"; # this is the file that gets passed to paraphrase.py
-OUTPUT_DIR="./en_12_sentences";
+INPUT_DATA="./it_10_sentences.tsv"; # this is the file that gets passed to paraphrase.py
+OUTPUT_DIR="./it_10_sentences";
 PARAPHRASE_OUTPUT="${OUTPUT_DIR}/paraphrase.tsv"; # set to input file path if you're skipping par
 EVAL_OUTPUT="eval.tsv";
 
@@ -16,12 +16,12 @@ EVAL_COL_LABEL="paraphrases"; # the column that contains the text to evaluate, d
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
 PARAPHRASE_FLAGS="-d";
-PARAPHRASE_CONSTRAINTS="./inventories/constraints_english_grammar_only.md";
+PARAPHRASE_CONSTRAINTS="./inventories/constraints_italian_grammar_only.md";
 
 EVAL_SCRIPT="./eval.py";
 EVAL_FLAGS="-d";
-EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
-LANGUAGE="english";
+EVAL_TASKS="./analysis_tasks/italian_analysis_tasks.json";
+LANGUAGE="italian";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag

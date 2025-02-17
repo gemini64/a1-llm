@@ -81,7 +81,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
                 "description": "The verb mood, following Italian language verb moods"
             },
             "tense": {
-                "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
+                "enum": ["presente", "imperfetto", "passato prossimo", "passato remoto", "trapassato", "trapassato prossimo", "trapassato remoto", "passato", "futuro semplice", "futuro anteriore", "futuro"],
                 "description": "The verb tense, following Italian language verb tenses"
             },
             "voice": {
