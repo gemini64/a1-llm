@@ -5,7 +5,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the nouns it contains.
 
-These nouns have been tagged as either "NOUN" or "PROPN" POS tag. Include every item that corresponds to this specification, even multiple occurrences.
+Look for words tagged as either "NOUN" or "PROPN" in the given input. List all noun instances, including repeated occurrences.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -46,9 +46,9 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the contained pronouns.
+Extract and analyze the pronouns it contains.
 
-These have been tagged with the pos "PRON". Include every item that corresponds to this specification, even multiple occurrences.
+Look for words tagged as "PRON" in the given input. List all pronoun instances, including repeated occurrences.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -81,13 +81,13 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the contained adjectives.
+Extract and analyze the adjectives it contains.
 
-These have been tagged with the pos "ADJ". Include every item that corresponds to this specification, even multiple occurrences.
+Look for words tagged as "ADJ" in the given input. List all adjective instances, including repeated occurrences.
 
 Be especially careful when analyzing adjectives' regularity:
 - **comparative form**: Regular adjectives form their comparative either by:
-  - Adding 'more' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'more capable'). In these cases, the adjective will be directly preceded by 'more' in the provided input. List and analyzed them as a single item.
+  - Adding 'more' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'more capable'). In these cases, the adjective will be directly preceded by 'more' in the provided input. List and analyze them as a single item.
   - Adding the suffix '-er/r' (typically for 1 syllable words, e.g. 'fast' -> 'faster')
 
 - **superlative form**: Regular adjectives form their superlative either by:
@@ -98,7 +98,7 @@ Be especially careful when analyzing adjectives' regularity:
   1. Complete irregularity: All forms are different (e.g. 'good' -> 'better' -> 'best', 'bad' -> 'worse' -> 'worst')
   2. Partial irregularity: Using standard suffixes but with stem changes (e.g. 'far' -> 'further' -> 'furthest')
 
-- **edge cases (more/most)**: 'more' and 'most' may also be used independently as the comparative and superlative irregular forms of 'many/much'. Be extra attentive and check if any other adjective directly follows them or if they are indeed used as standalone
+- **edge cases (more/most)**: 'more' and 'most' may also be used on their own as the comparative and superlative irregular forms of 'many/much'. Be extra attentive and check if any other adjective directly follows them or if they are indeed used as standalone.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.```json
 {
@@ -138,7 +138,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze ALL the contained verbs.
+Extract and analyze ALL the verbs it contains.
 
 Be particularly careful when analyzing auxiliary verbs:
 - **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
