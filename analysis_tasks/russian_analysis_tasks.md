@@ -6,15 +6,15 @@ Given the following part-of-speech (POS) tagged text:
 Extract and analyze the nouns it contains.
 
 Look exclusively for words tagged as "NOUN" or "PROPN" in the given input. List all the noun instances, including repeated occurrences.
-For each noun, you will have to define it's case and the case general meaning. 
-For each combination of case and it's general meaning there is a list of specific case meanings, from which you will need to chose one.
+For each noun, you will have to define its case and the case general meaning. 
+For each combination of case and its general meaning there is a list of specific case meanings, from which you will need to chose one.
 
 Be careful when analyzing case general meanings, follow these definitions:
-- *subjective meaning*: there is an action, a state, or a situtation that comes from the noun.
-- *objective meaning*: there is an action directed at the noun.
-- *attributive meaning* : there is a relation of the noun to another object, action, state, or situation.
-- *vocative expression*: the noun is used to directly address someone or something.
-- *necessary informational completion*: the meaning of the case as a separate unit cannot be determined. It happens when the noun is a part of a fixed expression or is directed by a verb that requires a specific noun case.
+- **subjective meaning**: there is an action, a state, or a situtation that comes from the noun.
+- **objective meaning**: there is an action directed at the noun.
+- **attributive meaning**: there is a relation of the noun to another object, action, state, or situation.
+- **vocative expression**: the noun is used to directly address someone or something.
+- **necessary informational completion**: the meaning of the case as a separate unit cannot be determined. It happens when the noun is a part of a fixed expression or is directed by a verb that requires a specific noun case.
 
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
@@ -39,11 +39,12 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
 
             "case_general_meaning": {
-                "enum": ["subjective: there is an action, a state, or a situtation that comes from the noun", 
-                "objective: there is an action directed at the noun", 
-                "attributive: there is a relation of the noun to another object, action, state, or situation",
-                "necessary informational completion: the meaning of the case as a separate unit cannot be determined",
-                "vocative expression"],
+                "enum": ["subjective", 
+                "objective", 
+                "attributive",
+                "vocative expression",
+                "necessary informational completion"
+                ],
                 "meaning": "following the definitions, report the main noun case meaning. The case meaning doesn't always match the syntactic function of the noun."
             },
             "nominative_subjective_meaning": {
@@ -263,6 +264,8 @@ Given the following part-of-speech (POS) tagged text:
 Extract and analyze all the verbs it contains.
 Look exclusively for words tagged as "VERB" in the given input. List all the verb instances, including repeated occurrences.
 
+Be careful when defining the verb conjugation class. The verbs of the same conjugation class have similar endings and similar stem changes when conjugated. To define the conjugation class, conjugate the verb lemma and then look for the closest conjugation pattern in the list.
+
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
 ```json
 {
@@ -316,7 +319,7 @@ Respond with a structured JSON array conforming to the schema attached below. No
                 "First-conjugation verbs in -ехать, like 'приехать - приеду'",
                 "First-conjugation irregular verbs with differen endings and with major stem change, like 'обнять - обниму', 'есть - ем', 'жать - жму'"
         ],
-                "description": "The verbs of the same conjugation class have similar endings when conjugated. Conjugate the lemma and then look for the closest conjugation pattern in the list"
+                "description": "The verb conjugation class"
             },
 
             "mood": {
@@ -325,11 +328,11 @@ Respond with a structured JSON array conforming to the schema attached below. No
             },
             "tense": {
                 "enum": ["past", "present", "future"],
-                "description": "The verb tense, following Russian language tenses"
+                "description": "The verb tense"
             },
             "voice": {
                 "enum": ["действительный", "страдательный"],
-                "description": "The verb voice, following russian language voices"
+                "description": "The verb voice"
             }
         },
         "required": ["text", "lemma", "conjugation_class", "mood", "tense", "voice" ]
@@ -371,6 +374,45 @@ Respond with a structured JSON array conforming to the schema attached below. No
             }
         },
         "required": ["text", "class"]
+    }
+}
+```
+---
+# Numerals
+Given the following part-of-speech (POS) tagged text:
+```
+{input}
+```
+Extract and analyze all the numerals it contains. Look for words tagged as "NUM" in the given input. List all the numeral instances, including repeated occurrences.
+
+Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
+```json
+
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/schemas/numerals_ru.json",
+    "title": "Numerals",
+    "description": "A list of numerals",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "description": "Describes a numeral",
+        "properties": {
+            "text": {
+                "type": "string",
+                "description": "The numeral extracted"
+            },
+            "kind": {
+                "enum": ["ordinal", "cardinal", "collective"],
+                "description": "The numeral kind"
+            },
+            "case": {
+                "enum": ["Nominative", "Genitive", "Dative", "Accusative",
+                "Instrumental", "Prepositional"],
+                "description": "The numeral case"
+            }
+        },
+        "required": ["text", "kind", "case"]
     }
 }
 ```
