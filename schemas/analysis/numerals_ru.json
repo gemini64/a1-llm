@@ -22,6 +22,6 @@
                 "description": "The numeral case"
             }
         },
-        "required": ["text", "kind"]
+        "required": ["text", "kind", "case"]
     }
 }
