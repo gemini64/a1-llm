@@ -115,6 +115,7 @@ Numbers in Italian text appear in two main categories:
    - Compound forms: ventuno (21), quarantadue (42), etc.
 
 Important notes:
+- 'I' may be used as uppercase determiner (e.g. 'I Sopranos') or as the first roman numeral (i.e. 'I' as 'primo'). Consider the overall context to differentiate between the two.
 - The same number can be ordinal or cardinal depending on its form and context (e.g., "1" is cardinal but "1°" is ordinal)
 - Some words like "primo" can appear in non-ordinal contexts (e.g., "di primo mattino") - consider the context
 - Compound numbers follow the same rules whether written in text or digits

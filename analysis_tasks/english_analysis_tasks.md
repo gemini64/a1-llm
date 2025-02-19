@@ -101,7 +101,7 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze the adjectives it contains.
 
-Look for words tagged as "ADJ" in the given input. List all adjective instances, including repeated occurrences.
+Look SPECIFICALLY for words tagged as "ADJ" in the given input. List all adjective instances, including repeated occurrences.
 
 Be especially careful when analyzing adjectives' regularity:
 - **comparative form**: Regular adjectives form their comparative either by:

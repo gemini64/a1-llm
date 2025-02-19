@@ -15,7 +15,7 @@ italian_eval_template = {
 
 # --- control references
 italian_allowed_pronouns_categories = [ "personale", "possessivo", "dimostrativo", "interrogativo", "indefinito" ]
-italian_allowed_ordinal_numbers = ["primo", "prima", "primi", "prime", "secondo", "seconda", "secondi", "seconde", "terzo", "terza", "terzi", "terze", "1°", "2°", "3°", "1′", "2′", "3′", "1ª", "2ª", "3ª", "1º", "2º", "3º", "I", "II", "III", "primo (1º)", "primo (1°)", "prima (1ª)", "secondo (2º)", "secondo (2°)", "seconda (2ª)", "terzo (3º)", "terzo (3°)", "terza (3ª)" ]
+italian_allowed_ordinal_numbers = ["primo", "prima", "primi", "prime", "secondo", "seconda", "secondi", "seconde", "terzo", "terza", "terzi", "terze", "1°", "2°", "3°", "1′", "2′", "3′", "1ª", "2ª", "3ª", "1º", "2º", "3º", "i", "ii", "iii", "primo (1º)", "primo (1°)", "prima (1ª)", "secondo (2º)", "secondo (2°)", "seconda (2ª)", "terzo (3º)", "terzo (3°)", "terza (3ª)" ]
 italian_allowed_voices = ["attiva"]
 italian_allowed_mood_tense_combinations = {
     "indicativo": ["presente", "passato prossimo"],
