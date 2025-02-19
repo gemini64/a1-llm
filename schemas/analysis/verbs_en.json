@@ -17,8 +17,8 @@
                 "description": "The base form of the verb (e.g., 'go' for 'went')."
             },
             "auxiliary": {
-                "type": "string",
-                "description": "The base form of the auxiliary verb (where applicable)."
+                "type": [ "string", "null" ],
+                "description": "The base form of the auxiliary verb. Use null if the verb has no auxiliary or if this property is not applicable."
             },
             "modal": {
                 "type": "boolean",
@@ -49,6 +49,6 @@
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },
-        "required": [ "text", "lemma", "modal", "finite", "voice" ]
+        "required": [ "text", "lemma", "auxiliary", "modal", "finite", "voice" ]
     }
 }

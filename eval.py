@@ -116,20 +116,32 @@ def analyze_text(
     with get_openai_callback() as cb:
         for superkey in tasks.keys():
             for key, value in tasks[superkey].items():
+
+                # extract data
+                task_prompt = value["prompt"]
+                task_schema = value["schema"]
+
                 prompt = ChatPromptTemplate.from_messages(
                     [
-                        ("user", value["prompt"])
+                        ("user", task_prompt)
                     ]
                 )
                 chain = prompt | llm | message_parser
 
                 results = chain.invoke(
                     input={
-                        "input": json.dumps(tagged_text)
+                        "input": json.dumps(tagged_text, ensure_ascii=False),
+                        "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
                     }
                 )
 
-                analysis_report[key] = results
+                # validate output using schema supplied
+                try:
+                    validate(instance=results, schema=task_schema)
+                    analysis_report[key] = results
+                except:
+                    analysis_report[key] = []
+                    analysis_warnings.append(f"Warning! Got an invalid output when processing '{key}' analysis task!")
         
         consumed_tokens = cb.total_tokens
 
@@ -191,7 +203,7 @@ def main():
 
         analysis_data.append(report)
         tokens.append(token_usage)
-        postags.append(tags)
+        pos_tags.append(tags)
         warnings.append(warning_messages)
 
     # Add results to dataframe
