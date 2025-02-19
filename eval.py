@@ -1,5 +1,6 @@
 import os, argparse, json
 import pandas as pd
+from jsonschema import validate
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import JsonOutputParser
@@ -103,6 +104,7 @@ def analyze_text(
     """Analyze a single text chunk"""
     analysis_report = {}
     consumed_tokens = 0
+    analysis_warnings = []
 
     # we drop tasks keys if syntax needs to be skipped
     if not analyze_syntax:
@@ -116,7 +118,7 @@ def analyze_text(
             for key, value in tasks[superkey].items():
                 prompt = ChatPromptTemplate.from_messages(
                     [
-                        ("user", value)
+                        ("user", value["prompt"])
                     ]
                 )
                 chain = prompt | llm | message_parser
@@ -131,7 +133,7 @@ def analyze_text(
         
         consumed_tokens = cb.total_tokens
 
-    return analysis_report, consumed_tokens
+    return analysis_report, consumed_tokens, analysis_warnings, tagged_text
 
 def add_dictlist_to_dataframe(dictlist, df):
     """
@@ -178,20 +180,26 @@ def main():
     json_parser = JsonOutputParser()
 
     # analyze data
+    pos_tags = []
     analysis_data = []
     tokens = []
+    warnings = []
 
     # --- Step 1 - Analyze
     for input_text in df['texts']:
-        report, token_usage = analyze_text(input_text, tasks, llm, json_parser, tagger, args.syntax)
+        report, token_usage, warning_messages, tags = analyze_text(input_text, tasks, llm, json_parser, tagger, args.syntax)
 
         analysis_data.append(report)
         tokens.append(token_usage)
+        postags.append(tags)
+        warnings.append(warning_messages)
 
     # Add results to dataframe
+    df.insert(len(df.columns), "pos_tags", list(map(lambda x : json.dumps(x, ensure_ascii=False), pos_tags)))
     df.insert(len(df.columns), "analysis_data", list(map(lambda x : json.dumps(x, ensure_ascii=False), analysis_data)))
     if args.debug:
         df.insert(len(df.columns), "tokens", tokens)
+        df.insert(len(df.columns), "warnings", warnings)
 
     # --- Step 2 - Eval
     if not args.analysis:
