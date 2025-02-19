@@ -19,11 +19,12 @@
             },
 
             "case_general_meaning": {
-                "enum": ["subjective: there is an action, a state, or a situtation that comes from the noun", 
-                "objective: there is an action directed at the noun", 
-                "attributive: there is a relation of the noun to another object, action, state, or situation",
-                "necessary informational completion: the meaning of the case as a separate unit cannot be determined",
-                "vocative expression"],
+                "enum": ["subjective", 
+                "objective", 
+                "attributive",
+                "vocative expression",
+                "necessary informational completion"
+                ],
                 "meaning": "following the definitions, report the main noun case meaning. The case meaning doesn't always match the syntactic function of the noun."
             },
             "nominative_subjective_meaning": {
@@ -143,6 +144,6 @@
                 "meaning": "choose from these meanings if the noun is in Prepositional with necessary informational completion general meaning"
             }
         },
-        "required": ["text", "case", "meaning"]
+        "required": ["text", "case"]
     }
 }
