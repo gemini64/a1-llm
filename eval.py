@@ -4,7 +4,7 @@ from jsonschema import validate
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import JsonOutputParser
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from pos_tagger import POSTagger, Language, TAGMethod
 from parsers import parse_italian_analysis, parse_english_analysis
 from langchain_community.callbacks.manager import get_openai_callback
@@ -120,9 +120,14 @@ def analyze_text(
                 # extract data
                 task_prompt = value["prompt"]
                 task_schema = value["schema"]
+                task_shots = value["shots"]
+
+                # here we reformat optional shots
+                shots = list(map(lambda x: (x["role"], x["content"]), task_shots)) if len(task_shots) != 0 else []
 
                 prompt = ChatPromptTemplate.from_messages(
                     [
+                        MessagesPlaceholder("shots", optional=True),
                         ("user", task_prompt)
                     ]
                 )
@@ -130,6 +135,7 @@ def analyze_text(
 
                 results = chain.invoke(
                     input={
+                        "shots": shots,
                         "input": json.dumps(tagged_text, ensure_ascii=False),
                         "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
                     }

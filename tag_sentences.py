@@ -11,8 +11,8 @@ from pos_tagger import POSTagger, Language, TAGMethod
 ###
 
 # --- params
-input_file = "./reference/input.json" # a json list of strings to process
-output_file = "./reference/output.json" # output
+input_file = "./input.json" # a json list of strings to process
+output_file = "./output.json" # output
 
 tagger_language = "italian" # one of: ["italian", "russian", "english"]
 

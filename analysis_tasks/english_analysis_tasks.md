@@ -49,26 +49,55 @@ Given the following part-of-speech (POS) tagged text:
 ```
 {input}
 ```
-Extract and analyze the adjectives it contains.
+Extract and analyze ALL the adjectives it contains.
 
-Look SPECIFICALLY for words tagged as "ADJ" in the given input. List all adjective instances, including repeated occurrences.
+## Analysis Instructions
 
-Be especially careful when analyzing adjectives' regularity:
-- **comparative form**: Regular adjectives form their comparative either by:
-  - Adding 'more' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'more capable'). In these cases, the adjective will be directly preceded by 'more' in the provided input. List and analyze them as a single item.
-  - Adding the suffix '-er/r' (typically for 1 syllable words, e.g. 'fast' -> 'faster')
+1. Look EXCLUSIVELY for words tagged as "ADJ" in the given input.
+2. For each adjective instance (including repeated occurrences):
+   - Record the exact text as it appears
+   - Determine its degree (positive, comparative, or superlative)
+   - Classify its regularity (true/false)
+   - Identify its function (descriptive, interrogative, possessive, or other)
 
-- **superlative form**: Regular adjectives form their superlative either by:
-  - Adding 'most' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'most capable'). In these cases, the adjective will be directly preceded by 'most' in the provided input. List and analyze them as a single item
-  - Adding the suffix '-est/st' (typically for 1 syllable words, e.g. 'fast' -> 'fastest')
+## Important Guidelines for Degree Classification
 
-- **irregular adjectives**: Some adjectives don't follow these patterns. They can be irregular in two ways:
-  1. Complete irregularity: All forms are different (e.g. 'good' -> 'better' -> 'best', 'bad' -> 'worse' -> 'worst')
-  2. Partial irregularity: Using standard suffixes but with stem changes (e.g. 'far' -> 'further' -> 'furthest')
+### For Analytical Purposes Only - Do Not Double Count
+When determining adjectives' degrees, check the context carefully:
 
-- **edge cases (more/most)**: 'more' and 'most' may also be used on their own as the comparative and superlative irregular forms of 'many/much'. Be extra attentive and check if any other adjective directly follows them or if they are indeed used as standalone.
+- **Positive form**: The base form of the adjective (e.g., "beautiful", "good", "tall")
 
-Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.```json
+- **Comparative form**: Either:
+  - ADJ ending in '-er/r' (e.g., "taller", "bigger")
+  - "more" + ADJ as a single unit (e.g., "more beautiful")
+    * CRITICAL: When an adjective ("ADJ")  is IMMEDIATELY preceded by "more" (tagged as "ADV"), treat the entire phrase "more + [adjective]" as a SINGLE comparative adjective. DO NOT list the base adjective separately.
+
+- **Superlative form**: Either:
+  - ADJ ending in '-est/st' (e.g., "tallest", "biggest") 
+  - "most" + ADJ as a single unit (e.g., "most beautiful")
+    * CRITICAL: When an adjective ("ADJ") is IMMEDIATELY preceded by "most" (tagged as "ADV"), treat the entire phrase "most + [adjective]" as a SINGLE superlative adjective. DO NOT list the base adjective separately.
+
+## Irregular Adjectives
+- **Completely irregular**: All forms are different roots (e.g., 'good' -> 'better' -> 'best')
+- **Partially irregular**: Uses standard suffixes but with stem changes (e.g., 'far' -> 'further' -> 'furthest')
+
+### Standalone comparative "more" and superlative "most"
+- When "more" is tagged as "ADJ" in the given input, consider it standalone and classify it as:
+  - text: "more"
+  - degree: comparative
+  - regular: false (it's the irregular comparative form of "many/much")
+  - function: typically "descriptive" unless context suggests otherwise
+
+- When "most" is tagged as "ADJ" in the given input, consider it standalone and classify it as:
+  - text: "most"  
+  - degree: superlative
+  - regular: false (it's the irregular superlative form of "many/much")
+  - function: typically "descriptive" unless context suggests otherwise
+
+## Response Format
+Respond with a structured JSON array conforming to the schema below. No additional comment or data is required.
+
+```json
 {schema}
 ```
 ---

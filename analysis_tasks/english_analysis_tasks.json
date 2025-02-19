@@ -17,7 +17,10 @@
                             "description": "The noun extracted."
                         },
                         "number": {
-                            "enum": ["singular", "plural"],
+                            "enum": [
+                                "singular",
+                                "plural"
+                            ],
                             "description": "The noun number."
                         },
                         "possessive": {
@@ -29,10 +32,15 @@
                             "description": "True if the noun follows standard English pluralization rules."
                         }
                     },
-                    "required": ["text", "number", "possessive", "regular"]
+                    "required": [
+                        "text",
+                        "number",
+                        "possessive",
+                        "regular"
+                    ]
                 }
             },
-            "shots": {}
+            "shots": []
         },
         "pronouns": {
             "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze the pronouns it contains.\n\nLook for words tagged as \"PRON\" in the given input. List all pronoun instances, including repeated occurrences.\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
@@ -51,17 +59,29 @@
                             "description": "The pronoun exactly as it appears in the text"
                         },
                         "kind": {
-                            "enum": [ "personal", "reflexive", "possessive", "reciprocal", "relative", "interrogative", "demonstrative", "indefinite" ],
+                            "enum": [
+                                "personal",
+                                "reflexive",
+                                "possessive",
+                                "reciprocal",
+                                "relative",
+                                "interrogative",
+                                "demonstrative",
+                                "indefinite"
+                            ],
                             "description": "The pronoun kind, based on the English language pronouns categories."
                         }
                     },
-                    "required": ["text", "kind"]
+                    "required": [
+                        "text",
+                        "kind"
+                    ]
                 }
             },
-            "shots": {}
+            "shots": []
         },
         "adjectives": {
-            "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze the adjectives it contains.\n\nLook for words tagged as \"ADJ\" in the given input. List all adjective instances, including repeated occurrences.\n\nBe especially careful when analyzing adjectives' regularity:\n- **comparative form**: Regular adjectives form their comparative either by:\n  - Adding 'more' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'more capable'). In these cases, the adjective will be directly preceded by 'more' in the provided input. List and analyze them as a single item.\n  - Adding the suffix '-er/r' (typically for 1 syllable words, e.g. 'fast' -> 'faster')\n\n- **superlative form**: Regular adjectives form their superlative either by:\n  - Adding 'most' before the positive form (typically for 2+ syllable words, e.g. 'capable' -> 'most capable'). In these cases, the adjective will be directly preceded by 'most' in the provided input. List and analyze them as a single item\n  - Adding the suffix '-est/st' (typically for 1 syllable words, e.g. 'fast' -> 'fastest')\n\n- **irregular adjectives**: Some adjectives don't follow these patterns. They can be irregular in two ways:\n  1. Complete irregularity: All forms are different (e.g. 'good' -> 'better' -> 'best', 'bad' -> 'worse' -> 'worst')\n  2. Partial irregularity: Using standard suffixes but with stem changes (e.g. 'far' -> 'further' -> 'furthest')\n\n- **edge cases (more/most)**: 'more' and 'most' may also be used on their own as the comparative and superlative irregular forms of 'many/much'. Be extra attentive and check if any other adjective directly follows them or if they are indeed used as standalone.\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze ALL the adjectives it contains.\n\n## Analysis Instructions\n\n1. Look EXCLUSIVELY for words tagged as \"ADJ\" in the given input.\n2. For each adjective instance (including repeated occurrences):\n   - Record the exact text as it appears\n   - Determine its degree (positive, comparative, or superlative)\n   - Classify its regularity (true/false)\n   - Identify its function (descriptive, interrogative, possessive, or other)\n\n## Important Guidelines for Degree Classification\n\n### For Analytical Purposes Only - Do Not Double Count\nWhen determining adjectives' degrees, check the context carefully:\n\n- **Positive form**: The base form of the adjective (e.g., \"beautiful\", \"good\", \"tall\")\n\n- **Comparative form**: Either:\n  - ADJ ending in '-er/r' (e.g., \"taller\", \"bigger\")\n  - \"more\" + ADJ as a single unit (e.g., \"more beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\")  is IMMEDIATELY preceded by \"more\" (tagged as \"ADV\"), treat the entire phrase \"more + [adjective]\" as a SINGLE comparative adjective. DO NOT list the base adjective separately.\n\n- **Superlative form**: Either:\n  - ADJ ending in '-est/st' (e.g., \"tallest\", \"biggest\") \n  - \"most\" + ADJ as a single unit (e.g., \"most beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\") is IMMEDIATELY preceded by \"most\" (tagged as \"ADV\"), treat the entire phrase \"most + [adjective]\" as a SINGLE superlative adjective. DO NOT list the base adjective separately.\n\n## Irregular Adjectives\n- **Completely irregular**: All forms are different roots (e.g., 'good' -> 'better' -> 'best')\n- **Partially irregular**: Uses standard suffixes but with stem changes (e.g., 'far' -> 'further' -> 'furthest')\n\n### Standalone comparative \"more\" and superlative \"most\"\n- When \"more\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"more\"\n  - degree: comparative\n  - regular: false (it's the irregular comparative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n- When \"most\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"most\"  \n  - degree: superlative\n  - regular: false (it's the irregular superlative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n## Response Format\nRespond with a structured JSON array conforming to the schema below. No additional comment or data is required.\n\n```json\n{schema}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/adjectives_en.json",
@@ -77,7 +97,11 @@
                             "description": "The adjective exactly as it appears in the text."
                         },
                         "degree": {
-                            "enum": ["positive", "comparative", "superlative"],
+                            "enum": [
+                                "positive",
+                                "comparative",
+                                "superlative"
+                            ],
                             "description": "The adjective degree."
                         },
                         "regular": {
@@ -85,14 +109,79 @@
                             "description": "True if the adjective follows standard English formation patterns for its comparative and superlative forms."
                         },
                         "function": {
-                            "enum": ["descriptive", "interrogative", "possessive", "other"],
+                            "enum": [
+                                "descriptive",
+                                "interrogative",
+                                "possessive",
+                                "other"
+                            ],
                             "description": "The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive."
                         }
                     },
-                    "required": ["text", "function", "degree", "regular"]
+                    "required": [
+                        "text",
+                        "function",
+                        "degree",
+                        "regular"
+                    ]
                 }
             },
-            "shots": {}
+            "shots": [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "Given the following part-of-speech (POS) tagged text:\n```\n[\n {\n\"text\": \"The\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"happier\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"team\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"celebrated\",\n\"pos\": \"VERB\"\n },\n {\n\"text\": \"loudly\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \",\",\n\"pos\": \"PUNCT\"\n },\n {\n\"text\": \"while\",\n\"pos\": \"SCONJ\"\n },\n {\n\"text\": \"more\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"spectators\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"watched\",\n\"pos\": \"VERB\"\n },\n {\n\"text\": \"the\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"best\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"players\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"receive\",\n\"pos\": \"VERB\"\n },\n {\n\"text\": \"their\",\n\"pos\": \"PRON\"\n },\n {\n\"text\": \"most\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \"prestigious\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"awards\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \".\",\n\"pos\": \"PUNCT\"\n }\n ]\n```\nExtract and analyze ALL the adjectives it contains.\n\n## Analysis Instructions\n\n1. Look EXCLUSIVELY for words tagged as \"ADJ\" in the given input.\n2. For each adjective instance (including repeated occurrences):\n   - Record the exact text as it appears\n   - Determine its degree (positive, comparative, or superlative)\n   - Classify its regularity (true/false)\n   - Identify its function (descriptive, interrogative, possessive, or other)\n\n## Important Guidelines for Degree Classification\n\n### For Analytical Purposes Only - Do Not Double Count\nWhen determining adjectives' degrees, check the context carefully:\n\n- **Positive form**: The base form of the adjective (e.g., \"beautiful\", \"good\", \"tall\")\n\n- **Comparative form**: Either:\n  - ADJ ending in '-er/r' (e.g., \"taller\", \"bigger\")\n  - \"more\" + ADJ as a single unit (e.g., \"more beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\")  is IMMEDIATELY preceded by \"more\" (tagged as \"ADV\"), treat the entire phrase \"more + [adjective]\" as a SINGLE comparative adjective. DO NOT list the base adjective separately.\n\n- **Superlative form**: Either:\n  - ADJ ending in '-est/st' (e.g., \"tallest\", \"biggest\") \n  - \"most\" + ADJ as a single unit (e.g., \"most beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\") is IMMEDIATELY preceded by \"most\" (tagged as \"ADV\"), treat the entire phrase \"most + [adjective]\" as a SINGLE superlative adjective. DO NOT list the base adjective separately.\n\n## Irregular Adjectives\n- **Completely irregular**: All forms are different roots (e.g., 'good' -> 'better' -> 'best')\n- **Partially irregular**: Uses standard suffixes but with stem changes (e.g., 'far' -> 'further' -> 'furthest')\n\n### Standalone comparative \"more\" and superlative \"most\"\n- When \"more\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"more\"\n  - degree: comparative\n  - regular: false (it's the irregular comparative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n- When \"most\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"most\"  \n  - degree: superlative\n  - regular: false (it's the irregular superlative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n## Response Format\nRespond with a structured JSON array conforming to the schema below. No additional comment or data is required.\n\n```json\n{\n    \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n    \"$id\": \"/schemas/adjectives_en.json\",\n    \"title\": \"Adjectives\",\n    \"description\": \"A list of adjectives\",\n    \"type\": \"array\",\n    \"items\": {\n        \"type\": \"object\",\n        \"description\": \"Describes the linguistics features of an adjective.\",\n        \"properties\": {\n            \"text\": {\n                \"type\": \"string\",\n                \"description\": \"The adjective exactly as it appears in the text. For comparatives/superlatives formed with 'more'/'most', include the entire phrase (e.g., 'more beautiful'). For standalone 'more'/'most' tagged as ADJ, just use 'more' or 'most'.\"\n            },\n            \"degree\": {\n                \"enum\": [\"positive\", \"comparative\", \"superlative\"],\n                \"description\": \"The adjective degree.\"\n            },\n            \"regular\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the adjective follows standard English formation patterns for its comparative and superlative forms.\"\n            },\n            \"function\": {\n                \"enum\": [\"descriptive\", \"interrogative\", \"possessive\", \"other\"],\n                \"description\": \"The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive.\"\n            }\n        },\n        \"required\": [\"text\", \"function\", \"degree\", \"regular\"]\n    }\n}\n```"
+                        }
+                    ]
+                },
+                {
+                    "role": "assistant",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "```json\n[\n    {\n        \"text\": \"happier\",\n        \"degree\": \"comparative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"more\",\n        \"degree\": \"comparative\",\n        \"regular\": false,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"best\",\n        \"degree\": \"superlative\",\n        \"regular\": false,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"most prestigious\",\n        \"degree\": \"superlative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    }\n]\n```"
+                        }
+                    ]
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "Given the following part-of-speech (POS) tagged text:\n```\n[\n {\n\"text\": \"Most\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \"experienced\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"teachers\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"agreed\",\n\"pos\": \"VERB\"\n },\n {\n\"text\": \"that\",\n\"pos\": \"SCONJ\"\n },\n {\n\"text\": \"the\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"more\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \"challenging\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"curriculum\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"was\",\n\"pos\": \"AUX\"\n },\n {\n\"text\": \"better\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"for\",\n\"pos\": \"ADP\"\n },\n {\n\"text\": \"the\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"brightest\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"students\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \".\",\n\"pos\": \"PUNCT\"\n }\n ]\n```\nExtract and analyze ALL the adjectives it contains.\n\n## Analysis Instructions\n\n1. Look EXCLUSIVELY for words tagged as \"ADJ\" in the given input.\n2. For each adjective instance (including repeated occurrences):\n   - Record the exact text as it appears\n   - Determine its degree (positive, comparative, or superlative)\n   - Classify its regularity (true/false)\n   - Identify its function (descriptive, interrogative, possessive, or other)\n\n## Important Guidelines for Degree Classification\n\n### For Analytical Purposes Only - Do Not Double Count\nWhen determining adjectives' degrees, check the context carefully:\n\n- **Positive form**: The base form of the adjective (e.g., \"beautiful\", \"good\", \"tall\")\n\n- **Comparative form**: Either:\n  - ADJ ending in '-er/r' (e.g., \"taller\", \"bigger\")\n  - \"more\" + ADJ as a single unit (e.g., \"more beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\")  is IMMEDIATELY preceded by \"more\" (tagged as \"ADV\"), treat the entire phrase \"more + [adjective]\" as a SINGLE comparative adjective. DO NOT list the base adjective separately.\n\n- **Superlative form**: Either:\n  - ADJ ending in '-est/st' (e.g., \"tallest\", \"biggest\") \n  - \"most\" + ADJ as a single unit (e.g., \"most beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\") is IMMEDIATELY preceded by \"most\" (tagged as \"ADV\"), treat the entire phrase \"most + [adjective]\" as a SINGLE superlative adjective. DO NOT list the base adjective separately.\n\n## Irregular Adjectives\n- **Completely irregular**: All forms are different roots (e.g., 'good' -> 'better' -> 'best')\n- **Partially irregular**: Uses standard suffixes but with stem changes (e.g., 'far' -> 'further' -> 'furthest')\n\n### Standalone comparative \"more\" and superlative \"most\"\n- When \"more\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"more\"\n  - degree: comparative\n  - regular: false (it's the irregular comparative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n- When \"most\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"most\"  \n  - degree: superlative\n  - regular: false (it's the irregular superlative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n## Response Format\nRespond with a structured JSON array conforming to the schema below. No additional comment or data is required.\n\n```json\n{\n    \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n    \"$id\": \"/schemas/adjectives_en.json\",\n    \"title\": \"Adjectives\",\n    \"description\": \"A list of adjectives\",\n    \"type\": \"array\",\n    \"items\": {\n        \"type\": \"object\",\n        \"description\": \"Describes the linguistics features of an adjective.\",\n        \"properties\": {\n            \"text\": {\n                \"type\": \"string\",\n                \"description\": \"The adjective exactly as it appears in the text. For comparatives/superlatives formed with 'more'/'most', include the entire phrase (e.g., 'more beautiful'). For standalone 'more'/'most' tagged as ADJ, just use 'more' or 'most'.\"\n            },\n            \"degree\": {\n                \"enum\": [\"positive\", \"comparative\", \"superlative\"],\n                \"description\": \"The adjective degree.\"\n            },\n            \"regular\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the adjective follows standard English formation patterns for its comparative and superlative forms.\"\n            },\n            \"function\": {\n                \"enum\": [\"descriptive\", \"interrogative\", \"possessive\", \"other\"],\n                \"description\": \"The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive.\"\n            }\n        },\n        \"required\": [\"text\", \"function\", \"degree\", \"regular\"]\n    }\n}\n```"
+                        }
+                    ]
+                },
+                {
+                    "role": "assistant",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "```json\n[\n    {\n        \"text\": \"most experienced\",\n        \"degree\": \"superlative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"more challenging\",\n        \"degree\": \"comparative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"better\",\n        \"degree\": \"comparative\",\n        \"regular\": false,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"brightest\",\n        \"degree\": \"superlative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    }\n]\n```"
+                        }
+                    ]
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "Given the following part-of-speech (POS) tagged text:\n```\n[\n {\n\"text\": \"The\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"more\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \"beautiful\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"garden\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \"attracted\",\n\"pos\": \"VERB\"\n },\n {\n\"text\": \"most\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"visitors\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \",\",\n\"pos\": \"PUNCT\"\n },\n {\n\"text\": \"despite\",\n\"pos\": \"SCONJ\"\n },\n {\n\"text\": \"being\",\n\"pos\": \"AUX\"\n },\n {\n\"text\": \"smaller\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"and\",\n\"pos\": \"CCONJ\"\n },\n {\n\"text\": \"less\",\n\"pos\": \"ADV\"\n },\n {\n\"text\": \"accessible\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"than\",\n\"pos\": \"ADP\"\n },\n {\n\"text\": \"the\",\n\"pos\": \"DET\"\n },\n {\n\"text\": \"good\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"botanical\",\n\"pos\": \"ADJ\"\n },\n {\n\"text\": \"park\",\n\"pos\": \"NOUN\"\n },\n {\n\"text\": \".\",\n\"pos\": \"PUNCT\"\n }\n ]\n```\nExtract and analyze ALL the adjectives it contains.\n\n## Analysis Instructions\n\n1. Look EXCLUSIVELY for words tagged as \"ADJ\" in the given input.\n2. For each adjective instance (including repeated occurrences):\n   - Record the exact text as it appears\n   - Determine its degree (positive, comparative, or superlative)\n   - Classify its regularity (true/false)\n   - Identify its function (descriptive, interrogative, possessive, or other)\n\n## Important Guidelines for Degree Classification\n\n### For Analytical Purposes Only - Do Not Double Count\nWhen determining adjectives' degrees, check the context carefully:\n\n- **Positive form**: The base form of the adjective (e.g., \"beautiful\", \"good\", \"tall\")\n\n- **Comparative form**: Either:\n  - ADJ ending in '-er/r' (e.g., \"taller\", \"bigger\")\n  - \"more\" + ADJ as a single unit (e.g., \"more beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\")  is IMMEDIATELY preceded by \"more\" (tagged as \"ADV\"), treat the entire phrase \"more + [adjective]\" as a SINGLE comparative adjective. DO NOT list the base adjective separately.\n\n- **Superlative form**: Either:\n  - ADJ ending in '-est/st' (e.g., \"tallest\", \"biggest\") \n  - \"most\" + ADJ as a single unit (e.g., \"most beautiful\")\n    * CRITICAL: When an adjective (\"ADJ\") is IMMEDIATELY preceded by \"most\" (tagged as \"ADV\"), treat the entire phrase \"most + [adjective]\" as a SINGLE superlative adjective. DO NOT list the base adjective separately.\n\n## Irregular Adjectives\n- **Completely irregular**: All forms are different roots (e.g., 'good' -> 'better' -> 'best')\n- **Partially irregular**: Uses standard suffixes but with stem changes (e.g., 'far' -> 'further' -> 'furthest')\n\n### Standalone comparative \"more\" and superlative \"most\"\n- When \"more\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"more\"\n  - degree: comparative\n  - regular: false (it's the irregular comparative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n- When \"most\" is tagged as \"ADJ\" in the given input, consider it standalone and classify it as:\n  - text: \"most\"  \n  - degree: superlative\n  - regular: false (it's the irregular superlative form of \"many/much\")\n  - function: typically \"descriptive\" unless context suggests otherwise\n\n## Response Format\nRespond with a structured JSON array conforming to the schema below. No additional comment or data is required.\n\n```json\n{\n    \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n    \"$id\": \"/schemas/adjectives_en.json\",\n    \"title\": \"Adjectives\",\n    \"description\": \"A list of adjectives\",\n    \"type\": \"array\",\n    \"items\": {\n        \"type\": \"object\",\n        \"description\": \"Describes the linguistics features of an adjective.\",\n        \"properties\": {\n            \"text\": {\n                \"type\": \"string\",\n                \"description\": \"The adjective exactly as it appears in the text. For comparatives/superlatives formed with 'more'/'most', include the entire phrase (e.g., 'more beautiful'). For standalone 'more'/'most' tagged as ADJ, just use 'more' or 'most'.\"\n            },\n            \"degree\": {\n                \"enum\": [\"positive\", \"comparative\", \"superlative\"],\n                \"description\": \"The adjective degree.\"\n            },\n            \"regular\": {\n                \"type\": \"boolean\",\n                \"description\": \"True if the adjective follows standard English formation patterns for its comparative and superlative forms.\"\n            },\n            \"function\": {\n                \"enum\": [\"descriptive\", \"interrogative\", \"possessive\", \"other\"],\n                \"description\": \"The adjective function. It should be labeled as 'other' if it cannot be cataloged as descriptive, interrogative or possessive.\"\n            }\n        },\n        \"required\": [\"text\", \"function\", \"degree\", \"regular\"]\n    }\n}\n```"
+                        }
+                    ]
+                },
+                {
+                    "role": "assistant",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": "```json\n[\n    {\n        \"text\": \"more beautiful\",\n        \"degree\": \"comparative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"most\",\n        \"degree\": \"superlative\",\n        \"regular\": false,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"smaller\",\n        \"degree\": \"comparative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"less accessible\",\n        \"degree\": \"comparative\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"good\",\n        \"degree\": \"positive\",\n        \"regular\": false,\n        \"function\": \"descriptive\"\n    },\n    {\n        \"text\": \"botanical\",\n        \"degree\": \"positive\",\n        \"regular\": true,\n        \"function\": \"descriptive\"\n    }\n]\n```"
+                        }
+                    ]
+                }
+            ]
         },
         "verbs": {
             "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze ALL the verbs it contains.\n\nBe particularly careful when analyzing auxiliary verbs:\n- **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. \"was playing\" should be listed as a \"past continuous\").\n- **modals**: if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. \"can swim\").\n- **multiple auxiliary verbs**: some verb forms may include multiple auxiliary verbs. This is the case, for example for the \"future perfect continous\", where we have both the modal \"will\" and the verb \"to be\". In cases where multiple auxiliary verbs accompany a main verb, if a modal verb is used, list only the lemma of the modal auxiliary verb (e.g. \"will have been\" should list just \"will\" as auxiliary).\n- **perfect gerunds**: this non-finite verb form is formed by \"having\" + \"past participle\" (this is the main verb). Analyze and list perfect gerunds as a single item (e.g. \"having swum\").\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
@@ -115,7 +204,10 @@
                             "description": "The base form of the verb (e.g., 'go' for 'went')."
                         },
                         "auxiliary": {
-                            "type": [ "string", "null" ],
+                            "type": [
+                                "string",
+                                "null"
+                            ],
                             "description": "The base form of the auxiliary verb. Nullable if the verb has no auxiliary or if this property is not applicable."
                         },
                         "modal": {
@@ -127,30 +219,59 @@
                             "description": "True if the verb is conjugated in a finite form."
                         },
                         "mood": {
-                            "enum": [ "indicative", "imperative", "subjunctive"],
+                            "enum": [
+                                "indicative",
+                                "imperative",
+                                "subjunctive"
+                            ],
                             "description": "The verb mood (only for finite verb forms)."
                         },
                         "tense": {
-                            "enum": [ "present", "past", "future"],
+                            "enum": [
+                                "present",
+                                "past",
+                                "future"
+                            ],
                             "description": "The verb tense (only for finite verb forms)."
                         },
                         "aspect": {
-                            "enum": [ "simple", "continous", "perfect", "perfect continous"],
+                            "enum": [
+                                "simple",
+                                "continous",
+                                "perfect",
+                                "perfect continous"
+                            ],
                             "description": "The verb aspect (only for finite verb forms)."
                         },
                         "voice": {
-                            "enum": [ "active", "passive"],
+                            "enum": [
+                                "active",
+                                "passive"
+                            ],
                             "description": "The verb voice."
                         },
                         "verb_form": {
-                            "enum": [ "infinitive", "simple gerund", "perfect gerund", "present participle", "past participle" ],
+                            "enum": [
+                                "infinitive",
+                                "simple gerund",
+                                "perfect gerund",
+                                "present participle",
+                                "past participle"
+                            ],
                             "description": "The verb form (only for non-finite verb forms)."
                         }
                     },
-                    "required": [ "text", "lemma", "auxiliary", "modal", "finite", "voice" ]
+                    "required": [
+                        "text",
+                        "lemma",
+                        "auxiliary",
+                        "modal",
+                        "finite",
+                        "voice"
+                    ]
                 }
             },
-            "shots": {}
+            "shots": []
         }
     },
     "syntax": {}
