@@ -116,7 +116,7 @@ Note: The final version MUST be enclosed in <text> tags, regardless of whether c
 
 def setup_llm(use_groq):
     """Configure and return appropriate LLM"""
-    model = "gpt-4o"
+    model = "gpt-4o-2024-11-20"
     temperature = 0
     top_p = 0.95
 

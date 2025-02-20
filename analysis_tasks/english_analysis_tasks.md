@@ -108,13 +108,55 @@ Given the following part-of-speech (POS) tagged text:
 ```
 Extract and analyze ALL the verbs it contains.
 
-Be particularly careful when analyzing auxiliary verbs:
-- **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
-- **modals**: if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. "can swim").
-- **multiple auxiliary verbs**: some verb forms may include multiple auxiliary verbs. This is the case, for example for the "future perfect continous", where we have both the modal "will" and the verb "to be". In cases where multiple auxiliary verbs accompany a main verb, if a modal verb is used, list only the lemma of the modal auxiliary verb (e.g. "will have been" should list just "will" as auxiliary).
-- **perfect gerunds**: this non-finite verb form is formed by "having" + "past participle" (this is the main verb). Analyze and list perfect gerunds as a single item (e.g. "having swum").
+## Analysis Instructions
+Annotate the following morphological features for every verb, either in finite or non-finite form:
+- **finite forms**: its auxiliary (if present) and the mood x tense x aspect combination used.
+- **non-finite forms**: the specific non-finite verb form used ("infinitive", "simple gerund", "perfect gerund", "present participle", "past participle").
+- **both**: the verb analyzed (as it appears in the given text), its lemma, its voice ("active"/"passive"), if it is finite/non-finite and if it includes a modal verb.
 
+### Dealing with auxiliary ("AUX") verbs 
+Apply the following rules when dealing with auxiliary ("AUX") verbs:
+- **to be/to have**: when used as auxiliaries in finite verb forms, they should be listed and analyzed as a single unit with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous"). When a modal verb appears without an explicit main verb (e.g., "I can't, but he can."), analyze it as a standalone implied main verb.
+- **modals**: when a modal verb has auxiliary ("AUX") function, it should be listed and analyzed as a single unit with the main verb it accompanies (e.g. "can swim"). Set the verb's "modal" property to true.
+- **multiple auxiliary verbs**: some finite verb form may include multiple auxiliaries. This is the case for some passive verb forms and, as an example, verbs conjugated in "future perfect continuous", where we have both the modal "will" and the verb "to be". When multiple auxiliary verbs accompany a main verb, compile the "auxiliary" property as follows:
+    - if a **modal** verb is used, annotate exclusively the lemma of the modal auxiliary verb (e.g. "will have been" should list just "will" as auxiliary)
+    - in all other cases, annotate the lemmas of the auxiliaries used.
+
+### Handling negation particles
+Negation particles such as "n't", "not", etc. are NOT separate verbs and should NOT be listed as individual entries. Instead:
+- For contracted forms like "can't", "don't", "won't", etc., analyze the full auxiliary/modal together with its negation as a single unit.
+- Example: "can't" should be analyzed as a single entry with:
+  - text: "can't"
+  - lemma: "can"
+  - modal: true
+  - other properties as appropriate
+
+### Marginal verb constructs
+- **perfect gerund**: this non-finite verb form is formed by [having] + [past participle] (this is the main verb). Analyze and list this construct a single unit (e.g. "having swum").
+- **[be going to] + [verb]**: this construct should always be analyzed as a single unit (e.g. "I'm going to jump"). Annotate these properties as follows:
+  - **text**: the full construct, as it appears in the input text
+  - **lemma**: the lemma of the [verb] used
+  - **auxiliary**: be going to
+  - **modal**: true
+  - **tense and mood**:
+    - when used as **is/are going to**: present continuous
+    - when used as **was/were going to**: past continuous
+- **[be able to/have to/be to/had better] + [verb]**: these marginal verb forms are referred as semi-modals or semi-auxiliaries. These constructs should always be analyzed as a single unit (e.g. "I have to go"). Annotate these properties as follows:
+  - **text**: the full construct, as it appears in the input text
+  - **lemma**: the lemma of the [verb] used
+  - **auxiliary**: [be able to/have to/be to/had better]
+  - **modal**: true
+
+### Handling verbs in marginal constructs
+When analyzing marginal verb constructs such as [be going to] + [verb], [be able to] + [verb], [have to] + [verb], etc.:
+- The entire construct should be analyzed as a single unit ONLY
+- DO NOT analyze the main verb as a separate infinitive
+- DO NOT analyze "going" as a separate gerund/participle when it appears in the [be going to] construction
+- Example: In "I am going to swim", only analyze "am going to swim" as a single unit, with no separate entries for "going" or "swim"
+  
+## Output format
 Respond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.
+
 ```json
 {schema}
 ```

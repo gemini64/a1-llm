@@ -184,7 +184,7 @@
             ]
         },
         "verbs": {
-            "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze ALL the verbs it contains.\n\nBe particularly careful when analyzing auxiliary verbs:\n- **to be/to have**: when used as auxiliary in finite verb forms, they should be listed and analyzed as a single item along with the main verb they accompany (e.g. \"was playing\" should be listed as a \"past continuous\").\n- **modals**: if used as auxiliary, should be listed and analyzed as a single item along with the main verb they accompany (e.g. \"can swim\").\n- **multiple auxiliary verbs**: some verb forms may include multiple auxiliary verbs. This is the case, for example for the \"future perfect continous\", where we have both the modal \"will\" and the verb \"to be\". In cases where multiple auxiliary verbs accompany a main verb, if a modal verb is used, list only the lemma of the modal auxiliary verb (e.g. \"will have been\" should list just \"will\" as auxiliary).\n- **perfect gerunds**: this non-finite verb form is formed by \"having\" + \"past participle\" (this is the main verb). Analyze and list perfect gerunds as a single item (e.g. \"having swum\").\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze ALL the verbs it contains.\n\n## Analysis Instructions\nAnnotate the following morphological features for every verb, either in finite or non-finite form:\n- **finite forms**: its auxiliary (if present) and the mood x tense x aspect combination used.\n- **non-finite forms**: the specific non-finite verb form used (\"infinitive\", \"simple gerund\", \"perfect gerund\", \"present participle\", \"past participle\").\n- **both**: the verb analyzed (as it appears in the given text), its lemma, its voice (\"active\"/\"passive\"), if it is finite/non-finite and if it includes a modal verb.\n\n### Dealing with auxiliary (\"AUX\") verbs \nApply the following rules when dealing with auxiliary (\"AUX\") verbs:\n- **to be/to have**: when used as auxiliaries in finite verb forms, they should be listed and analyzed as a single unit with the main verb they accompany (e.g. \"was playing\" should be listed as a \"past continuous\"). When a modal verb appears without an explicit main verb (e.g., \"I can't, but he can.\"), analyze it as a standalone implied main verb.\n- **modals**: when a modal verb has auxiliary (\"AUX\") function, it should be listed and analyzed as a single unit with the main verb it accompanies (e.g. \"can swim\"). Set the verb's \"modal\" property to true.\n- **multiple auxiliary verbs**: some finite verb form may include multiple auxiliaries. This is the case for some passive verb forms and, as an example, verbs conjugated in \"future perfect continuous\", where we have both the modal \"will\" and the verb \"to be\". When multiple auxiliary verbs accompany a main verb, compile the \"auxiliary\" property as follows:\n    - if a **modal** verb is used, annotate exclusively the lemma of the modal auxiliary verb (e.g. \"will have been\" should list just \"will\" as auxiliary)\n    - in all other cases, annotate the lemmas of the auxiliaries used.\n\n### Handling negation particles\nNegation particles such as \"n't\", \"not\", etc. are NOT separate verbs and should NOT be listed as individual entries. Instead:\n- For contracted forms like \"can't\", \"don't\", \"won't\", etc., analyze the full auxiliary/modal together with its negation as a single unit.\n- Example: \"can't\" should be analyzed as a single entry with:\n  - text: \"can't\"\n  - lemma: \"can\"\n  - modal: true\n  - other properties as appropriate\n\n### Marginal verb constructs\n- **perfect gerund**: this non-finite verb form is formed by [having] + [past participle] (this is the main verb). Analyze and list this construct a single unit (e.g. \"having swum\").\n- **[be going to] + [verb]**: this construct should always be analyzed as a single unit (e.g. \"I'm going to jump\"). Annotate these properties as follows:\n  - **text**: the full construct, as it appears in the input text\n  - **lemma**: the lemma of the [verb] used\n  - **auxiliary**: be going to\n  - **modal**: true\n  - **tense and mood**:\n    - when used as **is/are going to**: present continuous\n    - when used as **was/were going to**: past continuous\n- **[be able to/have to/be to/had better] + [verb]**: these marginal verb forms are referred as semi-modals or semi-auxiliaries. These constructs should always be analyzed as a single unit (e.g. \"I have to go\"). Annotate these properties as follows:\n  - **text**: the full construct, as it appears in the input text\n  - **lemma**: the lemma of the [verb] used\n  - **auxiliary**: [be able to/have to/be to/had better]\n  - **modal**: true\n\n### Handling verbs in marginal constructs\nWhen analyzing marginal verb constructs such as [be going to] + [verb], [be able to] + [verb], [have to] + [verb], etc.:\n- The entire construct should be analyzed as a single unit ONLY\n- DO NOT analyze the main verb as a separate infinitive\n- DO NOT analyze \"going\" as a separate gerund/participle when it appears in the [be going to] construction\n- Example: In \"I am going to swim\", only analyze \"am going to swim\" as a single unit, with no separate entries for \"going\" or \"swim\"\n  \n## Output format\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n\n```json\n{schema}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/verbs_en.json",
@@ -201,73 +201,65 @@
                         },
                         "lemma": {
                             "type": "string",
-                            "description": "The base form of the verb (e.g., 'go' for 'went')."
+                            "description": "The base form of the main verb (e.g., 'go' for 'went')."
                         },
                         "auxiliary": {
-                            "type": [
-                                "string",
-                                "null"
-                            ],
-                            "description": "The base form of the auxiliary verb. Nullable if the verb has no auxiliary or if this property is not applicable."
+                            "type": [ "string", "null" ],
+                            "description": "The base form of the auxiliary verb. Use null if the verb analyzed has no auxiliary."
                         },
                         "modal": {
                             "type": "boolean",
-                            "description": "True if the verb is a modal verb."
+                            "description": "True if the verb includes a modal verb."
                         },
                         "finite": {
                             "type": "boolean",
                             "description": "True if the verb is conjugated in a finite form."
                         },
                         "mood": {
-                            "enum": [
-                                "indicative",
-                                "imperative",
-                                "subjunctive"
-                            ],
+                            "enum": [ "indicative", "imperative", "subjunctive"],
                             "description": "The verb mood (only for finite verb forms)."
                         },
                         "tense": {
-                            "enum": [
-                                "present",
-                                "past",
-                                "future"
-                            ],
+                            "enum": [ "present", "past", "future" ],
                             "description": "The verb tense (only for finite verb forms)."
                         },
                         "aspect": {
-                            "enum": [
-                                "simple",
-                                "continous",
-                                "perfect",
-                                "perfect continous"
-                            ],
+                            "enum": [ "simple", "continuous", "perfect", "perfect continuous" ],
                             "description": "The verb aspect (only for finite verb forms)."
                         },
                         "voice": {
-                            "enum": [
-                                "active",
-                                "passive"
-                            ],
+                            "enum": [ "active", "passive"],
                             "description": "The verb voice."
                         },
                         "verb_form": {
-                            "enum": [
-                                "infinitive",
-                                "simple gerund",
-                                "perfect gerund",
-                                "present participle",
-                                "past participle"
-                            ],
+                            "enum": [ "infinitive", "simple gerund", "perfect gerund", "present participle", "past participle" ],
                             "description": "The verb form (only for non-finite verb forms)."
                         }
                     },
-                    "required": [
-                        "text",
-                        "lemma",
-                        "auxiliary",
-                        "modal",
-                        "finite",
-                        "voice"
+                    "required": [ "text", "lemma", "modal", "finite", "voice" ],
+                    "allOf": [
+                        {
+                            "if": {
+                                "properties": {
+                                    "finite": { "const": true }
+                                },
+                                "required": ["finite"]
+                            },
+                            "then": {
+                                "required": ["mood", "tense", "aspect", "auxiliary"]
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "finite": { "const": false }
+                                },
+                                "required": ["finite"]
+                            },
+                            "then": {
+                                "required": ["verb_form"]
+                            }
+                        }
                     ]
                 }
             },

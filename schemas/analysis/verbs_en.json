@@ -14,15 +14,15 @@
             },
             "lemma": {
                 "type": "string",
-                "description": "The base form of the verb (e.g., 'go' for 'went')."
+                "description": "The base form of the main verb (e.g., 'go' for 'went')."
             },
             "auxiliary": {
                 "type": [ "string", "null" ],
-                "description": "The base form of the auxiliary verb. Use null if the verb has no auxiliary or if this property is not applicable."
+                "description": "The base form of the auxiliary verb. Use null if the verb analyzed has no auxiliary."
             },
             "modal": {
                 "type": "boolean",
-                "description": "True if the verb is a modal verb."
+                "description": "True if the verb includes a modal verb."
             },
             "finite": {
                 "type": "boolean",
@@ -33,11 +33,11 @@
                 "description": "The verb mood (only for finite verb forms)."
             },
             "tense": {
-                "enum": [ "present", "past", "future"],
+                "enum": [ "present", "past", "future" ],
                 "description": "The verb tense (only for finite verb forms)."
             },
             "aspect": {
-                "enum": [ "simple", "continous", "perfect", "perfect continous"],
+                "enum": [ "simple", "continuous", "perfect", "perfect continuous" ],
                 "description": "The verb aspect (only for finite verb forms)."
             },
             "voice": {
@@ -49,6 +49,30 @@
                 "description": "The verb form (only for non-finite verb forms)."
             }
         },
-        "required": [ "text", "lemma", "auxiliary", "modal", "finite", "voice" ]
+        "required": [ "text", "lemma", "modal", "finite", "voice" ],
+        "allOf": [
+            {
+                "if": {
+                    "properties": {
+                        "finite": { "const": true }
+                    },
+                    "required": ["finite"]
+                },
+                "then": {
+                    "required": ["mood", "tense", "aspect", "auxiliary"]
+                }
+            },
+            {
+                "if": {
+                    "properties": {
+                        "finite": { "const": false }
+                    },
+                    "required": ["finite"]
+                },
+                "then": {
+                    "required": ["verb_form"]
+                }
+            }
+        ]
     }
 }

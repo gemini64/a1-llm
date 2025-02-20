@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 
 # --- configuration defaults
 # LLM Tagger
-OAI_MODEL = "gpt-4o"
+OAI_MODEL = "gpt-4o-2024-11-20"
 OAI_TEMPERATURE = 0.0
 OAI_TOP_P = 0.95
 

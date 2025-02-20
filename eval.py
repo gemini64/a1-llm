@@ -1,4 +1,5 @@
 import os, argparse, json
+from collections.abc import Callable
 import pandas as pd
 from jsonschema import validate
 from dotenv import load_dotenv
@@ -84,7 +85,7 @@ def load_evaluator(language, check_syntax):
     return evaluator
 
 def setup_llm():
-    model = "gpt-4o"
+    model = "gpt-4o-2024-11-20"
     temperature = 0
     top_p = 0.95
 
@@ -95,13 +96,23 @@ def setup_llm():
     )
 
 def analyze_text(
-    text,
-    tasks,
-    llm,
-    message_parser,
-    tagger,
-    analyze_syntax):
-    """Analyze a single text chunk"""
+    text: str,
+    tasks: dict,
+    llm: ChatOpenAI,
+    message_parser: Callable[..., dict],
+    tagger: POSTagger,
+    analyze_syntax: bool):
+    """Analyze a single text chunk
+    
+    Arguments:
+        text (str): the input text to analyze
+        tasks (dict): a dict defining analysis subtasks
+        llm (ChatOpenAI): the langchain LLM instance
+        message_parser (Callable[..., dict]): AIMessage output parser, should return a dict
+        tagger (POSTagger): the postagger to use
+        analyze_syntax (bool): set to False to skip syntax analysis tasks
+    """
+
     analysis_report = {}
     consumed_tokens = 0
     analysis_warnings = []
