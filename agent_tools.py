@@ -28,7 +28,7 @@ def regex_message_parser(regex: str) -> partial[str | None]:
     Can be chained with a langchain sequences."""
     return partial(regex_parser, regex=regex)
 
-def json_message_parser(message: AIMessage):
+def json_message_parser(message: AIMessage) -> dict:
     """Tries to load JSON object encoded in an AI Message.
     Can be chained with langchain sequences."""
     message_content = message.content

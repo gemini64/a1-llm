@@ -116,8 +116,8 @@ Annotate the following morphological features for every verb, either in finite o
 
 ### Dealing with auxiliary ("AUX") verbs 
 Apply the following rules when dealing with auxiliary ("AUX") verbs:
-- **to be/to have**: when used as auxiliaries in finite verb forms, they should be listed and analyzed as a single unit with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous"). When a modal verb appears without an explicit main verb (e.g., "I can't, but he can."), analyze it as a standalone implied main verb.
-- **modals**: when a modal verb has auxiliary ("AUX") function, it should be listed and analyzed as a single unit with the main verb it accompanies (e.g. "can swim"). Set the verb's "modal" property to true.
+- **to be/to have**: when used as auxiliaries in finite verb forms, they should be listed and analyzed as a single unit with the main verb they accompany (e.g. "was playing" should be listed as a "past continuous").
+- **modals**: when a modal verb has auxiliary ("AUX") function, it should be listed and analyzed as a single unit with the main verb it accompanies (e.g. "can swim"). Set the verb's "modal" property to true. When a modal verb appears without an explicit main verb (e.g., "I can't, but he can."), analyze it as a standalone implied main verb.
 - **multiple auxiliary verbs**: some finite verb form may include multiple auxiliaries. This is the case for some passive verb forms and, as an example, verbs conjugated in "future perfect continuous", where we have both the modal "will" and the verb "to be". When multiple auxiliary verbs accompany a main verb, compile the "auxiliary" property as follows:
     - if a **modal** verb is used, annotate exclusively the lemma of the modal auxiliary verb (e.g. "will have been" should list just "will" as auxiliary)
     - in all other cases, annotate the lemmas of the auxiliaries used.

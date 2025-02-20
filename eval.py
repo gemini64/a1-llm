@@ -147,7 +147,7 @@ def analyze_text(
                 results = chain.invoke(
                     input={
                         "shots": shots,
-                        "input": json.dumps(tagged_text, ensure_ascii=False),
+                        "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
                         "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
                     }
                 )
