@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init variable
-PY_EXE ="/opt/homebrew/bin/python3.11";
+PY_EXE="/opt/homebrew/bin/python3.11";
 PY_ENV=".venv";
 ENV_TEMPLATE="./.env_sample";
 ENV_TARGET="./.env";
