@@ -43,10 +43,21 @@ pip install -r "${PY_REQUIREMENTS}";
 
 # install tint
 echo -e "${LIGHT_BLUE}[4/4]${NC} - ${GREEN}Fetching Tint binaries${NC}";
-mkdir "${TOOLS_DIR}";
-curl -L "${TINT_URL}" -o "${TINT_PKG}";
-tar -xf "${TINT_PKG}" -C "${TOOLS_DIR}";
-rm "${TINT_PKG}";
+mkdir -p "${TOOLS_DIR}";
+
+# added timeout to avoid issues if FBK server does not respond
+if ! curl --max-time 30 -L "${TINT_URL}" -o "${TINT_PKG}" 2>/dev/null; then
+    echo -e "${YELLOW}Warning: Could not download Tint binaries.${NC}";
+    echo -e "${YELLOW}Please download Tint manually from:${NC}";
+    echo -e "${YELLOW}${TINT_URL}${NC}";
+    echo -e "${YELLOW}Extract it and place the contents in: ${TOOLS_DIR}${NC}";
+else
+    if ! tar -xf "${TINT_PKG}" -C "${TOOLS_DIR}"; then
+        echo -e "${YELLOW}Warning: Could not extract Tint binaries.${NC}";
+        echo -e "${YELLOW}Please download and extract Tint manually to: ${TOOLS_DIR}${NC}";
+    fi
+    rm -f "${TINT_PKG}";
+fi
 
 # exit
 deactivate;
