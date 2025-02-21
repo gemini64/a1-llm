@@ -48,7 +48,7 @@ echo -e "${LIGHT_BLUE}[3/5]${NC} - ${GREEN}Setting-up groq cloud env variables${
 if [ ! -z "${GROQ_KEY}" ]; then
     export GROQ_API_KEY="${GROQ_KEY}";
 fi
-if [ ! -z "${GROQ_MODEL}" ]; then
+if [ ! -z "${GROQ_MODEL_NAME}" ]; then
     export GROQ_MODEL="${GROQ_MODEL_NAME}";
 fi
 

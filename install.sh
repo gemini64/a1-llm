@@ -8,8 +8,7 @@ ENV_TARGET="./.env";
 TOOLS_DIR="./tools";
 TINT_PKG="./tint.tar.gz";
 TINT_URL="https://dhsite.fbk.eu/tint-release/0.3/tint-0.3-complete.tar.gz";
-REQUIREMENTS_LINUX="./requirements.txt"
-REQUIREMENTS_DARWIN="./requirements_darwin.txt"
+PY_REQUIREMENTS="./requirements.txt"
 
 # check os
 if ! ( [[ "$OSTYPE" == "linux-gnu"* ]] | [[ "$OSTYPE" == "darwin"* ]] ); then
@@ -38,12 +37,9 @@ fi
 source "${PY_ENV}/bin/activate";
 
 # other requirements
-echo -e "${LIGHT_BLUE}[3/4]${NC} - ${GREEN}Installing requirements${NC}";
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    pip install -r "${REQUIREMENTS_LINUX}";
-else
-    pip install -r "${REQUIREMENTS_DARWIN}";
-fi
+echo -e "${LIGHT_BLUE}[3/4]${NC} - ${GREEN}Installing python requirements${NC}";
+pip install --upgrade pip;
+pip install -r "${PY_REQUIREMENTS}";
 
 # install tint
 echo -e "${LIGHT_BLUE}[4/4]${NC} - ${GREEN}Fetching Tint binaries${NC}";

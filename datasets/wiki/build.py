@@ -134,7 +134,7 @@ def spacy_cut_text(input: str, min_words: int = 10) -> str:
 
 # --- flags
 output_file = "./output.tsv"
-input_file = "./pages_wikipedia.json" # a list of links to crawl
+input_file = "./pages.json" # a list of links to crawl
 
 cut_sentences = True # set to True to cut summary to the last sentence that matches (or exceeds) min_words
 min_words = 40 # minimum words a summary should contain
