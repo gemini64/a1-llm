@@ -11,7 +11,7 @@ TINT_URL="https://dhsite.fbk.eu/tint-release/0.3/tint-0.3-complete.tar.gz";
 PY_REQUIREMENTS="./requirements.txt"
 
 # check os
-if ! ( [[ "$OSTYPE" == "linux-gnu"* ]] | [[ "$OSTYPE" == "darwin"* ]] ); then
+if ! ( [[ "$OSTYPE" == "linux-gnu"* ]] || [[ "$OSTYPE" == "darwin"* ]] ); then
     echo "Error! Unsupported OS";
     exit 2;
 fi
