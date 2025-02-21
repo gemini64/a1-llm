@@ -22,7 +22,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="a TSV file containing the texts to evaluate")
 parser.add_argument("-t", "--tasks", help="a JSON file containing analysis tasks to perform", required=True)
-parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True)
+parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True, choices=['italian', 'english', 'russian'], type=str)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-a', '--analysis', help="(optional) perform analysis only", action='store_true')
 parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
