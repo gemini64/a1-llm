@@ -13,11 +13,11 @@ if (os.getenv("PY_ENV") == "DEVELOPMENT"):
 # set up parser
 parser = argparse.ArgumentParser(
     prog="paraphrase",
-    description="Given a set of texts as input, performs text transformations to make the input text conform to given linguistics constraints."
+    description="Given a set of texts as input, performs text transformations to make the input text conform to given linguistic constraints."
 )
 
 parser.add_argument("input", help="a TSV file containing the texts to paraphrase")
-parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistics constraints to paraphrase against", required=True)
+parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistic constraints to follow when paraphrasing", required=True)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
@@ -69,13 +69,13 @@ Check if the given {text_type} complies with the constraints provided; generate 
 {input_text}
 
 # Constraints checking:
-Check {check_scope} againts ALL constraints.
+Check {check_scope} againts ALL the constraints.
 - If it violates no constraint, keep it as is.
 - If it violates one or more constraints, paraphrase {action_scope}.
 
 # Paraphrasing:
-- A paraphrase has to preserve the original semantic meaning and minimize information loss.
-- A paraphrase has to replace each non-constraints conformant element with an equivalent conformant alternative.
+- A paraphrase must preserve the original semantic meaning and minimize information loss.
+- A paraphrase must replace each non-constraints conformant element with an equivalent conformant alternative.
 - If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the non conformant text should be removed.
 
 # Output format:
@@ -85,7 +85,7 @@ Check {check_scope} againts ALL constraints.
     - Quote the problematic text
     - Explain which constraint it violates
     - Give a paraphrase for that specific violation (if any can be formulated)
-- If no violations found, state this explicitly
+- If no violations are found, state this explicitly
 
 2. End your response with:
 <text>[Your final version of the {text_type} here - either the original if no changes were needed, or your paraphrased version if changes were made]</text>
