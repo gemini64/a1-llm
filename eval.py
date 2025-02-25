@@ -28,6 +28,7 @@ parser.add_argument('-a', '--analysis', help="(optional) perform analysis only",
 parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-o', '--output', help="(optional) output file")
+parser.add_argument('-r', '--retries', help="(optional) number of allowed retries if model output is invalid", type=int, default=0)
 
 def validate_args(args):
     """Validate command line arguments"""
@@ -46,6 +47,10 @@ def validate_args(args):
 
     if (not args.postagger in set([ "italian", "english", "russian" ])):
         print(f"Error: '{args.postagger}' is not a supported language to validate against!")
+        exit(2)
+        
+    if args.retries < 0:
+        print("Error: number of retries must be a positive integer!")
         exit(2)
 
     return output_file
@@ -101,7 +106,8 @@ def analyze_text(
     llm: ChatOpenAI,
     message_parser: Callable[..., dict],
     tagger: POSTagger,
-    analyze_syntax: bool):
+    analyze_syntax: bool,
+    max_retries: int = 0):
     """Analyze a single text chunk
     
     Arguments:
@@ -111,6 +117,7 @@ def analyze_text(
         message_parser (Callable[..., dict]): AIMessage output parser, should return a dict
         tagger (POSTagger): the postagger to use
         analyze_syntax (bool): set to False to skip syntax analysis tasks
+        max_retries (int): maximum number of retries if the model output is invalid
     """
 
     analysis_report = {}
@@ -143,22 +150,56 @@ def analyze_text(
                     ]
                 )
                 chain = prompt | llm | message_parser
-
-                results = chain.invoke(
-                    input={
-                        "shots": shots,
-                        "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
-                        "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
-                    }
-                )
-
-                # validate output using schema supplied
-                try:
-                    validate(instance=results, schema=task_schema)
-                    analysis_report[key] = results
-                except:
-                    analysis_report[key] = []
-                    analysis_warnings.append(f"Warning! Got an invalid output when processing '{key}' analysis task!")
+                
+                # Initialize retry counter and status
+                retries = 0
+                valid_output = False
+                results = []
+                
+                # Try to get valid output with retries
+                while not valid_output and retries <= max_retries:
+                    try:
+                        results = chain.invoke(
+                            input={
+                                "shots": shots,
+                                "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
+                                "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
+                            }
+                        )
+                        
+                        # Validate output using schema supplied
+                        validate(instance=results, schema=task_schema)
+                        valid_output = True
+                        analysis_report[key] = results
+                        
+                    except Exception as e:
+                        retries += 1
+                        if retries <= max_retries:
+                            # Add feedback about the error to help model correct its output
+                            error_message = str(e).replace("{", "{{").replace("}", "}}")
+                            error_feedback = f"Your previous response was invalid. Please try again and ensure your output conforms to the schema.\n\nError: {error_message}\n\nIMPORTANT: Your response must be ONLY valid JSON without any additional text, explanations, or comments."
+                            
+                            # Escape curly braces for langchain template system
+                            previous_results = json.dumps(results, indent=4, ensure_ascii=False)
+                            escaped_results = previous_results.replace("{", "{{").replace("}", "}}")
+                            
+                            prompt = ChatPromptTemplate.from_messages(
+                                [
+                                    MessagesPlaceholder("shots", optional=True),
+                                    ("user", task_prompt),
+                                    ("assistant", escaped_results),
+                                    ("user", error_feedback)
+                                ]
+                            )
+                            chain = prompt | llm | message_parser
+                        else:
+                            # Max retries exceeded
+                            analysis_report[key] = []
+                            analysis_warnings.append(f"[WARNING] Got an invalid output when processing '{key}' analysis task after {max_retries+1} attempts! Error: {str(e)}")
+                
+                # Log retry information if debug is enabled
+                if retries > 0 and valid_output:
+                    analysis_warnings.append(f"[INFO] Task '{key}' succeeded after {retries+1} attempts.")
         
         consumed_tokens = cb.total_tokens
 
@@ -216,7 +257,15 @@ def main():
 
     # --- Step 1 - Analyze
     for input_text in df['texts']:
-        report, token_usage, warning_messages, tags = analyze_text(input_text, tasks, llm, json_parser, tagger, args.syntax)
+        report, token_usage, warning_messages, tags = analyze_text(
+            input_text, 
+            tasks, 
+            llm, 
+            json_parser, 
+            tagger, 
+            args.syntax,
+            args.retries
+        )
 
         analysis_data.append(report)
         tokens.append(token_usage)
