@@ -51,7 +51,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
     # --- grammar
     # check pronouns
     for pronoun in input["pronouns"]:
-        text = pronoun["text"].lower()
+        text = pronoun["text"]
         kind = pronoun["kind"].lower()
 
         # 1 - pronoun outside of allowed categories
@@ -63,12 +63,12 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
     
     # check numbers
     for number in input["numbers"]:
-        text = number["text"].lower()
+        text = number["text"]
         kind = number["kind"].lower()
 
         # 1 - Number is ordinal and outside of allowed range
         if (kind == "ordinale"):
-            if (text not in italian_allowed_ordinal_numbers):
+            if (text.lower() not in italian_allowed_ordinal_numbers):
                 results["conform"] = False
                 results["numbers_conform"] = False
 
@@ -76,7 +76,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
     
     # check verbs
     for verb in input["verbs"]:
-        text = verb["text"].lower()
+        text = verb["text"]
         lemma = verb["lemma"].lower()
         voice = verb["voice"].lower()
         mood = verb["mood"].lower()
@@ -94,7 +94,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
             results["conform"] = False
             results["verbs_conform"] = False
 
-            results["error_messages"].append(italian_verbs_voice_error_message.format(text = text))
+            results["error_messages"].append(italian_verbs_voice_error_message.format(text=text))
 
         # 3 - Verb is conjugated in a mood/tense combination out of inventory
         ## Note: if in imperative mood, also have to check person
@@ -103,7 +103,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
                 person = verb["person"].lower()
                 number = verb["number"].lower()
 
-                if ( person != "second" ):
+                if ((person != "second") and (tense not in italian_allowed_mood_tense_combinations["imperativo"])):
                     results["conform"] = False
                     results["verbs_conform"] = False
 
