@@ -132,7 +132,7 @@ Negation particles such as "n't", "not", etc. are NOT separate verbs and should 
   - other properties as appropriate
 
 ### Marginal verb constructs
-- **perfect gerund**: this non-finite verb form is formed by [having] + [past participle] (this is the main verb). Analyze and list this construct a single unit (e.g. "having swum").
+- **perfect gerund**: this non-finite verb form is formed by [having] + [past participle] (this is the main verb). Analyze and list this construct as a single unit (e.g. "having swum").
 - **[be going to] + [verb]**: this construct should always be analyzed as a single unit (e.g. "I'm going to jump"). Annotate these properties as follows:
   - **text**: the full construct, as it appears in the input text
   - **lemma**: the lemma of the [verb] used
