@@ -158,7 +158,7 @@ def parse_italian_analysis(input: dict, check_syntax: bool = False) -> dict:
 
             # 1A - Check verb within volitive clause
             if (main_clause_function == "volitiva"):
-                tokens = POSTagger(language=Language.IT, method=TAGMethod.TINT).tag_text(main_clause_text)
+                tokens = POSTagger(language=Language.IT, method=TAGMethod.STANZA).tag_text(main_clause_text)
                 has_imperative = False
                 for token in tokens:
                     if token["pos"] == "VERB":
@@ -223,14 +223,15 @@ english_eval_template = {
     "error_messages": []
 }
 
-english_allowed_pronouns = [ "personal", "possessive", "interrogative", "demonstrative" ]
+english_allowed_pronouns = ["personal", "possessive", "interrogative", "demonstrative" ]
 english_allowed_interrogative_pronouns = [ "who", "what", "which" ]
-english_allowed_adjectives = [ "descriptive", "interrogative", "possessive"]
-english_allowed_modals = [ "can", "will" ]
+english_allowed_adjectives = ["descriptive", "interrogative", "possessive"]
+english_allowed_modals = ["can", "will" ]
+english_semi_modal_constructs = ["be going to", "be to", "have to", "be able to", "had better"]
 
 # here we use the mood as key to simplify checks
 english_allowed_finite_conj = {
-    "indicative": [('present', 'simple'), ('present', 'perfect'), ('present', 'continous'), ('past', 'simple'), ('past', 'continous')],
+    "indicative": [('present', 'simple'), ('present', 'perfect'), ('present', 'continuous'), ('past', 'simple'), ('past', 'continuous')],
     "imperative": []
 }
 
@@ -238,14 +239,22 @@ english_allowed_passive_voice_conj = {
     "indicative": [('present', 'simple'), ('past', 'simple')]
 }
 
-english_noun_irregular_error_message = "The noun '{text}' has an irregular plural form, which is not allowed according to the A1 inventory noun specs."
+english_noun_irregular_error_message = "The noun '{text}' is irregular and is used in its plural form. Irregular plurals are not allowed according to the A1 inventory."
 english_pronoun_category_error = "The pronoun '{text}' belongs to the '{kind}' category. This pronoun category does not belong to the A1 inventory."
-english_pronoun_interrogative_error = "The pronoun '{text}' is an interrogative pronoun, however only 'who', 'what' and 'which' are allowed according to the A1 inventory pronoun specs."
-english_adjective_irregular_error = "The adjective '{text}', with 'degree' = '{degree}', is an irregular adjective. This is not allowed according to the A1 inventory adjective specs."
-english_adjective_category_error = "The adjective '{text}' has a function outside of the A1 inventory allowed set ('descriptive', 'interrogative', 'possessive')."
-english_finite_conj_error = "The verb '{text}' is conjugated in a mood x tense x aspect combination outside of the A1 verbs specs."
-english_finite_voice_error = "The verb '{text}' is in 'voice' = '{voice}', however its mood x tense x aspect combination is not allowed in passive voice, according to the A1 inventory."
-english_modal_verb_error = "The verb '{text}', includes the modal '{auxiliary}'. This is not one of the allowed A1 inventory modal verbs."
+english_pronoun_interrogative_error = "The pronoun '{text}' is an interrogative pronoun, however only ['who', 'what', 'which'] are included into the A1 inventory."
+english_adjective_irregular_error = "The adjective '{text}' is irregular and used in its '{degree}' form. Irregular adjectives are not allowed according to the A1 inventory."
+english_adjective_category_error = "The adjective '{text}' has a function outside of the A1 inventory allowed ones ['descriptive', 'interrogative', 'possessive']."
+
+english_non_finite_modal_error = "The verb '{text}', which is in 'verb_form'='{verb_form}, contains the modal verb '{lemma}'. This specific modal is not allowed according to the A1 inventory."
+english_non_finite_voice_error = "The verb '{text}', which is in 'verb_form'='{verb_form}, is in 'voice'='{voice}'. Non-finite verb forms cannot be used in passive voice according to the A1 inventory."
+
+english_finite_going_to_future_error = "The verb construct '{text}' contains the semi-modal/semi-auxiliary '{auxiliary}' (for reference, the model annotated it with 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}). In this specific instance it is used to express a future intention. According to our interpretation of the A1 inventory, this construct used to express this meaning is not allowed."
+english_finite_going_to_past_error = "The verb construct '{text}' contains the semi-modal/semi-auxiliary '{auxiliary}' (for reference, the model annotated it with 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}). In this specific instance it is used to express a future intention in the past. According to our interpretation of the A1 inventory, this construct used to express this meaning is not allowed."
+
+english_finite_semi_modal_error = "The verb construct '{text}' contains the semi-modal/semi-auxiliary '{auxiliary}' (for reference, the model annotated it with 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}). This construct expresses 'modality' and isn't allowed according to our interpretation of the A1 inventory."
+english_finite_modal_error = "The verb '{text}', which is conjugated in 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}', contains the modal '{auxiliary}'. This specific modal is not allowed according to the A1 inventory."
+english_finite_voice_error = "The verb '{text}', which is conjugated in 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}', is in 'voice'='{voice}'. This specific mood x tense x aspect combination cannot be used in passive voice according to the A1 inventory."
+english_finite_conj_error = "The verb '{text}' is conjugated in 'mood'='{mood}', 'tense'='{tense}' and 'aspect'='{aspect}'. This combination is not allowed for finite verb forms according to the A1 inventory."
 
 def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
     results = copy.deepcopy(english_eval_template)
@@ -256,7 +265,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
     # --- grammar
     # check nouns
     for noun in input["nouns"]:
-        text = noun["text"].lower()
+        text = noun["text"]
         number = noun["number"].lower()
         possessive = noun["possessive"]
         regular = noun["regular"]
@@ -270,7 +279,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
 
     # check pronouns
     for pronoun in input["pronouns"]:
-        text = pronoun["text"].lower()
+        text = pronoun["text"]
         kind = pronoun["kind"].lower()
 
         # 1 - check if pronoun category is allowed
@@ -281,7 +290,7 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
             results["error_messages"].append(english_pronoun_category_error.format(text = text, kind = kind))
 
         # 2 - check if interrogative pronoun is within allowed list
-        if (kind == "interrogative" and (text not in english_allowed_interrogative_pronouns)):
+        if (kind == "interrogative" and (text.lower() not in english_allowed_interrogative_pronouns)):
             results["conform"] = False
             results["pronouns_conform"] = False
 
@@ -289,8 +298,10 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
     
     # check adjectives
     for adjective in input["adjectives"]:
-        text = adjective["text"].lower()
+        text = adjective["text"]
         function = adjective["function"].lower()
+        degree = adjective["degree"].lower()
+        regular = adjective["regular"]
 
         # 1 - check if function is within allowed categories
         if (function not in english_allowed_adjectives):
@@ -299,75 +310,113 @@ def parse_english_analysis(input: dict, check_syntax: bool = False) -> dict:
 
             results["error_messages"].append(english_adjective_category_error.format(text = text))
         
-        # 2 - if function is descriptive, also check degree and regularity
-        if (function == "descriptive"):
+        # 2 - check if descriptive adjective is regular
+        if ((function == "descriptive") and (degree != "positive") and (not regular)):
+            results["conform"] = False
+            results["adjectives_conform"] = False
 
-            degree = adjective["degree"].lower()
-            regular = adjective["regular"]
-
-            if (not regular and (degree != "positive")):
-                results["conform"] = False
-                results["adjectives_conform"] = False
-
-                results["error_messages"].append(english_adjective_irregular_error.format(text = text, degree = degree))
+            results["error_messages"].append(english_adjective_irregular_error.format(text = text, degree = degree))
 
 
     # check verbs
     for verb in input["verbs"]:
-        text = verb["text"].lower()
-        lemma = verb["lemma"].lower()
-        modal = verb["modal"]
+
+        # common propeties
         finite = verb["finite"]
+        text = verb["text"]
+        lemma = verb["lemma"].lower()
+        voice = verb["voice"].lower()
+        modal = verb["modal"]
 
-        # 1 - Check modal verbs
-        if (modal):
+        # A - non-finite
+        if not finite:
+            verb_form = verb["verb_form"]
 
-            auxiliary = verb.get("auxiliary")
-            auxiliary = lemma if auxiliary is None else auxiliary.lower()
-
-            if (auxiliary not in english_allowed_modals):
+            # 1A. check modal
+            if (modal and (lemma not in english_allowed_modals)):
                 results["conform"] = False
                 results["verbs_conform"] = False
 
-                results["error_messages"].append(english_modal_verb_error.format(text = text, auxiliary=auxiliary))
-        
-        # 2 - finite verbs forms
-        if (finite):
+                results["error_messages"].append(english_non_finite_modal_error.format(text=text, verb_form=verb_form, lemma=lemma))
 
-            voice = verb["voice"].lower()
+            # 2A. check voice
+            if voice == "passive":
+                results["conform"] = False
+                results["verbs_conform"] = False
+
+                results["error_messages"].append(english_non_finite_voice_error.format(text=text, verb_form=verb_form, voice=voice))
+
+        # B - finite
+        if finite:
+            auxiliary = verb["auxiliary"]
             mood = verb["mood"].lower()
-            tense = verb.get("tense")
-            aspect = verb.get("aspect")
+            tense = verb["tense"].lower()
+            aspect = verb["aspect"].lower()
 
-            # 2A - Conj
+            # OUT OF MAIN LOOP - 'be going to' construct
+            if (modal and auxiliary == "be going to"):
+                if (mood == "indicative" and tense == "present" and aspect == "continuous"):
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(english_finite_going_to_future_error.format(text=text, mood=mood, tense=tense, aspect=aspect, auxiliary=auxiliary))
+                    continue
+
+                if (mood == "indicative" and tense == "past" and aspect == "continuous"):
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(english_finite_going_to_past_error.format(text=text, mood=mood, tense=tense, aspect=aspect, auxiliary=auxiliary))
+                    continue
+
+
+            # 1B. conjugation
             if (mood in english_allowed_finite_conj.keys()):
                 if(not mood == "imperative"):
                     if(not ((tense, aspect) in set(english_allowed_finite_conj[mood]))):
                         results["conform"] = False
                         results["verbs_conform"] = False
 
-                        results["error_messages"].append(english_finite_conj_error.format(text = text))
+                        results["error_messages"].append(english_finite_conj_error.format(text=text, mood=mood, tense=tense, aspect=aspect))
             else:
                 results["conform"] = False
                 results["verbs_conform"] = False
 
-                results["error_messages"].append(english_finite_conj_error.format(text = text))
+                results["error_messages"].append(english_finite_conj_error.format(text=text, mood=mood, tense=tense, aspect=aspect))
 
-
-            # 2B - Voice
+            # 2B. voice
             if (voice == "passive"):
                 if (mood in english_allowed_passive_voice_conj.keys()):
                     if (not((tense, aspect) in set(english_allowed_passive_voice_conj[mood]))):
                         results["conform"] = False
                         results["verbs_conform"] = False
 
-                        results["error_messages"].append(english_finite_voice_error.format(text = text, voice=voice))
+                        results["error_messages"].append(english_finite_voice_error.format(text=text, mood=mood, tense=tense, aspect=aspect, voice=voice))
                 
                 else:
                     results["conform"] = False
                     results["verbs_conform"] = False
 
-                    results["error_messages"].append(english_finite_voice_error.format(text = text, voice=voice))
+                    results["error_messages"].append(english_finite_voice_error.format(text=text, mood=mood, tense=tense, aspect=aspect, voice=voice))
+            
+            # 3B. modal
+            if modal:
+                modal_lemma = auxiliary
+                if modal_lemma is None:
+                    modal_lemma = lemma
+
+                # sub - semi-modals/semi-aux
+                if (modal_lemma in english_semi_modal_constructs):
+                    results["conform"] = False
+                    results["verbs_conform"] = False
+
+                    results["error_messages"].append(english_finite_semi_modal_error.format(text=text, mood=mood, tense=tense, aspect=aspect, auxiliary=modal_lemma))
+                else:
+                    if (modal_lemma not in english_allowed_modals):
+                        results["conform"] = False
+                        results["verbs_conform"] = False
+
+                        results["error_messages"].append(english_finite_modal_error.format(text=text, mood=mood, tense=tense, aspect=aspect, auxiliary=modal_lemma))
 
     # --- syntax
     if (check_syntax):
