@@ -141,7 +141,7 @@ def analyze_text(
                 task_shots = value["shots"]
 
                 # here we reformat optional shots
-                shots = list(map(lambda x: (x["role"], x["content"]), task_shots)) if len(task_shots) != 0 else []
+                shots = list(map(lambda x: (x["role"], x["content"]), task_shots))
 
                 prompt = ChatPromptTemplate.from_messages(
                     [
@@ -195,11 +195,11 @@ def analyze_text(
                         else:
                             # Max retries exceeded
                             analysis_report[key] = []
-                            analysis_warnings.append(f"[WARNING] Got an invalid output when processing '{key}' analysis task after {max_retries+1} attempts! Error: {str(e)}")
+                            analysis_warnings.append(f"WARNING: Got an invalid output when processing '{key}' analysis task after {max_retries+1} attempts! Error: {str(e)}")
                 
                 # Log retry information if debug is enabled
                 if retries > 0 and valid_output:
-                    analysis_warnings.append(f"[INFO] Task '{key}' succeeded after {retries+1} attempts.")
+                    analysis_warnings.append(f"INFO: Task '{key}' succeeded after {retries+1} attempts.")
         
         consumed_tokens = cb.total_tokens
 

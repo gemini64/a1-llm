@@ -6,8 +6,8 @@ PY_ENV="./.venv"
 SKIP_PARAPHRASE=false; # set to true to skip par
 SKIP_EVAL=false; # set to true to skip eval
 
-INPUT_DATA="./en_2_sentences.tsv"; # this is the file that gets passed to paraphrase.py
-OUTPUT_DIR="./en_2_sentences";
+INPUT_DATA="./en_12_sentences.tsv"; # this is the file that gets passed to paraphrase.py
+OUTPUT_DIR="./en_12_sentences";
 PARAPHRASE_OUTPUT="${OUTPUT_DIR}/paraphrase.tsv"; # set to input file path if you're skipping par
 EVAL_OUTPUT="eval.tsv";
 
@@ -15,11 +15,11 @@ PARAPHRASE_COL_LABEL="text"; # the column that contains the text to paraphrase
 EVAL_COL_LABEL="paraphrases"; # the column that contains the text to evaluate, default is "paraphrases"
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
-PARAPHRASE_FLAGS="-d";
+PARAPHRASE_FLAGS="-d -r 1";
 PARAPHRASE_CONSTRAINTS="./inventories/constraints_english_grammar_only.md";
 
 EVAL_SCRIPT="./eval.py";
-EVAL_FLAGS="-d";
+EVAL_FLAGS="-d -r 1";
 EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
 LANGUAGE="english";
 

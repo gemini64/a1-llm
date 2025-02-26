@@ -2,6 +2,8 @@ import os, re, json, time, argparse, spacy
 from dotenv import load_dotenv
 import pandas as pd
 from agent_tools import regex_message_parser, strip_string, TEXT_TAG_REGEX_PATTERN, token_usage_message_parser
+from langchain_core.runnables import Runnable
+from collections.abc import Callable
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
@@ -27,6 +29,10 @@ parser.add_argument("-s", "--sentencizer",
                    help="language used to initialize the sentencizer (required if --by-sentence is used)", 
                    choices=['italian', 'english', 'russian'],
                    type=str)
+parser.add_argument("-r", "--retries", 
+                   help="maximum number of retries if model fails to respond as expected", 
+                   type=int,
+                   default=0)
 
 def validate_args(args):
     """Validate command line arguments"""
@@ -45,6 +51,10 @@ def validate_args(args):
 
     if args.by_sentence and not args.sentencizer:
         print("Error: --sentencizer is required when using --by-sentence!")
+        exit(2)
+        
+    if args.retries < 0:
+        print("Error: --retries must be a non-negative integer!")
         exit(2)
 
     return output_file
@@ -134,57 +144,116 @@ def setup_llm(use_groq):
         )
 
 def process_text(
-    text,
-    chain,
-    message_parser,
-    token_parser,
-    constraints,
-    max_iterations,
-    use_groq):
-    """Process a single text chunk (sentence or full text)"""
+    text: str,
+    chain: Runnable,
+    message_parser: Callable[...,str],
+    token_parser: Callable[...,int],
+    constraints: str,
+    max_iterations: int,
+    max_retries: int,
+    use_groq: bool):
+    """Process a single text chunk (sentence or full text) with retry mechanism
+    
+    Arguments:
+        Arguments:
+        text (str): the input text to paraphrase
+        chain (Runnable): the LLM text processing chain
+        message_parser (Callable[..., dict]): AIMessage output parser, should return a string
+        token_parser (Callable[..., dict]): AIMessage token parser, given an AIMessage, returns the amount of consumed tokens
+        constraints (str): the linguistic constraints list
+        max_iterations (int): the upper limit to the iterative paraphrase process
+        max_retries (int): maximum number of retries if the model output is invalid
+        use_groq (bool): set to True to run inference on groq cloud models"""
+
     current = text
     messages = []
     iteration = None
     token_usage = 0
-
+    warnings = []
+    last_good_response = None  # Track the last good response
+    
     for i in range(1, max_iterations):
         iteration = i
+        retry_count = 0
+        successful = False
         
+        # Add the user message for this iteration
         messages.append({
             "role": "user",
             "content": current
         })
-
-        results = chain.invoke({
-            "input_text": current,
-            "constraints": constraints
-        })
-
-        messages.append({
-            "role": "assistant",
-            "content": results.content
-        })
-
-        if use_groq:
-            time.sleep(30)
-
-        token_usage += token_parser(results)
-        message_content = message_parser(results)
         
-        if message_content is None:
-            current = "ERROR"
-            break
-        elif compare_texts(message_content, current):
+        # Try to get a valid response with retries
+        while retry_count <= max_retries and not successful:
+            # Invoke the model
+            results = chain.invoke({
+                "input_text": current,
+                "constraints": constraints
+            })
+            
+            # Record the response
+            messages.append({
+                "role": "assistant",
+                "content": results.content
+            })
+            
+            # --- this is to keep consumption within free tier limits
+            if use_groq:
+                time.sleep(30)
+            
+            # Update token usage
+            token_usage += token_parser(results)
+            
+            # Try to extract the text content with the parser
+            message_content = message_parser(results)
+            
+            if message_content is not None:
+                # We got a valid response with matching <text> tags
+                last_good_response = message_content
+                successful = True
+            else:
+                # Parser returned None (no <text> tags found) - need to retry
+                retry_count += 1
+                if retry_count <= max_retries:
+                    # Document the retry in messages
+                    retry_message = f"Retry {retry_count}/{max_retries}: No <text> tags found in response, retrying..."
+                    messages.append({
+                        "role": "system",
+                        "content": retry_message
+                    })
+
+                else:
+                    # Max retries reached, use last good response or mark as error
+                    if last_good_response:
+                        warning = f"WARNING: Iteration {i}: Failed to find <text> tags after {max_retries} retries. Using last good response."
+                        warnings.append(warning)
+                        message_content = last_good_response
+                        successful = True  # Consider it successful since we're using a valid response
+                    else:
+                        warning = f"ERROR: Iteration {i}: Failed to find <text> tags after {max_retries} retries. No good previous response available. Using original text."
+                        warnings.append(warning)
+                        message_content = current
+                        successful = True  # Mark as successful to exit the retry loop, but with an error value
+            
+        # Check if we should continue iterations (text hasn't changed)
+        if compare_texts(message_content, current):
             break
         else:
+            # Update current text for next iteration
             current = message_content
+    
+    return current, iteration, messages, token_usage, warnings
 
-    return current, iteration, messages, token_usage
-
-def compare_texts(text1, text2):
-    # Remove extra whitespace and newlines by:
-    # 1. Converting all whitespace (including newlines) to single spaces
-    # 2. Removing leading/trailing whitespace
+def compare_texts(text1: str, text2: str) -> bool:
+    """Compares two strings. If their content matches,
+    excluding whitespaces and newlines, returns True
+    
+    Arguments:
+        text1 (str): the first text
+        text2 (str): the second text
+        
+    Returns:
+        bool: whether the two input texts match"""
     processed_text1 = ' '.join(text1.split())
     processed_text2 = ' '.join(text2.split())
     
@@ -223,6 +292,7 @@ def main():
     iterations = []
     messages = []
     tokens = []
+    all_warnings = []  # List to collect warnings
 
     # Process texts
     for input_text in df['texts']:
@@ -235,31 +305,35 @@ def main():
             session_messages = []
             session_iterations = []
             session_tokens = 0
+            session_warnings = []
 
             for sentence in sentences:
-                current, sent_iter, sent_messages, sent_tokens = process_text(
+                current, sent_iter, sent_messages, sent_tokens, warnings = process_text(
                     sentence, chain, message_parser, token_parser, constraints,
-                    max_iterations, args.groq
+                    max_iterations, args.retries, args.groq
                 )
                 session_text.append(current)
                 session_iterations.append(sent_iter)
                 session_messages.append(sent_messages)
                 session_tokens += sent_tokens
+                session_warnings.extend(warnings)
 
-            paraphrases.append(" ".join(session_text) if "ERROR" not in session_text else "ERROR")
+            paraphrases.append(" ".join(session_text))
             iterations.append(session_iterations)
             messages.append(session_messages)
             tokens.append(session_tokens)
+            all_warnings.append(session_warnings)
         else:
             # Process entire text at once
-            current, iteration, message_session, token_usage = process_text(
+            current, iteration, message_session, token_usage, warnings = process_text(
                 input_text, chain, message_parser, token_parser, constraints,
-                max_iterations, args.groq
+                max_iterations, args.retries, args.groq
             )
             paraphrases.append(current)
             iterations.append(iteration)
             messages.append(message_session)
             tokens.append(token_usage)
+            all_warnings.append(warnings)
 
     # Add results to dataframe
     df.insert(len(df.columns), "paraphrases", paraphrases)
@@ -270,8 +344,10 @@ def main():
                      list(map(lambda x: json.dumps(x, ensure_ascii=False), iterations)))
             df.insert(len(df.columns), "total_iterations", 
                      list(map(lambda x: sum(x), iterations)))
+            df.insert(len(df.columns), "warnings", list(map(lambda x: json.dumps(x, ensure_ascii=False), all_warnings)))
         else:
             df.insert(len(df.columns), "iterations", iterations)
+            df.insert(len(df.columns), "warnings", all_warnings)
         
         df.insert(len(df.columns), "tokens", tokens)
         df.insert(len(df.columns), "messages", 
