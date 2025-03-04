@@ -11,7 +11,7 @@ import pandas as pd
 ###
 
 # --- flags
-output_file = "wordsdiff.tsv"
+output_file = "diff_stats.tsv"
 
 # --- input files
 sentence_pairs = "./sentence_pairs.tsv"
@@ -52,6 +52,7 @@ df_pairs["words_diff"] = df_pairs.apply(lambda x: x["original_words"] - x["trans
 words_diff = {}
 
 words_diff["ALL"] = {
+    "count": len(df_pairs),
     "diff_min": round(df_pairs["words_diff"].min()),
     "diff_max": round(df_pairs["words_diff"].max()),
     "diff_mean": round(df_pairs["words_diff"].mean()),
@@ -63,6 +64,7 @@ words_diff["ALL"] = {
 df_pairs = df_pairs[df_pairs["original_id"].isin(original_ids)]
 
 words_diff["ITA_ORIG"] = {
+    "count": len(df_pairs),
     "diff_min": round(df_pairs["words_diff"].min()),
     "diff_max": round(df_pairs["words_diff"].max()),
     "diff_mean": round(df_pairs["words_diff"].mean()),

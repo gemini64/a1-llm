@@ -11,7 +11,7 @@ import pandas as pd
 ###
 
 # --- flags
-output_file = "metadata.tsv"
+output_file = "word_stats.tsv"
 
 # --- input files
 sentences = "./sentences_detailed.tsv"
@@ -40,6 +40,7 @@ df_join.insert(len(df_join.columns), "words", words)
 words_meta = {}
 
 words_meta["MOTHERTONGUE"] = {
+    "count": len(df_join[df_join["skill_level"] == '5']),
     "words_min": round(df_join[df_join["skill_level"] == '5']["words"].min()),
     "words_max": round(df_join[df_join["skill_level"] == '5']["words"].max()),
     "words_mean": round(df_join[df_join["skill_level"] == '5']["words"].mean()),
@@ -48,6 +49,7 @@ words_meta["MOTHERTONGUE"] = {
 }
 
 words_meta["ALL"] = {
+    "count": len(df_join),
     "words_min": round(df_join["words"].min()),
     "words_max": round(df_join["words"].max()),
     "words_mean": round(df_join["words"].mean()),

@@ -9,7 +9,7 @@ import pandas as pd
 ###
 
 # --- files
-output_file = "./metadata.tsv"
+output_file = "./words_stats.tsv"
 input_file = "./cefr_leveled_texts.csv"
 
 df = pd.read_csv(input_file, encoding="utf-8", header=0, sep=",")
@@ -28,6 +28,7 @@ for label in labels:
     subset = df[df["label"] == label]
 
     words_meta[label] = {
+        "count": len(subset),
         "words_min": round(subset["words"].min()),
         "words_max": round(subset["words"].max()),
         "words_mean": round(subset["words"].mean()),
@@ -37,6 +38,7 @@ for label in labels:
 
 # --- also add data for all
 words_meta["ALL"] = {
+    "count": len(df),
     "words_min": round(df["words"].min()),
     "words_max": round(df["words"].max()),
     "words_mean": round(df["words"].mean()),
