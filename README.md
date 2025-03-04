@@ -253,7 +253,7 @@ The **JSON schema** passed to the model is **used** both **to constrain its outp
 
 #### Analysis Tasks collection
 
-The tasks **JSON** passed to the **eval** script contains a **collection** tasks with their own:
+The tasks **JSON** passed to the **eval** script contains a **collection** of tasks with their own:
 - **template**
 - **schema**
 - (optionally) a set of **shots** to feed to the model
