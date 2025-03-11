@@ -24,9 +24,12 @@ parser.add_argument("-l", "--label", help="(optional) the label of the column th
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
-parser.add_argument('--by-sentence', action='store_true', help="process text sentence by sentence")
+parser.add_argument('-t', '--type', help="(optional) how the paraphrase should be performed, default is fulltext", 
+                   choices=['fulltext', 'bysentence', 'nocot'],
+                   type=str,
+                   default='fulltext')
 parser.add_argument("-s", "--sentencizer", 
-                   help="language used to initialize the sentencizer (required if --by-sentence is used)", 
+                   help="language used to initialize the sentencizer (required if paraphrasing bysentence)", 
                    choices=['italian', 'english', 'russian'],
                    type=str)
 parser.add_argument("-r", "--retries", 
@@ -44,12 +47,12 @@ def validate_args(args):
         print("Error: the constraints file provided does not exist!")
         exit(2)
 
-    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_paraphrases{'_sentences' if args.by_sentence else ''}.tsv"
+    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_paraphrases_{args.type}.tsv"
     if os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file))):
         print(f"Error: an output file with path '{output_file}' already exists!")
         exit(2)
 
-    if args.by_sentence and not args.sentencizer:
+    if args.type == "bysentence" and not args.sentencizer:
         print("Error: --sentencizer is required when using --by-sentence!")
         exit(2)
         
@@ -70,7 +73,7 @@ def load_spacy_model(language):
         case 'russian':
             return spacy.load("ru_core_news_lg")
 
-def get_prompt_template(by_sentence=False):
+def get_prompt_template(paraphrase_type: str):
     """Return appropriate prompt template based on processing mode"""
     base_message = """# Task:
 Check if the given {text_type} complies with the constraints provided; generate a paraphrase when necessary.
@@ -88,7 +91,12 @@ Check {check_scope} againts ALL the constraints.
 - A paraphrase must replace each non-constraints conformant element with an equivalent conformant alternative.
 - If a paraphrase that preserves the original meaning and completely conforms to the given constraints cannot be formulated, then the non conformant text should be removed.
 
-# Output format:
+{output_format}
+
+# Constraints:
+{constraints}"""
+
+    output_format_fulltext = """# Output format:
 1. Provide step-by-step reasoning:
 - List each constraint checked
 - For any violations found:
@@ -98,29 +106,59 @@ Check {check_scope} againts ALL the constraints.
 - If no violations are found, state this explicitly
 
 2. End your response with:
-<text>[Your final version of the {text_type} here - either the original if no changes were needed, or your paraphrased version if changes were made]</text>
+<text>[Your final version of the text here - either the original if no changes were needed, or your paraphrased version if changes were made]</text>
 
-Note: The final version MUST be enclosed in <text> tags, regardless of whether changes were made to the original {text_type}.
+Note: The final version MUST be enclosed in <text> tags, regardless of whether changes were made to the original text."""
 
-# Constraints:
-{constraints}"""
+    output_format_bysentence = """# Output format:
+1. Provide step-by-step reasoning:
+- List each constraint checked
+- For any violations found:
+    - Quote the problematic text
+    - Explain which constraint it violates
+    - Give a paraphrase for that specific violation (if any can be formulated)
+- If no violations are found, state this explicitly
 
-    if by_sentence:
-        message = base_message.format(
-            text_type="sentence",
-            check_scope="the given sentence",
-            action_scope="it",
-            input_text="{input_text}",
-            constraints="{constraints}"
-        )
-    else:
-        message = base_message.format(
-            text_type="text",
-            check_scope="each sentence",
-            action_scope="or remove it",
-            input_text="{input_text}",
-            constraints="{constraints}"
-        )
+2. End your response with:
+<text>[Your final version of the sentence here - either the original if no changes were needed, or your paraphrased version if changes were made]</text>
+
+Note: The final version MUST be enclosed in <text> tags, regardless of whether changes were made to the original sentence."""
+
+    output_format_nocot = """# Output format:
+Format your response as shown below, no additional comment is needed:
+
+<text>[Your final version of the text here - either the original if no changes were needed, or your paraphrased version if changes were made]</text>
+
+Note: The final version MUST be enclosed in <text> tags, regardless of whether changes were made to the original text."""
+
+    match paraphrase_type:
+        case "bysentence":
+            message = base_message.format(
+                text_type="sentence",
+                check_scope="the given sentence",
+                action_scope="it",
+                input_text="{input_text}",
+                constraints="{constraints}",
+                output_format=output_format_bysentence
+            )
+        case "fulltext":
+            message = base_message.format(
+                text_type="text",
+                check_scope="each sentence",
+                action_scope="or remove it",
+                input_text="{input_text}",
+                constraints="{constraints}",
+                output_format=output_format_fulltext
+            )
+        case "nocot":
+            message = base_message.format(
+                text_type="text",
+                check_scope="each sentence",
+                action_scope="or remove it",
+                input_text="{input_text}",
+                constraints="{constraints}",
+                output_format=output_format_nocot
+            )
 
     return ChatPromptTemplate.from_messages([("user", message)])
 
@@ -278,8 +316,8 @@ def main():
     df.rename(columns={args.label: 'texts'}, inplace=True)
 
     # Setup processing pipeline
-    nlp = load_spacy_model(args.sentencizer) if args.by_sentence else None
-    prompt_template = get_prompt_template(args.by_sentence)
+    nlp = load_spacy_model(args.sentencizer) if args.type == "bysentence" else None
+    prompt_template = get_prompt_template(args.type)
     llm = setup_llm(args.groq)
     
     # Setup chain and parsers
@@ -296,7 +334,7 @@ def main():
 
     # Process texts
     for input_text in df['texts']:
-        if args.by_sentence:
+        if args.type == "bysentence":
             # Process sentence by sentence
             documents = nlp(input_text)
             sentences = [strip_string(sent.text) for sent in documents.sents]
@@ -339,7 +377,7 @@ def main():
     df.insert(len(df.columns), "paraphrases", paraphrases)
 
     if args.debug:
-        if args.by_sentence:
+        if args.type == "bysentence":
             df.insert(len(df.columns), "iterations", 
                      list(map(lambda x: json.dumps(x, ensure_ascii=False), iterations)))
             df.insert(len(df.columns), "total_iterations", 
