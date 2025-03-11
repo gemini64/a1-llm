@@ -79,9 +79,7 @@ The paraphrase script `paraphrase.py` offers a CLI interface to specify various 
 
 Below is its CLI interface:
 ```
-usage: paraphrase [-h] -c CONSTRAINTS [-l LABEL] [-o OUTPUT] [-d] [-g] [--by-sentence] [-s {italian,english,russian}]
-                  [-r RETRIES]
-                  input
+usage: paraphrase [-h] -c CONSTRAINTS [-l LABEL] [-o OUTPUT] [-d] [-g] [-t {fulltext,bysentence,nocot}] [-s {italian,english,russian}] [-r RETRIES] input
 
 Given a set of texts as input, performs text transformations to make the input text conform to given linguistic constraints.
 
@@ -98,9 +96,10 @@ options:
                         (optional) output file
   -d, --debug           (optional) log additional information
   -g, --groq            (optional) run on groq cloud
-  --by-sentence         process text sentence by sentence
+  -t {fulltext,bysentence,nocot}, --type {fulltext,bysentence,nocot}
+                        (optional) how the paraphrase should be performed, default is fulltext
   -s {italian,english,russian}, --sentencizer {italian,english,russian}
-                        language used to initialize the sentencizer (required if --by-sentence is used)
+                        language used to initialize the sentencizer (required if paraphrasing bysentence)
   -r RETRIES, --retries RETRIES
                         maximum number of retries if model fails to respond as expected
 ```
@@ -112,7 +111,7 @@ The parameters are, briefly:
 - **--output [file]**: The paraphrase **output**, in **TSV format**
 - **--debug**: (Optional) flag to output **debug data** (full messages dump, token usage, warnings, etc...)
 - **--groq**: (Optional) if set, the script will use a groq hosted model. Remember to set the API key and model name in your environment.
-- **--by-sentence**: (Optional) if set, the script will **paraphrase** the text **sentence by sentence**.
+- **--type**: (Optional) paraphrase type. Can be either fulltext (default), bysentece or nocot (without chain-of-thought prompting).
 - **--sentencizer [enum]**: (Required if paraphrasing by sentence) This will be **used to initialize the sentencizer** (used to split the text into sentences).
 - **--retries [int]**: (Optional) the maximim number of retries if the model responds with unparsable output. Default is 0.
 
@@ -128,7 +127,7 @@ Ci sono 12 mesi in un anno. italian 7
 
 And this is a **call example**, using constraints lists stored in `./inventories`:
 ```bash
-python paraphrase.py input_file.tsv -c "./inventories/constraints_italian_grammar_only.md" -l "text" -s "italian" -r 1 -o output_file.tsv
+python paraphrase.py input_file.tsv -c "./inventories/constraints_italian_grammar_only.md" -l "text" -s "italian" -t "fulltext" -r 1 -o output_file.tsv
 ```
 
 ### Understanding the retry mechanism
