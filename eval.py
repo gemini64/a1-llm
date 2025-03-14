@@ -136,12 +136,12 @@ def analyze_text(
             for key, value in tasks[superkey].items():
 
                 # extract data
-                task_prompt = value["prompt"]
-                task_schema = value["schema"]
                 task_shots = value["shots"]
-
                 # here we reformat optional shots
                 shots = list(map(lambda x: (x["role"], x["content"]), task_shots))
+
+                task_schema = value["schema"]
+                task_prompt = value["prompt"] if len(shots) == 0 else value["shots_prompt"]
 
                 prompt = ChatPromptTemplate.from_messages(
                     [
@@ -159,13 +159,21 @@ def analyze_text(
                 # Try to get valid output with retries
                 while not valid_output and retries <= max_retries:
                     try:
-                        results = chain.invoke(
-                            input={
-                                "shots": shots,
-                                "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
-                                "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
-                            }
-                        )
+                        if len(shots) == 0:
+                            results = chain.invoke(
+                                input={
+                                    "shots": shots,
+                                    "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
+                                    "schema": json.dumps(task_schema, indent=4, ensure_ascii=False)
+                                }
+                            )
+                        else:
+                            results = chain.invoke(
+                                input={
+                                    "shots": shots,
+                                    "input": json.dumps(tagged_text, indent=4, ensure_ascii=False),
+                                }
+                            )
                         
                         # Validate output using schema supplied
                         validate(instance=results, schema=task_schema)
@@ -256,7 +264,10 @@ def main():
     warnings = []
 
     # --- Step 1 - Analyze
+    counter = 0
     for input_text in df['texts']:
+        counter += 1
+        print(f"INFO\t Analyzing sample [{counter}/{len(df['texts'])}]")
         report, token_usage, warning_messages, tags = analyze_text(
             input_text, 
             tasks, 
@@ -283,7 +294,11 @@ def main():
     if not args.analysis:
         eval_data = []
 
+        counter = 0
         for analysis_report in analysis_data:
+            counter += 1
+            print(f"INFO\t Evaluating sample [{counter}/{len(analysis_data)}]")
+
             eval_report = evaluator(analysis_report)
             eval_data.append(eval_report)
  

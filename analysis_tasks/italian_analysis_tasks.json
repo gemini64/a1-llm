@@ -2,6 +2,7 @@
     "grammar": {
         "pronouns": {
             "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze the pronouns it contains.\n\nLook for words tagged as \"PRON\" in the given input. List all pronoun instances, including repeated occurrences.\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "shots_prompt": "Now analyze the following input:\n```\n{input}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/pronouns_it.json",
@@ -24,10 +25,11 @@
                     "required": ["text", "kind"]
                 }
             },
-            "shots": {}
+            "shots": []
         },
         "verbs": {
             "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze ALL the verbs it contains.\n\nBe particularly careful when dealing with auxiliary (\"AUX\") verbs:\n- **essere/avere**: when used as auxiliary verbs, analyze and list them as a single unit with the main verb they accompany (e.g. \"ho mangiato\" should be listed as a \"passato prossimo\").\n- **modal verbs**: when a modal verb is used as auxiliary with an infinitive, analyze and list the two verbs separately as if they were two main verbs (e.g. \"posso scrivere\" should be broken down and analyzed as \"posso\" and \"scrivere\").\n- **single auxiliary verb for multiple main verbs**: sometimes a single auxiliary verb may accompany multiple main verbs. In Italian, this usually happens when \"essere/avere\" are used as auxiliary verbs along with multiple participles. In these cases, explicitly list and analyze the two main verbs as separate items (e.g. \"ho mangiato e poi dormito\" should be broken down and analyzed as \"ho mangiato\" and \"ho dormito\").\n- **past gerund**: this Italian verb form is formed using the present gerund of an auxiliary verb (\"essere\"/\"avere\") + the past participle of another verb (this is the main verb). List past gerunds constructs as a single unit (e.g. \"avendo ascoltato\").\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "shots_prompt": "Now analyze the following input:\n```\n{input}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/verbs_it.json",
@@ -76,6 +78,7 @@
         },
         "numbers": {
             "prompt": "Given the following part-of-speech (POS) tagged text:\n```\n{input}\n```\nExtract and analyze EVERY number it contains.\n\nIdentify all word representing numbers in the given text, ignoring their specific POS classifications. List all number instances, including repeated occurrences.\n\nNumbers in Italian text appear in two main categories:\n1. **Ordinal numbers (ordinali)**: Numbers that express position or rank in a sequence. They appear in these forms:\n   - Written in text: primo, secondo, terzo, quarto, etc.\n   - Roman numerals: I, II, III, IV, V, etc.\n   - Digits with ordinal markers: 1°, 1ª, 2°, 2ª, etc.\n   - Compound forms: ventunesimo (21°), quarantaduesimo (42°), etc.\n2. **Cardinal numbers (cardinali)**: Numbers that express quantity or amount. They appear in these forms:\n   - Written in text: uno, due, tre, quattro, etc.\n   - Written in digits: 1, 2, 3, 4, etc.\n   - Compound forms: ventuno (21), quarantadue (42), etc.\n\nImportant notes:\n- 'I' may be used as determiner (e.g. 'I sopranos') or as the first roman numeral (i.e. 'I' as 'primo'). Consider the overall context to differentiate between the two cases.\n- The same number can be ordinal or cardinal depending on its form and context (e.g., \"1\" is cardinal but \"1°\" is ordinal)\n- Some words like \"primo\" can appear in non-ordinal contexts (e.g., \"di primo mattino\") - consider the context\n- Compound numbers follow the same rules whether written in text or digits\n\nRespond with a structured JSON array conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "shots_prompt": "Now analyze the following input:\n```\n{input}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/numbers_it.json",
@@ -104,6 +107,7 @@
     "syntax": { 
         "syntactical_analysis": {
             "prompt": "Perform an \"analisi logica del periodo\" on the following text:\n```\n{input}\n```\nThe expected output is a JSON object conforming to the schema attached below. No additional comment or data is required.\n```json\n{schema}\n```",
+            "shots_prompt": "Now analyze the following input:\n```\n{input}\n```",
             "schema": {
                 "$schema": "https://json-schema.org/draft/2020-12/schema",
                 "$id": "/schemas/syntactical_analysis_it_v2.json",

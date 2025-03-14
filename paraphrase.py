@@ -332,8 +332,12 @@ def main():
     tokens = []
     all_warnings = []  # List to collect warnings
 
+    counter = 0
     # Process texts
     for input_text in df['texts']:
+
+        counter += 1
+        print(f"INFO\tParaphrasing sample [{counter}/{len(df['texts'])}]")
         if args.type == "bysentence":
             # Process sentence by sentence
             documents = nlp(input_text)
