@@ -1,6 +1,6 @@
 import copy
 from pos_tagger import POSTagger, Language, TAGMethod
-from agent_tools import is_regular_it_verb
+from utils import is_regular_it_verb
 
 # --- italian
 

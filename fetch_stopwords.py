@@ -11,7 +11,7 @@ import stopwordsiso as stopwords
 # output -> a JSON word list
 ###
 
-output_dir = "./inventories"
+output_dir = "./inventories/stopwords"
 languages = ["it", "en", "ru"]
 
 output_file = """stopwords_{lang}.json"""

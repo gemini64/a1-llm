@@ -95,3 +95,9 @@ def is_regular_it_verb(verb: str, check_allowed: bool = False) -> bool:
         irregular_verbs = irregular_verbs.difference(set(ITALIAN_ALLOWED_IRREGULARS))
 
     return not (verb in irregular_verbs)
+
+def word_in_list(word: str, comparison_list: list[str]) -> bool:
+    """Given a string and a string list
+    performs a case-insensitive comparison"""
+    lower_list = list(map(lambda x: x.lower(), comparison_list))
+    return (word.lower() in lower_list)
