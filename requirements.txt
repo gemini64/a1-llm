@@ -9,7 +9,8 @@ python-dotenv==1.0.1
 requests==2.32.3
 spacy~=3.8.4
 stanza==1.10.1
-stopwordsiso==0.6.1
+nltk==3.9.1
+pypdf==5.4.0
 en_core_web_trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl#sha256=272a31e9d8530d1e075351d30a462d7e80e31da23574f1b274e200f3fff35bf5
 it_core_news_lg @ https://github.com/explosion/spacy-models/releases/download/it_core_news_lg-3.8.0/it_core_news_lg-3.8.0-py3-none-any.whl#sha256=b78582d0b2d05fd6509995f68ab7452efed7a27c6fbc5a071e9a9787a58c1e87
 ru_core_news_lg @ https://github.com/explosion/spacy-models/releases/download/ru_core_news_lg-3.8.0/ru_core_news_lg-3.8.0-py3-none-any.whl#sha256=90bd584be86772b647e1b15cdc62e09d3a7182284ee23da95e19c2bf71aa0189

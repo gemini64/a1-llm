@@ -10,7 +10,7 @@
 - `eval.py`: Evaluation script. Takes a set of texts, a set of linguistic analysis tasks (language specific), annotates the input's content (using an LLM), then validates it using a rule-based approach. See the CLI interface for additional details.
 - `parsers.py`: Parsers to validate analysis data. Available for EN/IT and based on the respective inventories.
 - `pos_tagger.py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
-- `agent_tools.py`: This module defines various data parsers chainable with langchain runnables. Basically it contains functions used to parse and extract data from LLM chain invokes.
+- `utils.py`: This module defines various helper function and a set of data parsers chainable with langchain runnables.
 - `fetch_irregular_verbs.py`: (utility script) to collect a list of irregular italian verbs from Wikitionary.
 - `tag_sentences.py`: (utility script) to quickly test available POS tagging methods.
 - `udpipe2_client.py`: This is the python UDPipe-2 client. Some functions have been added to fit our POS tagging output format requirements.

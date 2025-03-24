@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="a TSV file containing the texts to paraphrase")
 parser.add_argument("-c", "--constraints", help="a plain-text file containing the linguistic constraints to follow when paraphrasing", required=True)
-parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
+parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
@@ -47,7 +47,7 @@ def validate_args(args):
         print("Error: the constraints file provided does not exist!")
         exit(2)
 
-    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_paraphrases_{args.type}.tsv"
+    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_paraphrase_{args.type}.tsv"
     if os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file))):
         print(f"Error: an output file with path '{output_file}' already exists!")
         exit(2)
@@ -193,7 +193,6 @@ def process_text(
     """Process a single text chunk (sentence or full text) with retry mechanism
     
     Arguments:
-        Arguments:
         text (str): the input text to paraphrase
         chain (Runnable): the LLM text processing chain
         message_parser (Callable[..., dict]): AIMessage output parser, should return a string
@@ -313,7 +312,7 @@ def main():
         exit(2)
 
     df = df[[args.label]]
-    df.rename(columns={args.label: 'texts'}, inplace=True)
+    df.rename(columns={args.label: 'text'}, inplace=True)
 
     # Setup processing pipeline
     nlp = load_spacy_model(args.sentencizer) if args.type == "bysentence" else None
@@ -334,10 +333,10 @@ def main():
 
     counter = 0
     # Process texts
-    for input_text in df['texts']:
+    for input_text in df['text']:
 
         counter += 1
-        print(f"INFO\tParaphrasing sample [{counter}/{len(df['texts'])}]")
+        print(f"INFO\tParaphrasing sample [{counter}/{len(df['text'])}]")
         if args.type == "bysentence":
             # Process sentence by sentence
             documents = nlp(input_text)
@@ -378,7 +377,7 @@ def main():
             all_warnings.append(warnings)
 
     # Add results to dataframe
-    df.insert(len(df.columns), "paraphrases", paraphrases)
+    df.insert(len(df.columns), "paraphrase", paraphrases)
 
     if args.debug:
         if args.type == "bysentence":

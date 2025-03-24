@@ -1,10 +1,11 @@
 - Nouns, Adjectives, Adverbs, Prepositions, Conjunctions, and Interjections: These may be used without limitations.
 - Pronouns: Only personal, possessive, demonstrative, interrogative, and indefinite pronouns are allowed.
 - Numerals: Cardinal numbers may be used without limitation. Ordinal numbers must be limited to range 1-3.
-- Verbs: essere, avere, volere, potere, dovere, and regular Italian verbs are allowed. Any other irregular verbs are forbidden.
+- Verbs: all the regular Italian verbs are allowed. Only the following irregular verbs are allowed: essere, avere, volere, potere, dovere, andare, dare, dire, fare, sapere, stare, venire, chiudere, mettere, morire, nascere, prendere, scrivere. Any other irregular verbs are forbidden.
 - Verbs have to be conjugated in active voice.
 - Verbs have to be conjugated strictly in the following moods and tense combinations:
     - Indicativo: presente e passato prossimo
     - Infinito: presente
     - Imperativo: presente (only 2nd person singular and plural)
     - Condizionale: presente (only 'vorrei' - first person singular of 'volere')
+- Vocabulary: use only basic Italian vocabulary suitable for CEFR A1 level learners (absolute beginners)

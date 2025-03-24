@@ -4,7 +4,7 @@ from utils import is_regular_it_verb
 
 # --- italian
 
-# --- template
+# --- output template
 italian_eval_template = {
     "conform": True,
     "pronouns_conform": True,

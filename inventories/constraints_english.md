@@ -37,3 +37,4 @@
     - Adverb
     - Adverb of degree + adverb
     - Preposition + noun phrase
+- Vocabulary: use only basic English vocabulary suitable for CEFR A1 level learners (absolute beginners)

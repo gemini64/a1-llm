@@ -13,8 +13,8 @@ OAI_MODEL = "gpt-4o-2024-11-20"
 OAI_TEMPERATURE = 0.0
 OAI_TOP_P = 0.95
 
-# Stanza and Spacy (Note, will default to CPU if
-# no GPU processor is available)
+# Stanza and Spacy (will default to CPU if
+# no compatible GPU is available)
 USE_GPU = True
 
 # Tint
@@ -54,7 +54,7 @@ Respond with a JSON output, following the schema defined below.
                 "enum": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB" ],
                 "description": "The universal POS tag associated with the tagged text"
             }},
-            "pos": {{
+            "lemma": {{
                 "type": "string"
                 "description": "The base lemma."
             }},
@@ -126,7 +126,7 @@ class Tagger(ABC):
 
 class LLMTagger(Tagger):
     """An openai LLM based part-of-speech tagger"""
-    def __init__(self, include_lemma: bool = False, model : str = OAI_MODEL, temperature: float = OAI_TEMPERATURE, top_p = OAI_TEMPERATURE, prompt: str = TAGGING_PROMPT) -> None:
+    def __init__(self, include_lemma: bool = False, model: str = OAI_MODEL, temperature: float = OAI_TEMPERATURE, top_p = OAI_TOP_P, prompt: str = TAGGING_PROMPT) -> None:
         self._include_lemma = include_lemma
         self._model = model
         self._temperature = temperature

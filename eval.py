@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("input", help="a TSV file containing the texts to evaluate")
 parser.add_argument("-t", "--tasks", help="a JSON file containing analysis tasks to perform", required=True)
 parser.add_argument("-p", "--postagger", help="the language to validate constraints against, used to initialize the postagger", required=True, choices=['italian', 'english', 'russian'], type=str)
-parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="completions")
+parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
 parser.add_argument('-a', '--analysis', help="(optional) perform analysis only", action='store_true')
 parser.add_argument('-s', "--syntax", help="(optional) perform syntax analysis", action='store_true')
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
@@ -247,7 +247,7 @@ def main():
 
     # now we drop unneded columns and rename
     df = df[[args.label]]
-    df.rename(columns={args.label :'texts'}, inplace=True)
+    df.rename(columns={args.label :'text'}, inplace=True)
     
     # Setup processing pipeline
     tagger = load_pos_tagger(args.postagger)
@@ -265,9 +265,9 @@ def main():
 
     # --- Step 1 - Analyze
     counter = 0
-    for input_text in df['texts']:
+    for input_text in df['text']:
         counter += 1
-        print(f"INFO\t Analyzing sample [{counter}/{len(df['texts'])}]")
+        print(f"INFO\t Analyzing sample [{counter}/{len(df['text'])}]")
         report, token_usage, warning_messages, tags = analyze_text(
             input_text, 
             tasks, 

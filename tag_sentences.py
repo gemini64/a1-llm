@@ -13,6 +13,7 @@ from pos_tagger import POSTagger, Language, TAGMethod
 # --- params
 input_file = "./input.json" # a json list of strings to process
 output_file = "./output.json" # output
+include_lemma = True
 
 tagger_language = "italian" # one of: ["italian", "russian", "english"]
 
@@ -24,16 +25,15 @@ with open(input_file, encoding="utf-8", mode="r") as f_in:
 
 # --- process
 tagger = None
-
 match tagger_language:
     case "italian":
-        tagger = POSTagger(language=Language.IT, method=TAGMethod.STANZA)
+        tagger = POSTagger(language=Language.IT, method=TAGMethod.STANZA, include_lemma=include_lemma)
     
     case "english":
-        tagger = POSTagger(language=Language.EN, method=TAGMethod.STANZA)
+        tagger = POSTagger(language=Language.EN, method=TAGMethod.STANZA, include_lemma=include_lemma)
 
     case "russian":
-        tagger = POSTagger(language=Language.RU, method=TAGMethod.SPACY)
+        tagger = POSTagger(language=Language.RU, method=TAGMethod.SPACY, include_lemma=include_lemma)
 
     case _:
         print(f"Error! '{tagger_language}' is not a supported POSTagger language!")
@@ -49,4 +49,4 @@ results = {str(i): value for i, value in enumerate(outputs)}
 
 # --- write out data
 with open(output_file, mode="w", encoding="utf-8") as f_out:
-    json.dump(results, f_out,ensure_ascii=False)
+    json.dump(results, f_out,ensure_ascii=False, indent=4)

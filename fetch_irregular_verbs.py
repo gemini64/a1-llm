@@ -4,7 +4,7 @@ import requests, os, json
 # An Utility script that fetches Italian
 # irregular verbs from Wikitionary
 #
-# output -> a JSON string list
+#   output -> a JSON string list
 ###
 
 def query(request, host):
@@ -32,7 +32,8 @@ def query(request, host):
             break
         last_continue = result['continue']
 
-output_file = "./inventories/italian_irregular_verbs.json"
+output_dir = "./inventories/word_lists"
+output_file = "italian_irregular_verbs.json"
 
 web_host = "https://en.wiktionary.org/w/api.php"
 req_params = {
@@ -48,5 +49,7 @@ for result in query(req_params, web_host):
     for page in pages:
         irregular_verbs.append(page["title"])
 
-with open(output_file, 'w', encoding='utf-8') as f_out:
+output_path = f"{output_dir}/{output_file}"
+
+with open(output_path, 'w', encoding='utf-8') as f_out:
     json.dump(irregular_verbs, f_out, ensure_ascii=False)
