@@ -4,18 +4,29 @@ import pandas as pd
 import numpy as np
 
 # --- flags
-filenames_to_utf8 = True
-min_chars = 240
-min_page_edits = 50
+filenames_to_utf8 = False # if True, in-place renames all files that contain hex-encoded special chars
+min_chars = 240 # paragraphs with less chars get discarded
+min_page_edits = 50 # pages with less edits get discarded
 sep_char = "_"
 
 # --- I/O
-input_dir = "./en-output/html"
-input_metadata = "./en-output/en-output.csv"
-output_file = "./vikidia_en.tsv"
+input_dir = "./en-output/html" # directory that contains extracted page texts
+input_metadata = "./en-output/en-output.csv" # csv metadata
+output_file = "./vikidia_en.tsv" # output file
 
 # --- read data
 def read_text(path: str) -> str | None:
+    """
+    Tries to open and read content from the given
+    file path. If the I/O operation fails, returns
+    None and prints and error message
+    
+    Arguments:
+        path (str): A file path to read text from
+    
+    Returns:
+        str | None: Either the file content or None
+    """
     try:
         with open(path, "r", encoding="utf-8") as f_in:
             results = f_in.read()
@@ -27,6 +38,12 @@ def read_text(path: str) -> str | None:
         return None
     
 def has_category_prefix(input: str) -> bool:
+    """
+    Checks wheter the given string has a wikimedia
+    style category prefix.
+
+    Example: Utente:Peppe -> True
+    """
     has_category = re.compile(r'^[^:]+:.+$')
     return bool(has_category.match(input))
     
@@ -107,10 +124,11 @@ def rename_files_in_directory(directory_path, file_extension=".txt", dry_run=Tru
     
     return renamed_files
 
-# convert filenames
+#  --- convert filenames
 if filenames_to_utf8:
     rename_files_in_directory(input_dir, dry_run=False)
 
+# --- read metadata
 df = pd.read_csv(input_metadata, encoding="utf-8", header=0, sep=",", na_values={'title': ""})
 
 # coherce dtypes
@@ -118,7 +136,7 @@ df['title'] = df['title'].astype(str).replace('nan', "")
 df['pageID'] = pd.to_numeric(df['pageID'], errors='coerce')
 df['revisions_count'] = pd.to_numeric(df['revisions_count'], errors='coerce')
 
-# filter out pages with less than min revisions and NaN pages
+# filter out pages with less than min revisions + pages without a title
 df.sort_values(by=["revisions_count"], inplace=True)
 df = df[df["revisions_count"] >= min_page_edits]
 df = df[df["title"] != ""]
@@ -126,9 +144,8 @@ df = df[df["title"] != ""]
 # remove pages with category prefix
 df = df[~df['title'].apply(has_category_prefix)]
 
+# --- Read text from local files
 output_data = []
-errors = []
-
 for index, row in df.iterrows():
     page_title = row["title"].replace(" ", sep_char)
     page_content = read_text(f"{input_dir}/{page_title}.txt")
