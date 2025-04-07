@@ -1,0 +1,6 @@
+ValterVB :è più corretto modifiche che edizioni (guarda wp:d:MediaWiki:Gadget-quickeditcounter.js). Puoi correggere?--ANGELO (aka Ajeje Brazorf)  14:50, 2 nov 2020 (CET)
+
+Ajeje Brazorf : Fatto --ValterVB (discussioni) 18:35, 2 nov 2020 (CET)
+inoltre sto gadget non funziona--ANGELO (日本) 17:26, 19 gen 2021 (CET)
+Si potrebbe usare questo (link al js)) --ValterVB (discussioni) 17:52, 19 gen 2021 (CET)
+ok mi pare un'ottima idea--ANGELO (日本) 18:16, 19 gen 2021 (CET)

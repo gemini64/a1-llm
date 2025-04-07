@@ -1,0 +1,7 @@
+Come funziona il criterio di divisibilità per 4?
+Un numero è divisibile per 4  se le ultime due cifre a destra formano un numero multiplo di 4 oppure sono due zeri.
+
+Esempi
+Per esempio: 43600 è divisibile per 4 perchè finisce con 2 zeri.
+Per esempio: 3512 è divisibile per 4 perchè 12, che è il numero composto dalle ultime 2 cifre è un multiplo di 4.
+Per esempio: 5679 non è divisibile per 4 perchè non finisce con 2 zeri e nemmeno perchè le ultime 2 cifre non sono un multiplo di 4.

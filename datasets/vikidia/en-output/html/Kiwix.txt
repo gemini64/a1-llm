@@ -1,0 +1,2 @@
+Kiwix is a web browser which lets you download online content to browse offline such as Wikipedia and other Wikimedia projects, texts from Project Gutenberg, and many of the Stack Exchange sites, and other resources, including Vikidia.
+As of 29 November 2024, Kiwix lets you download the entirety of Wikipedia, which is 102 GB with pictures, 53 GB without pictures, and 6.89 GB with only the introduction to articles.

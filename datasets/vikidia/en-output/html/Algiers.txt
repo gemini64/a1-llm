@@ -1,0 +1,1 @@
+Algiers is the capital city of Algeria.

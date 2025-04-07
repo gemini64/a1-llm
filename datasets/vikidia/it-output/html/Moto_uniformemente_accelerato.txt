@@ -1,0 +1,23 @@
+Il moto uniformemente accelerato è quel moto in cui la velocità varia in maniera regolare, cioè accelera in modo costante.
+
+Caratteristiche del moto
+Se misuri per ogni secondo la velocità, ti accorgerai che aumenta in maniera uniforme e costante, perciò velocità e tempo sono direttamente proporzionali fra loro. Questo moto però (come quello uniforme) avviene raramente nella vita reale  perché alcune forze come la resistenza dell'aria e quella del terreno cambiano il movimento degli oggetti sulla terra.
+
+Accelerazione
+Accelerazione
+a = \frac {v_2-v_1}{t}
+dove  v_2  e  v_1  sono valori della velocità in istanti successivi.
+
+Esempi
+
+Un sasso quando cade da un punto alto
+Una cascata, infatti l'acqua della cascata cade con un moto uniformemente accellerato
+Una macchina quando percorre l'autostrada
+
+
+
+Altri tipi di moti
+Esistono altri tipi di moti come:
+
+moto uniforme
+moto vario

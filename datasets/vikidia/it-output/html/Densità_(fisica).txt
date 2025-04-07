@@ -1,0 +1,36 @@
+La densità è una proprietà della materia. La densità è uguale alla massa di una sostanza diviso il volume.
+d= \frac{m}{V}
+Una grandezza simile alla densità è il peso specifico.
+Sulla Luna il peso specifico è inferiore rispetto alla terra invece la densità rimane invariata.
+
+Esempi
+
+La densità dell'acqua è di 1000 kg/m³
+
+
+
+
+
+
+
+
+
+
+
+
+Misurare la densità
+
+Domanda
+Esistono sostanze con diverse densità?
+Materiale
+1 litro di glicerina
+1 litro d'acqua
+2 recipienti identici
+1 bilancia a bracci
+2 cilindri graduati identici
+100 grammi d'acqua
+100 grammi di glicerina
+Procedimento
+Versa 1l di glicerina e 1l d'acqua in due recipienti uguali e mettili sui piatti di una bilancia a bracci. Il piatto dove si trova il recipiente che contiene la glicerina si abbassa: ciò significa che la massa della glicerina è maggiore rispetto a quella dell'acqua. Versa ora 100 g di glicerina e 100g d'acqua in due cilindri graduati identici i due piatti sono in equilibrio. Si può notare però che la glicerina ha un volume minore. L'esperimento dimostra che due sostanze con lo stesso volume possono avere differenti, sostanze con la stessa massa possono avere volumi diversi. Un litro di glicerina ha una massa maggiore di un litro d'acqua perchè in un litro di glicerina c'è più materia che in un litro d'acqua.
+Conclusione
+La glicerina è più densa dell'acqua.

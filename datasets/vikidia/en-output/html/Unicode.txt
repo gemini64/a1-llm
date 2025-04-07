@@ -1,0 +1,20 @@
+Unicode, is a text encoding standard which is maintained by the Unicode Consortium and is designed to support and standardise the use of text in all of the world's writing systems that can be digitized.
+Version 15.1 of the standard defines 149,813 characters and 161 scripts used in various ordinary, literary, academic and technical contexts.
+
+Encoding formats
+
+UTF-8
+UTF-16
+GB18030
+UTF-32 (uncommon)
+BOCU (uncommon)
+SCUSU (uncommon)
+UTF-7 (obsolete)
+UTF-1 (obsolete)
+
+
+
+External links
+
+Official website
+Technical website

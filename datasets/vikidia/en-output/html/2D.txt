@@ -1,0 +1,49 @@
+2D or 2 dimensional space is consisting of 2 dimensions.
+
+Shapes
+
+
+Quadrilateral
+Any shape with 4 sides not curved.
+
+Square
+A Shape that has 4 right angles (90°) and 4 congruent sides.
+
+Rectangle
+A Shape that has 4 right angles. Opposite sides are congruent.
+
+Parallelogram
+A shape that has 2 pairs of parallel sides.
+
+Triangle
+A shape that has 3 sides.
+
+Pentagon
+A shape that has 5 sides
+
+Hexagon
+A shape that has 6 sides
+
+Heptagon
+A shape that has 7 sides
+
+Octagon
+A shape that has 8 sides
+
+Nonagon
+A shape with 9 sides
+
+Decagon
+A shape with 10 sides
+
+Hendecagon
+A shape with 11 sides
+
+Dodecagon
+A shape with 12 sides
+
+2D video games
+Games that are 2D are usually 1 of these kinds
+
+8 bit
+16 bit

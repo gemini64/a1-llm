@@ -1,0 +1,2 @@
+In una frazione il denominatore è il numero sotto la linea frazionaria
+\frac{Numeratore}{Denominatore}

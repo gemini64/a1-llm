@@ -1,0 +1,1 @@
+A minigame is a game that is part of another game.

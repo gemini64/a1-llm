@@ -1,0 +1,14 @@
+L'attrito è una forza che si oppone al movimento quando un corpo striscia, rotola o cammina su di un altro.
+L'attrito è una forza che si manifesta quando un oggetto è in movimento.
+Ad esempio sul disco che scivola sul ghiaccio non c'è attrito, mentre quello lanciato sull'asfalto si ferma prima a causa dell'attrito.
+
+
+
+
+Esempi
+Per esempio, quando spostiamo un oggetto pesante possiamo identificare la forza di attrito come la forza esercitata fra il pavimento e l'oggetto.
+<gallery widths=250px heights=250px perrow=2 mode="packed" caption="Attrito">
+File:Friction alt.svg
+File:Free body diagram.png
+File:Lucio_Cecchinello_-_GP_of_Italy_2003.jpg
+</gallery>

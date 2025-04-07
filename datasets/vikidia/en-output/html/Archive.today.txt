@@ -1,0 +1,11 @@
+archive.today is a web archiving site founded in 2012. archive.today records two snapshots: one replicates the original webpage including any functional live links; the other is a screenshot of the page.
+
+External links
+
+archive.today
+archive.fo
+archive.is
+archive.li
+archive.md
+archive.ph
+archive.vn

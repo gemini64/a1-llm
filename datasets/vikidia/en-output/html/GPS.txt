@@ -1,0 +1,1 @@
+GPS (Global positioning system) is used by satellites to tell you where to go.

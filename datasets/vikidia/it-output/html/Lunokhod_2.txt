@@ -1,0 +1,9 @@
+Modello a dimensioni reali del Lunokhod 2
+Il Lunokhod 2, portato dalla sonda Luna 21, fu il secondo rover robotico a scendere sulla superficie della Luna.
+Il vettore SL-12/D-1-e mise la nave spaziale in orbita terrestre l'8 gennaio del 1973, il 12 gennaio la navicella raggiungeva la sua orbita lunare e successivamente avveniva l'allunaggio del rover.
+Gli obiettivi primari della missione includevano la raccolta di immagini del suolo lunare, la rilevazione dei livelli di luce per determinare la convenienza di osservazioni astronomiche eseguite dalla Luna, un test con laser per determinare la distanza con la Terra, l'osservazione dei raggi X solari, misurazioni del campo magnetico locale e un test sulle proprietà meccaniche del suolo.
+
+<gallery perrow="4" widths="200" heights="180">
+File:Луноход-2.jpg
+File:1971. Луна-17.jpg|Луна-17
+</gallery>

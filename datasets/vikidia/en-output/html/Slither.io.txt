@@ -1,0 +1,16 @@
+Slither.io an Internet game and popular application.  It is a multiplayer game in which players control snakes and kill other players' snakes.  This game was released on 4 April 2016.
+
+Popularity
+This game was played by such endorsers as PewDiePie, and topped the App Store shortly after its release. Slither.io's browser version was ranked by Alexa as one of the 1,000 most visited sites by July 2016, while the iOS version ranked first in the most downloaded apps on the App Store. A mobile version of the game for Android was released on March 27, 2016. The reception of the game was positive, with reviewers praising its appearance and customization but criticizing it for its low replay value and the high price users must pay to remove advertisements.
+
+Gameplay
+The objective of the game is to control and move a snake (or a worm to some players) around a colored area, eat pellets to gain mass, and defeat and consume other players to grow the biggest and longest in the game.[1] If the player's snake's head collides into a part of another snake, the player loses the game and must start over. The defeated avatar's body turns into bright, shining pellets for other players to consume.[1][2] These pellets that remain from "death" of an avatar will correspond to the color of the avatar itself, and are both brighter and bigger than normal pellets.[2]
+A game of Slither.io
+Pellets also spawn from other snake avatars. By either pressing the space bar or clicking on the mouse or trackpad, the player can activate "boost mode", which causes the avatar to speed up.[3] When a player uses "boost mode", the snake loses some mass, causing the snake's size to shrink slightly, with the mass that is lost from the boost appearing as a line of dots where the boost was used.[3] This feature is useful to outmaneuver and defeat opponents.[4] Another strategy that players use to defeat opponents is coiling around them in a loop until the opponent, trapped in the loop, crash into the player.[5]
+
+Information About Slither.io
+
+This game is built from HTML
+This game updates often
+The average number of people playing at one time is 500 (Have *Down* in People Play)
+Slither.io needs Adobe Flash to run

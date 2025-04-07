@@ -1,0 +1,2 @@
+−1 is the first negative number, it comes before 0 and after −2.
+Multiplying any number by −1 changes the sign of the number, for example:

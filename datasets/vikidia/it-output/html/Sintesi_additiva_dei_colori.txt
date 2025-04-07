@@ -1,0 +1,17 @@
+La luce può essere di diversi colori, ad esempio un semaforo emette luce rossa, gialla o verde. La luce che vediamo più facilmente è bianca, come la luce del Sole. Newton scoprì che si può scomporre la luce bianca nei diversi colori. Se scomponiamo la luce bianca otteniamo sette colori (rosso, arancione, giallo, verde, azzurro, indaco e violetto).
+Tre di questi colori (verde, rosso e blu) vengono chiamati colori fondamentali che con la loro unione formano altri colori (giallo, magenta e azzurro). L'unione dei colori viene chiamata sintesi additiva dei colori.
+Verde + rosso = giallo
+Rosso + blu = magenta
+Blu + verde = azzurro
+L'assenza dei colori (buoi totale) da il nero, mentre il bianco è l'unione di tutti i colori messi assieme.
+
+
+Dispositivo per la sintesi additiva dei colori
+
+Il primo strumento utilizzato per vedere la sintesi additiva dei colori fu il disco di Newton, dove sono disegnati delle circonferenze di vari colori.
+Se si fa ruotare il disco vedremo il colore bianco ( l'insieme di tutti i colori ). Il disco di newton è stato inventato da Isaac Newton (1642-1727) è un semplice strumento e per riprodurlo si utilizza un prisma di vetro a base rettangolare che scompone la luce nei setti colori. Ogni raggio subisce una doppia rifrazione e ogni colore una deviazione differente, il rosso è deviato in misura minore mentre il violetto in misura maggiore.
+
+Come fanno ad apparire i corpi colorati
+
+Noi riusciamo a vedere i corpi colorati grazie all'assorbimento. Infatti quando un corpo riceve la luce bianca, la maggior parte delle volte assorbe tutti i colori tranne quello che noi vedremo. Un colore ci appare ai nostri occhi se i colori vengono trattenuti tutti e  uno viene riflesso ( il colore che noi percepiamo.)
+Un esempio dell'assorbimento è la foglia che assorbe tutti i colori ma riflette il verde, che è il colore che appare ai nostri occhi.

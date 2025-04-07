@@ -1,0 +1,1 @@
+A Svg is a 2D animation drawn image. It stands for scalable vector graphics. Most Images that are svg on wikimedia commons and Wikipedia is made from Inkscape.

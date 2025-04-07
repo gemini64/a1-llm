@@ -1,0 +1,71 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Frazione
+Una frazione è un modo per esprimere una quantità basandosi sulla divisione di un oggetto in un certo numero di parti della stessa dimensione.
+Le frazioni sono state inventate dagli Egizi nel XVII a.C.
+
+Le parti della frazione
+La frazione sono divise in 3 parti:
+
+Numeratore, parte alta della frazione;
+
+
+
+La linea di frazione che divide tra il numeratore e il denominatore;
+
+
+
+Denominatore, parte bassa della frazione
+
+
+Le frazioni sono come divisioni solo che sono rappresentate con la linea di frazione
+Una frazione può essere:
+
+Ridotta ai minimi termini;
+
+
+
+Espansa, con una piccola parentesi e un numero dentro;
+
+
+
+Propria, se il numeratore è minore del denominatore;
+
+
+
+Impropria, se il numeratore è più grande del denominatore
+
+
+
+Apparente se il numeratore è multiplo del denominatore o uguale ad esso.
+
+
+
+Sottrazione e addizione di una frazione
+La sottrazione o l'addizione di una frazione non si svolge sommando o facendo la differenza dei numeratori e denominatori, bensì trovando il m.c.m tra i denominatori e dividere il m.c.m con il denominatore della prima frazione e il risultato moltiplicarlo con il numeratore della prima frazione. Così anche per la seconda frazione.
+Ad esempio:
+\frac{5}{2}+\frac{8}{3}+\frac{7}{8}=?
+m.c.m(2,3,8) = 24
+\frac{... + ... + ...}{24}
+24 : 2 = {12}, {12}\times{5} = 60
+24 : 3 = {8}, {8}\times{8} = 64
+24 : 8 = {3}, {3}\times{7} = 21
+\frac{60 + 64 + 21}{24} =\frac{145}{24}            Calcola la somma dei numeri positivi
+
+Moltiplicazione di una frazione
+La moltiplicazione di una frazione è come una semplice moltiplicazione, basta moltiplicare il numeratore con il numeratore e il denominatore con il denominatore.
+Ad esempio:
+\frac{1}{3}\times\frac{2}{4} = ?
+{1}\times{2} = 2
+{3}\times{4} = 12
+\frac{1}{3}\times\frac{2}{4} = \frac{2}{12}
+
+Divisione di una frazione
+La divisione tra frazioni non è possibile effettuarla, perciò si deve ricorrere alla moltiplicazione tra frazioni invertendo numeratore e denominatore della seconda frazione.
+Ad esempio:
+\frac{5}{6} : \frac{20}{3} = ?
+\frac{5}{6}\times\frac{3}{20} =
+{5}\times{3} = 15
+{6}\times{20} = 120
+\frac{5}{6}\times\frac{3}{20} = \frac{15}{120}
+
+Espressioni con frazioni
+Le espressioni con frazioni si svolgono regolarmente come tutte le altre espressioni, risolvendo prima le parentesi tonde, poi le quadre ed infine le graffe, con una piccola distinzione: vanno applicate le regole delle frazioni per risolverle.

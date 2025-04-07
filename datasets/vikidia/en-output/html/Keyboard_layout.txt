@@ -1,0 +1,25 @@
+Geographic distribution of keyboards in Europe:
+     QWERTY
+     QWERTZ
+     AZERTY
+     National layout (Turkey FGĞIOD, Latvia ŪGJRMV, Lithuania ĄŽERTY)
+     Non-Latin alphabet
+
+A keyboard layout  is an arrangement of the keys on a keyboard. It enables us to use the keyboard of a typewriter in the past, or on a computer nowadays.
+These are three examples of the most common keyboard layouts.
+
+QWERTY
+QWERTY keyboard layout (US)
+The QWERTY layout was created in the 1870s. It was created to prevent the type bars to overlap themselves.
+It is still used today in most English-speaking countries, but also in Spain and Italy.
+
+QWERTZ
+
+The German QWERTZ layout
+The QWERTZ layout was created for Germany countries (in German, but also in Austria and Switzerland, and most of the countries in Central Europe).
+One of the difference with the QWERTY keyboard is that the Z and the Q keys are switched (this is because that the Z letter is more used in the German language than in English.). It is also the reason for this layout to have the nickname "kezboard".
+
+AZERTY
+
+AZERTY layout used in France
+The AZERTY layout exists also and was created for French Flemish speakers based in Europe (in the last decade of the 19th century). Two of the differences with the QWERTY keyboards are with the A-Q and Z-Y keys, which are switched.

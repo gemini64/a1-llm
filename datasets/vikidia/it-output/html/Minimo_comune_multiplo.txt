@@ -1,0 +1,47 @@
+Il minimo comune multiplo di due o più numeri è il più piccolo dei loro multipli comuni: m.c.m. è l'acronimo di minimo comune multiplo.
+Ad esempio:
+\begin{cases}
+M(6) = [6,~12,~18,~24,~30,~36,~42,~\dots]  \\
+M(8) = [8,~16,~24,~32,~40,~48,~56,~\dots]
+\end{cases}
+Quindi:
+\text{m.c.m.}(6,~8) = 24
+o ad esempio con gli insiemi di Eulero-Venn trovo il \text{m.c.m.}(12,~18) = 36
+
+
+Caratteristiche
+I multipli, comuni a due numeri, sono infiniti.
+Il più piccolo di essi è il m.c.m.
+
+Se due numeri sono uno multiplo dell'altro, allora il loro m.c.m. è uguale al maggiore di essi.
+
+Per esempio:
+\begin{cases}
+M(60) = [60,~120,~180,~240,~300,~360,~420,~\dots]  \\
+M(30) = [30,~60,~90,~120,~150,~180,~210,~\dots]
+\end{cases}
+Quindi:
+\text{m.c.m.}(30,~60) = 60
+poiché 60 è il multiplo di 30, perciò è il minimo comune multiplo dei numeri dati.
+
+Il m.c.m. di due numeri primi fra loro è il loro prodotto
+
+Per esempio:
+\begin{cases}
+M(5) = [5,~10,~15,~20,~25,~30,~35,~\dots]  \\
+M(6) = [6,~12,~18,~24,~30,~36,~42,~\dots]
+\end{cases}
+Quindi:
+\text{m.c.m.}(5,~6) = 30
+poiché 5 \times 6=30, perciò è il minimo comune multiplo dei numeri dati.
+
+Come si calcola
+Prima si scompongono i numeri in fattori primi poi si prendono i fattori comuni e non comuni con l'esponente più grande.
+Per esempio:
+10 = 2 \times 5
+6 = 2 \times 3
+e si ottiene:
+\text{m.c.m.}(10,~6) = 2 \times 3 \times 5 = 30
+
+Come usare il m.c.m. nelle frazioni
+Serve per calcolare il denominatore comune di una somma o di una differenza fra frazioni; nell'addizione di più frazioni il denominatore comune è proprio il minimo comune multiplo di tutti i singoli denominatori.

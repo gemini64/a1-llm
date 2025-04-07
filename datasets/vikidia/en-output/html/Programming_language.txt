@@ -1,0 +1,30 @@
+A programming language is a formal language used to write instructions that a computer can follow. It consists of a set of rules (syntax) and meanings (semantics) that allow humans to communicate with computers. (*)
+
+Types of Programming Languages
+Programming languages are generally divided into two main categories (*) :
+
+High-level languages: These are easier for humans to read and write. They are further away from machine code, making them more abstract. Examples include Python, Java, and JavaScript.
+Low-level languages: These are closer to the computer's machine code, providing more control over the hardware but being harder to work with. Examples include Assembly and C.
+
+
+
+Popular Programming Languages
+Some of the most popular programming languages include: (*)
+
+Python: Known for its simplicity and readability, it is widely used in web development, data science, and automation.
+JavaScript: Mainly used for adding interactive elements to websites.
+Java: A versatile language used for Android app development and large-scale systems.
+C++: Known for its performance and control over system resources, commonly used in game development and high-performance applications.
+C#: A language developed by Microsoft for the .NET Framework.
+Ruby: Praised for its elegant syntax, often used with the Ruby on Rails web framework.
+Go: A statically typed language developed by Google, known for its efficiency in server-side applications.
+
+
+
+
+References
+
+Template:Portal Computers
+(*) https://web.archive.org/web/20121108043216/http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
+(*) https://en.m.wikipedia.org/wiki/Programming_language#CITEREFGabbrielliMartini2023
+(*) https://web.archive.org/web/20150707093557/http://home.mis.u-picardie.fr/~site-ic/site/IMG/pdf/ICSOFT2007_final.pdf

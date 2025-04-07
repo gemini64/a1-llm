@@ -1,0 +1,6 @@
+Quando un corpo si muove a velocità costante e percorre una traiettoria rettilinea ad esempio se percorriamo il corridoio con la stessa velocità ci muoviamo con moto rettilineo uniforme. La legge oraria del moto permette di calcolare lo spazio percorso da un corpo in moto rettilineo uniforme.
+
+Esempi
+
+Un aereo che percorre una rotta rettilinea a velocità costante si sposta con Moto rettilineo uniforme
+Un' automobile che percorre una strada a velocità costante percorrerà spazi uguali in tempi uguali (legge oraria del moto)

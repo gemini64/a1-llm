@@ -1,0 +1,1 @@
+Google Tensor is a succession of ARM64-based system-on-chip processors designed for Google's Pixel devices. It was initially conceived after introducing the first Pixel smartphone in 2016; although the initial development work had begun, the actual progress didn't reach its full potential until the 2020s.

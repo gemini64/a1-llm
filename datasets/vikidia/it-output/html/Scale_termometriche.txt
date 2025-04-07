@@ -1,0 +1,25 @@
+Per approfondire vedi la pagina: Grado Celsius.
+
+
+La scala Celsius (grado Celsius o C°) è stata ideata e introdotta dallo scienziato svedese Anders Celsius (1701-1744) nell'anno 1742. secondo la scala Celsius il ghiaccio fonde a 0° e l'acqua bolle a 100°. L'unità di questa scala è il grado centigrado (C°). Inizialmente la scala ideata da Celsius aveva il punto di ebollizione dell'acqua a 0° e il punto di fusione a 100°, dopo la sua morte è stata invertita, nel 1745  da Linneo trasformandola in quella di oggi di uso comune. Ci sono cento divisioni tra questi due punti di riferimento, quindi il termine più esatto per questo sis F° e scala Kelvin, K°.
+
+Scala Celsius
+tema è scala centigrada o centesimale. Nel 1948 il nome è stato cambiato in Celsius , sia per riconoscere i meriti di Celsius sia per eliminare la confusione del prefisso - certi usato nel sistema internazionale (SI). La scala Celsius o scala Centigrada è la scala di temperatura più usata al mondo.
+
+Scala Fahrenheit
+
+
+
+Per approfondire vedi la pagina: Grado Fahrenheit.
+
+
+La scala Fahrenheit (grado Fahrenheit o F°) è stata introdotta dal fisico tedesco Gabriel Fahrenheit (1686-1736) nell'anno 1714. Nella scala Fahrenheit il ghiaccio fonde a 32 F° e l'acqua bolle a 212 F°. L'unità di questa scala è il grado Fahrenheit (F°). Fahrenheit stabilì il punto zero della sua scala doveva essere la temperatura alla quale un ugual misura di ghiaccio e sale fonde. Le sue misure non erano molto precise, nella scala originale il punto di congelamento era ben diverso da la scala utilizzata oggi. In seguito le misure furono cambiate in 32 F°, che corrisponde al punto di fusione e 212 F° che corrisponde al punto di ebollizione.
+
+Scala Kelvin
+
+
+
+Per approfondire vedi la pagina: Kelvin.
+
+
+La scala Kelvin, o semplicemente Kelvin, è stata introdotta dal fisico ingegnere britannico Thomas William Kelvin (1824-1907). Nella scala Kelvin il ghiaccio fonde a 273,15K e l'acqua bolle a 373,15K. L'unita di misura di questa scala è il Kelvin ( il kelvin del sistema internazionale è l'unita di misura della temperatura). La scala Kelvin viene chiamata anche scala assoluta delle temperature. Il valore più basso della scala kelvin è lo zero assoluto che corrisponde a - 273,15 C°, la temperatura a cui le particelle sono immobili.

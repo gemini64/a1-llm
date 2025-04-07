@@ -1,0 +1,2 @@
+A grandparent is the parent of one's parent.
+The father of one's parent is called a grandfather, the mother of one's parent is called a grandmother.

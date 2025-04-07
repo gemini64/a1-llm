@@ -1,0 +1,1 @@
+A Timer is the opposite of a stopwatch. Basically you put the numbers in then it counts down until it reaches 0 seconds.

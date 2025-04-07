@@ -1,0 +1,11 @@
+La velocità del suono è la velocità con cui un suono si propaga in un mezzo (cioè un materiale). Poichè il suono è costituito da onde di pressione che si propagano in un mezzo (solido, liquido o gassoso), la sua velocità è legata alle caratteristiche fisiche di quel mezzo. In particolare la velocità sarà tanto più elevata quanto maggiore è la sua rigidezza e quanto minore è la sua  densità (o peso specifico). Un materiale molto rigido significa  "poco comprimibile" (esempio l'acqua), un materiale molto denso significa "molto pesante" (esempio il piombo). Quindi in un materiale come la gomma che ha una densità media e una rigidità molto, molto bassa (la gomma si comprime molto facilmente), la velocità del suono è bassa. In un materiale come l'acqua che ha una densità simile alla gomma ma è molto poco comprimibile la velocità del suono è molto più elevata. A pressione e temperatura ambiente il materiale nel quale il suono si propaga più velocemente è il Diamante (18.000 m/s) che è il materiale più rigido che si conosca (5 volte più dell'acciaio). Dopo di lui il Berillio, un metallo molto rigido (un po' più dell'acciaio) e leggero (pesa 4 volte meno dell'acciaio) nel quale il suono viaggia a 13.000 m/s.
+La velocità di un oggetto a volte viene espressa come rapporto con la velocità del suono nell'aria. Questo rapporto si chiama Mach (pronuncia mak, simbolo Ma). Un oggetto che si muove a mach = 1 viaggia a 1225 km/h. Un oggetto che viaggia a tre volte la velocità del suono in aria, viaggia a Mach = 3 (3675 km/h). Questa unità di misura della velocità è utilizzata soprattutto in aeronautica. All'interno del Concorde (uno dei pochissimi aerei passeggeri che viaggiava a velocità superiore a quella del suono) i passeggeri potevano osservare un grande display che riportava, oltre alla temperatura esterna, la velocità espressa in Mach. Il francese Concorde poteva viaggiare a Mach =2, battuto solo dal sovietico Tupolev Tu-144 che viaggiava a Mach = 2.5.
+
+Velocità del suono nei diversi materiali
+
+
+
+
+Esempi
+
+Esperimento

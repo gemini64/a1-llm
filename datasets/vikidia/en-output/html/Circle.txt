@@ -1,0 +1,13 @@
+A circle is a geometrical figure where all its points are equidistant from a single point (the center). This distance is called the radius.
+A circle is empty, a filled circle is a disc.
+
+Properties
+
+
+Perimeter
+
+The perimeter of a circle is given by 2\pi r, where r is the radius of the circle.
+
+Area
+
+The area or a circle is given by \pi r^2.

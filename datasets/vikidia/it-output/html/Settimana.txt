@@ -1,0 +1,17 @@
+Una settimana corrisponde all'insieme di 7 giorni.
+I giorni che compongono una settimana sono (in ordine):
+
+lunedì
+martedì
+mercoledì
+giovedì
+venerdì
+sabato
+domenica
+
+
+Dopo la domenica inizia il lunedì successivo e così via.
+
+Intervalli di tempo misurabili in settimane
+
+due settimane di vacanza al mare

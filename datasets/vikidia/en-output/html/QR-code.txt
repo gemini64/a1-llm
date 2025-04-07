@@ -1,0 +1,5 @@
+<gallery>
+File:WikiQRCode.png
+File:QR_Code_Struktur_Beispiel.svg|(blue):version information (pink):format, [pattern] includying position, alignment and timing
+</gallery>
+Qr for quick-responde is a 2-D code readable for an smart-phone. It can then read download content to the device or open a webpage. It can also be used in AR games.

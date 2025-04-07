@@ -1,0 +1,3 @@
+Il sistema metrico decimale è il sistema che usiamo per usare i chilometri(km), i ettometri (hm), i decametri (dam),
+i metri (m), i decimetri (dm), i centimetri (cm) e i millimetri (mm).Che sono misure di lunghezza. Li usiamo per molte cose ad esempio la lunghezza di un posto o la scala numerica... Avvolte dobbiamo trasformare un di queste misure in un'altra misura ad esempio 1458 chilometri (km) in metri (m) e 1,458 metri (m)  o 233centimetri (cm)  in decametri è 0,233 decametri (dam).Questo è successo perché  se devi ringrandire la misura devi dividere per il 10 o se devi diminuire moltiplicherai per
+10.

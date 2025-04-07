@@ -1,0 +1,7 @@
+Vasi comunicanti
+Il principio dei vasi comunicanti dice che un liquido versato in diversi contenitori collegati tra loro raggiunge lo stesso livello.
+
+Esempi
+
+
+Eccezione la capillarità

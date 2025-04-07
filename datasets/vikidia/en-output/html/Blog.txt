@@ -1,0 +1,29 @@
+A blog (a truncation of weblog) is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. (*)
+
+History
+The emergence of blogs in the late 1990s coincided with the advent of web publishing tools that facilitated the posting of content by non-technical users. Early blogs were simply manually updated components of common websites. However, the evolution of tools to facilitate the production and maintenance of web articles posted in reverse chronological order made the publishing process accessible to a much larger, less technical, population. (*)
+
+Types
+Blogs can be categorized into several types, including:
+
+Personal blogs: An ongoing online diary or commentary by an individual.
+Corporate blogs: Blogs used for business purposes.
+Microblogging: A form of blogging using very short posts.
+
+
+
+Impact
+Blogs have had a significant impact on the communication landscape, providing a platform for individuals to express their opinions, share knowledge, and connect with others. They have also influenced journalism, marketing, and public relations. (*)
+
+
+References
+
+
+
+
+
+
+
+(*) https://web.archive.org/web/20150530144950/http://www.rebeccablood.net/essays/weblog_history.html
+(*) http://www.viralblogcontent.com/Origins_of__22Blog_22_and__22Blogger_22.pdf
+(*) https://www.theguardian.com/news/blog/2006/aug/15/whohe

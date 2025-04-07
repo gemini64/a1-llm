@@ -1,0 +1,6 @@
+Tiny herpes viruses (the five, ball-like structures at the left) infecting a human cell (at the right).
+A virus is a tiny parasite of living beings, that thrives in their cells.
+Viruses are not true living beings, since they do not have cell, and, furthermore, they don't eat, they don't grow, and they don't reproduce themselves. Instead, virus are able to force the living beings' cells to copy them, wich is called replication.
+Despite they are not true living beings, viruses are made about the same way : they contain the same type of molecules (such as proteins), and a genetic information, beared by a DNA or a RNA molecule.
+A virus is able to insert its own genetic information into the genetic information of the cell, so that the cell mistakes, and replicates the virus instead of doing its normal work.
+Many viruses are agents responsible for diseases, such as flu, AIDS, etc.

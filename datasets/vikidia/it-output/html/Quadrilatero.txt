@@ -1,0 +1,25 @@
+In geometria il quadrilatero è un poligono con quattro lati e quattro vertici.
+Tutti i quadrilateri hanno quattro vertrici e quattro angoli interni (cioè sono quadrangoli).
+La somma delle ampiezze degli angoli interni di un quadrilatero semplice ABCD è uguale a 360°:
+A +  B +  C +  D = 360°
+
+Quali sono
+
+Tra i quadrilateri sono compresi:
+trapezi;
+parallelogrammi;
+rettangoli;
+rombi;
+quadrati.
+
+
+
+Quadrilateri concavi e convessi
+Il quadrilatero convesso è una figura piana che contiene almeno due prolungamenti dei lati che compongono il perimetro. Tutti gli angoli interni di un quadrilatero convesso hanno ampiezza inferiore a 180°.
+Il quadrilatero concavo, è una figura piana che non contiene nessun prolungamento dei lati che compongono il perimetro.
+
+
+Bibliogreafia
+
+Collegamenti estreni
+Wikipedia Quadrilatero

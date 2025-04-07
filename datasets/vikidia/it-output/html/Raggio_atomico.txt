@@ -1,0 +1,8 @@
+Il raggio atomico è una proprietà periodica degli elementi che sta ad indicare la grandezza degli atomi di un elemento ed aumenta lungo i gruppi dall'alto al basso e diminuisce lungo i periodi da destra a sinistra.
+
+gruppo con raggio atomico maggiore: metalli alcalini
+gruppo con raggio atomico minore: Gas nobili
+periodo con raggio atomico maggiore: 7
+periodo con raggio atomico minore: 1
+elemento con raggio atomico minore: elio
+elemento con raggio atomico maggiore: francio

@@ -1,0 +1,61 @@
+JavaScript, da non confondere con Java, è un linguaggio di programmazione utilizzato principalmente nel web assieme all'HTML. Il suo scopo è rendere un sito web dinamico e far si che l'utente possa interagire con esso, può avere anche funzioni di stile simili al CSS. Javascript è un linguaggio orientato agli oggetti ed un linguaggio orientato agli eventi, ciò significa che permette la comunicazione tra gli oggetti (o gli elementi) presenti in una pagina web e può catturare gli eventi (le azioni dell'utente) attivando un eventuale ciclo o funzione.
+Questo linguaggio è stato creato da Sun Microsystems ed è stato pubblicato la prima volta nel 1995.
+
+Metodi di utilizzo assieme all'HTML
+Javascript può essere inserito direttamente nel codice HTML oppure può essere scritto in un file a parte con estensione .js.
+
+Utilizzo all'interno del codice HTML
+Per utilizzare Javascript direttamente nel codice HTML basta creare il tag script e inserirci all'interno il codice Javascript.
+
+
+<html>
+<head>
+<title>Pagina HTML con Javascript</title>
+</head>
+<body>
+<a id="a" href="">Questa pagina utilizza anche Javascript</p>
+<script> var a = document.getElementById("a");
+a.onclick = function() {
+a.style.color = "red";
+} </script>
+</body>
+</html>
+
+Il codice contenuto nell'elemento script dice che se l'elemento a è cliccato esso dovrà diventare rosso.
+
+Utilizzo in un file separato
+Per utilizzare Javascript in un file separato dall'HTML bisogna creare un file con estensione .js e "collegarlo" all'HTML tramite il tag script inserendo nell'attributo src il nome completo del file Javascript creato (compresa l'estensione .js). Questo tag dovrà essere inserito nell'ultima riga del body.
+
+
+<script src="nomeDelFile.js"></script>
+
+E poi nel file Javascript inseriamo il codice.
+
+
+var a = document.getElementById("a");
+a.onclick = function() {
+a.style.color = "red";
+}
+Anche in questo caso il codice dice che se l'elemento a è cliccato esso dovrà diventare di colore rosso.
+
+
+La sintassi
+Come tutti gli altri linguaggi, Javascript ha delle precise regole di sintassi.
+
+Principali regole di sintassi
+
+Alla fine di ogni riga di codice si mette il ; (punto e virgola) per indicare che il browser o il framework che lo leggerà dovrà separare quella riga dalle altre.
+Si usano le { } (parentesi graffe) per aprire e chiudere delle function o dei cicli (while, for...).
+Per concatenare più funzioni si usano i . (punti). Ad esempio nel codice mostrato sopra ho usato i termini a.onclick (significa: se a è cliccato) e a.style.color (significa stilizza il colore di a).
+Si usano le , (virgole) per separare alcuni elementi tra di loro in casi specifici, ad esempio all'interno di un array.
+Si usano le [ ] (parentesi quadre) per aprire e chiudere un array di dati e in pochissimi altri casi.
+Si usano " " (doppi apici o virgolette) oppure ' ' (singoli apici) per contenere una stringa o per modificare lo stile di un elemento. Ad esempio nel codice sopra ho scritto red tra doppi apici per indicare il colore rosso.
+Si usano le ( ) (parentesi tonde) in alcuni casi. Ad esempio vengono usate per indicare dei parametri nelle function (o in altre funzioni) o per indicare una o più condizioni negli if.
+
+
+
+Javascript con Electron
+Javascript è uno dei principali linguaggi utilizzati con Electron per sviluppare applicazioni desktop.
+
+Javascript con React Native
+Javascript è anche usato assieme a React Native per sviluppare applicazioni mobile soprattutto per Android ma anche per iOS.

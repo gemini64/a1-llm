@@ -1,0 +1,2 @@
+Pretendo logo
+After Nintendo shut down its Wii U and Nintendo 3DS online services on Monday, Pretendo — an open-source Nintendo Network substitute — has found a workaround that grants users (limited) access to its own network without custom firmware. Pretendo is not available on the Wii or Nintendo Switch.

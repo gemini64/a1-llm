@@ -1,0 +1,17 @@
+Il termine cambiamento di stato (o transizione di fase) in fisica e in chimica indica il passaggio di un corpo da uno stato d'aggregazione a un altro al variare dei parametri, come la temperatura e la pressione. (*)
+
+Cambiamenti di stato
+
+Il passaggio dallo stato aeriforme allo stato liquido si chiama condensazione.
+La trasformazione dei gas (es.l'aria) in liquidi si chiama liquidazione.
+Il passaggio dallo stato liquido allo stato solido si chiama solidificazione.
+Il passaggio dallo stato aeriforme allo stato solido si chiama brinamento.
+Il passaggio dallo stato solido allo stato aeriforme si chiama sublimazione.
+
+
+
+Esempi
+
+se prendiamo il ghiaccio e lo mettiamo sul fuoco si scioglie e diventa acqua (fusione)
+se vogliamo trasformare un gas in liquido bisogna non solo raffreddarlo ma anche comprimerlo enormemente (liquidazione)
+se prendiamo l'acqua che bolle e la mettiamo nel congelatore diventa ghiaccio (brinamento)

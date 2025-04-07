@@ -1,0 +1,28 @@
+Biografia
+
+
+I primi passi
+Stallman si formò all’Università di Harvard, presso il MIT ( Massachusetts Institute of Technology),  dove entrò a far parte della comunità degli hacker, e presso la  Rockefeller University.
+
+La sua persona
+Ha dedicato la sua vita alla politica e al mondo del software, senza curarsi dei beni materiali, è ateo e non possiede un telefono cellulare, poiché crede che creino problemi di riservatezza dei dati personali, inoltre,  è un appassionato di fantascienza, e ha scritto due racconti di questo genere.
+Parla bene, oltre all’inglese (madrelingua), anche francese e spagnolo; tra i suoi hobby ci sono lo studio delle danze popolari internazionali, volare, cucinare, suonare il flauto dolce, la fisica e naturalmente la programmazione informatica. Stallman ha scritto numerosi saggi sulla libertà del software e dai primi anni novanta è un attivista politico onesto a favore del movimento del software libero; ha promosso campagne contro i software proprietari, ovvero programmi la cui licenza consente l'utilizzo sotto particolari condizioni e ne impedisce altre come, ad esempio, lo studio, la modifica, la condivisione, la ridistribuzione ed ha combattuto le leggi sul copyright.
+
+Principali contributi e invenzioni
+
+
+Progetto GNU
+Nel 1983 avviò il progetto GNU che fu pubblicato nel 1985, con l'obiettivo di creare un sistema operativo composto interamente da software libero.
+
+Progetto Free Software Foundation
+Nel 1985, fondò la Free Software Foundation, un’organizzazione senza scopo di vantaggi economici che promuove la libertà degli utilizzatori di computer di condividere, studiare e modificare un software.
+Nel 2019, Stallman annunciò le sue dimissioni dalla Free Software Foundation, sostenendo di avere ricevuto pressioni a farlo. Nel 2021, però, è tornato a far parte del consiglio di amministrazione della FSF non senza qualche protesta di un buon numero di membri della comunità del software libero.
+
+Copyleft
+
+Nel 1985, Stallman inventò e rese popolare il concetto di Copyleft, ovvero un meccanismo legale inventato per proteggere i diritti di modifica.
+
+
+
+Riconoscimenti
+Stallman ha ricevuto numerose lauree honoris causa da diverse università e istituti, come ad esempio dall'Istituto Reale di Tecnologia della Svezia, dall'Università di Pavia, dall'Università Nazionale di Córdoba, e da molte altre, inoltre, gli sono stati assegnati anche numerosi premi.

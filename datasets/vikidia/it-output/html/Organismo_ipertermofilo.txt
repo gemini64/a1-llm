@@ -1,0 +1,15 @@
+Gli ipertermofili sono organismi che vivono in ambienti estremamente caldi, con temperature che possono superare gli 80 gradi centigradi. Essi rappresentano il sottogruppo degli organismi termofili in grado di resistere alle maggiori temperature. (*)
+
+Gli ipertermofili sono stati scoperti per la prima volta nel 1969, anno in cui il microbiologo Thomas Brock isolò da una sorgente termale presente nel Parco Nazionale di Yellowstone (negli Stati Uniti) il batterio Thermus aquaticus, capace di crescere intorno ai 100 °C. (*)  (*)
+Gli ipertermofili sono estremamente resistenti alle alte temperature, e sono in grado di sopravvivere e riprodursi in ambienti dove sarebbe impossibile per altre forme di vita. Sono stati trovati in diverse categorie (batteri, archeobatteri e funghi) e sono stati oggetto di numerosi studi scientifici per comprendere le loro caratteristiche uniche e il loro ruolo nell'ecosistema.
+Siccome man mano che aumenta la temperatura, l'ossigeno diventa meno solubile, la maggior parte di questi organismi è anaerobio, cioè vive senza bisogno di ossigeno. Il loro DNA è più ricco di coppie citosina-guanina, perché sono più resistenti al calore rispetto alle coppie adenina-timina.
+La più alta temperatura nota in cui è stata osservata una cellula attiva e capace di riprodursi è 121 °C; si tratta dell'archeobatterio ceppo 121, isolato da una sorgente idrotermale nel nord-est dell'oceano Pacifico a un temperatura di 300 °C. Questo microrganismo, capace inoltre di produrre magnetite, ha fatto ipotizzare che simili forme di vita su Marte possano aver prodotto rocce dalle particolari caratteristiche.
+Molti ipertermofili, in particolare quelli isolati da sorgenti nei fondali oceanici, sono anche barofili – cioè resistenti nei confronti dell'alta pressione dell'acqua. Alcuni ipertermofili possono inoltre resistere ad alte dosi di radiazioni. Altri resistono a condizioni estreme di pH, come l'archeobatterio acidofilo Sulfolobus acidocaldarius che vive e si riproduce a pH 3 e 80 °C.
+In genere gli ipertermofili non sono causano malattie negli esseri umani perché non sopravvivono ai 37 °C del corpo umano. (*)
+Gli ipertermofili sono interessanti anche per la tecnologia, poiché alcune delle loro proteine e dei loro enzimi sono stabili alle alte temperature e possono essere utilizzati nei laboratori e nelle industrie.
+
+Altri esempi di organismi ipertermofili comprendono:
+
+Pyrolobus fumarii: un archeobatterio che vive a temperature estreme fino a 113 gradi, in condizioni ottimali intorno ai 106 gradi; è stato trovato in fondali marini caldi e in sorgenti termali sotterranee;
+Pyrodictium occultum: un archeobatterio scoperto nel 1982 nelle acque dell'isola di Vulcano, capace di vivere fino a 110 °C;
+Sulfolobus solfataricus (*) : un archeobatterio che vive nelle solfatare a pH 2-3 e a 80 °C, scoperto nell'area vulcanica di Pozzuoli e da cui è stato estratto un enzima utilizzato nella ricerca spaziale.

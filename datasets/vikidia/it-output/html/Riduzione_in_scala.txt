@@ -1,0 +1,37 @@
+I cartografi eseguono un calcolo per rimpicciolire un territorio, questa è la riduzione in scala, chiamata anche scala di rappresentazione. Con la riduzione in scala è possibile disegnare un territorio su un foglio di dimensioni molto piccole.
+
+Scala di riduzione
+La scala di riduzione è utile per conoscere le dimensioni reali di un territorio che rappresenta e calcola le distanze fra i luoghi.
+
+La scala numerica
+La scala numerica è espressa da una divisione, per esempio 1:1.000.00; si legge "uno a un milione" e significa che un centimetro sulla carta equivale a un milione di centimetri nella realtà.
+
+La scala grafica
+La scala grafica è un segmento diviso in parti uguali ciascuna lunga un centimetro.
+
+La riduzione in scale e le carte
+Le carte geografiche sono classificate in base alla riduzione in scala.
+
+Carte a piccola scala
+Le carte a piccola scala contengono porzioni di territorio molto estese e rappresentano pochi dettagli.
+Le carte a piccola scala sono le carte geografiche e i planisferi, cioè le carte a una scala oltre 1:100.000.
+
+
+
+
+Carta geografica
+Scala -> 1:100.000. Rappresenta una regione, una Nazione o un continente.
+
+Planisfero
+Scala -> 1:30.000.000 e oltre. E' un particolare tipo di carta geografica che rappresenta il mondo.
+
+Carte a grande scala
+Le carte a grande scala rappresentano una piccola porzione di territorio e possono contenere molti particolari, come negozi o case.
+
+Carta topografica
+Scala -> da 1:10.000 a 1:100.000.
+Rappresenta una città e i suoi dintorni, mostra particolari sia naturali sia artificiali.
+
+Pianta o mappa
+Scala -> inferiore a 1:10.000.
+È molto dettagliata e riporta un territorio poco esteso ma tanto dettagliato e rappresenta una città, un quartiere, un edificio o una zona di campagna.

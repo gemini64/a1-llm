@@ -1,0 +1,27 @@
+Mozilla Firefox logo
+Screenshot of Mozilla Firefox
+Mozilla Firefox is a web browser developed by the Mozilla Foundation. It runs on Windows, OS X, Linux, Android, and other operating systems. The latest version is 44.0, released on January 26, 2016. (*)
+Firefox finds its roots in Netscape Navigator, the first commercial web browser released in 1994.
+
+References
+
+
+
+Other websites
+
+Official website
+
+
+
+
+
+
+
+
+
+es:Mozilla Firefox
+fr:Mozilla Firefox
+nl:Mozilla Firefox
+simple:Mozilla Firefox
+wp:Firefox
+(*) Firefox Release Notes

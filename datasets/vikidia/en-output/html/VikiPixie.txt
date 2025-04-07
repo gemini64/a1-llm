@@ -1,0 +1,143 @@
+A VikiPixie is a type of fairy which is a mythical creature. They are common around Vikidia.
+They usually categorise articles, improve their formatting, correct spelling.
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: #ffffff" | VikiPixie
+|-
+| colspan=2 style="text-align: center" |
+|-
+| colspan=2 style="text-align: center; font-size: 88%" | A image of pixie dust from the Vikipixie
+|-
+|- colspan=2 style="text-align: center; background-color: #ffffff"
+|-
+|-
+! colspan=2 style="text-align: center; background-color: #ffffff" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animal
+|-
+
+
+
+
+
+
+
+
+| Phylum:
+| Pixie
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Class:
+| Pixie
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Pixie
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Family:
+| Fairies
+|-
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Pixie
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| Fairies
+|-
+
+|-
+
+|-
+! colspan=2 style="text-align: center; background-color: #ffffff"  | Binomial name
+|-
+| colspan=2 style="text-align: center" | PixiePixie
+|- style="text-align: center; background-color: #ffffff"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|}

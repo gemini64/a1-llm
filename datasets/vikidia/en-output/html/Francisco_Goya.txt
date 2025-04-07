@@ -1,0 +1,10 @@
+Goya by Vicente López y Portaña, 1826
+Francisco Goya (1746 –  1828) was a Spanish painter of the Romantic era. He is considered the last of the Old Masters and the first of the Moderns. He painted the horrors of the Napoleonic Wars in Spain, the Spanish Royal family, and a series of pictures depicting witches. His best known works are probably The Naked Maja, The Third of May 1808, and a series of prints titled, The Disasters of War.
+
+<gallery perrow="4" widths="200" heights="180">
+File:El_Quitasol.jpg|1777. The Parasol
+File:Carlos_IV_de_rojo.jpg|1789. Charles IV of Spain in red
+File:Goya_Maja_ubrana2.jpg|circa 1800. The Clothed Maja
+File:El_tres_de_mayo_de_1808_en_Madrid_(2008).jpg|1814. The Third of May 1808
+File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg|1819-1823. Saturn eating his Son
+</gallery>

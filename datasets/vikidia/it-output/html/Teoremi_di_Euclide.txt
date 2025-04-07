@@ -1,0 +1,65 @@
+Sia il primo che il secondo teorema riguardano il triangolo rettangolo.
+Essi hanno svolgimenti simili tra di loro, ma trattano cose differenti.
+
+Primo teorema di Euclide
+
+L'enunciato di questo teorema riguarda i cateti, l'ipotenusa e le proiezioni sui cateti.
+
+Enunciato del teorema
+
+
+Enunciato con l'equivalenza
+
+Questo teorema dice che il quadrato costruito sul lato di un cateto è equivalente al rettangolo costruito sulla proiezione sull'ipotenusa di questo cateto, avente come seconda misura l'ipotenusa stessa.
+Esempio:
+
+ABC = triangolo rettangolo        = 11.7 cm
+AB  = ipotenusa                   = 5 cm
+BC  = cateto maggiore             = 4.5 cm
+CA  = cateto minore               = 2.2 cm
+AH  = proiezione cateto minore    = 1 cm
+HB  = proiezione cateto maggiore  = 4 cm
+
+
+e quindi
+
+CA x  CA = AH x AB = 2.2 x 2.2 = 1 x 5
+BC x BC = HB x AB = 4.5 x 4.5 = 4 x 5
+
+
+
+Enunciato con le proporzioni
+
+In ogni triangolo rettangolo i cateti sono medi proporzionali tra l'ipotenusa e la propria proiezione sull'ipotenusa.
+Esempio :
+
+AH / CA = CA / AB = 1 / 2.2 = 2.2 / 5
+HB / BC = BC / AB = 4 / 4.5 = 4.5 / 5
+
+
+
+Secondo teorema di Euclide
+
+In questo enunciato si parla dell'altezza e delle proiezioni dei cateti sull'ipotenusa.
+
+Enunciato del teorema
+
+
+Enunciato con l'equivalenza
+
+Nel triangolo rettangolo, se si prende l'altezza relativa all'ipotenusa e ci si costruisce un quadrato sopra, la sua area sarà uguale a quella di un rettangolo costruito sulla proiezione di uno dei due cateti, avente come secondo lato la proiezione dell'altro cateto.
+Esempio:
+
+ABC = triangolo rettangolo        = 20 cm
+CH  = altezza    = 4 cm
+AH  = proiezione cateto minore    = 2 cm
+HB  = proiezione cateto maggiore  = 8 cm
+
+
+e quindi CH * CH = AH * HB = 4 * 4 = 2 * 8
+
+Enunciato con le proporzioni
+
+Questo enunciato afferma che nel triangolo rettangolo, l'altezza relativa all'ipotenusa, è media proporzionale tra la proiezione del cateto maggiore e quella del cateto minore sull'ipotenusa.
+Esempio:
+HB / CH = CH / AH = 8 / 4 = 4 / 2

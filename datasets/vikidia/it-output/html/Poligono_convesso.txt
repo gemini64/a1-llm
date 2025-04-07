@@ -1,0 +1,21 @@
+Un poligono convesso è un poligono le cui diagonali cadono tutte all'interno.
+
+Classificazione
+
+
+Caratteristiche dei lati
+
+
+Caratteristiche degli angoli
+
+
+Caratteristiche delle diagonali
+
+
+Note speciali
+
+
+Calcolo del perimetro
+
+
+Calcolo dell'area

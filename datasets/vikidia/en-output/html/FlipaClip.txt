@@ -1,0 +1,4 @@
+FlipaClip is a free animation program available on Android, iOS and Windows. This program is a very basic app that introduce you to the world of animated shorts.
+It allows you to draw a frame to later on change some elements on the layers that give movement effect as you play the frames. For better results, it is recommended to prepare the project to 24 frames per second. Making an even fluid animation will make you draw more frames per second (maxímum 30/second).
+Flipaclip screenshot on mobile
+Its paid suscription, FlipaClip+, allows you to use special effects (including audio). filters and add up to 10 layers. However, these can be eluded in the basic version by watching ads.

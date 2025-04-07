@@ -1,0 +1,150 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Moluccan woodcock
+|-
+| colspan=2 style="text-align: center" |
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+! colspan = 2 | Conservation status
+|-
+| colspan = 2 |
+Endangered
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animalia
+|-
+
+
+
+
+
+
+
+
+| Phylum:
+| Chordata
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Class:
+| Aves
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Charadriiformes
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Family:
+| Scolopacidae
+|-
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Scolopax
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| S. rochussenii
+|-
+
+|-
+
+|-
+! colspan=2 style="text-align: center; background-color: pink"  | Binomial name
+|-
+| colspan=2 style="text-align: center" | Scolopax rochussenii(Schlegel, 1866)
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+The Moluccan woodcock (scientific name : Scolopax rochussenii) is a bird of the sandpiper family (Scolopacidae).
+It lives in forests of Obi and Bacan, in Indonesia.
+
+References
+
+IUCN redlist

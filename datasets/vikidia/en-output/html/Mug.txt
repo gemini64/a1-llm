@@ -1,0 +1,1 @@
+A mug is an object that holds a liquid or drink.

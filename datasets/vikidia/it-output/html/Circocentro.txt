@@ -1,0 +1,28 @@
+Il circocentro è il centro della circonferenza circoscritta del triangolo, quella che passa per i vertici.
+Per trovarlo bisogna trovare il punto di incontro degli assi dei tre lati del triangolo. Il circocentro è equidistante da tutti i vertici del triangolo e non sempre si trova all'interno del triangolo.
+
+
+
+
+Posizione del circocentro
+A secondo del tipo di triangolo il circocentro si trova in posizioni diverse.
+
+Triangolo acutangolo
+
+Nel triangolo acutangolo il circocentro si trova all'interno.
+
+
+Triangolo rettangolo
+È nel punto medio dell'ipotenusa.
+
+
+
+
+Triangolo ottusangolo
+
+
+
+
+Bigliografia
+
+Contaci 1 Misure, spazi, figure,C.Bertinetto,A.Metiäinen, J.Paasonen, E.Voutilainen,Zanichelli

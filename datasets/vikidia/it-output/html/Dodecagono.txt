@@ -1,0 +1,10 @@
+Il dodecagono è un poligono con dodici lati uguali e 12 angoli uguali.
+
+Angoli nel dodecagono
+Hanno 12 angoli uguali, e gli angoli hanno un'ampiezza di 150°
+
+Diagonali nel dodecagono
+Le diagonali sono 54, in ogni vertice passano nove diagonali.
+
+Significato di dodecagono
+Dal greco dōdekágōnon e significa poligono convesso con dodici lati e dodici angoli.

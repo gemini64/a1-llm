@@ -1,0 +1,12 @@
+Si chiamano rette parallele due rette che non si incontrano mai.
+
+Criteri di parallelismo
+
+Due rette r ed s sono parallele se, tagliate da una trasversale t, formano
+
+1. angoli alterni interni  congruenti    (ζ,ά    e   β,δ')
+2. angoli alterni esterni congruenti    (σ,β'    e   α,ζ')
+3. angoli coniugati interni supplementari  (ζ,δ   e   β,ά)
+4. angoli corrispondenti congruenti   (δ,δ':  ζ,ζ';   α,ά;  β,β')
+
+In un triangolo  ogni angolo esterno è uguale alla somma dei due angoli interni non adiacenti ad esso.

@@ -1,0 +1,9 @@
+DISPLAYTITLE
+
+The Latin adverb sic is inserted in a quotation to show that a typo or misspelling appeared in the original source and is being quoted.
+Example:
+"The quick brown fox jump over the lazy dog."
+This sentence should be spelled:
+"The quick brown fox jumps over the lazy dog."
+If someone was quoting the first sentence without changing the errors, they could use sic to show where the mistake has been made:
+"The quick brown fox jump [sic] over the lazy dog."

@@ -1,0 +1,20 @@
+The Domain Name System or DNS is the phonebook of the Internet, connecting web browsers with websites.  (*)
+
+Related pages
+
+.net
+.com
+.org
+.xyz
+
+
+
+References
+
+
+
+
+
+
+
+(*)  https://www.fortinet.com/resources/cyberglossary/what-is-dns

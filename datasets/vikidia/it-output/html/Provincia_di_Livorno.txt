@@ -1,0 +1,36 @@
+Mappa di localizzazione.
+La provincia di Livorno è una provincia della Toscana. Il capoluogo di provincia è Livorno.
+
+Confini
+Confina con:
+
+provincia di Pisa
+provincia di Grosseto
+
+
+
+Comuni
+La provincia è composta da 20 comuni.
+
+
+
+Bibbona
+Campiglia Marittima
+Campo nell'Elba
+Capoliveri
+Capraia isola
+Castagneto Carducci
+Cecina
+Collesalvetti
+Livorno
+Marciana
+Marciana Marina
+Piombino
+Porto Azzurro
+Portoferraio
+Rio Marina
+Rio nell'Elba
+Rosignano Marittimo
+San Vincenzo
+Sassetta
+Suvereto

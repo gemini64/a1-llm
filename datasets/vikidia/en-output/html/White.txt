@@ -1,0 +1,2 @@
+White is a color obtained by the presence of intense brightness, having as an outcome a lack of natural colors. Many things can be white, like paper, shirts, and pants. Even this page is white.
+It is obtained by getting 255 on parameters RGB. or #fffff... however using extremely bright colors on night time is not healthy for our eyes, as these may harm out vision or giving us headaches. Keep in mind of readjusting brightness when you're using a device

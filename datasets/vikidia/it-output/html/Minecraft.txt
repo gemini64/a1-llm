@@ -1,0 +1,64 @@
+Minecraft è un gioco di genere "Sandbox" creato dalla Mojang.
+Esistono 4 versioni di Minecraft, sono: Classic (online), Java Edition (solo per PC), Bedrock Edition (per console) e Pocket Edition (per dispositivi mobili) ; ed è disponibile in varie piattaforme: Computer, Mobile, Playstation 3, 4 e 5, Xbox 360, Xbox One, Xbox Series X/S, Nintendo Wii, Nintendo Switch.
+Giocabile in Singleplayer e Multiplayer (Online o Locale).
+
+Storia
+Tutto inizia quando il 17 maggio del 2009, Markus Alexej Persson, chiamato e conosciuto anche come Notch, inizia a sviluppare a tempo pieno un videogioco prendendo ispirazione, secondo alcune fonti, da giochi come Dwarf Fortress, Dungeon Keeper e soprattutto Infiniminer. Nel mentre fonda anche la Mojang, studio che ancora oggi sviluppa Minecraft.
+Notch mostrerà poi la prima versione del gioco su TIGSource Forums (portale dove si possono dare feedback riguardo allo sviluppo di videogames) ricevendo molti giudizi positivi da parte della community.
+La prima versione rilasciata, chiamata anche “Minecraft Classic”, disponibile ancora oggi da browser, prevedeva un mondo finito composto solo da blocchi di terra e di roccia. Con aggiornamenti (o update) settimanali, il gioco inizia a progredire sempre di più, così come la community che inizia ad essere sempre più numerosa, mentre le prime mod vengono create.
+Fino a quel momento, l’unica modalità presente era quella creativa, e solo a ottobre 2009 verrà aggiunta anche quella survival (sopravvivenza in italiano) nella quale si ha il rischio di morire a causa dei mostri nemici e bisogna mangiare per restare in vita. Il gioco verrà poi chiamato “Minecraft” e da qua nascerà in seguito il famosissimo videogioco che presto diventerà tra i più giocati al mondo.
+Nel 2014, il gioco viene venduto alla compagnia Microsoft per circa 2,5 miliardi di dollari, perdendo però il suo creatore Markus Persson “Notch”.
+La mojang inizierà poi a fare molti aggiornamenti, tra i quali, il Village & Pillage Update (versione java 1.14) e il World of Colour Update (versione java 1.12). (*)  (*)
+
+Il gioco
+Minecraft è diventato famoso per i suoi blocchi pixelati che compongono il mondo, infatti non esistono figure curve o circolari. Quando si crea un nuovo mondo si può scegliere un seme (seed) che definirà la morfologia del territorio; poi bisogna scegliere la difficoltà (che può essere pacifica, facile, normale e difficile) che definirà la forza dei mob ostili e la complessità del gioco, e infine si deve scegliere la modalità di gioco. Inoltre si possono attivare anche i “trucchi” che se inseriti renderanno il gioco più semplice attraverso alcune funzioni.
+Quando si avvia un nuovo mondo, inizia un lento avanzamento del gioco, nel quale prima bisogna raccogliere legna, poi pietra, dopo il ferro e così via, dove più si progredisce più si possono fare nuove esperienze.
+Questo gioco non ha un vero obiettivo e neanche una vera fine, ma si basa sull’esplorazione, sulla costruzione e sul combattimento; tuttavia molte persone intendono la fine del gioco dopo il combattimento con il boss finale (ender dragon) o dopo aver completato tutti gli avanzamenti (specifiche missioni secondarie).
+Minecraft è diventato popolare ed è stato elogiato anche per le sue meccaniche non fondamentali per il gioco ma comunque straordinarie come la pietrarossa (redstone), che permette di fare ogni tipo di meccanismo, o come i dischi musicali che sono vere e proprie composizioni di artisti.
+
+Modalità
+
+
+Sopravvivenza: qua il giocatore deve cercare di sopravvivere agli innumerevoli pericoli del gioco mangiando, raccogliendo risorse, esplorando e molto altro.
+Estrema: è una modalità sopravvivenza dove la difficoltà è bloccata su difficile e se si muore non si può più rinascere. In questo caso si può o cancellare il mondo o tenerlo solo in modalità spettatore.
+Creativa: i giocatori hanno risorse illimitate, sono invincibili, non hanno bisogno di mangiare e possono volare liberamente.
+Avventura: è fatta apposta per giocare le mappe create da altri utenti, restringendo, ad esempio, i blocchi che si possono rompere o piazzare, per far si che si possa giocare come il creatore l’abbia inteso.
+Spettatore: si è invisibili, si può volare tra i blocchi del mondo e ci si può teletrasportare il tutto senza interagire con il mondo e senza che gli altri giocatori vi vedano.
+
+
+
+Dimensioni
+Esistono tre dimensioni.
+La prima è il sopramondo (o overworld), dove si nasce all’inizio del gioco. Qua ci sono animali normali come pecore, mucche, maiali e creature ostili come zombi, scheletri, creeper. È composto da diversi biomi ognuno con le proprie risorse e la propria morfologia del territorio. Nel sopramondo sono fondamentali anche le caverne, poiché consentono al giocatore di avanzare nel gioco, trovando nuovi minerali che permetteranno al player di diventare sempre più forte. In questa dimensione ci sono anche molte strutture come villaggi, avamposti, roccaforti, piramidi e moltissime altre.
+Poi c’è il Nether, che si creda rappresenti l’inferno visto che è composto unicamente da altipiani di un tipo di roccia rossa e da enormi laghi di lava. Si possono trovare due strutture: un bastione, con creature (piglin) che scambiano vari oggetti in cambio di oro, e una fortezza con mob come i blaze e gli scheletri wither. Entrambe queste strutture sono fondamentali per arrivare nell’End. Per entrare nel Nether bisogna costruire un portale in ossidiana e successivamente accenderlo con un acciarino.
+Infine abbiamo l’End (che significa in inglese fine), che è composto da un’isola principale da da tante isole minori che galleggiano nel vuoto. Qua si può sconfiggere il boss finale, l’Ender Dragon, e dopo averlo fatto si aprirà un altro piccolo portale, l’End Gateway, che porterà ad una vasta distesa di piccole isole nelle quali raramente si trova la Città dell’End che contiene preziosissimi tesori e soprattutto, se la città è fornita di una barca fluttuante, le Elitre, che sono delle “ali” che ti permettono di planare e volare nel mondo.
+
+Multiplayer
+Minecraft è anche fornito di una funzione multigiocatore o multiplayer, che permette di far giocare più persone in uno stesso mondo insieme. Questa funzione si può giocare o nei Reami o nei Server. I Reami sono mondi normali (anche se si possono aggiungere mod) dove spesso si gioca con amici e conoscenti, dato che sono a pagamento e che consentono l’entrata di determinati giocatori scelti dal creatore del mondo.
+Ci sono poi i server, che non sono mondi normali, visto che spesso hanno diverse funzionalità come i minigiochi (molto famose le Bedwars e le Build Battle), possibilità di combattere contro altri giocatori e molto altro. Il più famoso è Hypixel con moltissimi giocatori da tutto il mondo attivi.
+
+Videogiochi a tema Minecraft
+Sono stati prodotti altri spin-off e videogiochi a tema minecraft dalla stessa Mojang.
+
+Minecraft Dungeons: Nel gioco il player è un eroe che ha il compito di sconfiggere l’Arci-abitore e salvare gli abitanti esplorando diversi luoghi (dungeons) con mob ostili da combattere. Si può giocare da soli o in modalità cooperativa. Ha circa 11 milioni di utenti.
+
+
+
+Minecraft Legends: Rilasciato ad aprile 2023, è un gioco di strategia ambientato nell’universo di Minecraft nel quale bisogna respingere l’avanzata dei Piglin nel sopramondo.
+
+
+
+Minecraft Education edition: Approvato da insegnanti in più di 100 paesi (*) , unisce all’esperienza di gioco comune alcuni elementi riguardanti la scienza e altro. È usato come strumento per apprendere nelle scuole.
+
+
+
+Diffusione
+Minecraft ha superato le 300 milioni di copie vendute in totale, diventando il videogioco più venduto della storia, superando anche Grand Theft Auto V (115 milioni di copie vendute).
+La critica ha accolto molto bene il gioco: Metacritic valuta la versione PC con un 93/100, mentre la testata Gamerankings approva il gioco con un 92,8/100. Nel 2024 conta più di 200 milioni di giocatori attivi (*) , mentre ci sono sulla piattaforma Youtube più di 35000 creator che portano Minecraft.
+Nel tempo molte figure del gioco sono diventate famose a livello mondiale come il “creeper”, mob ostile simbolo di Minecraft, che ha la particolarità di esplodere se ci si avvicina troppo a lui, o come la leggenda di “Herobrine”, una skin simile a quella base di Steve ma con gli occhi che appaiono infestati.
+
+Franchise
+Visto la popolarità del gioco sono innumerevoli i libri non ufficiali che raccontano storie ambientate in questo universo, comunque anche la stessa Mojang ha pubblicato dei libri a tema Minecraft, come la collana delle guide e dei manuali, oltre a più di 10 romanzi ufficiali e quattro serie di libri ufficiali per bambini che sono: Le cronache della spada, Stonesword Saga, Serie Minecraft, Mobs of Minecraft.
+Anche dal punto di vista dell'intrattenimento televisivo e cinematografico, è stata annunciata una nuova serie prodotta da Netflix intitolata “Minecraft - La serie animata”.
+È stato rilasciato a settembre 2024 il trailer del nuovo film “Un fim Minecraft” che uscirà ad aprile 2025.
+Esiste anche il Minecraft Live (una volta Minecon), evento una volta dal vivo e dopo e durante il Covid-19 in diretta streaming, dove vengono annunciati tutti i nuovi aggiornamenti. Si tiene ogni anno a settembre o ottobre.

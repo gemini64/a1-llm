@@ -1,0 +1,71 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Espressione
+Un'espressione è una sequenza di operazioni matematiche che devono essere eseguite seguendo delle regole.
+
+Esempio
+Esempio:
+7+(10-6)·5=
+7+4·5 =
+7+20 = 27
+Precedenze con l'espressione:
+
+.operazione dentro la parentesi prima tonde, poi graffe ed infine quelle graffe
+.moltiplicazione e divisioni da sinistra a destra.
+.addizione e sottrazione da sinistra a destra.
+se serve ridurre la frazione ai minimi termini
+
+
+Dentro alle parentesi valgono le regole precedenti:
+prima moltiplicazioni e divisioni nell'ordine in cui sono scritte,
+poi addizioni e sottrazioni.
+Se un'espressione contiene più, si risolvono prima i calcoli nelle parentesi più interne.
+Nell'ordine:
+
+.() parentesi tonde
+.[] parentesi quadre
+.{} parentesi graffe
+
+
+Se un'espressione contiene più parentesi, si risolvono prima i calcoli nelle parentesi più interne. Nell'ordine:
+
+() parentesi tonde
+[] parentesi quadre
+{} parentesi graffa
+
+
+Per esempio:
+100-{80+[50-(30+10)]}
+=100-{80+[50-40]}
+=100-{80+10}
+=100-90=
+=10
+
+Espressioni con le potenze
+Precedenze di calcolo: operazione
+1 dentro alle parentesi
+2.potenze
+3.moltiplicazioni e divisioni
+4.addizione e sottrazione
+
+Espressioni con le frazioni
+Nelle espressioni lunghe scrivere rispettando l'ordine da un grande vantaggio.
+Prima la parentesi più interna.Il m.c.m.tra 3 e 4 è 12.
+Il m.c.m. tra 36 e 12 è 36. Si riduce la frazione 36 fratto 8.
+Si scrive la frazione complementare di 2
+
+Le espressioni con i numeri decimali
+
+0,7×(2,8+6,34)-5,2:2,5=
+Per eseguire questa operazione bisogna trasformare i numeri decimali in frazioni, rispettando la seguente regola:
+si riscrivono i numeri senza virgola e al denominatore si scrive una potenza del 10 (10-100-1000...) in base a quante cifre ci sono dopo la virgola.
+7/10 × (28/10 + 634/100)- 52/10 : 25/10=
+Dopo aver trasformato tutti i numeri decimali in frazioni, bisogna seguire le seguenti regole:
+
+eseguire prima le parentesi tonde (prima risolvere moltiplicazioni e divisioni, poi il resto)
+poi le parentesi quadre e graffe
+
+
+
+RICORDA  PER RISOLVERE LE DIVISIONI CON FRAZIONI:
+prendiamo ad esempio la divisione
+52/10 : 25/10
+per risolverla bisogna mettere il × al posto del :, riscrivere il dividendo e invertire il numeratore con il denominatore del divisore. Per esempio se abbiamo la frazione 3/8:9/10 diventa: 3/8×10/9

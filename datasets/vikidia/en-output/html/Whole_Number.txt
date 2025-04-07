@@ -1,0 +1,14 @@
+A whole number or a normal number is a number which is a whole, not a fraction. Basically a whole number is 1 or greater. 0 is not.
+
+Whole number examples
+
+3: 3 is basically 3 wholes
+1: 1 is 1 whole
+4: 4 is 4 wholes.
+
+
+
+Not whole numbers
+1/2: 1 half or 1/2 is half a whole number.
+1/8: 1 eighth for 1/8 is 8 times smaller than a 1.
+0.25: it’s a decimal not a whole number.

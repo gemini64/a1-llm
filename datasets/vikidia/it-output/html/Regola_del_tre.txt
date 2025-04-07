@@ -1,0 +1,39 @@
+La regola del tre è un metodo per risolvere i problemi in cui i dati sono due quantità proporzionali tra di loro: se si raddoppia una di esse, anche l'altra raddoppia - in questo caso di parla di proporzionalità diretta - oppure diventa la metà, e in questo caso si parla di proporzionalità inversa.
+La regola viene anche chiamata "regola del tre semplice", perché è possibile usare un metodo simile quando le quantità iniziali sono più di due: in quel caso si parla di "regola del tre composto".
+
+Applicazione della regola
+
+Vediamo come risolvere un problema con la regola del tre semplice.
+
+Regola del tre semplice diretta
+
+Sia dato il seguente problema:
+
+
+Se un muratore costruisce 4 metri di muro in 6 ore, quanti ne costruirà in 15 ore?
+
+
+I dati in questo problema sono la quantità di muro costruita (4 m), il tempo necessario per costruirlo (6 ore), e il tempo per costruire un altro muro (15 ore); inoltre, anche se il problema non lo dice, sappiamo che ogni ora il muratore costruisce la stessa quantità di muro.
+Per risolvere il problema, occorrono due passi successivi. Nel primo, si calcola la quantità di muro costruita nell'unità di tempo: nel nostro caso in un'ora. Poiché il dato iniziale parla di 6 ore, occorre dividere per 6 sia il tempo che la quantità di muro costruita; otteniamo così che in un'ora il muratore costruisce 4:6 metri di muro, cioè 2/3 di metro. Nel secondo passo si riporta il tempo totale a quanto indicato nel problema, cioè 15 ore; la lunghezza del muro costruito si moltiplicherà per lo stesso valore, ottenendo così il risultato finale, 10 metri. Nella tabella seguente si può vedere la regola applicata passo passo.
+
+
+
+Regola del tre semplice inversa
+
+Sia dato il seguente problema:
+
+
+Sei bambini si sono divisi le caramelle di una scatola e ciascuno di loro ne ha avute 14. È poi arrivato un settimo bambino, e tutti insieme hanno deciso di dividersi le caramelle in modo che tutti ne abbiano lo stesso numero. Quante ne avrà ciascuno?
+
+
+I dati in questo problema sono il numero di bambini all'inizio (6), il numero di caramelle che ciascuno di loro ha ottenuto (14), e il numero finale di bambini (7). In questo caso è chiaro che se il numero di bambini raddoppia, ciascuno avrà solo la metà delle caramelle: quindi occorre applicare la regola del tre semplice inversa.
+Il procedimento è simile a quello per la regola del tre semplice diretto: prima si fa arrivare a 1 la grandezza che conosciamo all'inizio e alla fine (il numero dei bambini) e poi la si porta al valore finale. Però in questo caso quando si divide il numero dei bambini dobbiamo moltiplicare il numero di caramelle, e viceversa. In definitiva, se ci fosse un solo bambino avrebbe 14×6 caramelle, cioè 84; con 7 bambini occorrerà dividere le 84 caramelle per 7, ottenendo il risultato finale di 12 caramelle. Nella tabella seguente si può vedere la regola applicata passo passo.
+
+
+
+Regola del tre composto
+
+Per applicare la regola del tre composto, si applica tante volte quanto serve la regola del tre semplice a due dati lasciando gli altri intattei; bisogna verificare ogni volta se si deve applicare la regola diretta o inversa. Per esempio, prendiamo il classico indovinello Se un gatto e mezzo mangia un topo e mezzo in un minuto e mezzo, quanti gatti servono per mangiare sessanta topi in mezz'ora?. In questo caso la proporzionalità tra numero di gatti e tempo per mangiare i topi è diretta, mentre quella tra numero di gatti e numero di topi è inversa. Applicando la regola del tre composto, i passaggi sono i seguenti: prima si arriva al numero finale di topi, poi al tempo impiegato.
+
+
+Tre gatti mangeranno quindi 60 topi in mezz'ora.

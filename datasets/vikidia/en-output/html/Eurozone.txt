@@ -1,0 +1,45 @@
+Countries (in dark green) in the European Union that are part of the eurozone
+The Eurozone is a group of countries that use the euro as their currency.
+
+Countries
+The following 19 (out of 28 in the EU) countries in the European Union use the euro as their only currency: (*)
+
+Austria
+Belgium
+Cyprus
+Estonia
+Finland
+France
+Germany
+Greece
+Ireland
+Italy
+Latvia
+Lithuania
+Luxembourg
+Malta
+Netherlands
+Portugal
+Slovakia
+Slovenia
+Spain
+
+
+
+References
+
+
+
+
+
+
+
+
+
+
+
+
+fr:Zone euro
+simple:Eurozone
+wp:Eurozone
+(*) http://europa.eu/about-eu/basic-information/money/euro/index_en.htm

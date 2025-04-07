@@ -1,0 +1,19 @@
+Gli ultrasuoni sono suoni che le persone non sentono poiché hanno una frequenza troppo elevata, superiore al di fuori dal campo di udibilità, che va dai 16 ai 20 000 Hz.
+I suoni a frequenza inferiore ai 16 Hz si chiamano infrasuoni.
+
+Gli ultrasuoni in natura
+In alcuni animali il campo di udibilità è differente da quello umano. Per esempio:
+
+i cani percepiscono suoni fino a 50 000 Hz, infatti si dice che possano "prevedere" l'arrivo dei terremoti (per i quali sono in commercio appositi fischietti di richiamo che emettono ultrasuoni);
+il pipistrello percepisce suoni con frequenze fino a 120 000 Hz;
+il delfino e la balena arrivano addirittura a frequenze intorno ai 150 000 Hz, e li usano per comunicare tra loro;
+per nostra fortuna anche topi e ratti sentono frequenze fino ai 100 000 Hz, pertanto è possibile progettare apparecchiature che generano ultrasuoni fastidiosi per allontanarli senza l'uso di insetticidi.
+
+
+
+Gli ultrasuoni nella tecnologia
+
+
+Curiosità
+Durante la pandemia di Covid-19 un professore a chiesto ai suoi alunni di registrare quello che si spiegava e raccontarlo in modo ironico e comprensibile. Da quest'esperienza è nata la web-radio High Voltage Experiments.
+Un puntata di questa trasmissione era dedicata proprio agli ultrasuoni e il titolo vaceva il verso a una vecchia canzone dello Zecchino d'oro: Il pipistrello come fa. Eccola!

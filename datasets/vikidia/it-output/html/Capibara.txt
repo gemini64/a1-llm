@@ -1,0 +1,43 @@
+Il capybara è un mammifero che vive nel Sud America.
+
+Alimentazione
+È un onnivoro che può arrivare a mangiare fino a 8 chili di vegetali al giorno.
+WwW w2Q
+
+Habitat
+Vive sulle rive dei laghi, fiumi e paludi nel Sud America e ad est delle Ande.
+
+Dimensioni
+Gli adulti maschi raggiungono da 1 metro a un metro e 40 centimetri di lunghezza e dai 50 ai 63 centimetri di altezza. Il peso corporeo va dai 35 ai 70 chili. È il roditore di maggiori dimensioni sulla Terra.
+
+Comportamento
+Il capibara vive in branco, ai pericoli preferisce non attaccare ma nascondersi.
+Le femmine partoriscono da 4 a 8 cuccioli, li allatta da seduta e vivono fino a 12 anni.
+
+Quiz
+<quiz>
+{Dove vive il capibara?
+|type="()"}
+- In Africa.
++ In Sud America.
+- In Asia e Africa.
+- In Nord America.
+{Il capibara è..
+|type="()"}
+- ..carnivoro.
+- ..erbivoro.
++ ..onnivoro.
+- ..nessuna delle precedenti.
+{Fino a quanti chili può arrivare un capibara adulto?
+|type="()"}
++ Fino a 70 chili.
+- Fino a 35 chili.
+- Fino a 80 chili.
+- Fino a 65 chili.
+{Fino a quanti cuccioli può avere un capibara in una sola cucciolata?
+|type="()"}
++ Fino a 8.
+- Fino a 3.
+- Fino a 4.
+- Fino a 6.
+</quiz>

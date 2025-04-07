@@ -1,0 +1,15 @@
+Indicazione della velocità istantanea di un'automobile (in km/h) su un tachimetro.
+La velocità è una grandezza fisica vettoriale che corrisponde alla distanza percorsa durante un certo intervallo di tempo.
+Nel Sistema internazionale di unità di misura, la velocità si misura in metri al secondo (in simboli: m/s). Un'altra unità di misura della velocità molto utilizzata (ma che non è standard) sono i chilometri al minuto (km/min), miglia all'ora (Mph), il nodo (kn), il mach (1 mach=1200 km/h) chilometri all'ora (in simboli: km/h). Ad esempio se una macchina corre ad una velocità di 50 km/h, vuol dire che ci impiega un'ora per spostarsi tra due città che sono distanti 50 chilometri.
+Si distingue tra velocità media (v) (che è la velocità misurata in un certo intervallo di tempo più o meno lungo) e velocità istantanea (che è la velocità misurata in un certo istante, cioè per un intervallo di tempo brevissimo). Tornando all'esempio della macchina, la sua velocità media può essere 50 km/h perché impiega un'ora per spostarsi tra due città che sono lontane 50 chilometri, però durante il tragitto ci possono essere tratti in cui c'è più traffico (dove la velocità istantanea è minore) e tratti dove c'è meno traffico (dove la velocità istantanea è maggiore), per cui la velocità media è un valore fissato, mentre la velocità istantanea può cambiare in ogni istante. La velocità media e la velocità istantanea sono uguali solo se la velocità si mantiene costante durante tutto l'intervallo di tempo considerato.
+La velocità media è rappresentata così:
+v_m = \frac{s}{t}
+dove s è lo spazio percorso e t è l'intervallo di tempo trascorso.
+
+Esempi di velocità
+
+
+contachilometri
+cronometro
+timer
+orologio

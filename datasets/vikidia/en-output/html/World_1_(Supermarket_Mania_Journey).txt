@@ -1,0 +1,31 @@
+World 1 in supermarket mania journey is the 1st world you encounter. It is just a regular supermarket that you get groceries from. In fact since it has no theme but a regular supermarket, it does not really have special levels. It is also the only world where the silver is worth 2 crystals and gold 4 crystals.
+
+Stats
+
+
+Difficulty
+7% (Very Easy)
+
+Background
+
+
+In Shop
+A normal lighted grocery store with food shelves and a cashier
+
+Out shop
+The outside where people travel
+
+All General Goods
+
+Tier 1
+Cheese, Salami, Fish, Chicken, Spices, Tomatoes, Broccoli, Oranges, Pineapples
+
+Tier 2
+Crackers, Watermelons
+
+Tier 3
+Milk, Ice Cream, Milkshakes
+
+Tier 4
+Juices
+Juice Prompt: Oranges, Pineapples, Tomatoes, Broccoli

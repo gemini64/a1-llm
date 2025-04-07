@@ -1,0 +1,6 @@
+Come funziona il criterio di divisibilità per 2?
+Il criterio di divisibilità per 2 stabilisce che un numero è divisibile per 2 se è pari, oppure, equivalentemente, un numero è divisibile per 2 se la sua cifra delle unità è 0, 2, 4, 6 oppure 8.
+es:58, 62, 96 ecc...
+
+Esempi
+Ad esempio:72, 140, 88, 76, 94.

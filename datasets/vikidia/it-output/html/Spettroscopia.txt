@@ -1,0 +1,30 @@
+La spettroscopia, in fisica, indica la misurazione e lo studio di uno spettro elettromagnetico. Uno strumento che permette di misurare uno spettro, chiamato spettrometro.
+
+Descrizione
+È noto che la luce emessa da una sorgente si propaga nello spazio in ogni direzione. Se essa incontra un corpo “opaco” (in cui le radiazioni non possono propagarsi), si genera un cono d'ombra. Se la superficie è levigata i raggi possono subire una riflessione, se non è levigata possono subire una diffusione. Se invece penetrano in un corpo trasparente ma vengono deviati, allora si ha il fenomeno della rifrazione, che provoca la scomposizione della luce policromatica in radiazioni di diverso colore (lunghezza d'onda) che possono essere raccolte su uno schermo dando origine allo spettro. L'esperimento di scindere la luce nei suoi colori componenti fu effettuato da Newton nel 1666, ponendo le basi della spettroscopia.
+
+Strumenti e tecniche
+Le tecniche basate sullo studio delle radiazioni assorbite sono suddivise in:
+Spettroscopia infrarossa,
+Spettroscopia ultravioletta/visibile,
+Spettroscopia Raman,
+Spettroscopia astronomica,
+Spettroscopia a campo integrale,
+Spettroscopia di risonanza magnetica nucleare,
+Spettroscopia Mössbauer,
+Spettroscopia di assorbimento dei raggi X,
+Spettrofotometria XRF,
+Spettroscopia EDX (Energy Dispersive X-ray analysis),
+PIXE (Particle Induced X-ray Emission),
+Spettroscopia in riflettanza,
+Spettroscopia optogalvanica,
+Spettroscopia di risonanza paramagnetica elettronica (EPR),
+Spettroscopia Auger,
+Spettroscopia fotoacustica,
+Spettroscopia di annichilazione di positroni (PAS),
+Spettroscopia di impedenza elettrochimica (EIS),
+Spettroscopia di elettroni interni,
+Spettroscopia riflettometrica per interferenza,
+Spettroscopia di assorbimento atomico (AAS),
+Spettroscopia di emissione atomica (AES),
+Spettroscopia di risonanza magnetica nucleare.

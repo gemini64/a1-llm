@@ -1,0 +1,25 @@
+Un numero primo è un numero intero che ha solo due divisori: sé stesso e 1.
+Un numero primo è un numero naturale, maggiore di 1. Es:7 è divisibile da 1 e da 7. Un numero che ha più di 2 divisori è un numero composto. Esempi di numeri primi sono: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37… I numeri primi sono infiniti.
+
+Storia
+Le prime informazioni sui numeri primi, risalgono infatti agli antichi Greci, attorno al 300 a.C. I numeri primi sono presenti anche in molti altri ambiti della matematica come l'algebra o la geometria.
+
+Eratostene di Cirene
+Eratostene di Cirene (nato a Cirene, 276 a.C. circa – morto a Alessandria d'Egitto, 194 a.C. circa) è stato un matematico, astronomo, geografo e poeta greco antico. Tra gli studi matematici di Eratostene, quello più famoso è il crivello di Eratostene: un metodo per individuare i numeri primi.
+
+Il crivello di Eratostene
+Il crivello di Eratostene è il più antico metodo per individuare i numeri primi.
+
+Si scrivono in un foglio tutti i numeri fino al massimo che si intende studiare;
+ogni multiplo che si incontra verrà escluso. Ecco perché 1 non è un numero primo: se lo fosse lo sarebbero anche tutti gli altri;
+il primo numero primo è quindi 2, e si cancellano tutti i suoi multipli;
+si passa al 3 (che quindi è primo), e si cancellano i suoi multipli;
+poi troviamo 5, 7, 11 e si esegue la stessa procedura anche per loro. Naturalmente ci saranno numeri che verranno cancellati due volte: non importa;
+i numeri non cancellati (a eccezione di 1) sono numeri primi).
+
+
+
+I numeri primi nella letteratura
+
+
+«Tra i numeri primi ce ne sono alcuni ancora più speciali. I matematici li chiamano primi gemelli: sono coppie di numeri primi che se ne stanno vicini, anzi quasi vicini, perché fra di loro vi è sempre un numero pari che gli impedisce di toccarsi per davvero. Numeri come l'11 e il 13, come il 17 e il 19, il 41 e il 43. Se si ha la pazienza di andare avanti a contare, si scopre che queste coppie via via si diradano. Ci si imbatte in numeri primi sempre più isolati, smarriti in quello spazio silenzioso e cadenzato fatto solo di cifre e si avverte il presentimento angosciante che le coppie incontrate fino a lì fossero un fatto accidentale, che il vero destino sia quello di rimanere soli. Poi, proprio quando ci si sta per arrendere, quando non si ha più voglia di contare, ecco che ci si imbatte in altri due gemelli, avvinghiati stretti l'uno all'altro. Tra i matematici è convinzione comune che per quanto si possa andare avanti, ve ne saranno sempre altri due, anche se nessuno può dire dove, finché non li si scopre.»   (Paolo Giordano, La solitudine dei numeri primi)

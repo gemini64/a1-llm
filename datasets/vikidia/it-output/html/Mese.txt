@@ -1,0 +1,26 @@
+Un mese corrisponde all'insieme di 30 o 31 giorni.
+L'unico mese che non dura 30 o 31 giorni è febbraio che dura 28 o 29 giorni.
+I mesi che compongono un anno sono (in ordine):
+
+gennaio dura 31 giorni
+febbraio dura 28 giorni, invece 29 giorni ogni 4 anni.
+marzo dura 31 giorni
+aprile dura 30 giorni
+maggio dura 31 giorni
+giugno dura 30 giorni
+luglio dura 31 giorni
+agosto dura 31 giorni
+settembre dura 30 giorni
+ottobre dura 31 giorni
+novembre dura 30 giorni
+dicembre dura 31 giorni
+
+
+Dopo gennaio inizia febbraio successivo e così via, fino a quando si cambia l'anno.
+Il cambio dell'anno viene chiamato capodanno.
+
+Voci collegate
+
+Anno
+Settimana
+Giorno

@@ -1,0 +1,28 @@
+La cellula procariota è un organismo unicellulare
+Essa  possiede un nucleo, che non ha una membrana è  organizzata per far sopravvivere un organismo molto semplice.
+Hanno una struttura molto semplice a confronto delle cellule eucariote  perché sono meno complesse.
+
+
+
+Quali sono le differenze tra cellula procariota e eucarite?
+Le cellule procarioti presentano del citoplasma.
+Invece le cellule eucarioti si trovano all'interno dell'nucleo ed è circondato da citoplasma.
+Le cellule procariote sono più piccole delle cellule eucariote
+
+Cosa contiene la cellula?
+Il volume della cellula è occupato da un liquido gelatinoso, che si chiama citoplasma.
+Nel citoplasma sono immersi dei piccoli organuli detti ribosomi.
+Nella posizione centrale il materiale cellulare è rappresentato da un'unicamolecola di DNA.
+Il DNA è libero di fluttuare nel citoplasma.
+
+Cellula procariote-eucariote
+!"""PROCARIOTE
+!"""EUCARIOTE
+! Organismi tipici
+|betteri, archea
+! Organizzazione
+| in genere cellule singole, colonie
+|colonie,organismi multicellulari
+! Tipo di nucleo
+|non c'è un vero nucleo (nucleoide)
+|vero nucleo con doppia membrana

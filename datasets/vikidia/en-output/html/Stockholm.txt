@@ -1,0 +1,14 @@
+Stockholm is the capital of Sweden.  It is located on Sweden's east coast, across the mouth of the Gulf of Bothnia from Finland. (*)   Including the 25 surrounding cities, the city has a population of 2.2 million.  It is built around 14 islands. (*)
+
+
+
+
+
+
+
+
+
+simple:Stockholm
+wp:Stockholm
+(*) Student's Reference Atlas.
+(*) http://worldpopulationreview.com/world-cities/stockholm-population/

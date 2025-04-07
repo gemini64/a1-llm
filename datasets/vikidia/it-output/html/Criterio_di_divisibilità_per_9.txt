@@ -1,0 +1,12 @@
+Come funziona il criterio di divisibilità per 9?
+Si può dividere un numero per 9 se la somma delle sue cifre è divisibile per 9.
+
+Esempio
+
+99 è divisibile per 9 perché 9+9=18 e 18 è divisibile per 9 (18/9=2)
+103 non è divisibile per 9 perché 1+0+3=4 è 4 non si può dividere per nove
+.
+
+Curiosità
+A che cosa serve il criterio di divisibilità?
+Il criterio di divisibilità viene usato per capire se il dividendo è divisibile per il divisore

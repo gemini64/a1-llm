@@ -1,0 +1,11 @@
+A prefix is a part of a word at the start of the word that changes the meaning.
+For example the prefix "un" changes the meaning to mean the opposite, "undone" (not done), "unsuccessful" (not successful), "unbelievable" (not believable)
+
+List of prefixes
+
+"non"
+"un"
+"in"
+"re"
+"anti"
+"co"

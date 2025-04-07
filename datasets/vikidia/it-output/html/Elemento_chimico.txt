@@ -1,0 +1,5 @@
+Rappresentazione dell'atomo d'ossigeno: attorno al nucleo, gli elettroni in orbita.
+Un elemento chimico è un tipo di atomi caratterizzati da un numero definito di protoni nel loro nucleo atomico.
+Alcuni esempi di elementi chimici sono: l'idrogeno, il carbonio, l'azoto, l'ossigeno, il ferro, il rame, l'argento, l'oro, ecc. Ciascun elemento chimico è associato ad un simbolo chimico, come H, C, N, O, Fe, Cu, Ag, Au, ecc.
+In totale, ad oggi sono stati scoperti 118 elementi chimici, con numeri atomici (cioè numero di protoni presenti nel loro nucleo) compresi tra 1 e 118. Essi sono elencati nella cosiddetta tavola periodica, dove sono ordinati in base al loro numero di protoni.
+Una sostanza chimica costituita da atomi dello stesso elemento chimico è detta sostanza semplice, mentre una sostanza costituita da atomi di più elementi chimici è detta composto chimico.

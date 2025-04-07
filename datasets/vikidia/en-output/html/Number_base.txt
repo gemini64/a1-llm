@@ -1,0 +1,7 @@
+A number base is one way of writing numbers. It works by having each digit to the right having a place value multiplied by n, where n is the base of the number. The place value is multiplied by the number in that place. Each of these numbers is added together. The most common base is base 10. Here are some examples in base 2 ("binary"), base 10 ("decimal"), and base 12 ("duodecimal" or "dozenal"). In the charts below, the top row is the place value.
+
+8+0+2+0 = 10
+
+5000+300+0+2 = 5302
+
+3456+1008+36 = 4500

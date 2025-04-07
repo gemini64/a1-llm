@@ -1,0 +1,143 @@
+A clock in Belfast.
+A Roman numeral is the name for a number when it is written in the way the Romans used to write numbers. Roman numerals are not used very often today in the west. They are used to write the names of kings and queens, or popes. For example: Queen Elizabeth II. They may be used to write the year a book or movie was made.
+
+The base
+I - 1
+V - 5
+X - 10
+L - 50
+C - 100
+D - 500
+M - 1000
+If a lower value symbol is before a higher value one, it is subtracted. Otherwise it is added.
+So 'IV' is '4' and 'VI' is '6'.
+For the numbers above X, only the symbol right before it may be subtracted:
+so 99 is: XCIX (and not IC).
+<gallery>
+Colosseum-Entrance LII.jpg|Entrance LII of the Colosseum, Rome
+Tarnow dworzec detal.jpg|Date in roman numerals in Poland.
+</gallery>
+
+Notation
+
+The System that is in use today is: Whenever the same symbol is written four times, it is replaced by subtracting it from the next higher number (5,50,50,500). That way, IV is written instead of IIII (4), XL instead of XXXX (40), etc.
+Usually only one number is subtracted, not two. So 8 is always VIII and never IIX
+Especially on clocks and watches, IIII can sometimes still be found. This is done partly because the IIII for the 4 o'clock position aesthetically balances the VIII for the 8 o'clock position. Also, some use it as a metaphor that IIII was commonplace in an period of time earlier than the idea of subtraction - IX - was introduced into writing Roman numerals. (4:00 comes earlier in the day than 9:00.)
+Proper form is to subtract only a value with the next lower power of 10. Thus, 900 is written CM, but 990 would not be XM - properly, it is CM for the 900 portion and XC for the 90 portion, or CMXC. Similarly, 999 would not be IM but rather CMXCIX - CM for the 900 portion, XC for the 90 portion, and IX for the 9 portion. Only values with 1's are ever used to subtract; 45 is properly XLV, not VL. (*)
+Notations in Roman numerals for numbers higher than 3,001 are rarely seen. One system utilises V and X with bars over them to signify 5,000 and 10,000, respectively.
+So in the lists above, though 5000 etc. may appear as V please when writing it add a bar on top.
+
+Writing numbers & year
+
+Numbers & years are written as Roman numerals in this way:
+Years-
+
+1900 =MCM
+1990 =MCMXC
+1991=MCMXCI
+1992 =MCMXCII
+1993 =MCMXCIII
+1994 =MCMXCIV
+1995 =MCMXCV
+1996 =MCMXCVI
+1997 =MCMXCVII
+1998 =MCMXCVIII
+1999 =MCMXCIX
+2000 =MM
+2001 =MMI
+2002 =MMII
+2003 =MMIII
+2004 =MMIV
+2005 =MMV
+2006 =MMVI
+2007 =MMVII
+2008 =MMVIII
+2009 =MMIX
+2010 =MMX
+2011 =MMXI
+2012 =MMXII
+2013 =MMXIII
+2014 =MMXIV
+2015 =MMXV
+2016 =MMXVI
+
+
+-numbers-
+
+1 =I
+2 = II
+3 = III
+4 = IV
+5 =V
+6 =VI
+7 =VII
+8 =VIII
+9 =IX
+10 =X
+11=XI
+12 =XII
+13 =XIII
+14 =XIV
+15 =XV
+16 =XVI
+17 =XVII
+18 =XVIII
+19 =XIX
+20 =XX
+30 =XXX
+40 =XL
+50 =L
+60 =LX
+70 =LXX
+80 =LXXX
+90 =XC
+100 =C
+200 =CC
+300 =CCC
+400 =CD
+500 =D
+600 =DC
+700 =DCC
+800 =DCCC
+900 =CM
+1000=M
+5000 =V
+10000 =X
+50000 =L
+100000 =C
+500000=D
+1000000=M
+
+
+
+What they are used for
+
+In the Baltics and Russia, the days of the week, are often written as Roman numbers, I being Monday.
+When writing dates by hand, the month is sometimes written as a Roman numeral, especially for dates written in day-month-year sequence. Example: 26.XI.2007 = November 26, 2007.
+When movies or books are published, the year of publication or year of copyright may be done as a Roman numeral.
+When people write about Monarchs or Popes, Patriarchs, or other leading figures, they are sometimes counted with Roman numbers, e.g. Queen Elizabeth II (of England), Pope John Paul II, Pope Benedict XVI, Patriarch Alexius II (of the Russian-Orthodox church)
+In several languages Centuries are counted with Roman numerals.
+In Poland, roman numerals are used to denote the month in dates and as a short method of writing ordinals (i.e. VI to be 6th)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+
+
+fr:Numération romaine
+simple:Roman numeral
+nl:Romeinse cijfers
+wp:Roman numeral
+(*) 1  http://tbgs.tk/viewtopic.php?pid=7566#p7566

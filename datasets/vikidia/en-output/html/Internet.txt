@@ -1,0 +1,44 @@
+Internet map
+The Internet is a large group of computers that are connected to each other.  The Internet is used to send information quickly between computers around the world.  It has millions of smaller domestic, academic, business, and government networks and websites, which together carry many different kinds of information (facts and details) and services. So in other words, the Internet is a network of networks.
+
+History
+The Internet was created in the United States by the "United States Department of Defense Advanced Research Projects Agency" (ARPA). It was first connected in October, 1969. The World Wide Web was created
+at CERN in Switzerland in 1989 by a British (UK) man named Tim Berners-Lee.  Today, people can pay money to access the Internet from Internet Service Providers. Some services on the Internet cost nothing to use. Sometimes the people who offer these free services use advertising to make money from them.  The alternative (other) name, "Net" came from "Inter(net)".
+
+Services on the Internet
+The Internet is used for many things, such as electronic mail, online chat, file transfer, and the interlinked web pages and other documents of the World Wide Web.  The most used service on the Internet is the World Wide Web (which is also called the "Web"). The Web contains websites, blogs, and also wikis like Wikipedia. Webpages on the Web can be seen and read by anyone (unless the page needs a password, or it is blocked).
+The second major use of the Internet is to send and receive e-mail. E-mail is private and goes from one user to another. Instant messaging (such as AIM or ICQ) is similar to email, but allows two or more people to chat to each other much faster.  Some governments think the Internet is a bad thing, and block all or part of it.  For example, the Chinese government thinks that Wikipedia is bad. Many times no one in China can read it or add to it. (*)  Some parents block parts of the Internet they think are bad for children to see. Well-known examples of the whole Internet being blocked are in North Korea (*)  and Myanmar.
+
+Dangers on the Internet
+The Internet can also be a dangerous place. Information that people put on the Internet is not always checked, and some may not be true. Some may even be harmful. Also, if someone sends information through the internet, sometimes other people can read it even when they are not supposed to. For example, Facebook has had some problems with privacy settings. A person can post information on a website, but this is often a bad idea unless the person is very sure of what they are doing. A good way to check for a secure website is to make sure the URL starts with https:// instead of http://, this means it is a secure site. (This only stops other people from reading what a user types. It does not mean the website is safe)
+
+Some websites may trick people into downloading viruses that can harm a computer or spyware that spies on its users (looks at what they are doing and tells someone else).  E-mails can also have harmful files with them as "attachments". (*)
+In Internet chatrooms, people might be preying on others or trying to stalk or abuse them.
+The Internet contains content that many people find offensive such as pornography, as well as content intended to be offensive.
+
+
+
+Related pages
+
+Media studies
+
+
+
+You can also see the portal about internet on the French Vikidia.
+
+
+
+References
+
+
+
+
+
+
+
+
+wp:Internet
+fr:Internet
+(*) posted by abennett (2004-06-14). "Chinese censors block access to Wikipedia". ITworld. http://www.itworld.com/040614wikipedia. Retrieved 2009-10-16.
+(*) "Rapport @ 09 GB" (PDF). http://www.rsf.org/IMG/pdf/Internet_enemies_2009_2_.pdf. Retrieved 2009-10-16.
+(*) "Internet Safety: Internet 101 - Viruses, worms and Trojans". Wiredsafety.org. http://www.wiredsafety.org/internet101/viruses.html. Retrieved 2009-10-16.

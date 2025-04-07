@@ -1,0 +1,4 @@
+Internet Explorer's logo
+Internet Explorer is a web browser developed by Microsoft. It is available for Windows and Windows Phone.
+The first version of Internet Explorer was released in 1995 and was an add-on for Windows 95. With the version 4 integrated into the Windows 98 operating system, Internet Explorer became used more than its main rival Netscape Navigator.  Since then it remained the most used browser worldwide until 2012 when it was surpassed by Google Chrome.
+On Windows 10, Microsoft Edge replaced Internet Explorer as the default browser on Windows.

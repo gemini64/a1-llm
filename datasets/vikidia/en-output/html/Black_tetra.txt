@@ -1,0 +1,146 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | PAGENAME
+|-
+| colspan=2 style="text-align: center" |
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+! colspan = 2 | Conservation status
+|-
+| colspan = 2 |
+Least Concern  (IUCN 3.1)
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Gymnocorymbus
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| ternetzi
+|-
+
+|-
+
+|-
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+The black tetra (Gymnocorymbus ternetzi) is a freshwater fish. They vary in size and can grow up to  in length. (*)
+
+References
+
+
+
+
+
+
+(*) Template:FishBase

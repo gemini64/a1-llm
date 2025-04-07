@@ -1,0 +1,1 @@
+A theme park is a park which has some attractions. Like rides, food stands, etc.

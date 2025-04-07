@@ -1,0 +1,5 @@
+Il motore è un congegno utilizzato per mettere in movimento parti meccaniche sfruttando una qualche forma di energia. Ad esempio il motore delle automobili, detto "motore a combustione", utilizza l'energia del carburante (benzina o gasolio) per ottenere il movimento delle ruote. Oltre ai motori a combustione, esistono anche motori che utilizzano energia elettrica per funzionare (ad esempio il motore della lavatrice).
+<gallery>
+File:Model Engine Luc Viatour.jpg|Spaccato in un motore di automobile
+File:AC motor.jpg|Un esempio di motore elettrico
+</gallery>

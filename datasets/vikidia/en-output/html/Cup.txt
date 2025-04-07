@@ -1,0 +1,1 @@
+Cups are objects that hold liquid like tea/coffee.

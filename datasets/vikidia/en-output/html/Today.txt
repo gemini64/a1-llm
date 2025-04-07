@@ -1,0 +1,2 @@
+Today is the current day.
+The day before today is yesterday, the day after is tomorrow.

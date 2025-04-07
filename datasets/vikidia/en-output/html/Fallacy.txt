@@ -1,0 +1,29 @@
+A Fallacy is an argument that is considered to be bad for a specific reason.
+
+Common fallacies
+
+
+Ad hominem: Attacking a person rather than what they said.
+Ad populum: Saying that something is correct because most people think it is true.
+Association fallacy: Arguing that because two things are similar, they are the same.
+Fallacy fallacy: Saying that an argument is invalid because it is a fallacy.
+Strawman: Creating a new argument that was never made to make something said easier to defend against.
+Red herring: Attempting to create a new discussion to draw attention away from something said.
+Reductio ad Hitlerum: Comparing something to Adolf Hitler.
+
+
+<table class="banner plainlinks  " style="width:70%; margin:auto; margin-top:1em; margin-bottom:1em; text-align:center; background-color:#FFFFFF; border:2px solid #111111;  ">
+
+
+
+
+
+50px|alt=|link=
+
+
+
+
+
+
+
+This  does not have any mainspace categories at all. You can help by adding categories.

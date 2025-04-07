@@ -1,0 +1,12 @@
+Absolute temperature is the temperature of an object on a scale where 0 is taken as absolute zero. Absolute temperature scale in Celsius degrees is Kelvin; for Fahrenheit degrees, it is the scarcely used Rankine.
+Absolute zero is the lowest temperature at which the system is in a state of lowest possible (minimum) energy.
+Common temperatures in the absolute scale are:
+
+0°C (freezing/melting point of water) = 273.15K
+25°C (room temperature) = 298.15K
+100°C (boiling point of water) = 373.15K
+0K (absolute zero) = -273.15°C
+
+
+To convert from the Celsius scale into the absolute temperature, you add 273.15 and change °C to K. To get a temperature on the absolute scale to the Celsius scale, subtract 273.15 and change K to °C.
+This is normally used in the science world.

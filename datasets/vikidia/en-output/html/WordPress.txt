@@ -1,0 +1,18 @@
+Logo of WordPress
+WordPress is a content management system (CMS) software developed by the WordPress Foundation. It is free and open source software (anyone can see its source code).
+WordPress uses PHP and MySQL. As of September 2015, 24.5% of the top 10 million websites use WordPress. (*)
+
+References
+
+
+
+Other websites
+
+Official website
+
+
+
+
+simple:WordPress
+wp:WordPress
+(*) Usage of content management systems for websites — w3techs.com

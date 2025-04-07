@@ -1,0 +1,3 @@
+Black is a color that doesn't have specs of light in it whatsoever. The color can be achieved by blocking light, giving total darkness as an outcome. Is the complete opposite to white.
+In color psychology, black is the symbol of mystery, power and elegance.
+For RGB, the parameters are R: 0, G: 0 and B: 0.

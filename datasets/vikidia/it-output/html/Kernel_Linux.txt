@@ -1,0 +1,3 @@
+Il kernel Linux è un kernel (che rappresenta la parte più profonda di un sistema operativo) ideato e sviluppato da Linus Benedict Torvalds.
+La sua mascotte ufficiale è Tux, un pinguino.
+Sul kernel Linux si basa la numerosa famiglia dei sistemi operativi Linux, detti comunemente anche Gnu/Linux.

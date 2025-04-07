@@ -1,0 +1,41 @@
+L’uomo per contare ed eseguire semplici calcoli utilizza il sistema decimale, nato probabilmente dal fatto che noi esseri umani abbiamo 10 dita.
+Per eseguire complicati calcoli, il computer o la calcolatrice utilizzano invece un altro sistema, il sistema binario.
+Se il sistema decimale, detto anche in base 10, utilizza le 10 cifre da 0 a 9, quello binario ne utilizza solo 2: 0 e 1.
+Il computer o la calcolatrice utilizzano il sistema binario poiché tali strumenti lavorano grazie a congegni che assumono solo due stati differenti:
+
+0, che corrisponde alla mancanza di tensione (spento);
+1, che corrisponde alla presenza di tensione (acceso).
+
+
+Siccome il sistema binario utilizza solamente due cifre, diciamo che è un sistema di numerazione in base 2, quindi è come se il computer usasse solo 2 dita anziché 10.
+Utilizzando solo queste due cifre, si possono però rappresentare non solo tutti i numeri esistenti, ma anche tutte le parole, le immagini, i video, i suoni... tutte le tipologie digitali.
+Nel sistema decimale raggruppiamo di 10 in 10, otteniamo quindi le unità, le decine, le decine di decine (centinaia), le decine di decine di decine (migliaia), ecc.
+Nel sistema binario raggruppiamo invece di 2 in 2, allora anziché avere unità, decine, centinaia, migliaia ecc, avremo unità, coppie (2), coppie di coppie (4), coppie di coppie di coppie (8), e così via.
+Perciò le posizioni occupate dalle cifre nel sistema decimale valgono:
+…	1000		100		10		1
+mentre nel sistema binario valgono:
+…	8		4		2		1
+Prendiamo per esempio il numero 101, nel sistema decimale vale:
+1x100		0x10		1x1
+mentre nel sistema binario vale:
+1x4		0x2		1x1
+per un totale di 4 + 0 + 1 = 5.
+Ricordiamoci che 101, in binario, non si legge centouno ma unozerouno, ed è la trasformazione in binario del numero 5 del sistema decimale.
+Per trasformare un numero qualsiasi da decimale in binario, bisogna utilizzare un algoritmo, cioè una procedura che va seguita passo passo:
+
+si divide il numero da trasformare per 2 e si mette da parte il resto;
+poi si prende il risultato e si divide ancora per 2 mettendo sempre da parte il resto;
+si continua così finché il risultato della divisione non sarà 0;
+si scrivono i resti dall'ultimo al primo e si ottiene il numero trasformato.
+
+Facciamo un esempio con il numero 36:
+
+36 : 2 = 18   Resto 0
+18 :  2 = 9   Resto 0
+9 : 2 = 4     Resto 1
+4 : 2 = 2     Resto 0
+2 : 2 = 1     Resto 0
+1 : 2 = 0     Resto 1
+
+
+Il numero 100100 è, dunque, la traduzione in binario del numero 36.

@@ -1,0 +1,6 @@
+The Gregorian calendar is a calendar used in most parts of the world. It went into effect in October 1582 with the papal bull Inter gravissimas issued by Pope Gregory XIII, it was introduced as a replacement for the Julian calendar.
+The current year in the Gregorian calendar is 2024 (MMXXIV).
+Each calendar year in the Gregorian calendar is 365.2425 days long, rather than having a quarter of a day, every 4 years there is a leap year which has one extra day which takes place on February 29. Leap years do not take place on years that are divisible by 100 unless those years are divisible by 400.
+
+Months
+A year is divided into 12 months:

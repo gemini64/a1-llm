@@ -1,0 +1,2 @@
+Car
+A vehicle is a machine that can transport goods or people. They have different numbers of wheels, and different sources of power.

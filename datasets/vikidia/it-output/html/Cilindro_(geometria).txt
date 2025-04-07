@@ -1,0 +1,2 @@
+Cilindro circolare retto
+In geometria solida, il cilindro è la superficie che si ottiene conducendo per i singoli punti di una data circonferenza le perpendicolari al piano di essa (*) .

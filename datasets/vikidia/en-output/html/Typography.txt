@@ -1,0 +1,5 @@
+Typography is a style of text.
+
+example
+Boldface is a style of text thicker than regular text, as shown here:
+The quick brown fox jumped over the lazy dog.

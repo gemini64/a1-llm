@@ -1,0 +1,18 @@
+Il fisico tedesco Georg Simon Ohm (1789-1854).
+La legge di Ohm, deve il nome allo scienziato Georg Simon Alfred Ohm, esprime la proporzionalità tra la differenza di potenziale e l'intensità di corrente, la costante è la resistenza del conduttore.
+
+Le unità di misura
+
+La resistenza si misura è misurata in ohm
+La differenza di potenziale in volt
+L'Intensità si misura in ampère
+
+
+
+Formule
+Se un circuito già con una determinata resistenza(R),aumentando la differenza di potenziale(V),aumenta l'intensità(I)
+Quindi ci sono tre possibili formule:
+
+R=V/R
+V=I*R
+I=V/R

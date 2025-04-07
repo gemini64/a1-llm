@@ -1,0 +1,31 @@
+Il baricentro (o centro di gravità) è il punto di un corpo in cui si può immaginare agisca la forza peso.
+L'equilibrio è la risultante di due forze: la forza di gravità (che attira un corpo  verso il basso) e la forza-peso del corpo. La cui risultante è nulla.
+
+
+
+Quando un corpo è in equilibrio
+Un corpo è in equilibrio quando su di esso agiscono più forze,la cui risultante è nulla.
+
+Esempio
+Un lampadario appeso al soffitto non cade perché il soffitto esercita su di esso una forza uguale e opposta alla forza di gravità,che lo farebbe cadere.Il lampadario tira il soffitto verso il basso con la propria forza-peso  e il soffitto tira il lampadario verso l'alto con una forza uguale al peso del lampadario,ma in verso oposto.
+
+Qual è il punto d'applicazione della forza-peso di un corpo?
+Il corpo è formato da tantissime  particelle, ognuna ha una forza-peso. Quindi un corpo è soggetto a tante forze quante sono le particelle che lo formano. Hanno direzioni parallele e puntano tutte verso il centro della terra. La risultante avrà uguale verso e direzione delle particelle ed intensità pari alla somma delle intensità di esse. L'intensità corrisponde al peso del corpo ed il suo punto d'applicazione è detto baricentro.
+
+Equilibrio dei corpi sospesi
+
+L'oggetto è in equilibrio stabile se il baricentro e il punto di applicazione si trovano si trovano sulla stessa verticale e il punto di sospensione è posto sopra il baricentro;
+L'oggetto è in equilibrio instabile se il punto di sospensione si trova sotto il baricentro del corpo ed entrambi si trovano sulla stessa verticale;
+L'oggetto è in equilibrio indifferente se il baricentro ed il punto di sospensione coincidono
+
+
+
+Equilibrio dei corpi appoggiati
+Un corpo può avere una base di appoggio o un punto d'appoggio. Maggiore è la superficie occupata dalla base d'appoggio e maggiore sarà la stabilità dell'oggetto. Se un corpo con un punto d'appoggio viene posizionato su una superficie curva sarà instabile o stabile a seconda della superficie mentre se collocato su una base piana sarà indifferente.
+
+Baricentro di un poligono
+In un poligono il baricentro coincide con il suo centro di simmetria
+
+Baricentro del triangolo
+
+Il baricentro del triangolo si trova nel punto dove si incontrano le mediane

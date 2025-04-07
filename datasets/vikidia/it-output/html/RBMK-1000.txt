@@ -1,0 +1,7 @@
+Gli RBMK-1000 sono una classe di reattori nucleari costruiti in Unione Sovietica.
+
+Storia
+Il reattore nucleare "RBMK-1000" - modello di reattore presente nella serie RBMK (*)  dall'acronimo russo: "Reaktor Bolshoy Mosjchenosty Kanalny" - è basato sulla fissione nucleare, un processo fisico e chimico nucleare. L'RBMK era stato inserito alla centrale di Chernobyl per aumentare la produzione energetica, cosa che poi, provocherà il disastro di Chernobyl nel 1986.
+
+Tecnologia
+I reattori RBMK sono costituiti da due circuiti refrigeranti, ogni ciclo consuma un'elevata quantità di refrigerante (*)  e quindi si ha bisogno di una grande quantità d'acqua. Ogni reattore contiene anche 1660 barre di carburante - come l'uranio (*)  - che hanno il compito di far evaporare l'acqua (*)  che a sua volta alimenta le turbine che generano energia elettrica. Questa reazione è realizzata grazie ad un solido blocco di graffite moderato e ciò significa che i neutroni che vengono rilasciati durante la scissione nucleare (*)  vengono "riciclati", poiché possono nuovamente reazionare altri nuclei.

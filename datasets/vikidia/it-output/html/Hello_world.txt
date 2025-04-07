@@ -1,0 +1,301 @@
+Hello World! è un semplice programma che è tradizionalmente scritto per dare un rapido esempio di un linguaggio di programmazione (quando lo si impara o semplicemente lo si prova).
+La lunghezza di questo programma varia a seconda del linguaggio di programmazione usato: può essere usato per determinare se il linguaggio è di basso livello (vicino al linguaggio macchina, Hello World long) o di alto livello (più astratto, Hello World short).
+Hello World è stato introdotto per la prima volta come programma di esempio nel libro The C Programming Language di Brian Kernighan e Dennis Ritchie.
+
+Esempi
+
+Ada
+
+
+with Ada.Text_IO; use Ada.Text_IO;
+procedure Hello is
+begin
+Put_Line("Hello, world!");
+end Hello;
+
+
+
+ALGOL
+program HiFolks;
+begin
+print ‘Hello world’;
+end;
+
+APL
+
+
+'Hello, world'
+
+
+
+Assembly
+
+
+MODEL SMALL
+STACK 100H
+.DATA
+HW      DB      "hello, world", 13, 10, '$'
+.CODE
+.STARTUP
+MOV AX, @data
+MOV DS, AX
+MOV DX, OFFSET HW
+MOV AH, 09H
+INT 21H
+MOV AX, 4C00H
+INT 21H
+END
+
+
+
+Awk
+
+
+BEGIN { print "Hello, world!" }
+
+
+
+BASIC
+
+
+1 PRINT "Hello World"
+2 END
+
+
+
+C
+
+
+#include <stdio.h>
+
+int main()
+{
+printf("Hello world!\n");
+return 0;
+}
+
+
+
+C++
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+cout << "Hello World!" << endl;
+
+return 0;
+}
+
+
+
+C#
+
+
+using System;
+
+class HelloWorldApp
+{
+public static void Main(string[] args)
+{
+Console.WriteLine("Hello World");
+Console.ReadLine ();
+}
+}
+
+
+
+COBOL
+000001 IDENTIFICATION DIVISION.
+000002 PROGRAM-ID.     HELLOWORLD.
+000003 ENVIRONMENT DIVISION.
+000004 CONFIGURATION SECTION.
+000005 DATA DIVISION.
+000006 PROCEDURE DIVISION.
+000007
+000008     DISPLAY 'HELLO, WORLD.'.
+000009     STOP RUN.
+
+Delphi
+
+
+program HelloWorld;
+{$APPTYPE CONSOLE}
+
+begin
+WriteLn('Hello World');
+end.
+
+
+
+Eiffel
+
+
+class HELLO_WORLD
+create
+make
+feature
+make is
+do
+Io.put_string("Hello World%N")
+end
+end
+
+
+
+Fortran
+
+
+PROGRAM HELLO
+PRINT *, 'Hello, world!'
+END
+
+
+
+Haskell
+
+
+main = do
+putStrLn "Hello World!"
+
+
+
+Java
+
+
+class HelloWorld {
+public static void main(String[] args) {
+System.out.println("Hello World");
+}
+}
+
+
+
+JS
+
+
+<script type="text/javascript">
+alert('Hello world');
+</script>
+
+
+
+LOGO
+print word "Hello World"
+
+Objective-C
+
+
+#import <Foundation/Foundation.h>
+
+int main(int argc, const char * argv[]) {
+@mylak {
+NSLog(@"Hello World!");
+}
+return 0;
+}
+
+
+
+OCAML
+
+
+let main () =
+print_endline "Hello World";;
+
+
+
+Pascal
+
+
+program hello;
+begin
+writeln('Hello World');
+readln
+end.
+
+
+
+PHP
+
+
+<?php
+echo "Hello World!";
+?>
+
+
+
+PL/I
+
+
+Test: procedure options(main);
+
+declare My_String char(20) varying initialize('Hello, world!');
+
+put skip list(My_String);
+
+end Test;
+
+
+
+Prolog
+
+
+?- write('Hello World'), nl.
+
+
+
+Python, swift e lua
+
+
+print("Hello world")
+
+
+
+Ruby
+
+
+puts "Hello World"
+
+
+
+Rust
+
+
+fn main() {
+println!("Hello, world!");
+}
+
+
+
+Scheme
+
+
+(display "Hello World!")
+(newline)
+
+
+
+sh
+echo 'Hello World'
+
+Simula
+Begin
+OutText ("Hello World!");
+Outimage;
+End;
+
+Smalltalk
+
+
+Transcript show: 'Hello World!'
+
+
+
+VB
+
+
+MsgBox ("Hello World!")

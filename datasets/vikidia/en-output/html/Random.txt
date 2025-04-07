@@ -1,0 +1,5 @@
+Something random is something that doesn't depend on anything else, hence cannot be predicted.
+For example,
+
+Picking up a random number in a range means picking any number in that range, all of them having the same probability to be the chosen one.
+A random sequence of numbers is a sequence where each number is itself random so that there is no overall pattern. The numbers are not related with each other in any way, so that knowing part of the sequence doesn't help guessing the missing numbers in that sequence.

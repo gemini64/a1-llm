@@ -1,0 +1,11 @@
+Si dicono angoli supplementari due angoli che sommati insieme formano un angolo di 180°.
+In qualsiasi poligono ogni angolo è supplementare.
+
+Angoli supplementari nel Trapezio
+
+Nel trapezio gli angoli adiacenti ai lati obliqui  sono supplementari, infatti sommando un angolo giallo e un angolo azzurro in figura la loro somma sarà di 180°.
+
+Angoli supplementari nel Parallelogramma
+
+Nel parallelogramma gli angoli opposti sono uguali, mentre gli angoli adiacenti di ogni lato sono supplementari.
+Identica cosa per il rettangolo,quadrato e rombo

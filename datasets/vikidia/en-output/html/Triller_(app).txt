@@ -1,0 +1,1 @@
+Triller is a video-sharing social media app similar to TikTok. Users post short videos with music attached as well as music videos.

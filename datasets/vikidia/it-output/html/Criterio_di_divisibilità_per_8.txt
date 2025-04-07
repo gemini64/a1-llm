@@ -1,0 +1,12 @@
+Come funziona il criterio di divisibilità per 8?
+Un numero è divisibile per 8 se finisce con tre zeri oppure se il numero formato dalle sue ultime 3 cifre è divisibile per 8.
+
+Esempi
+
+Per esempio:
+
+1128 è divisibile per 8 perché anche 128 lo è
+12000 è divisibile per 8 perchè termina con 3 zeri.
+
+
+Per esempio: 2345 non è divisibile per 8 perchè le 3 cifre non sono divisibili per 8.

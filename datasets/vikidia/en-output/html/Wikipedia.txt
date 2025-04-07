@@ -1,0 +1,37 @@
+The Wikipedia logo
+Wikipedia is a free online encyclopedia, written and maintained by a  community of volunteers, known as Wikipedians, created by Jimmy Wales and Larry Sanger on 15 January 2001. There are Wikipedias in 292 languages. The first one, the English Wikipedia has over 6,000,000 articles as of April 2024. (*)  The Simple English Wikipedia has over 250,000 articles as of April 2024. (*)
+It was founded in 2001 as a source of crowd-sourced information under the name Nupedia, but it soon became Wikipedia and branched into many articles in different languages. (*)  Despite being all hosted, promoted and mostly funded by the Wikimedia Foundation , the various language versions of Wikipedia are mostly independent from each other's regarding their content and detailed rules for a given language version, these are defined by the community of users building and using that specific version.
+According to Alexa Answers Contributor, Wikipedia is the 5th ranked website based on web traffic, receiving the most traffic of any encyclopedic website. (*)
+
+References
+
+
+
+Other websites
+
+Main website
+English Wikipedia
+Simple English Wikipedia
+
+
+
+
+
+
+
+
+
+
+
+
+es:Wikipedia
+fr:Wikipédia
+it:Wikipedia
+nl:Wikipedia
+ru:Википедия
+simple:Wikipedia
+wp:Wikipedia
+(*) https://en.wikipedia.org/wiki/Special:Statistics
+(*) https://simple.wikipedia.org/wiki/Special:Statistics
+(*) "Wikipedia."  Wikipedia.
+(*) Alexa Top 100.

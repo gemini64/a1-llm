@@ -1,0 +1,162 @@
+45px|alt=|link=
+
+
+
+
+
+You're reading a star article
+
+
+
+
+
+
+
+
+
+
+Duolingo's current logo
+Luis von Ahn
+Duolingo is a website to learn languages for free. It was released on November 30, 2011. Currently the site offers courses in 28 languages. The most used are English, Spanish, French, Italian, Portuguese and Dutch. It also has an application for iOS, Android, Windows Phone and Chrome OS.
+
+History
+The project was initiated by the professor Luis von Ahn and the postgraduate student Severin Hacker. In its development, it used principally the programing language Python, (*)  and with him participated Antonio Navas, Vicki Cheung, Marcel Uekermann, Brendan Meeder, Hector Villafuerte and Jose Fuentes.
+
+Working methodology
+To participate in the courses, the user must create an account with an active and valid email address, where the user will receive the confirmation. Users are periodically sent reminders to practice the language. The user also can help to translate web pages and others documents. (*)  It is important to have backing material such as dictionaries.
+
+Services
+
+Translations
+In addition to courses, Duolingo provides to its users a space where can apply the knowledge gained through text translation. People can only access this space through the website and not through phones applications.
+
+Duolingo Test Center
+On July 22, 2004, Duolingo released Duolingo Test Center, a platform of an official English certification. This can be done in the website, iOS or Android, where the tests are supervised through camera and microphone. The tests require 20 minutes, cost $20 American dollars (*)  and  qualifies the student from a note of 0-10.
+
+Duolingo for Schools
+Duolingo is used increasingly in classrooms. For example, in Costa Rica and Guatemala, Duolingo has been used in public schools as a pilot project carried out by the government. In January 2015, Duolingo launched a project entitled Duolingo for Schools, in order to provide teachers a control panel through which they can follow the progress of their students in a particular language. The board helps the teacher to understand the weaknesses and strengths of each student individually. (*)
+
+List of languages for English speakers
+
+Duolingo has multiple languages available for English speakers (Including 3 which are constructed or fictional), and more are currently in development.
+
+Currently released
+
+
+
+
+Arabic
+Czech
+Danish
+Dutch
+Esperanto (constructed language)
+French
+Finnish
+German
+Greek
+Haitian Creole (Currently in Beta)
+Hawaiian
+Hebrew
+High Valyrian (fictional language)
+Hindi
+Hungarian (Currently in Beta)
+Indonesian
+Italian
+Irish
+Japanese
+Klingon (fictional language) (Currently in Beta)
+Korean
+Mandarin Chinese
+Navajo (Currently in Beta)
+Norwegian
+Polish
+Portuguese (Brazilian Portuguese)
+Romanian
+Russian
+Scots Gaelic
+Spanish (Latin American Spanish)
+Swahili
+Swedish
+Ukrainian
+Vietnamese
+Welsh
+Yiddish (Currently in Beta)
+Zulu
+
+
+
+
+Hatching
+
+"Hatching" means the course is still in development.
+
+Xhosa
+
+
+
+Unavailable for English speakers
+
+Duolingo has courses available for speakers of other languages as well, but Duolingo courses for non-English speakers are very limited, with most of the available languages only offering English as a course. All other available languages offer English as a course.
+However, the Guarani and Catalan courses are only available for Spanish speakers, which has the most available courses for speakers of non-English languages, with 9.
+
+List of courses for speakers of non-English languages
+
+
+
+
+Arabic: English, French, German, Swedish, Spanish (Hatching)
+Bengali: English (Hatching)
+Chinese: English, Spanish, French (Hatching)
+Czech: English
+Dutch: English
+French: English, Spanish, Italian, German, Portuguese
+German: English, Spanish, French
+Greek: English
+Hindi: English
+Hungarian: English
+Indonesian: English
+Italian: English, French, German, Spanish (Hatching)
+Japanese: English
+Korean: English
+Polish: English
+Portuguese: English, Spanish, French, German, Italian, Esperanto
+Punjabi: English (Hatching)
+Romanian: English (Hatching)
+Russian: English, German, French, Spanish, Swedish (Hatching)
+Spanish: English, French,  Italian, Portuguese, German, Catalan, Guarani, Esperanto, Russian
+Tagalog: English (Hatching)
+Tamil: English (Hatching)
+Telugu: English (Hatching)
+Thai: English
+Turkish: English, German, Russian, French (Hatching)
+Ukranian: English
+Vietnamese: English
+
+
+
+
+References
+
+
+
+Links
+
+Official website
+Duolingo for Schools
+Duolingo Test Center
+
+
+
+
+
+
+
+
+
+
+fr:Duolingo
+wp:Duolingo
+(*) What language is Duolingo written in
+(*) Translating the Web While You Learn
+(*) Duolingo offers language-certification tests via mobile devices
+(*) Duolingo Launches Free Language Learning Platform For Schools

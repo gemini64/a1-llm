@@ -1,0 +1,1 @@
+4D (4 Dimensional) space is space which includes the 3 coordinates of 3D space (x, y, and z) and a fourth coordinate. 4D objects include 3 values (width, length, height) and a fourth value which could refer to time.

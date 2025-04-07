@@ -1,0 +1,42 @@
+La proporzione è un’uguaglianza tra due rapporti. Ad esempio 12 : 4 = 6 : 2.
+
+Terminologia
+Il rapporto non è altro che il quoziente tra  due termini: 12/4 = 3.
+3 è il rapporto, 12 e 4 sono i termini del rapporto.
+Il rapporto può essere tra due grandezze omogenee, il cui risultato è un numero puro, o tra due grandezze non omogenee, il cui risultato è una grandezza derivata.
+I termini della proporzione si dicono antecedenti il primo e  il terzo, conseguenti   il secondo e il quarto, estremi il primo e il quarto, medi secondo e terzo.
+
+Come si legge
+La  proporzione 5/10=20/40 o 5 : 10 = 20 : 40
+si legge : " cinque sta a dieci come venti sta a quaranta "
+
+Proprietà
+Le proporzioni si possono risolvere più facilmente con le proprietà: applicando le proprietà la proporzione non cambia.
+
+proprietà fondamentale: in ogni proporzione il prodotto degli estremi è uguale al prodotto dei medi, cioè quelli interni
+9/6=12/8
+9x8=6x12
+proprietà dell’ invertire: ciascun antecedente si scambia con il suo conseguente
+9/6=12/8
+6/9=8/12
+proprietà del permutare gli estremi: si scambiano tra loro gli estremi
+9/6=12/8
+8/6=12/9
+proprietà del permutare i medi: si scambiano tra loro i medi
+9/6=12/8
+9/12=6/8
+proprietà dello scomporre: è una proprietà utile da applicare in una proporzione quando non conosci due dati
+9/6=12/8
+(9-6)/9=(12-8)/12
+proprietà del comporre: è una proprietà utile da applicare in una proporzione quando non conosci due dati
+9/6=12/8
+(9+6)/9=(12+8)/12
+
+
+
+
+Risoluzione di una proporzione
+Se si ha  una proporzione del tipo:"5/10=20/x" si esegue in questo modo:
+
+bisogna trovare il prodotto dei termini interni e poi il quoziente del prodotto:
+10x20/5=40 quindi l'incognita x è 40

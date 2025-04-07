@@ -1,0 +1,9 @@
+- is the ASCII and Unicode hyphen-minus character U-002D.
+- may also refer to:
+
+hyphen, - (U+2010)
+minus sign, – (U+2212)
+dash, – (U+2012
+endash, – (U+2013)
+em dash, — (U+2014)
+quotation dash (horizontal bar), — (U+2015)

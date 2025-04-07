@@ -1,0 +1,8 @@
+L'energia DI Prima ionizzazione è una proprietà periodica degli elementi che spiega l'energia necessaria ad un atomo neutro isolato per rimuovere l'elettrone più esterno.
+
+gruppo con energia di prima ionizzazione maggiore: gas nobili
+gruppo con energia di prima ionizzazione minore: Metalli alcalini
+periodo con energia di prima ionizzazione maggiore: 1
+periodo con energia di prima ionizzazione minore: 7
+elemento con energia di prima ionizzazione maggiore: elio
+elemento con energia di prima ionizzazione minore: Francio

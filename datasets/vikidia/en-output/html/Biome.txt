@@ -1,0 +1,10 @@
+A biome is the collection of plants and animals that have common characteristics for the environment they exist in.
+In the terrestrial (land) category, there are seven defined biomes:
+
+tropical rainforest
+temperate forest
+desert
+tundra
+taiga (also known as boreal forest)
+grasslands
+savanna

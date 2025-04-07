@@ -1,0 +1,161 @@
+Roman numerals were numerals used in Ancient Rome.
+The current year (2024) in Roman numerals is MMXXIV.
+
+Roman numerals
+
+Ⅰ = 1
+Ⅴ = 5
+Ⅹ = 10
+Ⅼ = 50
+Ⅽ = 100
+Ⅾ = 500
+Ⅿ = 1000
+
+
+
+Zero
+Roman numerals have no zero, as the Romans lacked a number for the number zero. However the word nulla (meaning "none") was used to represent 0. The letter N was sometimes used for 0 in the Middle Ages to modern times.
+
+Large numbers
+The Romans had to main ways of writing large numbers, the apostrophus and the vinculum.
+
+Apostrophus
+Using the apostrophus method, 500 is written as IↃ, while 1,000 is written as CIↃ. This system of encasing numbers to denote thousands (image the Cs and Ↄs as parentheses) had its origins in Etruscan numbers.
+Each additional set of C and Ↄ surrounding CIↃ raises the value by a factor of 10.
+Examples:
+
+IↃ = 500
+CIↃ = 1,000
+IↃↃ = 5,000
+CCIↃↃ = 10,000
+IↃↃↃ = 50,000
+CCCIↃↃↃ = 100,000
+
+
+Sometimes the numbers were simplified:
+
+CIↃ (1,000) → ↀ
+IↃↃ (5,000) → ↁ
+CCIↃↃ (10,000) → ↂ
+IↃↃↃ (50,000) → ↇ
+CCCIↃↃↃ (100,000) → ↈ
+
+
+
+Vinculum
+Using the vinculum, Roman numerals were multiplied by 1,000 by adding a "bar" or "overline", for example:
+
+Ⅳ = 4,000
+ⅩⅩⅤ = 25,000
+
+
+In an extension of the vinculum, a three-sided box is used to multiply by 100,000.
+Vinculum notation is not the same as the custom of adding an overline to a numeral simply to show it is a number.
+
+List of Roman numerals (1–100)
+
+Ⅰ = 1
+Ⅱ = 2
+Ⅲ = 3
+Ⅳ = 4
+Ⅴ = 5
+Ⅵ = 6
+Ⅶ = 7
+Ⅷ = 8
+Ⅸ = 9
+Ⅹ = 10
+Ⅺ = 11
+Ⅻ = 12
+ⅩⅢ = 13
+ⅩⅣ = 14
+ⅩⅤ = 15
+ⅩⅥ = 16
+ⅩⅦ = 17
+ⅩⅧ = 18
+ⅩⅨ = 19
+ⅩⅩ = 20
+ⅩⅩⅠ = 21
+ⅩⅩⅡ = 22
+ⅩⅩⅢ = 23
+ⅩⅩⅣ = 24
+ⅩⅩⅤ = 25
+ⅩⅩⅥ = 26
+ⅩⅩⅦ = 27
+ⅩⅩⅧ = 28
+ⅩⅩⅨ = 29
+ⅩⅩⅩ = 30
+ⅩⅩⅩⅠ = 31
+ⅩⅩⅩⅡ = 32
+ⅩⅩⅩⅢ = 33
+ⅩⅩⅩⅣ = 34
+ⅩⅩⅩⅤ = 35
+ⅩⅩⅩⅥ = 36
+ⅩⅩⅩⅦ = 37
+ⅩⅩⅩⅧ = 38
+ⅩⅩⅩⅨ = 39
+ⅩⅬ = 40
+ⅩⅬⅠ = 41
+ⅩⅬⅡ = 42
+ⅩⅬⅢ = 43
+ⅩⅬⅣ = 44
+ⅩⅬⅤ = 45
+ⅩⅬⅥ = 46
+ⅩⅬⅦ = 47
+ⅩⅬⅧ = 48
+ⅩⅬⅨ = 49
+Ⅼ = 50
+ⅬⅠ = 51
+ⅬⅡ = 52
+ⅬⅢ = 53
+ⅬⅣ = 54
+ⅬⅤ = 55
+ⅬⅥ = 56
+ⅬⅦ = 57
+ⅬⅧ = 58
+ⅬⅨ = 59
+ⅬⅩ = 60
+ⅬⅩⅠ = 61
+ⅬⅩⅡ = 62
+ⅬⅩⅢ = 63
+ⅬⅩⅣ = 64
+ⅬⅩⅤ = 65
+ⅬⅩⅥ = 66
+ⅬⅩⅦ = 67
+ⅬⅩⅧ = 68
+ⅬⅩⅨ = 69
+ⅬⅩⅩ = 70
+ⅬⅩⅩⅠ = 71
+ⅬⅩⅩⅡ = 72
+ⅬⅩⅩⅢ = 73
+ⅬⅩⅩⅣ = 74
+ⅬⅩⅩⅤ = 75
+ⅬⅩⅩⅥ = 76
+ⅬⅩⅩⅦ = 77
+ⅬⅩⅩⅧ = 78
+ⅬⅩⅩⅨ = 79
+ⅬⅩⅩⅩ = 80
+ⅬⅩⅩⅩⅠ = 81
+ⅬⅩⅩⅩⅡ = 82
+ⅬⅩⅩⅩⅢ = 83
+ⅬⅩⅩⅩⅣ = 84
+ⅬⅩⅩⅩⅤ = 85
+ⅬⅩⅩⅩⅥ = 86
+ⅬⅩⅩⅩⅦ = 87
+ⅬⅩⅩⅩⅧ = 88
+ⅬⅩⅩⅩⅨ = 89
+ⅩⅭ = 90
+ⅩⅭⅠ = 91
+ⅩⅭⅡ = 92
+ⅩⅭⅢ = 93
+ⅩⅭⅣ = 94
+ⅩⅭⅤ = 95
+ⅩⅭⅥ = 96
+ⅩⅭⅦ = 97
+ⅩⅭⅧ = 98
+ⅩⅭⅨ = 99
+Ⅽ = 100
+
+
+
+Unicode
+There are different Unicode symbols for Roman numerals which are different to the regular ASCII letters.

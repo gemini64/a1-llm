@@ -1,0 +1,1 @@
+ZeroNet è una rete sviluppata in modo decentralizzato e peer to peer che usa le stesse tecnologie di BitCoin e BitTorrent.

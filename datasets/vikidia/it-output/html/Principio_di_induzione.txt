@@ -1,0 +1,31 @@
+Il principio di induzione è una dei metodi per dimostrare che un certo insieme di numeri naturali gode di una particolare proprietà.
+
+Esempio di principio di induzione
+Dimostriamo che la somma dei numeri naturali da uno ad un certo numero si trova moltiplicando il numero per il suo successivo e dividendo per due.
+Per esempio
+1 + 2 + 3 + 4 + 5 = \frac {5 \cdot 6}{2} = 15
+questa regola vale per qualsiasi numero e si può esprimere con una formula
+1 + 2 + 3 + ... + n = \frac{n \cdot (n + 1)}{2}
+Questa regola vale per il numero 1, infatti, un po' banalmente:
+1  = \frac {1 \cdot 2}{2} = 1
+e per applica il principio di induzione dobbiamo dimostrare che se vale per 5 allora vale per 6, se vale per 6 allora vale per 7, se vale per 7 allora vale per 8
+1 + 2 + 3 + 4 + 5 = \frac{5 \cdot 6}{2} \rightarrow 1 + 2 + 3 + 4 + 5 + 6 = \frac{6 \cdot 7}{2}
+per dimostrarlo possiamo riscrivere la seconda uguaglianza così
+1 + 2 + 3 + 4 + 5 + 6 = \frac{5 \cdot 6}{2} + 6
+applicando la regola per la somma di frazioni
+1 + 2 + 3 + 4 + 5 + 6 = \frac{5 \cdot 6}{2} + \frac{6 \cdot 2}{2} = \frac{5 \cdot 6 + 2 \cdot 6}{2}
+quindi per la proprietà distributiva il numeratore della frazione è uguale a 6 moltiplicato per 7 volte e dunque
+1 + 2 + 3 + 4 + 5 + 6 = \frac{6 \cdot 7}{2}
+quindi abbiamo dimostrato che se la regola vale per 5 allora vale anche per 6, nello stesso modo potremmo fare per tutti i numeri seguenti.
+In generale dobbiamo dimostrare che
+1 + 2 + 3 + ... + n = \frac{n \cdot (n + 1)}{2} \rightarrow 1 + 2 + 3 + ... + n + (n + 1) = \frac{(n + 1) \cdot (n + 2)}{2}
+generalizzando la dimostrazione fatta per 6 partendo da 5 otteniamo
+1 + 2 + 3 + ... + n + (n + 1) = \frac{n \cdot (n + 1)}{2} + (n + 1) = \frac{n \cdot (n + 1)}{2} + \frac{(n + 1) \cdot 2}{2} = \frac{n \cdot (n + 1)+ (n + 1) \cdot 2}{2} =  \frac{(n + 1) \cdot (n + 2)}{2}
+Quindi la somma da 1 ad un certo numero è uguale alla formula data per tutti i numeri per il principio di induzione, poichè vale per 1 e se valida per un qualsiasi numero allo vera anche per il successivo.
+
+Principio di induzione enunciato
+Il principio di induzione dice che se una determinata proprietà vale per il numero 1, in simboli
+P(1) \ e' \ vera
+e si può dimostrare che se vera per n allora vera anche per (n + 1)
+P(n) \ e' \ vera \rightarrow P(n +1) \ e' \ vera
+allora P è una proprietà di tutti i numeri.

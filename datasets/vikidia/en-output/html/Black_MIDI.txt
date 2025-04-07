@@ -1,0 +1,28 @@
+A Black MIDI music
+Black MIDI is a music genre where creators, known as blackers, use MIDI files to make songs or remixes with a ton of notes. However, there are no clear rules for what makes a MIDI "black," so it's hard to trace the exact start of Black MIDI.
+
+Early history
+There are features songs with a huge number of notes. It's different but similar in spirit to "impossible piano" music, which existed before. (*)  This older style, seen in works like Conlon Nancarrow's player piano compositions and Marc-Andre Hamelin's "Circus Galop", involved very complex pieces that were too difficult to play by hand. Frank Zappa also composed a challenging piece called "The Black Page".
+Black MIDI started with a 2009 video on the Japanese site Nico Nico Douga. It was a version of "U.N. Owen Was Her?" from the video game "The Embodiment of Scarlet Devil" by Shirasagi Yukki at Kuro Yuki Gohan. The genre gained popularity in Japan, China, and Korea. Early Black MIDI songs had thousands of notes and were shown on traditional piano sheets. They were made with MIDI sequencers and played on MIDI players. However, the Black MIDI community in Japan didn't last long.
+
+Popularity at Japan
+A screenshot of a Black MIDI music video of "Last Brutal Sister Flandre Scarlet"
+Black MIDI became popular in Europe and the US, in YouTube. A user named kakakakaito1998 uploaded a Black MIDI video in February 2011, and another user, John L. Sinnesloschen, also contributed significantly by creating his own versions and compositions. This led to blackers worldwide creating even more complex pieces, some with millions of notes, and using lots of colors and patterns.
+The song "Necrofantasia" from the Touhou Project video game was the first to hit a million notes, arranged by TheTrustedComputer. Black MIDI videos often show the number of notes in the title. As computers got more powerful, these songs could have more notes and bigger file sizes. The genre has expanded from Japanese video game and anime music to include modern pop songs, like Miley Cyrus's "Wrecking Ball."
+English-speaking blackers have formed groups like the Black MIDI Team to collaborate on MIDI files and visuals for quicker online posting. Blackers use various software tools like Synthesia, FL Studio, and MIDITrail to create and play Black MIDIs. Some record at slow speeds and then speed up the video to manage computer performance issues.
+
+Analysis and reception
+Black MIDI gets its name because the sheet music looks almost entirely black due to the huge number of notes. California-based blacker TheTrustedComputer says it started more as a remix style than a genre, inspired by "bullet hell" video games with so many bullets that they're hard to see. Black MIDI is also seen as a digital version of composer Conlon Nancarrow's work, who used player pianos to create complex pieces without human players. However, some believe Black MIDI's roots are purely in the digital MIDI music world.
+The genre got attention from writer Michael Connor in 2013, leading to coverage from various publications and bloggers. It's praised for its unique sound, blending regular piano notes to create new, abstract sounds, and its visual aspect. Journalists and musicians have noted its distinctiveness, and it's been described as ironic by Hackaday's Elliot Williams, who pointed out that its fast arpeggios and "splatter-chords" make a piano sound more like a chiptune than a traditional piano.
+
+References
+
+
+
+
+
+
+
+
+
+(*) "The Impossible Music of Black MIDI". Rhizome.

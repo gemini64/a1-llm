@@ -1,0 +1,5 @@
+A dash is a punctuation mark. There are different types of dashes such as an en dash (–), em dash (—), horizontal bar (―) and a figure dash (‒).
+A dash is longer than a hyphen or a minus sign.
+There is also a swung dash (⁓) which represents a longer tilde.
+
+Unicode

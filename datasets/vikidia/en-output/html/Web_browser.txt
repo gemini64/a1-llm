@@ -1,0 +1,11 @@
+A Web browser is a piece of software used to display information on the Internet.
+It is especially suited to display information formatted in HTML and published over the Internet via the protocol HTTP, i.e. what's commonly referred to as World-wide web pages, or just web pages.
+
+Examples
+<gallery>
+File:Google Chrome icon (2011).png|Google Chrome
+File:Internet Explorer 10 logo.svg|Internet Explorer
+File:Mozilla Firefox logo 2013.svg|Mozilla Firefox
+File:Compass icon matte.svg|Safari
+File:Opera 2015 icon.svg|Opera
+</gallery>

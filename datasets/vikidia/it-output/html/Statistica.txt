@@ -1,0 +1,37 @@
+La statistica si occupa di studiare un fenomeno con lo scopo di metterne in evidenza gli aspetti essenziali. La statistica indaga i fenomeni collettivi. Essa è la scienza che studia i dati quantitativi e qualitativi, li elabora e li rappresenta graficamente.
+
+Dati
+
+Quantitativo: i dati sono numerici (esempio: L'altezza dei ragazzi)
+Qualitativo: i dati sono aggettivi o nomi (esempio: il genere o il credo religioso)
+
+
+
+Terminologia
+Con il termine statistica si fa riferimento all'insieme dei dati raccolti.
+I termini usati nella statistica sono:
+
+Popolazione: è l'insieme degli elementi che sono oggetto di studio.
+Individuo: indica ogni singolo individuo.
+Campione: è il numero di individui intervistati.
+Distribuzione di dati: è l'insieme di dati.
+
+
+
+Valori statistici
+La determinazione della frequenza è la prima fondamentale operazione statistica.
+Esistono diversi tipi di frequenze:
+
+Frequenza assoluta: numero di individui che possiedono quel valore.
+
+
+
+Frequenza relativa: è il quoziente tra la frequenza assoluta e il numero di individui della popolazione.
+
+
+
+La frequenza percentuale è uguale alla frequenza relativa per 100
+
+
+
+Indici statistici

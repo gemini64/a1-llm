@@ -1,0 +1,8 @@
+Scratch Logo
+Scratch is an online software offered by MIT, used to build games and software. It was conceived in 2007 and has grown over 10 years to have over 23 million projects or software drafts, a few of which are enjoyable to play.
+
+History
+A screenshot of the Scratch editor.
+MIT Media Lab's Lifelong Kindergarten Group, currently led by Mitchel Resnick along with the Playful Invention Company; developed the PC prototype of Scratch in late 2002 and early 2003. The prototype's purpose was having to be aimed at younger children from 8 to up.
+The prototype of Scratch.
+In early 2007, Lifelong Kindergarten Group developed Scratch 1.0, the most popular version at the time. The last version was Scratch 1.4. In early 2013, a beta version of a new update was made. In middle 2013, the new update was revealed as Scratch 2.0, currently the most popular version. In 2018, a beta version of what the third update is was made. It is confirmed that Scratch 3.0 will release in early 2019.

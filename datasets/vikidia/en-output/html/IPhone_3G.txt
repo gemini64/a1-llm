@@ -1,0 +1,5 @@
+DISPLAYTITLE
+iPhone 3G
+The iPhone 3G is a smartphone made by Apple Inc. It was first released in 2008. It was succeeded by the iPhone 3GS in 2009.
+The device originally came with iOS (iPhone OS) 2.0, and the latest available version was iOS 4.2.1.
+New features compared to the first generation iPhone include a GPS and 3G data.

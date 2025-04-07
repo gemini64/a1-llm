@@ -1,0 +1,14 @@
+Milky Way
+The Milky Way is a galaxy. Inside that galaxy there is a star(the sun) and some planets.
+
+The planets of the Milky Way
+
+Mercury
+Venus
+Earth
+Mars
+Jupiter
+Saturn
+Uranus
+Neptune
+Pluto

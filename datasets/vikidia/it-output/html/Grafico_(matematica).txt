@@ -1,0 +1,15 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Grafico
+Un grafico è una rappresentazione grafica di un fenomeno.
+
+Tipi di grafici
+Esistono vari tipi di grafici per la rappresentazione di vari dati; tra questi sono presenti:
+
+l’istogramma;
+l’aerogramma;
+diagramma cartesiano.
+
+
+
+istogramma: è rappresentato come un grafico a colonne che rappresentano i dati in  posizione verticale e dove su x e y sono rappresentate le unità di misura.
+aerogramma: è rappresentato a cerchio in cui i dati sono rappresentati in percentuale
+diagramma cartesiano: è rappresentato con punti a cui sono collegati segmenti che cambiano direzione in base ai dati che si vogliono rappresentare.

@@ -1,0 +1,199 @@
+Deep Rock Galactic, or DRG, is a first-person shooter video game developed by Ghost Ship Games and published by Coffee Stain in 2018. The game was released for PC and is also available for consoles.
+It focuses on mining solo or in groups of four players on a planet called Hoxxes IV, with no defined story.
+
+Gameplay
+
+About the Game
+Deep Rock Galactic focuses on cargo missions, where you must complete primary objectives, as well as secondary objectives for recovery, and climb with the local wildlife. Each available biome on Hoxxes IV features both peaceful alien creatures (such as Loot Grubs) and aggressive ones (Glyphids). Dwarves have dual firearms, caving tools, and support tools to overcome obstacles and continue their mission. Often, during the mission, a plague breaks out, and the dwarves must have enough ammunition to defeat it, which usually takes more than 2 or 3 minutes. Upon completion of the missions, the player is awarded credits and XP, depending on the difficulty and length of the mission, which is added to the completion of the cave.
+
+Dwarves
+In Deep Rock Galactic, there are four classes available: Gunner, Scout, Driller, and Engineer. During the tutorial, you play as a Gunner, who has a machine gun and a heavy revolver. You can change classes depending on the player's content or depending on the mission, which favors one class over the others.
+
+Gunner: This class is a heavy class and deals more damage than the other classes. With a rotary cannon, a heavy revolver, a slingshot, and a shield, it is one of the most important in the game.
+Driller: This is a heavy class that allows you to create new routes and facilitate access to others. With a lancet, a pistol, an awl, and a bomb, you can craft one of the most useful items in the game.
+Scout: This is the lightest class, being the fastest in the game. With an assault rifle, a short rifle, a grappling hook, and a flare gun, you can light the fireplace.
+Engineer: This is a medium class, with an autoscope, a submachine gun, sentry turrets, and a platform cannon. It helps any class stay on foot.
+
+If any class reaches level 25, it must complete a promotion quest. Whether completing the quest alone or in a group, go to the memorial hall. You must pay a certain amount of credits and minerals to obtain the promotion (This is not available in the game from the moment you start it).
+
+Weaponry and Equipment
+
+Gunner
+
+Primary
+
+"Leadstorm" Minigun
+"Thunderhead" Double-Barreled Weapon
+"Hurricane" Rocket Launcher
+
+
+Secondary
+
+"Bulldog" Heavy Revolver
+BRT7 Burst Cannon
+ArmsKore Railgun
+
+
+Speleology
+
+Zipline Launcher
+
+
+Support
+
+Shield Generator
+
+
+Grenades
+
+Sticky Grenade
+Incendiary Grenade
+Cluster Grenade
+
+
+Driller
+
+Primary
+
+CRSPR Flamethrower
+Cryo Cannon
+Corrosive Sludge Bomber
+
+
+Secondary
+
+Subata 120
+Experimental Plasma Cannon
+Colette Microwave Cannon
+
+
+Speleology
+
+Reinforced Drillers
+
+
+Support
+
+C4
+
+
+Grenades
+
+Axe
+High-Explosive Grenade
+Neurotoxin Grenade
+
+
+Scout
+
+Primary
+
+Deepcore GK2 Assault Rifle
+M1000 Classic
+DRAK-25 Plasma Rifle
+
+
+
+Secondary
+
+Double-Barreled Shotgun
+Zhukov NUK17 (Akimbo)
+Nishanka Bolshart X-80 Crossbow
+
+
+
+Speleology
+
+Grappling Hook
+
+
+Support
+
+Flare Gun
+
+
+Engineer
+
+Primary
+
+Warhog 210 Automatic Shotgun
+Stubby Voltaic Submachine Gun
+LOK-1 Smart Rifle
+
+
+Secondary
+
+Deepcore 40mm Grenade Launcher
+Breach Cutter
+Frag Defractor
+
+
+Speleology
+
+Platform Gun
+
+
+Support
+
+Sentry Gun Platform
+
+
+Grenade
+
+L.U.R.E
+Plasma Grenade
+Proximity Grenade
+
+
+Missions
+There are a wide variety of missions, which it expands as you unlock new tasks and or you level up. The missions are as follows:
+
+Mining Expedition. Mine a certain amount of Morkite. That's all.
+Refining. Build pipelines that connect to pumps located in liquid Morkite wells, defend the refinery, and repair any pipelines damaged during refining.
+Extraction. Mine a certain amount of Aquarq, which is found on the walls and can be located by a blue light.
+Industrial Sabotage. Hack into power plants and remove support stacks to expose the Watcher and defeat it in a battle (as a mini-boss).
+Elimination. Kill the glyphic dreadnoughts. You only need to find the cocoons and destroy them, but then you must focus your fire on the dreadnought's weak points.
+Egg Collection. Similar to the Mining Expedition, but you must search for and collect alien eggs.
+Deep Scanner. Find resonance crystals, connect them to a scanner, and perform triangulation. Once this is done, a drill will take you to a Morkite geode, where you must collect Morkite seeds.
+Rescue Operation. Repair mini-MULES, reestablish connection with the transport pod, and attempt to recover the lost contents.
+Escort. Protect the drilldozer ("Doretta") and extract the Omoran heartstone
+
+Some missions have side quests that grant a completion bonus. Additionally, as you gain experience in the game, there will be missions with known modifications, such as hazards and anomalies, that alter gameplay.
+
+Seasons
+Deep Rock Galactic has been offering several seasons since 2021, where players must progress through the Performance Pass (found in the terminal near the drop pod) to earn rewards. There are 100 tiers, each with storylines for the reward tree, minerals, credits, paints, and even cosmetic items for your dwarf. The available seasons are as follows:
+
+Season 1: Rival Incursion
+Season 2: Rival Escalation
+Season 3: Plaguefall
+Season 4: Critical Corruption
+Season 5: Drilling Deeper
+
+
+Downloadable Content
+The game includes DLC, consisting of cosmetic items for dwarves and their gear. It also includes a soundtrack. It is compatible with Ghost Ship Games.
+Its DLCs are:
+
+Dark Future
+MegaCorp
+Roughneck
+Dawn of the Dread
+Rival Tech
+Robot Rebellion
+Biohazard
+Decontaminator
+Order of the Deep
+Skullcrusher
+Supporter Upgrade
+Supporter Upgrade II
+Content Creator Partner
+Game Soundtrack
+
+
+Other Releases
+
+Deep Rock Galactic: Survivor
+Developed by Funday Games, this game is presented as an automatic survival shooter. Considered a "Bullet Hell," it puts you in the shoes of a dwarf with the goal of completing missions and eliminating endless hordes of alien monsters. Available in Early Access
+
+Deep Rock Galactic: Rogue Core
+Using the same engine as the original Deep Rock Galactic, Rogue Core is a spin-off with a roguelite structure. Currently, much is unknown about it. Its estimated release date is Q4 2025 in Early Access.

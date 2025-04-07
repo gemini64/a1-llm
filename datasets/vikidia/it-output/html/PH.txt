@@ -1,0 +1,13 @@
+DISPLAYTITLE
+
+Il pH è una scala di misura dell'acidità di una soluzione.
+
+pH = -\log_{10} a_{H^+} = \log_{10} {\frac {1} { a_{H^+} }}
+
+
+L´indice del grado di acidità di una soluzione è definito come il logaritmo in base 10 cambiato di segno dell'attività dello ione idrogeno; in soluzione acquosa varia da 1 a 14.
+
+\mbox{pH} = -\log_{10} \left[ \mbox{H}^+ \right]
+
+
+<gallery>File:Universal indicator paper.jpg</gallery>

@@ -1,0 +1,25 @@
+La cellula animale è un tipo di cellula eucariotica. Si differenzia dalla cellula vegetale per:
+
+L'assenza di una parete cellulare, in quanto presente solo una membrana cellulare;
+La presenza di lisosomi;
+La presenza di centrioli;
+La presenza di flagelli;
+L'assenza di Plastidi;
+La presenza di tanti, e non un singolo, vacuoli per la pinocitosi.
+
+
+Organuli
+
+Membrana cellulare: è una membrana semipermeabile il cui ruolo è far entrare alcune sostanze ed altre no, oltre ad evitare che la cellula "si frantumi";
+Desmosoma;
+Perossisoma;
+Apparato del Golgi: l'apparato del Golgi riceve le sostanze prodotte dalla cellula, le impacchetta e le spedisce dove serve, incluso fuori dalla cellula;
+Ribosoma: i ribosomi sono organuli non "membranosi" che producono le proteine nella sintesi proteica, possono essere liberi nel citoplasma o attaccati al reticolo endoplasmatico rugoso;
+Reticolo endoplasmatico liscio e rugoso: processa tante molecole per la cellula, ad esempio piega le proteine, e le trasporta dove c'è ne bisogno. Il Reticolo endoplasmatico rugoso contiene alcuni ribosomi e si occupa di mettere le molecole in vescicole e spedirle all'apparato del Golgi, mentre il reticolo endoplasmatico liscio è privo di ribosomi e produce alcuni tipi di lipidi e detossifica le sostanze (infatti ne è contenuto molto nelle cellule del fegato);
+Lisosoma;
+Nucleo: il nucleo è l'organulo più importante e contiene il DNA ed il nucleolo, che produce i ribosomi;
+Membrana nucleare;
+Poro nucleare;
+DNA;
+Cromatina;
+RNA.

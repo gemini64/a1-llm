@@ -1,0 +1,3 @@
+Rettangoli
+Il rettangolo è un quadrilatero con quattro angoli retti.
+I lati del rettangolo sono perpendicolare a due a due e non superano i 180°, gli interni del rettangolo sono tutti ha 90°. Le diagonali del rettangolo si dividono a metà

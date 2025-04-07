@@ -1,0 +1,140 @@
+Mappa di localizzazione.
+La provincia di Vicenza è una delle 7 province del Veneto. Il capoluogo di provincia è Vicenza.
+
+Confini
+Confina con:
+
+provincia autonoma di Trento
+provincia di Belluno
+provincia di Treviso
+provincia di Padova
+provincia di Verona
+
+
+
+Comuni
+La provincia è composta da 121 comuni.
+
+
+
+Agugliaro
+Albettone
+Alonte
+Altavilla Vicentina
+Altissimo
+Arcugnano
+Arsiero
+Arzignano
+Asiago
+Asigliano Veneto
+Barbarano Vicentino
+Bassano del Grappa
+Bolzano Vicentino
+Breganze
+Brendola
+Bressanvido
+Brogliano
+Caldogno
+Caltrano
+Calvene
+Camisano Vicentino
+Campiglia dei Berici
+Campolongo sul Brenta
+Carrè
+Cartigliano
+Cassola
+Castegnero
+Castelgomberto
+Chiampo
+Chiuppano
+Cismon del Grappa
+Cogollo del Cengio
+Conco
+Cornedo Vicentino
+Costabissara
+Creazzo
+Crespadoro
+Dueville
+Enego
+Fara Vicentino
+Foza
+Gallio
+Gambellara
+Gambugliano
+Grancona
+Grisignano di Zocco
+Grumolo delle Abbadesse
+Isola Vicentina
+Laghi
+Lastebasse
+Longare
+Lonigo
+Lugo di Vicenza
+Lusiana
+Malo
+Marano Vicentino
+Marostica
+Mason Vicentino
+Molvena
+Monte di Malo
+Montebello Vicentino
+Montecchio Maggiore
+Montecchio Precalcino
+Montegalda
+Montegaldella
+Monteviale
+Monticello Conte Otto
+Montorso Vicentino
+Mossano
+Mussolente
+Nanto
+Nogarole Vicentino
+Nove
+Noventa Vicentina
+Orgiano
+Pedemonte
+Pianezze
+Piovene Rocchette
+Pojana Maggiore
+Posina
+Pove del Grappa
+Pozzoleone
+Quinto Vicentino
+Recoaro Terme
+Roana
+Romano d'Ezzelino
+Rossano Veneto
+Rosà
+Rotzo
+Salcedo
+San Germano dei Berici
+San Nazario
+San Pietro Mussolino
+San Vito di Leguzzano
+Sandrigo
+Santorso
+Sarcedo
+Sarego
+Schiavon
+Schio
+Solagna
+Sossano
+Sovizzo
+Tezze sul Brenta
+Thiene
+Tonezza del Cimone
+Torrebelvicino
+Torri di Quartesolo
+Trissino
+Valdagno
+Valdastico
+Valli del Pasubio
+Valstagna
+Velo d'Astico
+Vicenza
+Villaga
+Villaverla
+Zanè
+Zermeghedo
+Zovencedo
+Zugliano

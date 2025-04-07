@@ -1,0 +1,26 @@
+Python is a high level programming language used by many people. (*)  Unlike many programming languages, python uses space (called "indents") for knowing when to repeat code and when to only run certain code if something is true. (*)
+
+History
+Python, first released in 1991 by Guido van Rossum. It was created as a successor to the ABC language and aimed to prioritize code readability and simplicity. (*)  Over time, Python has grown in popularity due to its versatility, being used in various domains like web development, data analysis, and artificial intelligence.
+The release of Python 2 in 2000 introduced many new features and improvements, but the language transitioned to Python 3 in 2008, which brought significant changes to improve consistency and future-proof the language. (*)  As of today, Python continues to be one of the most widely used programming languages across different industries.
+
+Others website
+
+
+https://www.python.org/
+
+
+
+References
+
+
+
+
+
+
+
+simple:Python (programming language)
+(*) https://web.archive.org/web/20120623165941/http://cutter.rexx.com/~dkuhlman/python_book_01.html
+(*) https://docs.python.org/3/faq/general.html#what-is-python
+(*) https://python-history.blogspot.com/2009/01/origins-of-python.html
+(*)  https://docs.python.org/3/whatsnew/3.0.html

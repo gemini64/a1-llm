@@ -1,0 +1,1 @@
+Satoshi Nakamoto is the pseudonym for the creator(s) of Bitcoin. They authored the Bitcoin white paper, developed the initial reference implementation and created the first blockchain database.

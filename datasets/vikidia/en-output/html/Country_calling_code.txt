@@ -1,0 +1,19 @@
+Country calling codes are used to identify all different countries by their international dialling codes.
+For example, from Delhi, India to Mumbai, India you simply call (22) 9903-6670 but from London to Mumbai, India you use: 00 91 022 9903 6670.
+
+Codes
+Codes are divided into zones.:
+Zone 1 - North American Numbering Plan
+Zone 2 - Africa
+Zone 3&4 - Europe
+Zone 5 - Latin America
+Zone 6 - Asia Pacific
+Zone 7 - Former Soviet Union
+Zone 8 - East Asia
+Zone 9 - other Asia
+For Zone 1 see List of NANP area codes.
+20 - Egypt
+27 - South Africa
+30 - Greece
+31 - Netherlands
+32 - Belgium

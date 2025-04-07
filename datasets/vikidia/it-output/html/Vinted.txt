@@ -1,0 +1,6 @@
+Vinted è un applicazione dove si mettono in vendita oggetti che non si usano più.(vestiti,accessori,scarpe ecc.)
+È stato creato nel 2008 a Vilnius, capitale della Lituania.
+È stato creato da Milda Mitkute ​​e Justas Janauskas.
+Per iniziare bisogna farsi un utente.
+Per mettere in vendita gli oggetti bisogna fare una foto per mostrarli.
+I metodi di pagamento sono carta di credito o debito o saldo sull'app (soldi guadagnati da vendite precedenti).

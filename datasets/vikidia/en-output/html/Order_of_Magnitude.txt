@@ -1,0 +1,8 @@
+Here are the magnitude lists.
+
+Order of Magnitude (Length)
+Order of Magnitude (Mass)
+Order of Magnitude (Time)
+Order of Magnitude (Speed)
+Order of Magnitude (Data)
+Order of Magnitude (Volume)

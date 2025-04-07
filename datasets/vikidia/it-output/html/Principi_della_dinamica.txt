@@ -1,0 +1,61 @@
+I principi della dinamica, o leggi di Newton, sono i tre risultati fondamentali su cui si basa l'intera teoria della dinamica (*) , materia che studia la relazione tra il movimento degli oggetti e le forze che lo provocano. Esse furono formulate per la prima volta dal fisico e matematico inglese Isaac Newton, e costituiscono la base il della meccanica classica  (*) .
+
+Primo principio della dinamica
+La prima legge della dinamica, detta anche principio d'inerzia, dice che se la risultate (cioè la somma vettoriale) delle forze che agiscono su un oggetto è nulla, la velocità dell'oggetto non cambia. Ciò significa che se un oggetto è in stato di quiete (cioè non si muove), esso rimarrà fermo se nessuna forza interviene a muoverlo; se invece un corpo è in moto (cioè in movimento) esso continuerà a muoversi con un moto rettilineo uniforme se nessuna forza agirà sull'oggetto. L'inerzia quindi è la tendenza di un oggetto a mantenere la stessa velocità in assenza di forze.
+
+L'inerzia e il suo rapporto con l'attrito
+Se si calcia un pallone da calcio, secondo l'inerzia, esso dovrebbe muoversi sempre a velocità costante, ma non è così: il pallone infatti, dopo un po' incomincia a rallentare fino a fermarsi del tutto. Com'è possibile? Ciò accade grazie all'attrito: le forze d'attrito sono infatti forze che si generano sulla superficie degli oggetti e che quindi si oppongono al movimento. Esistono diversi tipi di attriti:
+
+attrito radente: forza che si oppone allo strisciamento di una superficie sull'altra;
+attrito volvente: forza che si oppone al rotolamento di una superficie sull'altra;
+attrito viscoso: si genera quando un corpo si muove in fluido.
+
+In particolare, tra i solidi l'attrito radente è molto maggiore dell'attrito volvente. In pratica, l'attrito è sempre presente nella nostra vita quotidiana, perciò bisogna tenerne conto e ricordare che l'inerzia vale solo quando è nulla la risultante di tutte le forze, compreso l'attrito.
+
+Secondo principio
+Il secondo principio riguarda forza, massa e accelerazione, le quali sono legate da una relazione detta Secondo Principio della Dinamica, noto anche come proporzionalità o di conservazione.
+La formula per indicare è: "L'accelerazione di un corpo è direttamente proporzionale e ha la stessa direzione della forza agente su di esso, mentre invece è inversamente proporzionale alla sua massa"
+F=m \times a
+dove F sta per forza, m sta per massa e a per accelerazione.
+
+Se si mantiene costante la massa e si aumenta l'intensità della forza, l'accelerazione aumenta in proporzione: forza e accelerazione son direttamente proporzionali.
+
+
+
+Se si mantiene costante l'intensità della forza e si aumenta la massa, l'accelerazione diminuisce in proporzione: massa e accelerazione sono inversamente proporzionali.
+
+
+
+Se si mantiene costante l'accelerazione e si aumenta la massa, la forza deve aumentare in proporzione: forza e massa sono direttamente proporzionali.
+
+
+Se un oggetto libero di muoversi accelera è perché una forza ha causato questa accelerazione. Se per esempio sto camminando e qualcuno da dietro mi spinge, subisco un' accelerazione a causa della forza con cui la persona mi ha spinto.
+
+Il peso
+Ci sono delle differenze tra la massa e il peso di un corpo.
+La massa è la quantità di materia posseduta in un corpo e la sua unità di misura è il kilogrammo-massa (Kg).
+La forza con cui la terra attira a sè i corpi è detta forza di gravità, o forza di peso o semplicemente peso.
+La relazione tra la massa, il peso e l'accelerazione di gravità è espressa con la formula:
+P = m \cdot g
+(Peso uguale a massa per accelerazione)
+che deriva dalla formula della Dinamica, dove P sta per peso, m sta per massa e g per accelerazione di gravità.
+Lunità di misura del peso è il Newton che si ricava dalla formula che esprime il secondo principio:
+1~\text{N}=1~\text{Kg} \cdot 1 \frac{\text{m}}{\text{s}^2}
+Il Newton è l'unità di misura della forza cioè la forza che imprime a 1 Kg di massa un'accelerazione di 1 m al secondo quadrato.
+Il valore dell'accelerazione di gravità sulla Terra può essere calcolato matematicamente usando la formula inversa:
+g = \frac{p}{m}
+
+Terzo principio
+Il terzo principio della dinamica è anche detto di azione e reazione.
+
+Enunciato del principio
+"Se un corpo X esercita una forza su un corpo Y, allora il corpo Y esercita su X una forza uguale e contraria."
+Se per esempio noi spingiamo una molla, questa reagisce con la stessa forza con cui l’abbiamo spinta ma in verso opposto. In questo caso noi siamo la forza X e la molla è la forza Y. Le forze sono grandezze vettoriali.
+La formula sarebbe: F_{XY}=-F_{YX}.
+Dove per:
+
+FXY si intende la forza che X esercita su Y
+
+
+
+FYX  si intende la forza che Y esercita su X

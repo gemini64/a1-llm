@@ -1,0 +1,2 @@
+Minetest logo.
+Minetest is an open source voxel game engine and a sandbox video game that is a copied from Minecraft. This game is designed for Windows, Linux, FreeBSD, Android and macOS.

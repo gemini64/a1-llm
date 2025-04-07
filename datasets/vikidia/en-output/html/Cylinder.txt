@@ -1,0 +1,2 @@
+10ltr oxygen cylinder
+Cylinder is a shape that is not a polyhedron but a 3D shape. Cylinder has 2 circles and a rolled up rectangle.

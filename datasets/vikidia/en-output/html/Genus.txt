@@ -1,0 +1,8 @@
+A hierarchy of important ranks
+A genus is a group of one or more species; it is one of the most important ranks in biological classification (or taxonomy). When scientists talk about a genus of animals or plants, they mean one or more species of  animals or plants that should be closely related to each other.
+For example, horses, zebras and donkeys are in the same genus Equus.
+The plural is different from other English words because it is a Latin word. Genus is the singular for only one group, and genera is the plural form of the word for two or more groups. The next important level is that of family.
+When printing a scientific name of an organism, often the name is in italic. In case of a name of species (or at a lower rank) it consists of two or three parts, with the genus name first. For example, in "Felis silvestris catus", Felis is the genus name. The genus name always begins with a capital letter.
+
+As a common word
+To aid in the flow of words, genus names in Latin can be 'anglicised' to form a common name. For example, the genus Pseudomonas is "pseudomonad" (plural: "pseudomonads"). In practice, most really common animals and plants already have a common name. So instead of saying 'felids', or 'felines', one says 'cats'. The word 'cat' is used both for the family pet, and also as a general term for all the cat family (Felidae).

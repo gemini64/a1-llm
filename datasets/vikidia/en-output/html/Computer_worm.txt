@@ -1,0 +1,1 @@
+A computer worm is a program that makes copies of itself so it can spread to other computers. This is normally through email, IRC and social media.

@@ -1,0 +1,25 @@
+Charles Babbage è stato un matematico, ingegnere, politico economico, filosofo e scienziato dei computer britannico. Per primo ebbe l'idea di realizzare un calcolatore programmabile.
+
+Biografia
+
+Gli anni XVII
+Fin da giovane, Babbage dimostrò curiosità e per le macchine e i meccanismi. Durante gli anni della scuola, mostrò notevoli capacità matematiche e un talento innato per risolvere problemi complessi. Nel 1809, si iscrisse al Trinity College di Cambridge, dove continuò a sviluppare il suo interesse per la matematica e le scienze.
+Nel 1814, Babbage e alcuni colleghi fondarono l' "Analytical Society", un gruppo che andava a promuovere la diffusione e l'insegnamento della matematica nel Regno Unito. La loro attività contribuì a cambiare il modo in cui la matematica veniva insegnata a Cambridge e a diffondere l'interesse per la disciplina in tutto il paese. La vera fama di Babbage arrivò quando iniziò a sviluppare e sperimentare una serie di macchine calcolatrici meccaniche, che divennero conosciute come "macchine differenziali". Il concetto di queste macchine era quello di automatizzare il processo di calcolo matematico, eliminando gli errori umani e accelerando la velocità dei calcoli. Nel 1822, Babbage completò il prototipo della sua prima macchina differenziale, un'invenzione che suscitò grande interesse sia nell'ambito accademico che industriale. Tuttavia, a causa di problemi finanziari e di difficoltà tecniche, Babbage non fu in grado di completare la costruzione di una macchina funzionante. Babbage continuò a impegnarsi nel perfezionamento della sua invenzione. Nel corso degli anni, sviluppò anche il concetto di "macchina analitica", un dispositivo in grado di eseguire qualsiasi tipo di calcolo utilizzando un sistema di memoria. Nonostante Babbage fosse un genio nel campo dell'informatica, i suoi progetti di macchine calcolatrici non vennero mai realizzati durante la sua vita. Ciò nonostante, il suo lavoro ha avuto un impatto significativo sullo sviluppo dell'informatica moderna e le sue idee sono state fondamentali per il progresso tecnologico successivo.
+
+La morte
+Charles Babbage morì il 18 ottobre del 1871 a Londra, lasciando un'eredità nell'ambito dell'informatica e dell'ingegneria. La sua visione e le sue invenzioni hanno aperto la strada per la creazione dei moderni computer e il suo nome sarà per sempre associato alla nascita dell'era digitale. Alcune macchine realizzate da Babbage sono in mostra al Museo della scienza di Londra. Nel 1991, lavorando a partire dai suoi progetti originali, fu completata una macchina differenziale perfettamente funzionante, assemblata seguendo gli standard disponibili nel XIX secolo, ad indicare che la macchina di Babbage avrebbe potuto funzionare.
+
+Contributi
+Inoltre Babbage ricevette una medaglia d'oro dalla Società Astronomica per il suo progresso nella macchina per la differenza.                                                                                                                                                   Egli in seguito incontrò il Cancelliere dello Scacchiere (ministro delle finanze inglese) per chiedere fondi pubblici per la costruzione di una grande macchina differenziale.
+
+Tecnologia al magnetismo
+Nel 1830 in Inghilterra, lavorando insieme a Herschel sviluppo la tecnologia relativa al magnetismo che consente di sviluppare metodi introdotti da Arago.
+
+Riflessioni sul declino
+Un altro tra i principali contributi di Charles Babbage riguarda Le Riflessioni sul Declino della Scienza in Inghilterra infatti portò alla formazione, un anno dopo, dell'Associazione Britannica per il Progresso della Scienza.
+
+La macchina analitica
+Si deve a Charles Babbage l'invenzione della macchina analitica i cui campi d'applicazione furono informatico e ingegnieristico
+
+Riconoscimenti
+Charles Babbage, nel 1824 fu premiato dalla Royal Astronomical Society per la sua macchina  differenziale.Ricevette la medaglia d'oro anche se la sua macchina che però venne solo progettata e Babbage non fece in tempo a finirla. Durante gli anni del 1815 al 1817 Charles Babbage scrisse tre articoli sul "calcolo delle funzioni" e nel 1816 fu eletto membro della Royal Society.

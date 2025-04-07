@@ -1,0 +1,29 @@
+The .net is one of the top-level domains (TLDs) in the Domain Name System (DNS) of the Internet. The name ".nt" s nds for "nework," a  it was originally intended for use by network companies and Internet service providers. Over time, it has become a popular choice for a wide range of websites.  (*)
+
+History
+The .net domain was introduced in 1985 as one of the first TLDs, alongside .com, .org, and .edu. It was initially intended for organizations involved in networking technologies, but its usage has since expanded to include a variety of websites.  (*)
+
+Registration
+The .net domain is managed by VeriSign, which handles the registration and maintenance of the domain. It is available for registration through various domain registrars, and the registration process is similar to that of other TLDs.
+
+Notable .net Websites
+Some well-known websites using the .net domain include:
+
+Speedtest.net - A website for testing internet speed.
+Slashdot.org - A website for technology-related news.
+Battle.net - A platform for Blizzard Entertainment's online gaming services.
+
+
+
+References
+
+
+
+
+
+
+
+
+
+(*)  https://datatracker.ietf.org/doc/html/rfc920
+(*)  http://www.thedomains.com/2011/06/23/icann-approves-the-renewal-of-net-contract-with-verisign

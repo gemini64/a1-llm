@@ -1,0 +1,1 @@
+Il numero intero è un numero che non ha virgola, cioè che è intero.

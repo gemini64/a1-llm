@@ -1,0 +1,6 @@
+Come funziona il criterio di divisibilità per 5?
+Un numero è divisibile per 5 se l'ultima cifra è 5 o 0.
+
+Esempi
+Per esempio: 4930 è divisibile per 5 perchè finisce con zero.
+Per esempio: 76267 non è divisibile per 5 perchè non finisce con 5 o 0.

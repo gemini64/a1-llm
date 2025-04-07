@@ -1,0 +1,2 @@
+3D (3 Dimension) is a space with 3 dimensions: Length, Width and height. 3D shapes are made of 2D shapes, the cube is made of 6 squares and the dodecahedron is made of 12 pentagons.
+An example of a 3rd Dimensional object.

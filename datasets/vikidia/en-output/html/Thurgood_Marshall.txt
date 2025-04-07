@@ -1,0 +1,12 @@
+(*)
+Thurgood Marshall is a civil right activist. He was born at Baltimore, Maryland in July 1908. He argued some laws such as Brown vs board of education of Topeka. He joined the NAACP for 25 years.
+
+References
+
+
+
+
+
+DEFAULTSORT
+
+(*) https://en.wikipedia.org/wiki/Thurgood_Marshall

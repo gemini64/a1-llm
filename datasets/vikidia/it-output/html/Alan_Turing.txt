@@ -1,0 +1,16 @@
+Alan Mathison Turing  è stato un matematico, crittografo e anche un filosofo (filosofia) britannico. Nato il 23 giugno 1912 a Londra e morto il 7 giugno 1954 a Manchester, è considerato uno tra i padri dell'informatica e uno dei più grandi matematici del ventesimo secolo.
+
+Biografia
+Durante la Seconda guerra mondiale Turing lavorò infatti a Bletchley Park, il principale centro di crittoanalisi del Regno Unito, dove ideò una serie di tecniche per violare i cifrari tedeschi, incluso il metodo della Bomba, una macchina elettromeccanica in grado di decodificare codici creati mediante la macchina Enigma
+Turing fu il capo dei ricercatori che crearono il calcolatore Colossus che interpretava i messaggi tedeschi nella seconda guerra mondiale. Per crearli, i tedeschi utilizzavano il calcolatore Enigma, che interpretava i simboli del messaggio, inoltre, molto diversi dal messaggio originale.
+Nonostante ciò, lui ed il suo gruppo riuscirono a tradurre i messaggi di Enigma.
+Nel 1936, a 24 anni, il matematico ideò la "Macchina di Turing", un modello esclusivamente teorico.
+Turing si morì suicida nel 1953, a 41 anni, a causa delle umiliazioni e persecuzioni subite per via della sua omosessualità, illegale a quei tempi in Inghilterra.
+
+Contributi
+Alan Turing ha dato un contributo fondamentale allo sviluppo dell'intelligenza artificiale. Viene considerato il padre dell'informatica moderna grazie al suo lavoro durante la Seconda Guerra Mondiale nel decifrare i codici segreti di Enigma utilizzati dalla Germania nazista. Il suo "test di Turing" è diventato un punto di riferimento per valutare l'intelligenza delle macchine e ha aperto la strada alla creazione dei primi computer digitali.
+Turing rivoluzionò il mondo, grazie all'invenzione di Colossus, una macchina in grado di decifrare i messaggi tedeschi.
+
+
+Riconoscimenti
+Nel 1934 Alan Turing si laureò con il massimo dei voti e nel 1936 vinse il premio Smith assegnato ai due studenti ricercatori di Fisica e Matematica l'università di Cambridge. Ad Alan Turing venne dedicato anche un premio,l'A.M. Turing Award, in italiano "premio Turing" ovvero un premio che viene assegnato solo a chi ha una personalità che eccelle per i contributi di natura tecnica offerti alla comunità informatica, in particolare per progressi che siano duraturi e di elevata importanza tecnica.

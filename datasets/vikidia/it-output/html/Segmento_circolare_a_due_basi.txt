@@ -1,0 +1,3 @@
+Un segmento circolare a due basi è la parte del cerchio delimitata da due corde parallele, compresi gli archi che ne uniscono le estremità.
+Le due corde parallele che delimitano un segmento circolare a due basi possono essere poste nella medesima parte del cerchio rispetto al centro , oppure possono trovarsi opposte ad esso.
+L'area del segmento circolare a due basi si può calcolare facendo la differenza tra l'area dei due settori che hanno per basi le due corde.

@@ -1,0 +1,26 @@
+La legge di gravitazione universale dimostra che due corpi si attraggono proporzionalmente alle loro masse e inversamente alla distanza elevata al quadrato. È una legge meccanica classica scoperta da Isaac Newton e pubblicata il 5 luglio 1687.
+
+Descrizione
+I corpi di attraggono con una forza proporzionale e al prodotto delle loro masse e inversamente proporzionale al quadrato della loro distanza.
+F = G \cdot \frac [[:Template:M^2} \cdot {m^2]]{d^2}
+
+F è l'intensità della forza tra le masse,
+G è la costante di gravitazione universale,
+m1 è la prima massa,
+m2 è la seconda massa, e
+d2 è la distanza tra i centri delle masse.
+
+
+
+Storia
+
+
+
+
+
+Polemiche
+
+
+
+Plagio
+Il primo libro di Newton, "Principia", fu presentato alla Royal Society nel 1686. Robert Hooke accusò Newton di plagio, affermava che aveva preso da lui la "nozione" de "la regola della diminuzione della Gravità, agendo essa in modo reciproco come i quadrati delle distanze dal Centro". Allo stesso tempo, Hooke ammetteva  che la dimostrazione che dalla Legge di gravitazione si potessero deurre le Leggi di Keplero fosse opera di Newton.

@@ -1,0 +1,18 @@
+L'incentro è il punto in cui si incontrano le bisettrici del triangolo. ovvero le rette che dividono gli angolo a metà.  Esso si trova solo nei poligoni circoscrivibili  fra cui tutti i triangoli.
+
+
+
+La distanza tra l'incentro e i lati del triangolo
+La distanza dell'incentro è uguale per tutti i lati del triangolo. La distanza del  punto da un lato si misura lungo la perpendicolare che lo congiunge al lato stesso, in questo caso, tale distanza coincide con il raggio di una  circonferenza che tocca tutti i lati del poligono.
+
+Proprietà dell'incentro
+
+l'incentro è sempre interno al triangolo
+come potete osservare dalla figura e come suggerisce la parola stessa l'incentro è il centro della circonferenza inscritta al triangolo ovvero il cerchio che tocca i tre lati del triangolo.
+
+
+
+
+Bigliografia
+
+Contaci 1 Misure, spazi, figure,C.Bertinetto,A.Metiäinen, J.Paasonen, E.Voutilainen,Zanichelli

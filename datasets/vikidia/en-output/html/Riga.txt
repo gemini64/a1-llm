@@ -1,0 +1,18 @@
+Riga is the capital and largest city of Latvia. The city proper had 658,640 people in 2013, (*)  and the urban area had 711,000 people in 2009. (*)
+
+References
+
+
+
+
+
+
+
+
+es:Riga
+fr:Riga
+nl:Riga
+simple:Riga
+wp:Riga
+(*) UN data
+(*) https://www.cia.gov/library/publications/the-world-factbook/geos/lg.html

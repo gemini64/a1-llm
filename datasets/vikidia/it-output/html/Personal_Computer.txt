@@ -1,0 +1,51 @@
+Personal Computer
+Il personal computer (abbreviato PC) è un dispositivo elettronico programmabile in grado di risolvere problemi complessi seguendo le istruzioni impartite mediante un linguaggio di programmazione. Questa definizione è estendibile a ogni tipo di computer. Per personal computer si intende un elaboratore elettronico di uso domestico.
+È importante distinguere due grandi mondi che fanno sì ché il personal computer ci appaia come lo conosciamo: hardware e software.
+
+Hardware
+
+
+
+Per approfondire vedi la pagina: Hardware.
+
+Per hardware si intendono tutti i componenti del computer che si possono toccare fisicamente (anche da smontato e spento).
+Componenti fondamentali di un personal computer:
+
+
+
+Monitor
+
+Scheda madre
+
+Unità centrale (microprocessore)
+
+Memoria RAM
+
+Scheda di espansione
+
+Alimentatore
+
+Unità ottica CD/DVD/BR
+
+Disco rigido
+
+Mouse
+
+Tastiera
+
+Letteralmente tutto quello che compone la macchina è hardware, le informazioni, i programmi, i dati in essa contenuti, no.
+
+Software
+Per software si intente tutto ciò che non può essere toccato fisicamente, anche se funzionale (o fondamentale) al funzionamento della macchina o parte di essa.
+A titolo di esempio, il programma con cui leggi questa pagina è software, pure i dati in essa contenuti sono software. Lo strumento che consente di leggerli o modificarli non lo è.
+
+Principio di funzionamento
+Ogni unità di elaborazione elettronica (quindi anche il personal computer) è modellabile – a livello hardware – con questo schema a blocchi:Le componenti centrali, chiuse all'interno di un tratteggio, sono la vera e propria macchina: svolgono i calcoli e potrebbero essere il personal computer per intero. L'unità centrale è dove vengono eseguiti i calcoli, si assumono decisioni logiche (a seconda di un risultato o azione, si fa una cosa, oppure un'altra). Le memorie sono di diverso tipo, alcune conservano i dati dall'accensione allo spegnimento, altre dalla scrittura fino alla cancellazione, altre ancora vengono scritte quando la macchina viene costruita e non possono poi essere più modificate.
+Tutto questo fa funzionare il personal computer, ma è inutile senza le periferiche: i contatti con l'utente. Abbiamo le periferiche di ingresso (o, input, dall'inglese inserire, letteralmente mettere dentro) dove si impartiscono comandi. Sono la tastiera, il mouse, il microfono, la webcam e tutto ciò che può essere usato per inserire dati e istruzioni sulle cose che desideriamo sapere. Noi possiamo chiedere Quanto fa due più due. La macchina, tramite un programma di calcolo fornirà la risposta.
+Le risposte della macchina, le troviamo nel blocco complementare periferiche di uscita (o, output, letteralmente mettere fuori). Sono il monitor, gli altoparlanti e tutto quello che può essere utilizzato per mostrare un risultato.
+Tutto questo non potrebbe funzionare senza i bus (sì, come i pulmini). All'interno dei bus viaggiano i dati (le lettere e numeri che digitiamo nella tastiera, i movimenti del mouse, le immagini che visualizziamo nello schermo, l'audio). Le frecce mostrano i percorsi che i dati possono svolgere. Dalle perifiche di ingresso entrano nella macchina; l'unità centrale le elabora e restituisce il risultato; le memorie li conservano e possono essere lette; le periferiche di uscita li ricevono per mostrarceli.
+A questo, si aggiunge il bus degli indirizzi, dove l'unità centrale dice, a tutte le altre componenti, dove vanno collocati i dati. Quale tasto della tastiera sta leggendo, in quale porzione dello schermo farà modifiche all'immagine, in quale area della memoria leggerà o scriverà. Basta immaginare il personal computer come una città: i dati sono i contenuti delle singole abitazioni, gli indirizzi... appunto gli indirizzi stessi.
+Infine il più importante di tutti: il bus di controllo. Il bus dati e il bus degli indirizzi possono essere usati da uno strumento alla volta. L'unità centrale decide chi invia i dati e chi li riceve, da quale indirizzo a quale indirizzo. Riprendendo l'analogia della città è l'addetto al traffico.
+
+Sistema operativo
+Operating system placement-itIl sistema operativo è un programma (insieme di codici), come ogni altra applicazione. L'unica differenza è che viene avviato per primo e serve a far dialogare le applicazioni con la macchina.

@@ -1,0 +1,21 @@
+Art Fight is an online game where artists, divided in 2 groups, draw each other with the objetive of accumulating the most points possible before the season ends. The team wth the most points wins. It starts every July 1st and ends on August 1st.
+It was founded in 2007, but the events started in 2010, with 5 yearly events before it's website, artfight.net, was founded in 2015.
+Currently, the ongoing season for this year competition is Seafoam VS Stardust.
+
+How to play?
+First you need to create an account, and then, settle your characters. Unless there's an ongoing event, you will be a spectator by default.
+As a spectator, no one can see nor draw your characters. In order to join the fight you have to join a team randomly... although you can switch twice during the month.
+
+Attacks
+To play, you need to attack, to attack, you need to draw a character. Bookmark a a character you like to later on draw it an upload it as an attack. Remember to use the character ID and the recipient's name to fulfill the attack. Here are the attack types:
+
+Default Attack
+An attack directed to an artist from the opposite team. This accumulate your points and for your team.
+
+Friendly Fire
+An attack directed to an artist from your team. This deducts 80% of the total scoring.
+
+Revenge
+An attack from the enemy received in return. The likelyhood of this attack depends on what artist you attacked first. It can be repeated as many times as you want, keeping a chained attack, boosting points performance.
+
+References

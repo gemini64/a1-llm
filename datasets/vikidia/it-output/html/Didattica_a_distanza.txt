@@ -1,0 +1,18 @@
+La Didattica a distanza (spesso abbreviata in DaD, o DAD) è l'educazione di studenti che non sono fisicamente presenti a scuola. È stata introdotta in Italia durante l'emergenza covid del 2020 che ha costretto a casa gli studenti italiani.
+
+Tipologie di didattica a distanza
+La didattica a distanza si divide in tre categorie:
+
+sincrona, quando insegnante e alunni lavorano assieme nello stesso tempo;
+asincrona, quando gli alunni studiano con materiali che l'insegnate ha preparato in precedenza;
+misto (o blended, dal suo termine in lingua inglese).
+
+Quest'ultimo, è stato spesso usato in precedenza per corsi che vengono svolti a scuola e ultimati a casa. Chi già aveva familiarità con questi strumenti, durante l'emergenza covid, si è trovato fortemente avvantaggiato.
+
+Strumenti per la didattica
+Questi strumenti si dividono in due categorie:
+
+proprietari, quando fanno capo a un'azienda, anche se concessi a titolo gratuito;
+open source, quando possono essere installati presso i computer delle scuola che ne ha il pieno controllo.
+
+La prima soluzione è di facile gestione, mentre la secondo implica un lavoro e uno sforzo da parte delle scuole. Viceversa la seconda non espone studenti e insegnanti a rischi legnati alla privacy.

@@ -1,0 +1,54 @@
+Kick the Buddy: Forever is a merger of the Kick the Buddyman games (Origins, In Soviet Russia, and Mad Lab). The game used to be named Kick the Buddy 2 and was later updated on December 21, 2018. This game, however, was released in America on December 25, 2018. The Android version was released on March 23, 2019 but got deleted from Google Play later for unknown reasons.
+
+About
+Buddy
+Kick the Buddy: Forever is the second version of Kick the Buddy and has 10 categories. these 10 categories are in the notepad.
+
+Glitches
+
+Bubblegum
+
+When selecting the Mega Bomb, Buddy will blow lots of bubblegum at the same time (The bubblegum overlaps the next bubblegum) and the bubblegums disappear once the bomb exploded
+However, when the bubblegums disappear when the bomb exploded, the "Pop" sounds are still intact although they had already disappeared
+Sometimes when buddy blows bubblegum, his mouth is closed and he keeps on blowing the bubblegum even when you kick him
+When buddy is killed whilst blowing bubblegum, buddy still sucks the bubblegum in when he is dead
+The Sound buddy makes when he starts blowing the bubblegum keeps playing sometimes
+When buddy's head is taken off, being fed a tomato and his body being sent flying around the box, buddy will sometimes blow bubblegum even though he never does it at other times
+
+
+
+The Game itself
+
+Sometimes if the player buys something expensive (e.g. Make Buddy), the game will reset with the money(coins) at either 4,200 or 0
+
+
+
+Diamond Membership/Premium
+
+sometimes after exiting the "Ticket" reward, "Rate it", "Get Pinata(or Egg)" or the screen with those weapons, the screen showing the diamond membership will appear
+
+
+
+Buddy's Body
+
+Buddy's Head is able to be detached from the body and can be tossed around, it can be restored to buddy when chucked towards him.
+Untextured Buddy (known as well as Black Buddy) is a glitched Buddy that appears in Kick the Buddy: Forever Android, not because of his glitched textures, but because the error on the code, to fix this you need use a trash can or kill the Buddy, he will respawn with his textures restored, except for the neck, then do this again, and his body textures are fully restored.
+
+
+
+Buddy's Limbs
+
+Sometimes, One of Buddy's Legs can be split so the foot comes loose.
+
+
+
+Getting KO Screens
+
+When you empty the box while Buddy dies, buddy will respawn alive and the KO screen will pop up. but if you exit the KO screen, Buddy will respawn although he was already alive.
+When entering the bank just as buddy dies, the KO screen will pop up, but the sound gets cut off until the player exits the bank.
+
+
+
+The Land Mine
+
+Land Mines are unable to land on the ground in this version, because of the coding error, the same applies to Black Mine.

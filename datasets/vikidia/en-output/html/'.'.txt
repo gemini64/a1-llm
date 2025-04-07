@@ -1,0 +1,6 @@
+This symbol can refer to.
+
+Period (punctuation)
+Decimal Point
+Dot
+The point before the domain, ex: .com

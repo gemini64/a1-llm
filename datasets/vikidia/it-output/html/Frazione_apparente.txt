@@ -1,0 +1,5 @@
+Le frazioni apparenti hanno il numeratore multiplo del denominatore e pertanto, ridotte ai minimi termini, equivalgono a un numero intero. Ne esistono due tipi: quelle in cui il numeratore è uguale al denominatore e quelle in cui il numeratore è un multiplo del denominatore.
+
+Esempi
+
+12/3 equivale a 4

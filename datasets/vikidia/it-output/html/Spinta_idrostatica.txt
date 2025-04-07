@@ -1,0 +1,22 @@
+La spinta idrostatica è la spinta dal basso verso l'alto che riceve un corpo immerso in acqua ed è pari al peso  del volume dell' acqua spostata. Fu scoperta da Archimede nel Principio di Archimede.
+
+
+Questa immagine rappresenta la forza peso che spinge in basso, e la spinta di Archimede che spinge in alto.
+
+Galleggia o affonda?
+Un corpo immerso nell'acqua affonda quando la spinta idrostatica che riceve è minore del suo peso, galleggia se la spinta idrostatica è maggiore o uguale al peso del corpo.
+
+
+
+
+Le forze nei liquidi
+Una delle forze presenti nei liquidi è la pressione (P) che è il rapporto tra una forza (F) che agisce perpendicolarmente a una superficie e alla superficie stessa (S).
+P = \frac{F}{S}
+L'unità di misura della pressione è il pascal (Pa).
+Un pascal è la pressione esercitata da 1 N sull'unità di superficie.
+
+La legge di pascal
+Secondo la legge di Pascal,la pressione esercitata su un qualsiasi punto di un liquido si trasmette in tutte le direzioni integralmente,su qualunque superficie in contatto con il liquido.
+Il principio di Pascal o legge di Pascal è una legge della meccanica dei fluidi che stabilisce che, quando avviene un aumento della pressione in un punto di un fluido confinato, tale aumento viene trasmesso anche ad ogni punto del fluido all'interno del contenitore con la stessa intensità ma in direzione sempre
+
+{\rm 1~Pa = 1~\frac{N}{m^2}  = 1~\frac{kg}{m \cdot s^2}}

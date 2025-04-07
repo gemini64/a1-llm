@@ -1,0 +1,10 @@
+Self-portrait by Rembrandt, 1658
+Rembrandt Harmenszoon van Rijn was a Dutch painter and artist. He was born in Leiden on 15 July 1606. He died in Amsterdam on 4 October 1669.
+He is famous for his many self-portraits, his pictures with  Biblical themes, and his large paintings like The Night Watch and The Syndics of the Clothmaker's Guild.
+
+Gallery
+
+<gallery perrow="4" widths="200" heights="180">
+File:Rembrandt van Rijn-De Nachtwacht-1642.jpg|The Night Watch
+File:Rembrandt - De Staalmeesters - The Syndics of the Clothmaker's Guild.jpg|The Syndics of the Clothmaker's Guild
+</gallery>

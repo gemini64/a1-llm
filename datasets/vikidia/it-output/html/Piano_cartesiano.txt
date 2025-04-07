@@ -1,0 +1,51 @@
+Il piano cartesiano fu ideato dal famoso matematico Renè Descartes (detto Cartesio).
+Attraverso il piano cartesiano possiamo con due numeri, ascissa e ordinata, sapere dove ci troviamo nel piano.
+Le coordinate geografiche ad esempio: se ci trovassimo nel mare e avessimo due telefoni per incontrarci dovremmo soltanto dirci due numeri che sono la latitudine e la longitudine. Cartesio per raggiungere un maggior grado di precisione nella risoluzione dei problemi geometrici introdusse il concetto del “piano cartesiano”, in cui la scienza dei numeri, l’algebra e quella delle forme, la geometria, si uniscono. Lui  era un uomo di grande cultura e intelligenza ma gracile di salute, e un giorno, mentre era a letto con la febbre, vide una mosca che si spostava nel soffitto senza alcuna direzione; decise di prendere subito carta e penna per cercare di comprendere la traiettoria del insetto. Si narra che Cartesio abbia allora chiamato la mamma che, accorse subito in camere preoccupata da quelle grida: pensava che il figlio fosse in pericolo di vita. Naturalmente non stava morendo, ma stava inventando un sistema di riferimento fondamentale per la matematica odierna e per le coordinate geografiche; in questo modo lui creò una corrispondenza reciproca tra i punti disposti sul piano e le coppie di numeri. In questa maniera un insieme di punti può essere associato ad una serie di numeri e , se si riesce ad esprimere quest'ultima con una formula, si otterrà la corrispondenza tra  la linea e la formula stessa.
+
+La definizione del piano
+Il piano cartesiano è un sistema di riferimento formato da due assi perpendicolari, detti assi cartesiani che si intersecano in un punto chiamato origine.
+In un piano consideriamo due rette perpendicolari che chiamiamo con x e y,
+
+Gli assi cartesiani
+Nel piano cartesiano ci sono due assi: l'asse in verticale che si chiama ordinata (in genere indicata con y) e l' asse in orizzontale chiamato (x)
+
+Le coordinate
+Fissata un'unità di misura, è possibile individuare tutti i punti del piano con le loro coordinate.
+I due assi cartesiani,perpendicolari tra loro formano una griglia in cui possiamo individuare tutti i punti, infatti il piano cartesiano è un sistema di riferimento che funziona come le carte geografiche (il reticolo geografico).
+Data una coppia di numeri,la prima coordinata della coppia è sempre l'ascissa,la seconda è sempre l'ordinata.
+Scambiando il posto l'ascissa con l'ordinata,si rappresenta un punto diverso da quello dato.
+I punti che si trovano sull'ascisse hanno l'ordinata uguale a zero (es:A 2;0)
+invece i punti che si trovano sull'ordinata hanno l'ascissa uguale a zero (es:B 0;2)
+le coordinate dell'origine degli assi sono uguali a zero (es:C 0;0)
+Nel piano cartesiano possiamo individuare infiniti punti associati a due coordinate.
+
+Calcolare la lunghezza di un segmento
+
+
+Il segmento è parallelo all'asse delle y (ovvero i punti hanno le x uguali)
+La lunghezza del segmento parallelo all'asse delle y si calcola con il valore assoluto dell'y del primo punto meno l'y del secondo punto. Considerando due punti A e B, la formula è:\begin{vmatrix} \overline{AB} = Y_A - Y_B\end{vmatrix}
+La retta si troverà nel primo e nel quarto quadrante o nel secondo e nel terzo
+
+Il segmento è parallelo all'asse delle x (ovvero i punti hanno le y uguali)
+La lunghezza del segmento parallelo all'asse delle x si calcola con il valore assoluto dell'x del primo punto meno l'x del secondo punto. Considerando due punti A e B, la formula è:\begin{vmatrix} \overline{AB} = X_A - X_B\end{vmatrix}
+La retta si troverà nel primo e secondo quadrante o nel terzo e nel quarto quadrante
+
+Il segmento è obliquo (i punti hanno x ed y diversi)
+La lunghezza del segmento parallelo all'asse delle x si calcola facendo la radice quadrata del quadrato di x del primo punto meno x del secondo punto sommato al quadrato di y del primo punto meno y del secondo punto. Considerando due punti A e B, la formula è: \overline{AB} = \sqrt{ (X_A - X_B)^2 + (Y_A - Y_B)^2}
+
+L'equazione della retta
+Disegno geometrico di un piano cartesiano.
+L'equazione generica di una retta nel piano cartesiano è y = mx+q, dove m si chiama coefficiente angolare.
+Nel piano cartesiano possiamo disegnare delle rette:
+
+quando una retta è parallela all'asse x,i suoi punti hanno tutti la stessa coordinata dell'asse y
+quando una retta è parallela all'asse y,i suoi punti hanno tutti la stessa coordinata dell'asse x
+se disegno la bisettrice nel piano,i punti del piano risultano con le coordinate,ascissa e ordinata,con stessi numeri (es:8;8). In particolare, il coeffi.ciente angolare m della bisettrice è uguale ad 1
+
+
+
+Inclinazione della retta
+Più è maggiore è il coefficiente angolare, più la retta sarà vicina all'asse y.
+
+La retta nei quadranti
+Se il coefficiente angolare è maggiore di 0, la retta si troverà nel primo e nel terzo quadrante; se il coefficiente angolare è minore di 0, la retta si troverà nel secondo e nel quarto quadrante.

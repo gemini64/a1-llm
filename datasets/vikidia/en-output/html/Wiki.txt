@@ -1,0 +1,3 @@
+A wiki is a type of software that allows people to work together to add and change content. Usually, wikis are websites.
+Vikidia and Wikipedia are examples of websites that are wikis.
+MediaWiki is a popular wiki software.

@@ -1,0 +1,1 @@
+Internet Relay Chat (commonly known as IRC) is a network protocol which allows people to talk to each other on the internet. It supports multiple sections for different chats (called "channels"). It is not used very often anymore.

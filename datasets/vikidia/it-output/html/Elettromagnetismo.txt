@@ -1,0 +1,37 @@
+Per elettromagnetismo si intende il settore della fisica che studia l'interazione tra fenomeni elettrici e fenomeni magnetici (*) . L'elettricità e il magnetismo sono due fenomeni strettamente collegati, questo lo confermarono due scienziati: Christian Oersted e Michael Faraday nel 1800.
+
+La teoria di Oersted
+Oersted disse che il passaggio di corrente elettrica in un conduttore genera un campo magnetico.
+
+Esperimento
+Materiale:
+
+pila;
+filo conduttore;
+bussola;
+
+Descrizione:
+
+Prendo la pila e il filo conduttore. Avvicino il filo alla bussola e osservo.
+Prendo la pila le appoggio i capi del filo conduttore, uno sopra e uno sotto, avvicino il filo alla bussola e osservo.
+
+Osservazione:
+
+Nel primo caso non succede niente.
+Nel secondo caso l'ago della bussola si muove.
+
+Conclusione:
+
+Nel primo caso il circuito è aperto e quindi non passa corrente.
+Nel secondo caso il circuito è chiuso, passa corrente e si crea il campo magnetico. Quando avvicino il filo conduttore alla bussola, l'ago che si trovava sul N-S si posiziona perpendicolarmente al filo. (*)
+
+
+Elettrocalamita
+E' un filo conduttore avvolto a spirale (solenoide) in cui passa corrente elettrica avvolto attorno ad una barra di ferro.
+
+Utilizzi(1800)
+
+Telegrafo;
+Telefono;
+Campanello elettrico;
+Macchine per la separazione dei rifiuti.

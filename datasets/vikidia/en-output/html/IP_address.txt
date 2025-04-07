@@ -1,0 +1,11 @@
+An IP address (Internet Protocol address)is the public address of a computer.
+IP addresses are divided into two main types, a IPv4 and a IPv6.
+An example of an IPv4 would be 1.11.11.111.1.11
+An example of an IPv6 would be 785f:784g:h438:fhe8:98fe:9333:84ff, with some groups of four characters, either letters or numbers.
+
+Understanding IP addresses
+A good way to understand IP addresses is to imagine you have a street. The IP address is sort of like the address for your house. If you wanted to deliver something to another house you would first have to know the address just like how when a computer needs to send information to another computer it needs the IP address.
+However, you rarely have to know the IP address for everyday use. For example, when connecting to a website, the site can be reached by one or several IP addresses but instead of putting in the IP address of the site you want to connect to, each site has a domain which you can put in to connect to the site. For example, if you went on youtube.com, "youtube.com" would be the domain name.
+
+Privacy
+An IP address can be seen by the site you connect to or your Internet Service Provider (ISP), this is necessary for you to connect to the site or to use the internet. Your IP address should otherwise be kept secret as it could be used to find your location or you could be targeted by Deliberate Denial of Service (DDOS) attacks.

@@ -1,0 +1,13 @@
+Le scale di magnitudo servono per misurare l'intensità di un terremoto. Ci sono due tipi di scale di magnitudo: la Scala Mercalli creata da Giuseppe Mercalli e la scala Richter creata da Charles Ricther.
+
+Scala Mercalli
+Creata all'inizio del XXI° secolo da Giuseppe Mercalli che ideò una scala d'intensità, che stabiliva gli effetti  creati dal sisma e è divisa in 10 gradi e poi si passo a 12 gradi.
+La scala non aveva una valutazione giusta, perché si basava su la reazione dell'uomo e la distruzione non si basa solo sulla potenza del sisma ma anche da come è costruito un edificio.
+
+Scala Ritcher
+Fu creata da Charles Ricther un sismologo statunitense nel 1935, è una scala aperta cioè non ha un limite di magnitudo.
+il livello zero sono vibrazioni segnate sul sismografo standard posto a 100 km di distanza dall'epicentro, possiamo ricordare dei terremoti devastanti come quella in Messina del 1908 di 7,5°
+
+Nell'oceano Indiano di 8,9° nel 2004
+In Cile nel 1960 8,5°
+Nel 1976 in Cina di 8°

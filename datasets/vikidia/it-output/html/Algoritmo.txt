@@ -1,0 +1,1 @@
+L'algoritmo è una sequenza ordinata, chiara, finita, realizzabile e non ambigua di passi da seguire per risolvere un dato problema. Sono un concetto molto importante per l'informatica visto che un computer è in grado di eseguirli in un programma informatico.

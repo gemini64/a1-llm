@@ -1,0 +1,8 @@
+Nelle frazioni il numeratore è la parte sopra la linea frazionaria
+\frac{Numeratore}{Denominatore}
+
+esempi
+
+\frac{3}{2}      frazione
+
+\frac{3} {2}                              -   3  =  numeratore                   -   2 denominatore

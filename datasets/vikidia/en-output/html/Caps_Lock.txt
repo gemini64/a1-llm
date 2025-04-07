@@ -1,0 +1,17 @@
+Caps Lock in Laptop of Mac
+Caps Lock is a function on the computer keyboard which makes all letter keystrokes capitalized.  It enables a state of Caps Lock wherein the function of the shift key is inverted and it makes letters lowercase while they are by default upper case.  During a state of Caps Lock, it can be pressed again to end the state.
+<table class="banner plainlinks  " style="width:70%; margin:auto; margin-top:1em; margin-bottom:1em; text-align:center; background-color:#FFFFFF; border:2px solid #111111;  ">
+
+
+
+
+
+50px|alt=|link=
+
+
+
+
+
+
+
+This  does not have any mainspace categories at all. You can help by adding categories.

@@ -1,0 +1,56 @@
+Rubik's Cube
+A Rubik's Cube is a Combination Puzzle invented by Erno Rubik. The most common type is 3x3 but other ones like the 2x2 (Rubik's Mini Cube) and the 4x4 (Rubik's Master Cube). The goal is to solve all of the sides, a special algorithm is used to solve it. Other companies make cubes like the  Rubik's cube (Hence, Rubik's gets a lot of credit). 3x3 cubes are the main cube for Speedcubing. Rubik's Largest cube is the 5x5 (Professor's cube)
+
+Cubic variation
+
+
+Mini Cube
+
+Main Article: Mini Cube
+The Mini Cube or Pocket cube is the 2x2 version of the 3x3 puzzle. A total of 8 cubes are on there. They are also called Pocket cubes because they can be fit in a pocket. A 3x3 can also fit in a pocket. Mini cube and 2x2 pyraminx.
+
+Rubik's Master
+
+Main Article: Rubik's Master
+Rubik's master
+Rubik's Master (Also called Rubik's Revenge) is a 4x4 version of the 3x3 Rubik's Cube. Unlike 3x3 and 2x2 cubes, 4x4 cubes can have parity errors where specific solutions must be used to solve it.
+
+Professor's Cube
+
+Main Article: Professor's Cube
+
+V Cubes
+Cubes higher than the professor cube (5x5) are not made from Rubik's but still called Rubik's Cubes
+Main Articles: V Cube 6, V Cube 7, V Cube 8, V Cube 9, V Cube
+
+Pyraminx
+Main Article: Pyraminx
+A 3x3 Pyraminx solved
+A 2x2 Pyraminx unsolved
+Pyraminx is the pyramid version of the Rubik's Cube. Pyraminxes come in 3 levels, A 2x2,3x3, and a 4x4. 2x2 is around the same difficulty as a mini cube (2x2). A 3x3 is around the same difficulty as Rubik's Cube (3x3). A 4x4 is around the same difficulty as a Rubik's Master Cube (4x4)
+
+Gallery
+<gallery>
+File:Rubik's cube, CN II.jpg|Turning rubik's cube
+File:Rubikscube-2er3er4er.jpg|3 rubik's cubes with different sizes
+File:Rubiks Revenge 1982.jpg|Rubik's Master
+File:Professors cube.jpg|Professor's Cube mixed up
+File:V-Cube 7 solved.jpg|V Cube 7 solved
+File:V-Cube 6 small.jpg|V cube 6 solved
+File:MasterPyraminx-Scrambled.jpg|Master pyraminx
+</gallery>
+
+
+
+
+
+
+50px|alt=|link=
+
+
+
+
+
+
+
+This  does not have many mainspace categories. You can help by adding more categories.

@@ -1,0 +1,2 @@
+Honda is a car company.
+The civic is a kind of Honda model.

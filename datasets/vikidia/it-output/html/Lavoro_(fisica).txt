@@ -1,0 +1,10 @@
+Si dice che una forza compie un lavoro quando sposta il corpo a cui è applicata.
+Il lavoro è direttamente proporzionale all'intensità della forza e allo spostamento.
+Questa relazione è espressa dalla formula:
+L = F X s
+dove:
+L = lavoro
+F = forza
+s = spostamento
+In fisica l'unità di misura del lavoro è il chilogrammetro (kgm), che corrisponde al lavoro compiuto per spostare di un metro un chilogrammo (kg). Nel Sistema Internazionale l'unità di misura è il joule (J), che corrisponde al lavoro compiuto dalla forza di 1 newton (N) per spostare il corpo di 1 metro:
+1 joule = 1 N X 1 m

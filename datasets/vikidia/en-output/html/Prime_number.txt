@@ -1,0 +1,8 @@
+A prime number (or Prime for short) is a number that can be divided only by itself and 1. (not including 1) 11 Is a prime number because you can only write it as (11/1) or (11/11) to get a interger number But 6 is not a prime number because you can write it as (6/2), (6/3) and more...
+
+Examples of Primes
+The next 10 digits in front of you are natural numbers
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+The next 10 digits in front of you are prime numbers
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+Only even numbers are prime numbers (except 2), natural number can be showed with n.

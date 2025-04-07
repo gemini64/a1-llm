@@ -1,0 +1,25 @@
+Il piano è il terzo ente geometrico fondamentale, è illimitato e ha 2 dimensioni: lunghezza e larghezza.
+
+Come si rappresenta
+Il modello geometrico del piano, come lo troviamo disegnato nei libri,è una figura limitata da 4 lati, anche se nella realtà è una figura illimitata quindi senza lati.
+
+Come si indica
+
+Si indica con una lettera minuscola dell’alfabeto greco:  α (alfa), β (beta),γ (gamma) e δ(delta).
+
+Il semipiano
+
+Il semipiano si forma quando una retta divide in 2 parti il piano, la retta viene chiamata origine dei semipiani che si dicono opposti alla retta.
+
+Gli assiomi del piano
+
+
+Se una retta ha 2 punti in comune con un piano si dice che giace completamente sul piano.
+Per 2 punti (o per una retta) passano infiniti piani che costituiscono un fascio di piani.
+Per 3 punti passa un solo piano.
+
+
+
+Un altro piano
+
+Un caso particolare di piano è il piano cartesiano.

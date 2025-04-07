@@ -1,0 +1,59 @@
+Il Teorema fondamentale dell'aritmetica afferma che i numeri naturali o sono primi oppure sono il risultato di una moltiplicazione di numeri primi, anche ripetuti.
+Ad esempio:
+17 = 17
+17 è un numero primo
+18=2 \cdot 3 \cdot 3 = 2 \cdot 3^2
+18 non è un numero primo ma è il risultato della moltiplicazione di 2 con 3 ripetuto per 2 volte, e, ovviamente, 2 e 3 sono numeri primi. La moltiplicazione di numeri primi si chiama scomposizione in fattori primi.
+
+Osservazione necessaria
+Se un numero può essere espresso da due moltiplicazioni differenti allora i fattori delle due moltiplicazioni non sono tutti primi.
+Facciamo un esempio:
+12 = 3 \cdot 4 = 2 \cdot 6
+da queste uguaglianze ricaviamo che
+\frac {3 \cdot 4}{2} = 6
+ed anche che
+\frac {3 \cdot 4}{6} = 2
+Cioè che 12 si può dividere per 2 poiché 2 è un sottomultiplo di 4, quindi 4 non è primo, ed anche per 6, poiché 6 si ottiene moltiplicando 3 con il fattore 2 condiviso il 4, quindi 6 non è primo.
+In generale se
+n = a \cdot b = c \cdot d , con n, a, b, c, d tutti numeri naturali diversi tra loro allora non possono essere tutti primi.
+Infatti, procedendo come nell'esempio
+\frac {a \cdot b}{c} = d
+e quindi o a o b hanno come sottomultiplo c oppure alcuni dei loro fattori moltiplicati tra loro danno c.
+Questo vale qualsiasi sia il numero dei fattori, quindi anche se un numero è uguale due moltiplicazioni differenti a 3, o a 4 o ad un numero qualsiasi di fattori, si dimostra nello stesso modo che non possono essere tutti numeri primi differenti tra loro.
+
+
+Tutti i numeri hanno una scomposizione in fattori primi
+Tutti i numeri naturali o sono primi oppure hanno una scomposizione in fattori primi, i numeri primi sono la scomposizione di se stessi.
+Per dimostrare questa proprietà dobbiamo ricorrere al Principio di induzione. I primi numeri naturali, il 2 che è il primo numero primo, ha questa proprietà.
+Di fatto anche il 3 che è primo e il 4
+4 = 2^2
+la confermano. A noi basta che ne goda il 2 per dire che
+P(2)~\text{è vera} \Rightarrow 2~\text{è primo}
+Se tutti i numeri fino a n o sono primi oppure hanno una scomposizione in fattori primi anche (n + 1) avrà questa caratteristiche?
+n + 1 potrebbe essere primo, e quindi va bene, oppure potrebbe essere divisibile per un numero primo più piccolo di lui, e anche di n, visto che n + 1 è solo una unità più grande di n.
+Se il primo divisore è il numero p sarà
+\frac{n + 1}{p} = q < n
+dividendo n + 1 per p si ottiene q un numero più piccolo di n. q o è primo oppure ha una scomposizione in fattori primi essendo minore di n.
+Quindi se q primo
+n + 1 = p \cdot q
+e il prodotto p per q è la scomposizione in fattori primi di n + 1, oppure q è scomponibile in fattori primi e quindi
+n + 1 = p \cdot (scomposizione \ di \ q)
+e la scomposizione di n + 1 è quella di q moltiplicata per p, anche questa in fattori primi.
+Per il principio di induzione dunque tutti i numeri naturali o sono primi oppure hanno una scomposizione in fattori primi.
+
+La scomposizione in fattori primi è unica
+Per le osservazioni fatte all'inizio della voce se esistessero due scomposizioni in fattori primi differenti non potrebbero differire di un solo fattore, poiché in quel caso dall'uguaglianza delle moltiplicazioni si otterrebbe facilmente l'uguaglianza del fattore primo supposto diverso, infatti, per assurdo, supposto
+p \neq q
+da
+n = p \cdot (fattori \ uguali) = q \cdot ( fattori \ uguali)
+si ricava
+p = q
+Quindi non può essere
+p \neq q .
+Se invece le due scomposizioni differiscono per più fattori, prendiamo in considerazione due fattori, da
+n = a \cdot b \cdot (fattori \ uguali) = c \cdot d \cdot ( fattori \ uguali)
+si ricava
+n = a \cdot b  = c \cdot d
+e per le osservazioni fatte ad inizio voce
+a,\ b,\ c, \ d  non possono essere tutti primi.
+quindi la scomposizione di un numero in fattori primi è unica.

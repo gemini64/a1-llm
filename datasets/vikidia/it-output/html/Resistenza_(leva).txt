@@ -1,0 +1,17 @@
+Nella leva la resistenza è la forza da vincere e la forza che deve agire contro essa è detta potenza.La distanza tra resistenza e fulcro si chiama braccio della resistenza  e la distanza tra il fulcro e il punto di applicazione della potenza è detto braccio della potenza.Se il prodotto della potenza per il suo braccio è uguale al prodotto della resistenza per il suo braccio la leva è in equilibrio.
+
+Le altre parti della leva
+
+F= Fulcro cioè il punto attorno a cui ruota la leva
+P= Forza Potenza cioè la forza che viene applicata per raggiungere l'equilibrio
+R= Forza Resistenza cioè la forza che si oppone
+Br= Braccio della resistenza cioè la distanza Resistenza-fulcro
+Bp= Braccio della potenza cioè la distanza Potenza-fulcro
+
+
+
+Esempi
+
+leva di 1° genere cioè le forbici, ha il fulcro fra la potenza e la resistenza;
+leva di 2° genere cioè uno schiaccianoci, ha la resistenza fra il fulcro e la potenza;
+leva di 3° genere cioè un badile, ha la potenza fra la resistenza e il fulcro.

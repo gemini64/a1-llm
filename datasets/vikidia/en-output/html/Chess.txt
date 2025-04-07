@@ -1,0 +1,27 @@
+Chess board with pieces: in the center of each row, we can see the Queen and the King, with their crowns.
+Chess is a board game. It is one of the oldest board games still played, originating in the 6th century. Chess is considered to be a difficult game and requires a lot of strategy.
+
+
+Players
+
+Chess games are played by two players.
+
+Chess pieces
+
+Queen with a crown
+King with a crown too
+Bishop with his hat
+Knight with his horse
+Rook or Tower
+Pawns, simple soldiers
+
+
+
+Famous players
+
+
+Magnus Carlsen
+Bobby Fischer
+Anatoly Karpov
+Garry Kasparov
+Levon Aronian

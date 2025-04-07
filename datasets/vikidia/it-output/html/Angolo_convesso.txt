@@ -1,0 +1,2 @@
+Angolo convesso
+L'angolo convesso è un angolo con l'ampiezza compresa tra 0°e 180°, dove 0° è incluso ma 180° è escluso, e non contiene prolungamenti dei lati.

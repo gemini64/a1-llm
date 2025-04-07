@@ -1,0 +1,13 @@
+I materiali sono cose che vediamo e usiamo ogni giorno
+
+Le proprietà tecnologiche indicano quanto un materiale riesce a subire alcune lavorazioni. Ogni materiale è caratterizzato da alcune proprietà tecnologiche.
+Sono proprietà tecnologiche dei materiali:
+
+plasticità
+stampabilità
+malleabilità
+temprabilità
+piegabilità
+elasticità
+duttilità
+fusibilità

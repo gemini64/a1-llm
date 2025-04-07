@@ -1,0 +1,1 @@
+Il termine query, in informatica, viene utilizzato per indicare l'interrogazione di un database nel compiere determinate operazioni (selezione, inserimento, cancellazione dati, ecc.) da eseguire in uno o più database.

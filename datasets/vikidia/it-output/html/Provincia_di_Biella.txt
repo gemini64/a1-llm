@@ -1,0 +1,98 @@
+Mappa di localizzazione.
+La provincia di Biella è una delle 8 province del Piemonte. Il capoluogo di provincia è Biella.
+
+Confini
+Confina con:
+
+provincia di Vercelli
+provincia di Torino
+Valle d'Aosta
+
+
+
+Comuni
+La provincia è composta da 81 comuni.
+
+
+
+Ailoche
+Andorno Micca
+Benna
+Biella
+Bioglio
+Borriana
+Brusnengo
+Callabiana
+Camandona
+Camburzano
+Campiglia Cervo
+Candelo
+Caprile
+Casapinta
+Castelletto Cervo
+Cavaglià
+Cerreto Castello
+Cerrione
+Coggiola
+Cossato
+Crevacuore
+Crosa
+Curino
+Donato
+Dorzano
+Gaglianico
+Gifflenga
+Graglia
+Lessona
+Magnano
+Massazza
+Masserano
+Mezzana Mortigliengo
+Miagliano
+Mongrando
+Mosso
+Mottalciata
+Muzzano
+Netro
+Occhieppo Inferiore
+Occhieppo Superiore
+Pettinengo
+Piatto
+Piedicavallo
+Pollone
+Ponderano
+Portula
+Pralungo
+Pray
+Quaregna
+Quittengo
+Ronco Biellese
+Roppolo
+Rosazza
+Sagliano Micca
+Sala Biellese
+Salussola
+San Paolo Cervo
+Sandigliano
+Soprana
+Sordevolo
+Sostegno
+Strona
+Tavigliano
+Ternengo
+Tollegno
+Torrazzo
+Trivero
+Valdengo
+Vallanzengo
+Valle Mosso
+Valle San Nicolao
+Veglio
+Verrone
+Vigliano Biellese
+Villa del Bosco
+Villanova Biellese
+Viverone
+Zimone
+Zubiena
+Zumaglia

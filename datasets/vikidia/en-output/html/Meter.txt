@@ -1,0 +1,3 @@
+A Meter is a unit of length. It is equal to around 40 inches but it is not exact due to the fact that an inch is 2.54 cm not just 2.5.
+
+Uses Of Meter

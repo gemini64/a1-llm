@@ -1,0 +1,7 @@
+Correzioni
+
+GabryBarbe : Potresti corregere? Devi rimpiazzare {{CLEDETRI:}} con {{DEFAULTSORT}}; {{benvenuto}} con {{subst:benvenuto}}; {{BenvenutoIP}} con {{subst:benvenutoIP}}?--ANGELO (aka Ajeje Brazorf)  09:16, 13 gen 2021 (CET)
+
+✓ Fatto  Ajeje Brazorf : --GabryBarbe ↣Msg↢ 10:41, 13 gen 2021 (CET)
+ps  ValterVB : puoi togliere il tag tt, è la stessa cosa di code ed in più è obsoleto.--ANGELO (aka Ajeje Brazorf)  19:22, 15 gen 2021 (CET)
+Ajeje Brazorf : ✓ Fatto --ValterVB (discussioni) 19:27, 15 gen 2021 (CET)

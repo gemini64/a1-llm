@@ -1,0 +1,2 @@
+IbisPaint is an application dedicated to the creation of artwork and animation since the V.11 update. It was initially released on 2012 for Android and iOs as a free application, but it was expanded to Windows with a paid license.
+These also offers an optional Premium suscription that allows you to try new features, brushes and effects as you draw.

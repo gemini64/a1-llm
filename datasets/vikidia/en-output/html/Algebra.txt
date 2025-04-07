@@ -1,0 +1,13 @@
+In mathematics, algebra is where letters are used to represent a number, known or unknown.
+
+Examples
+If a equals 2 then:
+10 - a = 8
+In this example we have used a to represent 2.
+
+Multiplication
+3(a) = 3a
+n(a) = an
+a(n) = an
+a(a) = a^2
+a times itself n number of times could be represented as an

@@ -1,0 +1,27 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Funzione
+Una funzione, detta anche applicazione, è una relazione tra due insiemi.
+
+Classificazione delle funzioni
+Le funzioni possono essere classificate in..
+
+Campo di esistenza
+
+Funzioni algebriche razionali intere
+Il campo di esistenza è l'insieme R.
+
+Funzioni algebriche razionali fratte
+Il campo di esisitenza si calcola ponendo il denominatore diverso da zero.
+
+Funzioni algebriche irrazionali
+Se indice di radice è pari, il campo di esistenza si calcola ponendo il radicando maggioreo uguale a zero.
+Se l'indice di radice è dispari, non è necessario porre alcuna condizione.
+
+Funzioni trascendenti logaritmiche
+Il campo di esistenza si calcola ponenedo l'argomento maggiore di zero.
+
+Funzioni trascendenti esponenziali
+Il campo di esistenza è R.
+
+Guarda anche
+
+Successione (matematica)

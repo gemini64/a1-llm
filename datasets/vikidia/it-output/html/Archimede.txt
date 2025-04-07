@@ -1,0 +1,13 @@
+Archimede di Siracusa è stato un matematico, fisico e inventore siracusano.
+
+Biografia
+Come matematico, si concentrò alla risoluzione dell'area del cerchio, e il calcolo della superficie e del volume della sfera. Definì inoltre la cosiddetta "spirale di Archimede".
+Nell'ambito della fisica, sviluppò la legge sul galleggiamento dei corpi chiamato "principio di Archimede".
+Tra le invenzioni di Archimede, si ricorda la vite di Archimede, che permette il sollevamento dell'acqua da un bacino.
+
+Galleria
+<gallery>
+File:Archimedean spiral.png|Spirale di Archimede
+File:Experiment physique principe d Archimede.jpg|Illustrazione di un esperimento sul principio di Archimede
+File:Chambers 1908 Archimedean Screw.png|Disegno di una vite di Archimede
+</gallery>

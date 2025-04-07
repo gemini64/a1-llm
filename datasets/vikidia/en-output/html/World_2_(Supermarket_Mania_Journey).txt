@@ -1,0 +1,14 @@
+The garden store is a store in world 2. It sells foods that grow from plants.
+
+Stats
+
+Difficulty
+28% (Easy)
+
+Background
+
+In shop
+A store full of vegan food that comes from plants.
+
+Out of shop
+The rest of the garden where plants you can buy

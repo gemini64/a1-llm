@@ -1,0 +1,11 @@
+CC-by-SA is an abbreviation of Attribution-ShareAlike by Creative Commons. It is a copyright license that requires:
+
+Attribution, or proper credit to the creator of the work
+ShareAlike, that any works made from the original be distributed under the same license
+
+
+For files on Vikidia, you can use the following template: {{CC}}
+
+Other websites
+
+the text of CC-BY-SA 4.0

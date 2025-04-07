@@ -1,0 +1,2 @@
+Angolo giro
+L'angolo giro è un angolo di 360°. Si ottiene con una rotazione completa di una semiretta attorno alla sua origine.

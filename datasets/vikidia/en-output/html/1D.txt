@@ -1,0 +1,20 @@
+1D or 1 dimensional space is space in 1 dimension.
+
+Shapes
+Its not possible to have a shape going on forever.
+
+Ray
+Ray
+A Ray is a shape with 1 arrow head and 1 end point. It goes on forever in 1 way.
+
+Line
+A Line is a shape. It has length and it goes on forever 2 ways.
+
+Line Segments
+A Line segment is a line that ends both ways. They are used to connect shapes.
+
+Perpendicular Line
+Made of 2 line segments that intersect at 90 degree angles.
+
+Intersecting Line
+Made of 2 line segments that do not intersect at 90 degrees.

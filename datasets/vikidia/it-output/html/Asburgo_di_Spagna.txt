@@ -1,0 +1,147 @@
+Gli Asburgo di Spagna erano una ramificazione della famiglia Asburgo, che governò la Spagna dal 1556 al 1700. La dinastia iniziò nel 1556 con Filippo II, figlio di Carlo V, che ereditò il trono spagnolo, e ebbe termine nel 1700 con Carlo II, che morì senza lasciare eredi.<gallery widths="150" heights="150">
+File:Coat of Arms of Philip II of Spain (1558-1580).svg|Stemma di Filippo II di Spagna
+File:Argent Label Variant of the Coat of Arms of Philip III of Spain as Prince of Asturias.svg|Stemma di Filippo III di Spagna
+File:Full Ornamented Royal Coat of Arms of Spain (1621-1668).svg|Stemma di Filippo IV di Spagna
+File:Coat of Arms of Charles II of Spain as Monarch of Naples and Sicily.svg|Stemma di Carlo II di Spagna
+</gallery>
+
+
+
+Storia
+Carlo V degli Asburgo d'Austria, ereditò dalla mamma Giovanna la Pazza i domini spagnoli, mentre da suo nonno Massimiliano I ottenne i domini austriaci. Nel 1556 decise di abdicare e divise il suo vasto impero in due: affidò la corona spagnola a suo figlio Filippo II e l'Austria e il Sacro Romano Impero a suo fratello Ferdinando I (vedi Asburgo d'Austria). Gli Asburgo di Spagna videro sul trono spagnolo quattro sovrani:
+
+Filippo II : re di Spagna dal 1556 al 1598, egli rafforzo i tribunali dell'Inquisizione e reprime i moriscos, cioè i musulmani di Spagna convertiti al cattolicesimo.  Nel 1557 combatté contro la Francia la Battaglia di San Quintino, vincendola. In onore di questa vittoria, il sovrano fece costruire a Madrid l'Escorial, il palazzo in cui governo durante tutto il suo regno. Nel 1559 la Spagna di Filippo II stipulò con la Francia la pace di Cateau-Cambrésis, assicurandosi il predominio in Europa. In seguito nel 1571, l'esercito di Filippo entrò nella Lega Santa, che combatté contro gli ottomani la Battaglia di Lepanto, battendoli; Nel 1580 invece il sovrano annesse il Portogallo al suo impero. Verso la fine del XVI secolo i Paesi Bassi (calvinisti) si ribellarono alla Spagna per una maggiore libertà religiosa. La ribellione olandese venne appoggiata dall'Inghilterra, che portò alla sconfitta (e alla bancarotta) della Spagna. L'ultima azione di Filippo II fu quella di costruire una flotta detta Invincibile Armata da lanciare l'Inghilterra, che pero riuscì a distruggerla, segnando il declino della Spagna.
+
+
+
+Filippo III: re di Spagna dal 1598 al 1621, fu il figlio di Filippo II e di sua moglie Anna d'Austria. Durante il suo regno la Spagna continuò a combattere contro l'Inghilterra fino al 1604 e contro i Paesi Bassi fino all'anno 1609. Sempre nel 1609 caccio tutti i moriscos dalla Spagna. Inoltre dal 1613 al 1617 combatté la prima guerra del Monferrato contro il duca di Savoia Carlo Emanuele I, mentre durante gli ultimi anni del suo regno prese parte alla guerra dei trent'anni, alleandosi con il Sacro Romano Impero degli Asburgo d'Austria.
+
+
+
+Filippo IV: : re di Sagna dal 1621 al 1666, fu il figlio di Filippo III e di sua moglie Margherita d'Austria. Egli durante il suo regno si affidò al conte-duca d'Olivares. Per sbaglio Filippo IV riaccese il conflitto con i Paesi Bassi, che ottennero l'indipendenza con la pace di Westfalia nel 1648 co il nome di "Repubblica delle Sette Province Unite". Inoltre, sempre con Filippo IV, la Spagna vide incominciare una nuova guerra con la Francia che termino nel 1659 con la Pace dei Pirenei. Inoltre Filippo IV dovette affrontare la guerra di restaurazione portoghese (1640-1668) mirata a ottenere l'indipendenza del Portogallo.
+
+
+
+Carlo II: re di Spagna dal 1665 al 1700, fu il figlio di Filippo IV e di sua moglie Marianna d'Austria. Egli fu l'ultimo degli Asburgo di Spagna ed era debole di salute a causa dei frequenti matrimoni fra consanguinei che avvennero per circa un secolo e mezzo all’interno della sua famiglia. Egli morì di ictus nel 1700 senza lasciare eredi, causando così la guerra di successione spagnola.
+
+
+
+Titoli nobiliari
+
+Sovrani di Spagna, dal 1556 al 1700
+Sovrani di Napoli, dal 1554 al 1700
+Sovrani di Sicilia, dal 1556 al 1700
+Sovrani di Sardegna, dal 1556 al 1700
+Re del Portogallo, dal 1580 al 1640
+Duchi di Milano, dal 1540 al 1700
+Duchi di Borgogna, dal 1555 al 1700
+Duchi delle Fiandre, dal 1581 al 1700
+
+
+
+timeline asburgica
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1600 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1556 till:1598                                 #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1556 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1598   color:red     shift:(0,5)  align:center text: Filippo II re di Spagna.
+
+fine del codice della timeline
+
+</timeline>
+
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1200 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1598 till:1621                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1598 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1621   color:green     shift:(0,5)  align:center text: Filippo III re di Spagna.
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1200 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1621 till:1665                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1621 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1665   color:orange     shift:(0,5)  align:center text: Filippo IV re di Spagna.
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1200 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1665 till:1700                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1665 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1700   color:blue     shift:(0,5)  align:center text: Carlo II re di Spagna.
+
+fine del codice della timeline
+
+</timeline>

@@ -1,0 +1,18 @@
+Il corpo umano può essere attaccato da microrganismi che si distinguono in batteri e virus che provocano infezioni e l'uomo si difende attraverso il sistema immunitario.
+
+Componenti del sistema immunitario
+
+Il sistema immunitario è formato dalle barriere esterne (pelle, mucose ecc.) e da tanti tipi di cellule, qua ne elencherò alcune:
+
+Mastcellule/Mastociti: Pattugliano il corpo e se trovano un patogeno producono istamina, attirando i macrofagi;
+Macrofagi: Vengono attirati dall'istamina e dal sistema di complemento e divorano i batteri;
+Cellule T Citotossiche: Vengono attivate o dalle sostanze prodotte dalle Cellule T Helper oppure dalle cellule infette;
+Cellule T Helper: Quando un Macrofago presenta l'Antigene le Cellule T Helper si lega al Macrofago. Il Macrofago produce sostanze chimiche che portano la Cellula T Helper ha produrre sostanze chimiche che attivano le Cellule T Citotossiche e le Cellule B;
+Cellule B: Vengono attivate dalle Cellule T Helper o dal patogeno e producono anticorpi, molecole di diversi tipi che attaccano specifici antigeni;
+Cellule della memoria: Sono ex Cellule T Citotossiche e Cellule B che si ricordano dell'infezione che hanno combattuto e che attiveranno le Cellule B e le Cellule T Citotossiche nel caso che l'infezione ritorni.
+
+È presente anche un sistema di complemento, formato da sostanze chimiche che attirano i macrofagi, e poi ci sono gli anticorpi, molecole presenti in sangue, muco, saliva e latte che disattivano i patogeni ed attirano i fagociti (di cui fanno parte i Macrofagi).
+Oltre a queste cellule principali esistono anche altre cellule simili ai Macrofagi ed ai Mastociti (Neutrofili, Basofili, Eosinofili, Cellule Natural Killer ecc.)
+
+Funzionamento del sistema immunitario
+Quando le barriere esterne falliscono si attivano i Mastociti, che producono istamina che attiva i Macrofagi (similmente ai Mastociti funzionano i Basofili), che iniziano a fagocitare i patogeni. Quando un Macrofago fagocita e digerisce il patogeno presenta alcune molecole che vanno con il nome di Antigene sulla sua superficie, facendo si che le Cellule T Helper si attacchino all'Antigene, facendo si che il Macrofago produca sostanze che spingono la Cellula T Helper a produrre sostanze chimiche che attivano le Cellule T Citotossiche e le Cellule B, che fanno piazza pulita. Le Cellule T Citotossiche e le Cellule B si trasformano in Cellule della memoria, che ricorderanno l'infezione. Un patogeno indebolito inserito volontariamente nel corpo per addestrare il sistema immunitario si chiama Vaccino.

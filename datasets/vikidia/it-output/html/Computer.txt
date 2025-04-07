@@ -1,0 +1,10 @@
+Un computer (in italiano si dovrebbe parlare di calcolatore o elaboratore, ma il termine inglese è di gran lunga più diffuso nel linguaggio di tutti i giorni) è un apparecchio elettronico capace di realizzare rapidamente ed automaticamente delle operazioni matematiche, logiche, delle manipolazioni di catene di simboli o delle ricerche. Esso è composto di due grandi parti:
+
+l'unità centrale, rinchiusa in una cassa, dove si trova in particolare il processore, che è il centro di calcolo;
+le periferiche d'ingresso o d'uscita: si classifica la tastiera, il disco rigido, il lettore di dischi, di CD o di DVD, il mouse, il monitor, la stampante, lo scanner, ecc..
+
+
+I computer nascono negli anni '40 per scopi militari ma solo dagli anni '60 si trovano i primi personal computer per scopi professionali. Nel 1977 nascono i primi home computer, computer sviluppati per l'utenza comune che hanno portato il computer in ogni casa.
+
+Parti di un computer moderno
+Un calcolatore personale : 1.- Schermo (Monitor) ; 2.- Scheda madre ; 3.- Unità Centrale (Microprocessore) ; 4.- Memoria  (RAM) ; 5.- Schede periferiche ; 6.- Blocco d'alimentazione ; 7.- Lettore-masterizzatore di CD/DVD ; 8.- Disco rigido ; 9.- Mouse ; 10.- Tastiera.

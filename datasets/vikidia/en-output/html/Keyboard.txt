@@ -1,0 +1,3 @@
+Keyboard (LAPTOP)
+A keyboard is a part of a computer, used to type words.  It contains several keys that correspond to letters, numbers, and symbols.  Without a separate keyboard, some computers have functions for an on-screen keyboard operated by the cursor and mouse.  In a desktop computer, the keyboard is attacked to the computer via a USB cable, though in a laptop it is attached directly.  Older computers have no keyboard, as data was inputted via punch cards.
+Keyboard (COMPUTER)

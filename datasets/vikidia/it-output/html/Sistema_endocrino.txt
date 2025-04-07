@@ -1,0 +1,5 @@
+Il sistema endocrino o ormonale è un sistema che comprende le ghiandole endocrine e le cellule endocrine che secernono ormoni nel sangue, il quale li trasporta alle cellula bersaglio. Insieme al sistema nervoso forma il sistema neuroendrocrino e gestisce il funzionamento dell'organismo.
+
+Descrizione
+Le cellule endocrine producono l'ormone nel loro citoplasma e lo riversano nel sangue (o direttamente nell'organo bersaglio), che trasporta gli ormoni alle cellule bersaglio (poste lontane dalle cellule endocrine). Quando l'ormone giunge alla cellula bersaglio ne modifica l'attività.
+La regolazione di produzione di ormoni prodotti dalle cellule endocrine avviene attraverso la retroazione.Quando la retroazione è positiva stimola la produzione di ormoni dalle cellule endocrine. Quando la retroazione è negativa invece la cellula endocrina produce l'ormone, in seguito la concentrazione dell'ormone nel sangue aumenta e le cellule bersaglio inibiscono la produzione di ormoni, in modo che le cellule endocrine non ne producano più.

@@ -1,0 +1,4 @@
+Il vetro è un materiale particolarmente trasparente e fragile.
+Dal punto di vista microscopico, il vetro è costituito da un insieme di atomi di silicio e ossigeno disposti in maniera piuttosto disordinata. Tale disordine molecolare si traduce nel fatto che il vetro non è un materiale cristallino, bensì un materiale amorfo. Infatti nel caso dei materiali cristallini gli atomi occupano delle posizioni prestabilite all'interno di uno schema geometrico ordinato (detto reticolo cristallino), mentre nel caso del vetro gli atomi sono disposti un po' "a casaccio".
+I diversi colori del vetro sono dovuti alle impurezze presenti. Ad esempio il cobalto rende il vetro blu, il ferro rende il vetro verde, e così via.
+Blocchi di vetro colorati

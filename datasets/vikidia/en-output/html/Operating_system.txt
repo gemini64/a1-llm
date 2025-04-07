@@ -1,0 +1,18 @@
+An operating system (often called an OS) is a piece of software that is needed to run programs on a device. Most computers come with one already installed. Some are free (like Ubuntu) and some are paid (Microsoft Windows)
+
+Examples
+
+Microsoft Windows
+Mac OS X
+iOS
+Ubuntu
+Solaris
+Android
+MS-DOS
+
+
+
+Related pages
+
+BIOS
+List of operating systems

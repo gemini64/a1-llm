@@ -1,0 +1,5 @@
+L'insieme dei nervi forma il sistema nervoso periferico (SNP). Esso svolge la funzione di collegare il SNC con gli arti e con i vari organi e tessuti presenti nell'organismo.
+Il SNP si suddivide in:
+- volontario (o somatico): controlla le attività volontarie del corpo, cioè aziona i muscoli volontari;
+- involontario (o autonomo o vegetativo): innerva gli organi interni e controlla le cosiddette funzioni vegetative (indipendenti dalla volontà), come la digestione, il battito cardiaco, la respirazione.
+A sua volta il s.n. involontario è formato da due componenti: simpatico e parasimpatico.

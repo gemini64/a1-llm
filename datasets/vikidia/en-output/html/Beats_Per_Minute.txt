@@ -1,0 +1,13 @@
+Beats Per minute (BPM) is a unit used for how many beats in the minute. It’s used in songs and music. Since a minute is 60 seconds. 1 beat per second is equal to 60 beats per minute.
+
+Beats Per Second
+Main Pages: Beats Per Second, Hertz
+A Beat per second is 60 beats per minute. Here you can calculate beats per minute to beats per second.
+60 BPM = 1 BPS
+90 BPM = 1.5 BPS
+120 BPM = 2 BPS
+150 BPM = 2.5 BPS
+180 BPM = 3 BPS
+210 BPM = 3.5 BPS
+240 BPM = 4 BPS
+300 BPM = 5 BPS

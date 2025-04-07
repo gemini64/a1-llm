@@ -1,0 +1,2 @@
+A parent is the father or mother of a child.
+The parent of a parent is a grandparent, their parent is a great grandparent, and their parent is a great great grandparent, their parent is a great great great grandparent, and so on and so forth.

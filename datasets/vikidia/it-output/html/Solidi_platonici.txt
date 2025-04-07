@@ -1,0 +1,5 @@
+I solidi platonici sono tutti quei solidi formati da figure geometriche regolari (ad esempio: quadrato, triangolo equilatero, pentagono) e tutti questi solidi possono essere inscritti in una sfera (cioè ogni vertice tocca un punto della sfera.
+I solidi platonici sono solo 5: il tetraedro, l'esaedro (o cubo), l'ottaedro, il dodecaedro, l'icosaedro.
+
+
+puoi vedere una versione animata dei solidi platonici su wikipedia.

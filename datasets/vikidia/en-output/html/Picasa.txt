@@ -1,0 +1,27 @@
+Picasa is an image organizer and image viewer for organizing and editing digital images. It is also an integrated photo sharing website originally created in 2002 by a company called Lifescape. In July 2004, Google acquired the rights to Picasa from Lifescape and offered to make it free. "Picasa" is a combination of the Spanish painter Pablo Picasso, Mr. Casa (Spanish "My House") and "Pic" (Personalized Art) for Pictures.
+Version 3.8 is currently running. Its biggest advantage is the face recognition system which is unique. Currently it is very popular. Moreover, everyone likes to be able to easily edit photos.
+
+Version history
+
+Windows
+Linux
+Mac OS
+
+
+
+Features
+
+Organization and editing
+Keywords
+Search
+See
+Backup
+Appearance recognition
+Geotagging
+
+
+
+Other Picasa applications
+
+Picasa Web Albums
+Hello

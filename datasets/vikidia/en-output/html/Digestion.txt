@@ -1,0 +1,11 @@
+Diagram of the human digestive system.
+Digestion is the transformation of food to nutrients, in the alimentary canal.
+Food contains big molecules, such as sugars, fats and proteins, that are cut in smaller molecules by digestive juices. These smaller molecules can then be use by the body, and will pass through the blood to reach the organs that will use it.
+There are different kinds of digestive juices, depending on the part of the alimentary canal where they're acting ; each one contains a different mix of enzymes, that will digest different kinds of foods :
+
+in the mouth, the saliva, produced by the salivary glands, contains enzymes such as amylase, wich digests starch (contained in bread, pastas, potatoes, for example...) into sugars
+in the stomach, the gastric acid, produced by the stomach itself, contains enzymes suche as pepsine, wich digests the proteine (contained, for example, in meat, fish or eggs...) into amino acids. As its name indicate, the gastric acid is an higly acid digestive juice, wich helps in the digestion of proteines.
+in the gut, a mix of three kinds of digestive fluids is acting :
+the pancreatic juice, that is produced by the pancreas : it contains powerful enzymes, such as trypsin, that fulfill the digestion started in the stomach, and lipases, that digest fats.
+the intestinal juice : as its name indicates, it is produced by the intestine itself. Its role is mainly to activate the pancreatic juice enzymes, so they can only work in the intestine (otherwise, the pancreatic juice could digest our own body, wich would be very serious !)
+and the bile, produced by the liver : bile helps by mixing the fats to the water (water and fat usually don't mix, and digestive juices are mainly made of water, so that's a problem : bile fix it by making possible the fats to dissolve in the aqueous digestive juice : this is called an emulsion, so the pancreatic juice could act.

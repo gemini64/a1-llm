@@ -1,0 +1,153 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Red deer
+|-
+| colspan=2 style="text-align: center" |
+|-
+| colspan=2 style="text-align: center; font-size: 88%" | Male (stag)
+|-
+| colspan=2 style="text-align: center" |
+|-
+| colspan=2 style="text-align: center; font-size: 88%" | Female (hind)
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+! colspan = 2 | Conservation status
+|-
+| colspan = 2 |
+Least Concern  (IUCN 3.1)
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animalia
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Class:
+| Mammalia
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Artiodactyla
+|-
+| Suborder:
+| Ruminantia
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Family:
+| Cervidae
+|-
+| Subfamily:
+| Cervinae
+|-
+
+
+
+
+
+
+
+
+| Genus:
+| Cervus
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|-
+
+|-
+! colspan=2 style="text-align: center; background-color: pink"  | Binomial name
+|-
+| colspan=2 style="text-align: center" | Cervus elaphusLinnaeus, 1758
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+| colspan=2 style="text-align: center" |
+|-
+| colspan=2 style="text-align: center; font-size: 88%" | Range of Cervus elaphus
+|-
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+The red deer, Cervus elaphus, is one of the largest deer species. The red deer lives in most of Europe, the Caucasus Mountains region, Asia Minor and parts of western and central Asia, in Kashmir as the state animal. They can also be found in the Atlas Mountains region between Algeria and Tunisia in northwestern Africa. They are the only species of deer in Africa. Red deer have been introduced to other areas including Australia, New Zealand and Argentina. In many parts of the world the meat (venison) from red deer is widely used as a food source.

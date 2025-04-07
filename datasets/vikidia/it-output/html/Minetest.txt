@@ -1,0 +1,7 @@
+Minetest è un gioco simile a Minecraft in cui il giocatore può attraverso la fantasia costruire ciò che vuole senza limiti. All'inizio il giocatore entra in un server comune o privato dove c'è un mondo interamente costituito da blocchi quadrati dove oltre a costruire ciò che vuole può anche visitare pagine esterne o programmare dei Robot che possono svolgere molteplici funzioni.
+
+Dove si può giocare
+Dispositivi Windows, Android, MacOS e freeBSD.
+
+Età
+Dai 13 anni in su

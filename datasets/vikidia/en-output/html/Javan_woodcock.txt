@@ -1,0 +1,144 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Javan woodcock
+|-
+| colspan=2 style="text-align: center" |
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animalia
+|-
+
+
+
+
+
+
+
+
+| Phylum:
+| Chordata
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Class:
+| Aves
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Charadriiformes
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Family:
+| Scolopacidae
+|-
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Scolopax
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| S. saturata
+|-
+
+|-
+
+|-
+! colspan=2 style="text-align: center; background-color: pink"  | Binomial name
+|-
+| colspan=2 style="text-align: center" | Scolopax saturata(Horsfield, 1821)
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+The Javan woodcock (scientific name : Scolopax saturata), also known as Rufous woodcock, is a bird of the Scolopacidae family.
+
+Range and habitat
+The Javan woodcock occurs in Java and Sumatra. It lives in mountain forests.

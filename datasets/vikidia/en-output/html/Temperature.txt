@@ -1,0 +1,1 @@
+Temperature is a physical quantity. We can tell whether a thing is hot or cold in terms of temperature. If a thing is hot, we say its temperature is high and when a thing is cold, we say its temperature is low.

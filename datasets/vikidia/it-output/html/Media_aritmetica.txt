@@ -1,0 +1,18 @@
+La media è un valore che descrive in maniera sintetica un gruppo di numeri.
+
+Media
+La media è un valore che descrive in maniera sintetica un gruppo di numeri.
+
+Regola
+Per calcolare la media aritmetica bisogna calcolare la somma di un certo numero di termini e poi dividere il risultato per il numero di termini sommati precedentemente.
+
+La media aritmetica
+La media aritmetica è quella più usata comunemente ; viene usata per riassumere un'insieme di numeri in un solo numero.
+
+Vari tipi di media
+ovviamente non esiste solo la media aritmetica, ci sono anche altri tipi come la:
+
+Media ponderata
+Media geometrica
+Media di potenza (con le potenze)
+Media temporale (con le misure di tempo)

@@ -1,0 +1,17 @@
+Ruwiki is a Russian language online encyclopedia from Russia. It was started in July 2023 as a fork of the Russian Wikipedia. (*)  It was created by Vladimir Medeyko, who was previously involved with the Russian Wikipedia project. (*)   The full-scale launch of Ruwiki.ru took place on January 15, 2024. (*)  The project aims to provide an alternative to the Russian Wikipedia, with content that is more aligned with the Russian government’s perspectives. (*)  Despite this, Medeyko has stated that Ruwiki.ru operates independently of the government. (*)
+
+Others website
+
+(Wikipedia_fork)/ Ruwiki on Wikipedia
+
+
+References
+simple:Ruwiki.ru
+
+
+
+(*) https://www.india.com/technology/the-russian-version-of-wikipedia-ruviki-launching-soon-check-details-here-6656987/amp/
+(*) https://russiapost.info/society/alt_wikipedia
+(*) https://russiapost.info/society/alt_wikipedia
+(*) https://chytomo.com/en/russia-launches-its-own-analog-of-wikipedia-for-censorship/
+(*) https://novayagazeta.eu/articles/2024/04/11/party-line-editing-en

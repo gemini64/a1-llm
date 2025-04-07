@@ -1,0 +1,77 @@
+An ISBN-13 barcode represented as EAN-13 barcode (ISBN 978-3-16-148410-0)
+The International Standard Book Number, ISBN, is a unique (*)  commercial book identifier barcode. The ISBN system was created in the United Kingdom, in 1966, by the booksellers and stationers W.H. Smith.
+Originally, it was the 9-digit Standard Book Numbering (SBN) code and still was used in 1974; it was adopted as the international standard ISO 2108 in 1970. A similar, numeric identification, the International Standard Serial Number (ISSN), identifies periodical publications such as magazines. Since January 1, 2007, ISBNs are of 13 digits, like in Bookland EAN-13. (*)  The TC 46/SC 9 is responsible for the standard.
+
+Overview
+An ISBN is given to each edition and variation (except reprintings) of a book. The ISBN is 13 digits long if assigned after January 1, 2007, and 10 digits long if assigned before 2007. An International Standard Book Number consists of 4 or 5 parts:
+
+for a 13 digit ISBN, a GS1 prefix: 978 or 979
+the group identifier code, (group of countries sharing a language)
+the publisher code,
+the item number, and
+a checksum character or check digit.
+
+
+The ISBN parts may be of different lengths, and usually are separated with hyphens or spaces. (*)
+The group identifier code (GIC) number is 0 or 1 for English-speaking countries; 2 for French-speaking countries; 3 for German-speaking countries; 4 for Japanese; 5 for Russian, et cetera. The original standard book number (SBN) had no group identifier, but affixing a zero (0) as prefix to a 9-digit SBN creates a valid 10-digit ISBN. The group identifier may be up to 5 digits long; e.g. 99936 is a group identifier for the country Bhutan. (*)
+The national ISBN agency assigns the publisher number; the publisher selects the item number. Generally, a book publisher is not required to assign an ISBN, nor for a book to display its number (except in China; see below), however, most book stores only handle ISBN bearing merchandise.
+A listing of all the 628,000 assigned publisher codes is published, and can be ordered in book form, (*)  but, as of 2007, it costs US$300. The web site of the international ISBN agency does not offer any free method of looking up publisher codes.
+
+Related pages
+
+
+Amazon Standard Identification Number (ASIN)
+CODEN (serial publication identifier currently used by libraries; replaced by the ISSN for new works)
+Digital Object Identifier (DOI)
+European Article Number (EAN)
+International Standard Audiovisual Number (ISAN)
+International Standard Music Number (ISMN)
+International Standard Recording Code (ISRC)
+International Standard Serial Number (ISSN)
+International Standard Musical Work Code (ISWC)
+Library of Congress Control Number
+PMID (PubMed ID)
+Serial Item and Contribution Identifier (SICI)
+
+
+
+Footnotes
+
+
+
+Other websites
+
+
+ISO 2108:2005 at www.iso.org
+Brief Summary of ISBN
+How to find a book from Wikibooks
+ISBN to [[European Article Number|EAN] EAS EBS CONELRAD transition at isbn.org]
+Description of the ISBN to EAN upgrade process at bookweb.org
+
+
+
+National and international agencies
+International ISBN Agency—coordinates and supervises the worldwide use of the ISBN system.
+ISBN agency for UK and Republic of Ireland—Nielsen BookData
+ISBN agency for US and Puerto Rico— R.R. Bowker LLC
+
+
+
+Online tools
+Special:Booksources, ISBN search page.
+The ISBN tools website has open-source Java classes to implement 10- and 13-digit ISBNs.
+ISBNdb.com—find books by ISBN, author, title, subject, et cetera; auto-corrects ISBN checksums if needed.
+ISBN.nu—offers free searching of a titles database.
+ISBN-13 For Dummies
+Implementation guidelines (pdf document) for the 13 digit ISBN code.
+
+
+
+fr:ISBN
+simple:International Standard Book Number
+wp:International Standard Book Number
+(*) Occasionally publishers will use an ISBN for more than one title (e.g. the first edition of "The Ultimate Alphabet" and "The Ultimate Alphabet Workbook" have the same ISBN, 0-8050-0076-3). On the other hand, books can be published with more than one ISBN: A German-as-a-second-language edition of Emil und die Detektive has the ISBNs 87-23-90157-8 (Denmark), 0-8219-1069-8 (United States), 91-21-15628-X (Sweden), 0-85048-548-7 (England) and 3-12-675495-3 (Germany).
+(*) See Frequently Asked Questions about the new ISBN standard from ISO
+(*) the international ISBN agency's "ISBN User's Manual" says: "The ten-digit number is divided into four parts of variable length, which must be separated clearly, by hyphens or spaces" although permitting their omission for internal data processing, as the prefix code ensures that no two codes begin the same way. If present, hyphens must be correctly placed; See hyphenation instructions at the isbn.org web site.
+(*) See a complete list of group identifiers.
+(*) See Publisher's International ISBN Directory

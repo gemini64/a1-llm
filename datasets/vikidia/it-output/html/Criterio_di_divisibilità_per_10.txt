@@ -1,0 +1,6 @@
+Come funziona il criterio di divisibilità per 10?
+Un numero è divisibile per 10 solo se finisce un uno zero.
+
+Esempi
+Ad esempio: 1240 è divisibile per 10 perchè termina per 0.
+Ad esempio: 1234 non è divisibile per 10 perchè non termina per 0.

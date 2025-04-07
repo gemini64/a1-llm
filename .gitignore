@@ -9,6 +9,10 @@ tint.tar.gz
 reference/
 datasets/merlin/data
 datasets/wiki/*.json
+!datasets/vikidia/*.csv
+!datasets/vikidia/*.tsv
+!datasets/vikidia/**/*.csv
+!datasets/vikidia/**/*.tsv
 
 # --- macOS ---
 # General

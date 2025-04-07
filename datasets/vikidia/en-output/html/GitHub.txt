@@ -1,0 +1,3 @@
+GitHub Logo
+GitHub, Inc. is a web-based hosting service that utilizes the Git version control system for software development. It provides many features, including access control, bug tracking, task management, software feature requests, and continuous integration. It also offers distributed version control of the wiki for each project. The company, headquartered in California, has been a subsidiary of Microsoft since 2018.
+GitHub is most commonly used to host open-source software development projects. As of January 2023, GitHub reported having over 100 million developers and over 372 million repositories, with the last 28 million being public ones. It is currently the most prominent source code host as of November 2021.

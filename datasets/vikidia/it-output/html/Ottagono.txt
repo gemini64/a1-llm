@@ -1,0 +1,19 @@
+Ottagono
+L''ottagono è una figura geometrica regolare che possiede otto angoli uguali di centotrentacinque gradi ciascuno.
+
+Angoli
+L'angolo è il punto d'incontro tra due lati.
+Gli angoli del ottagono sono d'uguale ampiezza e misurano centotrentacinque gradi.
+Infatti la somma degli angoli interni dell'ottagono è
+S=(8-2) \cdot 180^\circ = 6 \cdot 180^\circ = 1080 \circ
+Ed un angolo dell'ottagono misura
+S= \frac{6 \cdot 180^\circ}{8} = \frac{1080^\circ }{8} = 135^\circ
+
+Diagonali
+Le diagonali sono dei segmenti che dividono delle figure.
+Le diagonali dell'ottagono partono da dei vertici opposti,si tagliano a metà e passano per il centro della figura.
+L'ottagono possiede 20 diagonali.
+
+Etimologia
+(L'etimologia è l'origine delle parole)
+L'origine della parola Ottagono deriva dal greco antico che significa figura geometrica con otto angoli.

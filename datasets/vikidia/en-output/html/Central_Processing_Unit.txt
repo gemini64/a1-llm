@@ -1,0 +1,2 @@
+The Central Processing Unit or CPU is the core of all desktop computers, laptops and servers.  It is where all the commands are sent to and issued from to control all the other parts and components of the computer. It is sometimes referred to as the "Brain" of the computer.
+This part is very important. Without this the computer won't work.

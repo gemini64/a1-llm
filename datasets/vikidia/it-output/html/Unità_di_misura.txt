@@ -1,0 +1,49 @@
+Le unità di misura sono uno standard per la misurazione di quantità fisiche.
+In fisica, un'unità di misura è una quantità di una grandezza fisica
+
+Sistemi di misura
+Esistono diversi sistemi in uso nelle diversi parti del pianeta.  Il sistema di misura più diffuso è il Sistema internazionale di unità di misura, solitamente indicato come SI, che è fondato su sette unità base (fondamentali), e in cui tutte le altre unità derivano da queste.
+Esistono altri sistemi, utilizzati per vari scopi, tra i quali:
+
+le unità di misura CGS (centimetro-grammo-secondo)
+le unità di misura MKS (metro-kilogrammo-secondo)
+le unità di misura di Planck
+il sistema consuetudinario USA
+il sistema imperiale britannico
+altri sistemi locali attuali e obsoleti:
+le unità di misura cinesi
+le unità di misura giapponesi
+le unità di misura norvegesi
+le unità di misura turche tradizionali
+
+
+In Italia sono ancora di uso quotidiano alcune antiche unità di misura italiane , diverse a livello locale in funzione dell'evoluzione storica di ciascun territorio.
+
+Spiegazione
+
+
+Unità di misura In fisica, grandezza assunta come campione e termine di confronto per la misurazione di tutte le grandezze della stessa. Si tratta di unità di misura valide in tutti i Paesi e utilizzate da tutti gli scienziati. Per ogni unità di misura è stato definito un nome, un simbolo e un valore.
+
+
+
+Esempi di unità di misura
+
+m=metro    (lunghezza)
+g=grammi   (peso)
+l=litri    (quantità di un liquido)
+m³= metro cubo    (volume)
+s=secondi    (tempo)
+
+
+
+Unità di misura fondamentali
+
+per la lunghezza è il metro (m)
+per la massa è il chilogrammo (kg)
+per il tempo è il secondo (s)
+
+
+
+Unità di misura di grandezze derivate
+
+per la capacità (volume) l'unità di misura è il litro

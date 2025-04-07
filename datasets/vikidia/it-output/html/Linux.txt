@@ -1,0 +1,13 @@
+thumb|Tux, la mascotte di Linux
+In informatica Linux, è un Sistema operativo libero, spesso anche gratuito, che utilizza il kernel Linux insieme ad altri programmi per dare varie funzioni all'utente spesso, ma non sempre, della suite GNU.
+
+Distribuzioni
+Esistono diverse varianti di Linux, chiamate «distribuzioni», tra cui le più conosciute sono:
+
+Debian, Ubuntu e Linux Mint; (chiamate Debian-Based)
+Red Hat, Fedora, Mandriva, PCLinuxOS e Mageia;
+Suse e OpenSUSE.
+
+
+Esistono anche delle distribuzioni specificamente pensate per i bambini, come Doudoulinux, o Qimo for kids, che hanno numerosi giochi e programmi educativi.
+DoudouLinux, in particolare, utilizza Vikidia come enciclopedia online.

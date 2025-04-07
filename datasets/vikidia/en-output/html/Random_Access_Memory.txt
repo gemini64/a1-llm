@@ -1,0 +1,1 @@
+The random access memory or RAM is a type of memory in a computer. This memory allows the processor quick access and storing of information being currently used by the system (for example, files being read or programs in execution). This memory is faster than the hard disk, but slower than the processor registers.

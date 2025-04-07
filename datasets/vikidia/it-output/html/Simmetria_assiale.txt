@@ -1,0 +1,18 @@
+Se ci guardiamo in uno specchio la nostra immagine viene riprodotta dall'altra parte dello specchio, alla stessa distanza.
+
+
+
+La simmetria assiale nel piano riflette una figura al di là di una retta alla stessa distanza.
+
+
+
+
+Definizione
+
+Due punti sono simmetrici rispetto ad una retta quando la retta è asse del segmento che unisce i due punti.
+
+Costruire simmetrie assiali
+
+Dato un punto di simmetria r e un punto P, per costruire il simmetrico rispetto all' asse si procede così:
+1) si traccia la retta perpendicolare all' asse condotta per il punto;
+2) nel semipiano opposto a quello dove sta P, si sceglie il punto P'  la cui distanza da r sia uguale alla distanza di P da r.

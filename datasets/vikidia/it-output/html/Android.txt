@@ -1,0 +1,3 @@
+Android è un sistema operativo per i dispositivi mobili (smartphone e tablet) sviluppato e mantenuto da Google.
+Si basa sul kernel Linux.
+È attualmente giunto alla sua versione 8.0, chiamata Oreo. Ogni versione, infatti, ha il nome di un dolce e vanno in ordine alfabetico. Per esempio la versione 7.0 aveva il nome "Nougat" che significa "torrone" mentre la 6.0 aveva il nome "Marshmellow".

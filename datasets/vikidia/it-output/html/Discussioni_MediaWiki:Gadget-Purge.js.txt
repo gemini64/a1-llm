@@ -1,0 +1,18 @@
+Il gadget non funziona, blocca VE, se si scrive nella barra di ricerca non compaiono i risultati, scompare la toolbar quando si modifica in wikitesto e blocca HotCat. Insomma fa un disastro, o lo si corregge o lo si cancella.--ANGELO (日本) 17:19, 19 gen 2021 (CET)
+
+Ajeje Brazorf :This is because the gadget doesn't wait for mw.util to be loaded. Here's the correct code :
+
+
+
+mw.loader.using(['mediawiki.util'], function() {
+// Aggiunge il tab "purge"
+if(!document.getElementById('ca-history'))
+return;
+var newLink = mw.config.get('wgServer') + mw.config.get('wgScript') + '?title=' + mw.config.get('wgPageName') + '&action=purge';
+mw.util.addPortletLink('p-cactions', newLink, 'Pulisci', 'ca-purge', 'Pulisci la cache', 'g');
+});
+
+Rififi (discussioni) 18:21, 24 apr 2021 (CEST)
+
+Ajejej Brazorf : GG, but you need to cite the source in a comment I hink :-) Rififi (discussioni) 12:51, 27 apr 2021 (CEST)
+Rififi : ✓ Done!--ANGELO (アンジェロ) 17:23, 27 apr 2021 (CEST)

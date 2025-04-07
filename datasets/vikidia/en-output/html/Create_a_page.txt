@@ -1,0 +1,8 @@
+Want to create a new page here in Vikidia? Let's create...
+
+
+<inputbox>
+type=create
+width=30
+break=no
+</inputbox>

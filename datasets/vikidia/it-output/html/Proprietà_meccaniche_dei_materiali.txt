@@ -1,0 +1,12 @@
+Test delle proprietà meccaniche
+
+Le proprietà meccaniche sono in grado di determinare la capacità dei materiali di resistere a forze come pressioni, urti, trazioni e altro ancora.
+Alcune proprietà meccaniche dei materiali sono:
+
+resistenza alla fatica
+tenacità o resistenza all'urto
+durezza
+
+
+
+Esempi

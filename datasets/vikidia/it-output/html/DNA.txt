@@ -1,0 +1,16 @@
+Il DNA (acido desossiribonucleico) detto anche materiale genetico è una molecola che si trova all’interno di ogni cellula e contiene tutte le informazioni dell’organismo.
+Negli organismi procarioti (privi di nucleo) il DNA si trova “sparso” nel citoplasma generalmente addensato al centro della cellula in una zona che prende il nome di nucleoide, negli organismi eucarioti invece il DNA si trova all’interno del nucleo (organulo cellulare) separato dal citoplasma dalla membrana nucleare.
+
+Struttura
+La struttura del DNA fu scoperta nel 1953 dagli scienziati James Watson e Francis Crick, i quali grazie a questa scoperta nel 1962 vinsero il premio Nobel per la Medicina.
+Il DNA è distribuito nei cromosomi e ciascun cromosoma è formato da una molecola di DNA che ha l’aspetto di un doppio filamento “arrotolato” su stesso e per questo viene detto filamento a doppia elica. Esso è formato da quattro tipi di molecole semplici dette i nucleotidi, ogni nucleotide è formato da tre parti: un gruppo fosfato, una molecola di zucchero (il desossiribosio) ed una base azotata tra Adenina (A), Guanina (G), Citosina (C) o Timina (T). Pertanto i nucleotidi differiscono solo per la base azotata.
+Sono i nucleotidi che si dispongono in due filamenti avvolti a spirale a formare proprio la doppia elica. Questa particolare struttura fa sì che la molecola di DNA venga paragonata a una scala a pioli, dove i pioli sono rappresentati dalle basi azotate mentre le molecole di zucchero e i gruppi fosfati formano i montanti.
+Le basi azotate si uniscono in modo specifico infatti l’Adenina si lega solo alla Timina e la Guanina solo alla Citosina.
+
+Duplicazione
+La molecola del DNA è in grado di riprodursi duplicandosi. Quando la cellula sta per riprodursi, la doppia catena di DNA si svolge e i legami tra le basi si spezzano dando origine a due catene separate. Su ognuna delle due catene vanno a legarsi i nucleotidi complementari: adenina con timina e citosina con guanina.
+Alla fine su ogni catena vecchia si è formata una catena nuova, uguale a quella originaria. Da una molecola di DNA se ne sono formate due identiche fra loro. Questo processo si dice semiconservativo perché ogni filamento parentale funziona da "stampo" per un nuovo filamento, cosicché le due molecole DNA neoformate contengono un filamento vecchio e uno nuovo.
+
+I geni
+Un gene è un tratto del DNA che codifica per un carattere.
+I geni controllano la crescita, la riparazione e le funzioni che ogni cellula svolge all'interno del corpo umano. Sono sezioni di DNA, una lunga molecola chimica di forma elicoidale che si trova nel nucleo di ciascuna cellula sotto forma di strutture denominate cromosomi. I geni sono suddivisi in 22 coppie di cromosomi appaiati, più 2 cromosomi sessuali, e rappresentano la modalità di trasmissione delle caratteristiche dai genitori ai figli. Il gene è situato in un'area specifica del cromosoma.

@@ -1,0 +1,54 @@
+Il baricentro è un punto in cui possiamo immaginare di applicare la forza peso. Un corpo è costituito da atomi e molecole ognuna delle quali ha un peso. Tutte queste forze "puntano" verso il centro della Terra. Il baricentro in un corpo è sempre lo stesso, comunque esso sia orientato. Il peso del corpo si può considerare raccolto in un punto detto centro di gravità o baricentro
+In un corpo il suo peso è concentrato nel baricentro.
+
+Nell'arte
+Gli antichi greci in alcune delle loro opere (in movimento) per farle stare in equilibrio dovevano conoscere il punto dove si concentrava tutto il peso.
+
+
+Equilibrio stabile, instabile e indifferente
+
+un corpo  è in equilibrio stabile se il baricentro e il punto di sospensione si trovano sulla stessa verticale e il punto di sospensione è posto sopra il baricentro;
+se il punto di sospensione è posto al di sotto del baricentro del corpo ed entrambi si trovano sulla stessa verticale, il corpo si trova in equilibrio instabile
+se il punto di sospensione coincide con il baricentro, il corpo rimane fermo, qualunque sia la posizione, si dice che esso è in equilibrio indifferente
+
+
+Esempio
+
+Una bottiglia è in equilibrio stabile se essa viene appoggiata sulla base;
+Una bottiglia è in equilibrio instabile se essa viene appoggiata sull'imboccatura;
+Una bottiglia è in equilibrio indifferente se essa viene appoggiata sul fianco.
+
+
+
+Nelle figure geometriche
+Nelle figure geometriche il braicentro corrisponde all'intersezione (punto d'incontro) delle altezze, ovvero il centro di simmetria.In questo caso il baricentro corrisponde al punto rosso.
+
+<quiz>
+{ Il baricentro di un corpo non dipende dall'orientamento del corpo stesso
+|type="()"}
++ vero
+- falso
+{ Un corpo è in equilibrio se una forza agisce su di esso nel suo baricentro
+|type="()"}
+- vero
++ falso
+{ un corpo in equilibrioindifferente rimane semprein equilibrio comunque si sposti
+|type="()"}
++ vero
+- falso
+{ Un tavolo è i equilibrio...
+|type="()"}
++ stabile
+- instabile
+- indifferente
+{ Una ruota è in equilibrio...
+|type="()"}
+- stabile
+- instabile
++ indifferente
+{ Un'uovo in verticale è in equilibrio...
+|type="()"}
+- stabile
++ instabile
+- indifferente
+</quiz>

@@ -1,0 +1,80 @@
+Cortana on Windows 11
+
+Cortana was a virtual assistant developed by Microsoft. Microsoft made Cortana and released it on April 2, 2014 at the Moscone Center in San Francisco. Cortana can do many things, like showing the weather and news. Cortana was released three years after Apple's Siri, which was released in 2011 on iOS. (*)
+
+Development history
+Microsoft showed Cortana on April 2 and April 4, 2014 at the Microsoft Build in San Francisco. Bill Gates, Steve Ballmer, and Joe Belfiore made the announcement. They said Cortana was virtual helper for the Windows Phone, starting with a video launch on April 6, 2014.
+On July 15, 2015, Microsoft launched Cortana on Windows (Update version -1507), which was available to consumers on July 29, 2015. Cortana was released for Microsoft Band and Windows Mixed Reality on August 2, 2015 and for Android, IOS, iPhone and iPad in December 2015.
+
+Discontinued
+On June 2, 2023, Microsoft announced they will be no longer support Cortana standalone app on Windows 10 and Windows 11 and will be ended on late 2023. After Cortana ended support, Microsoft will announced Cortana will be replaced by Microsoft Copilot and Bing Chat AI on Windows 11. (*)  Microsoft discontinued Cortana standalone app for Windows 10 and Windows 11 on August 2023. Supported of Cortana in Microsoft Outlook and Microsoft 365 Mobile app was discontinued in Fall 2023. After discontinued, “Play My Emails” for Outlook mobile app will continue to supported. Finally after 1 years discontinued of standalone app, in June 2024, ''Play My Emails'' for Outlook mobile app was discontinued by worldwide, and now Cortana has not available in all worldwide.
+
+Platform
+
+Android
+The Cortana that works on Android was released on December 2015 and launched for Android in Microsoft 2016 Build. On Android, Cortana does not respond to the user saying, "Hey Cortana". On Android, Cortana can do everything from searching on the internet to adding 'to do' list. Microsoft stopped Cortana and removed from Android on March 31, 2021, along with iOS.
+
+Windows Phone
+Cortana on Windows Phone 8.1 with a yellow colorCortana on Windows Phone 8.1 was released on April 16, 2014 and Windows 10 Mobile in 2016, development by Joe Belfiore, Bill Gates and Steve Ballmer. Cortana says ''Ask me anything'' from the voice command, Cortana on new features in white yellow, black cyan, lemon and green lemon.
+
+iOS
+Cortana on iOS was released on December 2015. Like on Android, Cortana does not respond to "Hey Cortana". Cortana app can open from the say in notebook, To Do list and more, or in Windows 10, Cortana on iOS can talk by search of Google and Bing in Web. Microsoft discontinued Cortana from iOS on March 31, 2021, along with Android. Microsoft stopped Cortana for iOS because there’s two virtual assistant and replaced by Siri originally.
+
+Microsoft Windows
+Cortana is supported on Windows 10 and Windows 11. Cortana can respond to ''Hey Cortana'' and can search the web using Microsoft Bing, Microsoft's search engine. In Windows 10 version 2004 until 22H2, Cortana was update with white wallpaper with news Cortana cyan blue, didn’t like Cortana in black wallpaper, they use Chat to Cortana and not respond to ''Hey Cortana''. In August 11, 2023, Microsoft announced that Cortana was discontinued by standalone app for all Windows 10 and Windows 11.
+
+Microsoft Band
+Cortana on Microsoft Band watch was released on January 2016, talk by watch into Windows Phone 8.1 and Windows 10 Mobile, Cortana can talk from watch in Windows Phone 8.1. Cortana can be used talking from To Do list, in Microsoft website.
+
+Amazon Alexa
+Amazon Alexa menu, in place of Cortana virtual assistantAmazon Alexa can be used for voice Cortana, voice by Jen Taylor, in Windows 10, Cortana can be talking from Amazon Alexa in plug USB. In Windows Phone 8.1, Cortana can plug from Amazon Alexa in blue Cortana colored, Cortana can talk anybody something on Microsoft website and Amazon Alexa.
+
+Region and language
+Cortana can be used in 7 places in the world: The United States, the United Kingdom, China, France, Italy, Germany and Spain. (*)
+
+
+Privacy
+Cortana using for IOS and Android in 6 years ago after in early 2021 can be closing, Cortana is the virtual assistant from the Microsoft Corporation, in Microsoft Build 2016, Cortana can be used for Android and IOS in privacy deletion from Microsoft.
+
+Cortana information
+Cortana is the virtual assistant using for Bing search in Microsoft, Cortana place on Xbox 360, is Halo 4 on 2012, people can use for Cortana saying from the Microsoft Build 2016. Cortana in Halo can use for virtual assistant about the Siri assistant, in Cortana menu, Cortana on Halo can be using in information privacy policy on 2015, in January 2016, Cortana using for iPad and iPhone in Microsoft Build 2016 on nine day later.
+
+Notebook
+Notebook for Cortana can launch after released, Notebook can use for Cortana writing in To Do List on Windows 10, Windows Phone 8.1 and more. in Windows Mixed Reality, Cortana can using from the privacy can starting on 2016. Notebook using from enterprise, businessman and later. Notebook can using for freeded on February 2016.
+
+Business Group
+Business Group was released on October 14, 2016, at the Moscone Center, in privacy of Cortana, in Halo, Cortana can using from Business Group on enterprise, consumer and businessman, developed for Microsoft Corporation, Cortana can using for blue Business Group use from development in Microsoft.
+
+Privacy policy
+Privacy policy on Cortana can starting until October 2020, after released Windows 10 October 2020 Update, Cortana using for news features in white blue cyan, not unlike Cortana black, in Windows 10 May 2020 Update, on June 2020, Cortana from Microsoft can starting privacy in until years 2020.
+
+Gallery
+<gallery>
+File:Halo Suite, Cortana in the background (2796560890).jpg|Halo 1 can suite from the Los Angeles Theater on October 2015
+File:Cortana na świecie.png|alt=Cortana Available Map|A map showing regions where Cortana is available.
+File:132121kl.png|alt=Cortana's main page|Cortana's main page
+</gallery>
+
+Related pages
+
+Siri
+Windows Phone 8.1
+
+
+References
+
+
+https://www.laptopmag.com/articles/change-cortanas-voice-windows-10
+https://www.cnn.com/2011/10/04/tech/mobile/siri-iphone-4s-skynet/index.html
+https://techcrunch.com/2014/12/05/microsoft-rolls-out-cortana-in-4-new-countries/
+https://bits.blogs.nytimes.com/2014/04/02/meet-microsofts-cortana-a-more-personal-siri/?searchResultPosition=2
+
+
+Other websites
+
+https://microsoft.com/meetcortana
+https://www.youtube.com/watch?v=DxrJWSi_IWo
+
+(*) CNN, Doug Gross (2011-10-04). "Apple introduces Siri, Web freaks out" (in en). https://www.cnn.com/2011/10/04/tech/mobile/siri-iphone-4s-skynet/index.html. Retrieved 2021-05-29.
+(*) "End of support for Cortana in Windows - Microsoft Support". https://support.microsoft.com/en-us/topic/end-of-support-for-cortana-in-windows-d025b39f-ee5b-4836-a954-0ab646ee1efa. Retrieved 2023-06-03.
+(*) July 2015, Avram Piltch-Online Editorial Director 21. "How to Change Cortana's Voice and Language in Windows 10" (in en). https://www.laptopmag.com/articles/change-cortanas-voice-windows-10. Retrieved 2021-05-29.

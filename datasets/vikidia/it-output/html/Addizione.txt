@@ -1,0 +1,57 @@
+L'addizione è una delle quattro operazioni aritmetiche elementari. Attraverso l'addizione si trova la somma di due o più numeri (*) .
+
+Terminologia
+
+
+5+3=8
+5 e 3 sono gli addendi
++ è il segno di operazione
+= è il segno di uguaglianza
+8 è la somma o il totale (usato nel commercio)
+
+
+
+Le sue proprietà
+
+L'addizione ha due proprietà: commutativa e associativa.
+
+Proprietà commutativa
+
+Se cambi l'ordine degli addendi il risultato non cambia.
+Esempio:
+
+5+3=8
+3+5=8
+
+
+
+Proprietà associativa
+
+Se a due o più addendi sostituisci la loro somma il risultato non cambia. In questo modo cambiando l'ordine in cui esegui le addizioni il risultato non cambia.
+esempio:
+
+5+3+4=12
+(5+3)+4=12
+8+4=12
+
+
+Nello stesso modo se a un addendo sostituisci uno o più addendi, la cui somma è l'adddendo sostituito, il risultato non cambia.
+esempio:
+
+5+3+4=12
+5+3+2+2=12
+
+
+
+Addizioni particolari
+
+L'addizione ha un elemento neutro, lo zero, che sommato a ad altri adddendi ne lascia invariato il risultato.
+
+5+0=5
+
+Se addiziono un qualsiasi numero a 0 il risultato non cambia. Lo 0 è l'elemento neutro nella addizione.
+
+Addizione di frazione
+Per sommare frazioni che hanno denominatori uguali, bisogna tenere uguale il denominatore e sommare i numeratori. Per sommare frazioni che hanno denominatori diversi, bisogna prima portare le frazioni allo stesso denominatore, trovando il m.c.m. dei denominatori. Una volta trovato il denominatore comune bisogna dividere quest'ultimo per il denominatore di ogni frazione e il risultato moltiplicarlo per il suo numeratore, trasformandole in frazioni equivalenti.
+In fine bisogna sommare tutti i numeratori che ora hanno lo stesso denominatore, esempio: \frac{3}{4} + \frac{4}{5} =\frac{15}{20} + \frac{16}{20} = \frac{15 + 16}{20}=\frac{31}{20}
+visto che il minimo comune multiplo di 4 e 5 è 20.

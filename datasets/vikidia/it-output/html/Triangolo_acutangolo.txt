@@ -1,0 +1,20 @@
+Il triangolo acutangolo è una delle tante tipologie di triangoli in particolare è caratterizzato dall'avere tutti e tre gli angoli acuti, da qui infatti il nome acutangolo. Un esempio di triangolo acutangolo è il triangolo equilatero poiché ha tutti gli angoli di 60°. Quindi un triangolo può essere classificato non solo in base ai suoi lati ma anche in base agli angoli.
+
+Triangoli classificati secondo gli angoli
+
+se il triangolo ha un angolo retto, abbiamo un triangolo rettangolo. Quindi abbiamo 2 angoli acuti e un angolo di 90°
+se il triangolo ha un angolo ottuso, ovvero maggiore di 90°, abbiamo un triangolo ottusangolo. Quindi abbiamo due angoli minori di 90° e uno maggiore di 90°.
+
+
+
+Triangoli classificati secondo i lati
+
+Triangolo scaleno
+Triangolo equilatero
+Triangolo isoscele
+
+
+
+Definizione
+Pensare che un triangolo acutangolo si può chiamare acutangolo se ha almeno un angolo acuto è sbagliato.
+La definizione corretta è: «Un triangolo si può chiamare acutangolo se ha tutti e tre gli angoli acuti»

@@ -1,0 +1,4 @@
+Google Knowledge Graph is search result card on Google Search based on Knowledge. (*)
+
+References
+(*) https://support.google.com/knowledgepanel/answer/9163198?hl=en

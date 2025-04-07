@@ -1,0 +1,33 @@
+Struttura di una cellulla batterica
+I batteri, oppure eubatteri (Bacteria), sono esseri viventi piccolissimi, microrganismi, le loro dimensioni sono nell'ordine dei millesimi di millimetro, per vederli occore il microscopio.
+Sono unicellulari formati da una sola procarioti.
+
+Storia
+Furono i primi organismi ad apparire sulla Terra. Le loro dimensioni si aggirano a una decina di micrometri. Possono vivere in colonie o isolati.
+
+Caratteristiche
+In base alla forma si possono dividere in:
+
+bacilli, batteri a forma di bastoncino;
+cocchi, batteri sferici che possono essere singoli o aggruppati;
+spirilli, batteri a forma di spirale rigidi;
+spirochete, batteri a spirale con una struttura meno rigida rispetto a quella degli spirilli
+vibrioni
+
+
+
+Biologia
+In base ai rapporti con gli altri organismi, si dividono in:
+
+i philum sono due batteri che riescono a comunicare scambindosi del DNA
+batteri simbionti, batteri che vivono in simbionti, cioè in simbiosi con altri organismi;
+batteri patogeni, batteri che causano malattie, e al loro volta si raggruppano in:
+patogeni facoltativi, batteri che non necessariamente causano malattie;
+patogeni obbligati, batteri che causano sempre malattie.
+
+Però solo una piccola parte dei batteri può causare malattie nell'uomo, la maggior parte invece è utile negli ecosistemi ( Batteri azotofissatori ecc.) e anche per il funzionamento del nostro organismo ( un esempio è dato dalla flora batterica intestinale).
+
+Riproduzione
+I batteri si riproducono tramite la scissione binaria, una riproduzione agamica. Avviene nel seguente modo: il cromosoma della cellula madre si duplica, ciascuna delle copie così prodotte si sposta verso un'estremità della cellula, allungando la cellula, e infine dopo la duplicazione del DNA la membrana si ripiega verso l'interno producendo due cellule figlie identiche alla cellula madre. In condizioni favorevoli i batteri si possono riprodurre ogni 20-40 minuti.
+i batteri sono sensibili a ciò che li circonda e quindi deve cambiare stato
+i batteri possono anche andare in "letargo" e diventano diventano spore

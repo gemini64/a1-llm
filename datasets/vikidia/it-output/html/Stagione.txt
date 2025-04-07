@@ -1,0 +1,12 @@
+La stagione è un periodo nel quale è suddiviso un anno solare. Tali periodi sono 4: primavera, estate, autunno e inverno. Ciascuna stagione dura 3 mesi.
+
+Descrizione
+Le stagioni sono causate dalla diversa esposizione alla luce e al calore del Sole durante l'anno, dovuta all'inclinazione della Terra sul proprio asse di rotazione, che muta l'angolo di incidenza dei raggi solari che raggiungono la superficie del pianeta, con conseguenze sulla temperatura dell'ambiente e sulla durata del giorno.
+
+
+wp:Stagione
+simple:Season
+fr:Saison
+es:Estaciones del año
+nl:Seizoen
+le stagioni sono : inverno,estate, primavera e autunno

@@ -1,0 +1,28 @@
+Il chilometro è un multiplo del metro. Per fare un chilometro servono 1000 metri. Quindi:
+1000 \ m = 1 \ km
+Di conseguenza
+1 \  m = 0,001 \  km
+
+Conversioni
+
+1 Km equivale a:
+-10 ettometri
+-100 decametri
+-1000 metri
+-10000 decimetri
+-100000 centimetri
+-1000000 millimetri
+-0,6213712 miglia
+-3 280,840 piedi
+-39 370,08 pollici
+-1 093,613 iarde
+
+Esempi di utilizzo del chilometro
+
+Il chilometro si può utilizzare ad esempio per: misurare la lunghezza delle strade, la profondità del mare, la lunghezza di una  meridiana o di un parallelo ecc...
+
+
+
+Simbolo
+Il simbolo del chilometro é km la lettera k é minuscola come la m.
+Deriva dai termini greci = χίλ

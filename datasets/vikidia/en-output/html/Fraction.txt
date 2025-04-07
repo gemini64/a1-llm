@@ -1,0 +1,45 @@
+A fraction is a number that has 2 numbers with a line between. Fractions show division which is why proper fractions are less than a whole. Fractions have decimal form and some fraction in decimal form are repeating. A 1/11 bar
+
+A list of fractions
+This list is fractions to decimal form. Rounded to the ten thousandths place, except for very long decimals that actually end. This fraction list goes to 1/20, you are welcome to add more (*) .
+Note : The overline symbol means repeating.
+
+1/1=1
+1/2=0.5
+1/3=0.\overline{33}
+1/4=0.25
+1/5=0.2
+1/6=0.1\overline{66}
+1/7=0.\overline{142857}
+1/8=0.125
+1/9=0.\overline{11}
+1/10=0.1
+1/11=0.\overline{0909}
+1/12=0.08\overline{33}
+1/13=0.076923076923077
+1/14=0.0\overline{714285}
+1/15=0.0\overline{666}
+1/16=0.0625
+1/17=0.0588235294117647
+1/18=0.0\overline{55}
+1/19=0.052631578947368421
+1/20=0.05
+
+
+
+Types of fractions
+
+Proper fraction: A fraction less than 1. 3/4
+Improper fraction: A fraction greater than 1, 16/3 = 5 1/3 Note that improper fractions needs to turn into a mixed number.
+Mixed number: Fraction that has a whole attached to it, 3 2/7.
+Improper mixed number: Improper fraction attached to a whole, 6 7/2 = 9 1/2.
+Fraction equal to a whole: This happens if the numerator is a multiple of the denominator, 50/10 = 5.
+Simplified fraction: A fraction in its simplist form, 3/8. Note that all unit fractions are in its simplist form.
+Unsimplified fraction: A fraction that can be simplified, 6/9 = 2/3. To simplify the fraction, find the greatest common factor (GCF) and divide it by the greatest common factor.
+Unit fraction: A fraction that has a 1 in its numerator, 1/5. Note that unit fractions cannot be simplified
+
+
+Citations
+
+
+(*) https://visualfractions.com/

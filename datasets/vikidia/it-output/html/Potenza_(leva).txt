@@ -1,0 +1,16 @@
+La potenza in una leva è quella che deve vincere la resistenza . La distanza tra potenza e il fulcro corrisponde al braccio della potenza mentre la distanza tra la resistenza e il fulcro corrisponde al braccio della resistenza. Quando la potenza è uguale alla resistenza la leva si trova in equilibrio.
+
+
+
+Esempi
+
+leva di 1° genere (forbici) ha il fulcro fra la potenza e la resistenza;
+leva di 2° genere (schiaccianoci) ha la resistenza fra il fulcro e la potenza;
+leva di 3° genere (badile) ha  la potenza fra la resistenza e il fulcro.
+
+
+
+
+Bibbliografia
+
+Scienze Focus,Volume A, Luigi Leopardi, Chiara Cateni, Massimo Temporelli, Francesca Bolognani, Casa editrice: Dea Scuola.

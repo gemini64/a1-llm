@@ -1,0 +1,22 @@
+Wikidata logo
+Wikidata (also known as WD) is a multilingual wiki hosted by the Wikimedia Foundation. It is a knowledge database and interlanguage link database (for Wikimedia projects). As of February 2015, there were over 13.1 million items on Wikidata. (*)
+
+References
+
+
+
+Other websites
+
+Wikidata Main Page in English
+
+
+
+
+
+
+
+
+
+simple:Wikidata
+wp:Wikidata
+(*) https://www.wikidata.org/wiki/Special:Statistics

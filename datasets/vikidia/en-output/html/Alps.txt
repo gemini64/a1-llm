@@ -1,0 +1,17 @@
+Map of the Alps with country borders
+The Alps is a mountain range in Europe. It covers parts of the countries Austria, France, Germany, Italy, Liechtenstein, Slovenia, and Switzerland.  The peaks there are known as alpine.
+The Alps are covered in snow mostly year-round, making the land ideal for skiing and other tourism industries.  Matterhorn is the tallest Alp, near the town of Zermatt, Switzerland.
+
+
+
+
+
+
+
+es:Alpes
+fr:Alpes
+it:Alpi
+nl:Alpen
+simple:Alps
+wp:Alps
+iw+1

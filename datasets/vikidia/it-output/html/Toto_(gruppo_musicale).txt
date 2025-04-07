@@ -1,0 +1,108 @@
+I Toto (stilizzato TOTO) sono stati una band rock statunitense di Los Angeles fondata il 1977 Ottenero il loro più grande successo con il brano Africa.
+
+Membri
+I mebri erano Joseph Williams, Steve Lukather, David Paich, Steve Porcaro, Bobby Kimball, Dennis Frederiksen, Jean-Michel Byron, Greg Phillinganes, David Hungate, Mike Porcaro, Jeff Porcaro, Simon Phillips, Keith Carlock, Shannon Forrest, Shem von Schroeck e Lenny Castro.
+
+Cronologia
+
+
+<timeline>
+ImageSize = width:1100 height:400
+PlotArea = left:140 bottom:120 top:0 right:30
+Alignbars = justify
+DateFormat = mm/dd/yyyy
+Period = from:1976 till:2018
+TimeAxis = orientation:horizontal format:yyyy
+Colors =
+id:Voce         value:red       legend:Voce
+id:Chitarra     value:blue      legend:Chitarra
+id:Tastiere     value:purple    legend:Tastiere
+id:Basso        value:green     legend:Basso
+id:Batteria     value:orange    legend:Batteria
+id:Lines        value:black     legend:Album
+id:grid1        value:gray(0.6)
+id:Tours        value:gray(0.5)
+id:bars         value:gray(0.9)
+BackgroundColors = bars:bars
+Legend = orientation:vertical position:bottom columns:3
+ScaleMajor = unit:year increment:2 start:1976
+ScaleMinor = unit:year increment:1 start:1976
+LineData =
+at:10/15/1978 color:black layer:back
+at:10/01/1979 color:black layer:back
+at:01/01/1981 color:black layer:back
+at:04/08/1982 color:black layer:back
+at:10/18/1984 color:black layer:back
+at:12/18/1984 color:black layer:back
+at:07/01/1986 color:black layer:back
+at:03/01/1988 color:black layer:back
+at:09/07/1992 color:black layer:back
+at:05/01/1995 color:black layer:back
+at:03/16/1999 color:black layer:back
+at:10/21/2002 color:black layer:back
+at:02/14/2006 color:black layer:back
+at:03/18/2015 color:black layer:back
+BarData =
+bar:BK text:"Bobby Kimball"
+bar:FF text:"Fergie Frederiksen"
+bar:JW text:"Joseph Williams"
+bar:JB text:"Jean-Michel Byron"
+bar:SL text:"Steve Lukather"
+bar:DP text:"David Paich"
+bar:SP text:"Steve Porcaro"
+bar:GP text:"Greg Phillinganes"
+bar:DH text:"David Hungate"
+bar:MP text:"Mike Porcaro"
+bar:JP text:"Jeff Porcaro"
+bar:PS text:"Simon Phillips"
+bar:KC text:"Keith Carlock"
+PlotData =
+width:10 textcolor:black align:left anchor:from shift:(10,-4)
+bar:BK from:01/01/1976 till:06/30/1984 color:Voce
+bar:FF from:07/01/1984 till:12/31/1985 color:Voce
+bar:JW from:01/01/1986 till:12/31/1989 color:Voce
+bar:JB from:01/01/1990 till:09/30/1990 color:Voce
+bar:BK from:07/01/1998 till:06/30/2008 color:Voce
+bar:JW from:01/01/2010 till:end        color:Voce
+bar:SL from:01/01/1976 till:06/30/2008 color:Chitarra
+bar:SL from:01/01/2010 till:end        color:Chitarra
+bar:DP from:01/01/1976 till:07/01/2007 color:Tastiere
+bar:GP from:07/01/2005 till:06/30/2008 color:Tastiere
+bar:DP from:01/01/2010 till:end        color:Tastiere
+bar:SP from:01/01/1976 till:06/30/1986 color:Tastiere
+bar:SP from:01/01/2010 till:end        color:Tastiere
+bar:DH from:01/01/1976 till:06/30/1982 color:Basso
+bar:MP from:07/01/1982 till:12/31/2006 color:Basso
+bar:DH from:01/01/2014 till:12/31/2015 color:Basso
+bar:JP from:01/01/1976 till:06/30/1992 color:Batteria
+bar:PS from:07/01/1992 till:06/30/2008 color:Batteria
+bar:PS from:01/01/2010 till:01/01/2013 color:Batteria
+bar:KC from:01/01/2013 till:12/31/2015 color:Batteria
+width:2.5 textcolor:black align:left anchor:from shift:(10,-4)
+bar:SL from:10/01/1990 till:06/30/1998 color:Voce
+</timeline>
+
+
+Carriera
+Sono stati attivi dal 1976 al 2008, succesivamente dal 2010 al 2019, pubblicando 14 album.
+
+Discografia
+
+
+Album
+
+1978 – Toto
+1979 – Hydra
+1981 – Turn Back
+1982 – Toto IV
+1984 – Isolation
+1986 – Fahrenheit
+1988 – The Seventh One
+1992 – Kingdom of Desire
+1995 – Tambu
+1998 – Toto XX
+1999 – Mindfields
+2002 – Through the Looking Glass
+2006 – Falling in Between
+2015 – Toto XIV
+2019 – Old Is New

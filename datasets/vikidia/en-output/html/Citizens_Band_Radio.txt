@@ -1,0 +1,6 @@
+thumb|A mobile CB radio
+Citizens Band Radio (also known as CB radio) is, in many countries, a system of short-distance radio communications between individuals. There are 40 channels within the 27 MHz (11 m) band. (*)  Citizens band not the same as the Amateur Radio Service ("ham" radio) which has a much longer range. In many countries, CB operation does not require a license to operate. It may be used for business or personal communications. Like many other two-way radio services, citizens band channels are shared by many users. All other stations must listen and wait for the shared channel to be available. It is customary for stations waiting to use a shared channel to broadcast the single word "break" (or "breaker") during a lull in the conversation. This lets other people using the channel know that others are waiting. In the US, channel 19 is most often used by truckers. Channel 9 is reserved for emergencies.
+Citizens band radio was originally introduced for car radios along with AM and FM bands, for two-way communication, but their overpopularity made communication difficult, and they became more popular with truck drivers. (*)
+
+(*) Long, Mark.  The World of CB Radio.
+(*) Uncle John's.

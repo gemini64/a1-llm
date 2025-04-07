@@ -1,0 +1,37 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Peso
+
+La Terra attira verso di se i corpi con la forza di gravità. Il peso di un corpo è proprio la misura di questa forza. Il peso è una grandezza estensiva poiché dipende dalla quantità di materia presente nel campione.
+
+Strumento si misura
+L’unità fondamentale del peso è il Newton (N) il cui srumento di misura è il dinamometro
+
+Bilancia
+
+Bilancia a due bracci
+
+La bilancia è uno strumento che serve per misurare la massa che è direttamente collegata al peso degli oggetti. In una bilancia a due bracci si mette l'oggetto da pesare su un piatto e sull'altro un oggetto campione di cui si sa il peso. Se i due oggetti hanno la stessa massa, e quindi lo stesso peso, i due bracci raggiungono la stessa altezza.
+
+
+
+Bilance di uso comune
+
+
+
+
+
+Formula principale
+P = {m}\times{g}
+In parole: Peso uguale a massa per accelerazione di gravità.
+
+Formule inverse
+m =\frac{P}{g}
+In parole: massa uguale a Peso fratto accelerazione di gravità.
+
+Esempi
+
+Per misurare il peso corporeo si usa la bilancia.
+
+
+
+Unità SI
+L'unità riconosciuta dall' SI è il Newton (N).

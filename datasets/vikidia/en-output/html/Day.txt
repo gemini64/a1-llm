@@ -1,0 +1,12 @@
+Each day includes 24 hours and there are seven days in a week. They are :
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+
+A month has usually 30 or 31 days but February is a exception. It has 28 days or 29 days.

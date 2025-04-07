@@ -1,0 +1,23 @@
+Logo di ChatGPTChatGPT è un software di intelligenza artificiale che riesce a dialogare con un essere umano. La sigla GPT, in inglese, significa Generative Pre-trained Transformer, ovvero "trasformatore generativo pre-addestrato".
+
+Descrizione
+ChatGPT, insieme alle altre intelligenze artificiali basate su trasformatori, ha fatto fare un notevole passo avanti ai sistemi come la traduzione automatica, il riassunto e la generazione di un testo, come la comprensione del linguaggio naturale.
+Il concetto chiave alla base dei transformatori è il meccanismo di "attenzione", che consente di pesare l'importanza di ogni parola all'interno di una frase in base al contesto. In questo modo riescono a determinare le relazioni tra le parole senza dipendere da strutture rigide (come un linguaggio di programmazione). (*)
+ChatGPT è stato lanciato il 30 novembre 2022 (*)  e ha attirato l'attenzione per le sue risposte dettagliate e articolate, anche se la sua accuratezza è stata criticata. Inoltre, nel 2023, ChatGPT è stato il servizio tecnologico che ha raggiunto più velocemente i 100 milioni di utenti, in soli due mesi. (*)
+
+Applicazioni pratiche
+ChatGPT è un potente strumento di elaborazione del linguaggio naturale, che può essere utilizzato per la creazione di una vasta gamma di applicazioni, come:
+
+chatbot che comprendono e rispondono a domande in linguaggio naturale. Questo può essere utilizzato per costruire chatbot per siti internet di qualsiasi altro tipo;
+completare o suggerire il testo sulla base di dati parziali. Utile per attività come la digitazione predittiva o la generazione di testo in base a una serie di richieste;
+generazione di testo sintatticamente corretto e naturale. Per descrizioni, titoli o qualsiasi altro tipo di testo che debba essere scritto in modo naturale;
+può tradurre del testo da una lingua all'altra. Utile per costruire chatbot multilingue o fornire traduzioni di contenuti di siti web;
+può determinare se un testo è positivo, negativo o neutro. Utile per attività come il servizio clienti o il monitoraggio dei social media;
+può essere utilizzato per riassumere lunghi brani di testo;
+può essere utilizzato per generare idee di contenuto o scrivere interi pezzi di contenuto. Utile per attività come la creazione di post sui social media o articoli di blog;
+può classificare il testo in categorie, come spam o non spam, positivo o negativo. Utile per compiti come il filtraggio di e-mail o la moderazione di discussioni online;
+può essere utilizzato per costruire sistemi in grado di rispondere a domande e fornire informazioni su un'ampia gamma di argomenti. Utile per costruire chatbot in grado di fornire informazioni agli utenti;
+può essere utilizzato per generare il parlato dal testo, consentendo di creare versioni audio di contenuti scritti o costruire assistenti vocali.
+
+
+Va ricordato, però, che sul mercato sono disponibili software capaci di rilevare il testo generato da GPT, come GPTZero. (*)  Quindi attenzione ad abusarne: qualcuno potrebbe controllare se il vostro lavoro è originale.

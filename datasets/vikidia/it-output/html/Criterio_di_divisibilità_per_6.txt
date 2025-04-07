@@ -1,0 +1,7 @@
+Come funziona il criterio di divisibilità per 6?
+Un numero è divisibile per 6 se è divisibile contemporaneamente per 2 e per 3.
+
+Esempi
+
+Ad esempio: il numero 2382 è divisibili  per 6 perchè è pari e perchè la somma delle sue cifre è divisibile per 3, infatti 2+3+8+2=15 che è divisibile per 3.
+Ad esempio: il numero 2675 non è divisibile per 6, perchè non è pari, quindi non si divide per 2.

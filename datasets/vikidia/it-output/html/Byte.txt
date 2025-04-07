@@ -1,0 +1,2 @@
+In informatica e telecomunicazioni il byte è un insieme di otto bit. Per questo è chiamato, soprattutto in Francia, ottetto.
+Sull'origine del nome ci sono differenti teorie: La prima è che sia una contrazione di by eight, (fatto) da otto, la seconda che derivi da bite, ossia morso.

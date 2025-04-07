@@ -1,0 +1,71 @@
+La divisione è l'operazione aritmetica che adopera il segno diviso (:). La sua operazione inversa è la moltiplicazione. La divisione serve per dividere un numero o una grandezza in parti uguali.
+
+Terminologia
+Se considero la divisione   15 : 5 = 3,          15 si dice dividendo,  : è il segno di operazione, 5 si chiama divisore e il 3 quoziente.
+
+Proprietà
+La divisione ha 2 proprietà
+
+Proprietà invariantiva
+Dividendo o moltiplicando i due termini della divisione per lo stesso numero, il quoziente non cambia.
+
+Esempio
+
+:
+
+
+15:5=3
+(15:5):(5:5)=3:1=3
+
+
+
+Oppure
+
+
+
+15:5=3
+(15x2):(5x2)=30:10=3
+
+
+
+Proprietà distributiva
+Per dividere una somma o una differenza, si può dividere i due numeri
+per il quoziente e poi sottrarre o addizionare i due risultati ottenuti.
+
+Esempio
+
+:
+
+
+(16+8):4=24:4=6
+(16+8):4=(16:4)+(8:4)=4+2=6
+
+
+
+Oppure
+
+:
+
+
+(32-10):2=22:2=11
+(32-10):2=(32:2)-(10:2)=16-5=11
+
+
+
+Divisioni particolari
+
+5:1=5
+
+se divido un qualsiasi numero per 1 il risultato è sempre se stesso. L'elemento neutro della divisione è 1.
+
+5:5=1
+
+se divido un qualsiasi numero per se stesso il risultato è sempre 1;
+
+5:0=Impossibile
+
+se divido un qualsiasi numero per 0 il risultato è impossibile perché 0 moltiplicato per un altro numero non fa 5;
+
+0:5=0
+
+se divido 0 per un qualsiasi numero il risultato è sempre 0 perché 0 x 5= 0;

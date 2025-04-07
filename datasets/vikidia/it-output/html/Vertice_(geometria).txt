@@ -1,0 +1,4 @@
+Nella geometria piana:
+Il vertice è il punto di incontro di due semirette che formano un angolo.
+Nella geometria solida:
+Il vertice è il punto dove almeno tre facce di un poliedro convergono (ad esempio il vertice di una piramide). Esso è dunque formato dall'intersezione da tre o più diversi spigoli.

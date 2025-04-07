@@ -1,0 +1,21 @@
+Elementi di una bandiera:
+
+
+pennone
+
+fune
+
+galloccia
+
+lunghezza
+
+larghezza
+
+battente
+
+centro
+
+inferitura
+
+puntale
+Le bandiere sono pezzi di stoffa, spesso rettangolari, che sono il simbolo di una nazione, ma anche di una città, una regione amministrativa o un'azienda. Soprattutto quelle nazionali sono divise in varie strisce colorate chiamate bande.

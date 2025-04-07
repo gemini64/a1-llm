@@ -1,0 +1,10 @@
+Linus Torvalds è un informatico e blogger finlandese, conosciuto soprattutto per essere stato l'autore e programmatore della prima versione del sistema operativo kernel Linux.
+
+Biografia
+
+Linus Torvalds nasce a Helsinki nel 1969 da una famiglia appartenente alla minoranza finlandese di lingua svedese.
+Attualmente Torvalds vive a Santa Clara, in California, dove coordina il progetto di sviluppo della sua creatura. Si sposa con Tove Torvalds, e ha 3 figlie: Patricia Miranda Torvalds, Daniela Yolanda Torvalds, Celeste Amanda Torvalds.
+
+Contributi e invenzioni
+
+Nel 1990 uno studente ventenne di informatica dell’università, Linus Torvalds,  decise di sviluppare il nucleo di un nuovo sistema operativo, un clone di Unix. Dopo un anno aveva creato un sistema operativo capace di gestire i file, ossia i documenti, e la loro organizzazione, era inoltre in grado di pilotare le unità periferiche. Sostituendo la consonante finale del proprio cognome con la “x” di Unix e adottando il pinguino come suo simbolo, Linus battezzò il suo prodotto “Linux”. Quindi diffuse il nuovo sistema operativo su Internet, così che tutti e tutte potessero averlo a disposizione.

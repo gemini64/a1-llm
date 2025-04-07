@@ -1,0 +1,25 @@
+L'esagono e un poligono regolare con sei lati uguali.
+
+Caratteristiche dei lati
+I lati del esagono sono tutti uguali.I suoi lati opposti sono paralleli tra di loro
+
+Caratteristiche degli angoli
+Le caratteristiche dei angoli è che misurano 120° e 60°.
+
+Caratteristiche delle diagonali
+Le caratteristiche delle diagonali è che dividono in varie parti la figura.
+
+Esagono nell'architettura
+
+
+Esagono nella natura
+L'esagono viene usato in natura dalle api usandolo come magazzino re metterci il  miele dentro.
+
+Calcolo del area
+
+
+Calcolo dell perimetro
+
+
+Il perimetro non è altro che la somma della lunghezza dei lati di una figura, perciò il suo calcolo sarà molto semplice. Occorre infatti, moltiplicare semplicemente la lunghezza di un lato per sei, quindi per esempio: un esagono regolare che ha un lato di 5
+centimetri, basta fare 5x6 = 30 centimetri.

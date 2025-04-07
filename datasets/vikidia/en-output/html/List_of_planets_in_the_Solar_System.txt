@@ -1,0 +1,18 @@
+The Solar System.
+
+
+The list of planets counts the eight planets that are in the Solar System.
+Pluto used to be classified as a planet but is no longer a planet.
+
+Gallery of planets
+
+<gallery>
+File:Mercury in color - Prockter07 centered.jpg|Mercury
+File:Venus-real.jpg|Venus
+File:The Earth seen from Apollo 17.jpg|Earth
+File:Mars Hubble.jpg|Mars
+File:Jupiter by Cassini-Huygens.jpg|Jupiter
+File:Saturn during Equinox.jpg|Saturn
+File:Uranus2.jpg|Uranus
+File:Neptune.jpg|Neptune
+</gallery>

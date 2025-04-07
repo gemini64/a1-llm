@@ -1,0 +1,7 @@
+TeamSpeak is a proprietary voice-over-Internet-Protocol (VoIP). It allows you to communicate with other people on the internet.
+TeamSpeak was founded in August 2001 and is developed by TeamSpeak Systems, Inc.
+
+Releases
+
+Stable release: 3.6.2 / September 21, 2023; 10 months ago
+Preview release: 5.0.0-beta77 / December 12, 2023; 8 months ago

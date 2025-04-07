@@ -1,0 +1,53 @@
+Some readers might find the article Metric system easier to understand.
+Voltmeter with 5V range.
+A 2 kilogram weight.
+A square metre quadrat made of PVC pipe on grass.
+The International System of Units is the standard modern form of the metric system. The name of this system can be shortened or abbreviated to SI, from the French name Système International d'unités.
+The International System of Units is a system of measurement based on 7 base units: the metre (length), kilogram (mass), second (time), ampere (electric current), Kelvin (temperature), mole (quantity), and candela (brightness). These base units can be used in combination with each other. This creates SI derived units, which can be used to describe other quantities, such as volume, energy, pressure, and velocity.
+The system is used almost globally. Only Myanmar, Liberia, and the United States do not use SI as their official system of measurement. (*)  In these countries, though, SI is commonly used in science and medicine.
+
+History and use
+
+Main page: Metric system
+
+The metric system was created in France after the French Revolution in 1789. The original system only had two standard units, the kilogram and the metre. The metric system became popular amongst scientists.
+In the 1860s, James Clerk Maxwell and William Thomson (later known as Lord Kelvin) suggested a system with three base units - length, mass, and time. Other units would be derived from those three base units. Later, this suggestion would be used to create the centimetre-gram-second system of units (CGS), which used the centimetre as the base unit for length, the gram as the base unit for mass, and the second as the base unit for time. It also added the dyne as the base unit for force and the erg as the base unit for energy.
+As scientists studied electricity and magnetism, they realized other base units were needed to describe these subjects. By the middle of the 20th century, many different versions of the metric system were being used. This was very confusing.
+In 1954, the 9th General Conference on Weights and Measures (CGPM) created the first version of the International System of Units. The six base units that they used were the metre, kilogram, second, ampere, kelvin, and candela. (*)  The seventh base unit, the mole, was added in 1971. (*)
+SI is now used almost everywhere in the world, except in the United States, Liberia and Myanmar, where the older imperial units are still widely used. Other countries, most of them historically related to the British Empire, are slowly replacing the old imperial system with the metric system or using both systems at the same time.
+
+Units of measurement
+
+
+Base units
+
+The SI base units are measurements used by scientists and other people around the world. All the other units can be written by combining these seven base units in different ways. These other units are called "derived units".
+A 61 grams egg.
+
+
+
+Derived units
+Derived units are created by combining the base units. The base units can be divided, multiplied, or raised to powers. Some derived units have special names. Usually these were created to make calculations simpler.
+
+
+
+Prefixes
+
+Very large or very small measurements can be written using prefixes. Prefixes are added to the beginning of the unit to make a new unit. For example, the prefix kilo- means "1000" times the original unit and the prefix milli- means "0.001" times the original unit. So one kilometre is 1000 metres and one milligram is a 1000th of a gram.
+
+
+
+References
+
+
+
+
+fr:Système international d'unités
+it:Sistema internazionale di unità di misura
+simple:International System of Units
+wp:International System of Units
+(*) "Appendix G: Weights and Measures". {{{2}}}. Central Intelligence Agency. 2013. https://www.cia.gov/library/publications/the-world-factbook/appendix/appendix-g.html. Retrieved 5 April 2013.
+(*) International Bureau of Weights and Measures (1954), {{{2}}}, http://www.bipm.org/en/CGPM/db/10/6/. 9th session, Resolution 6.
+(*) International Bureau of Weights and Measures (1971), {{{2}}}, http://www.bipm.org/en/CGPM/db/14/3/. 14th session, Resolution 3.
+(*) The kilogram is the SI base unit of mass and is used in the definitions of derived units. However, units of mass are named using prefixes as if the gram were the base unit.
+(*) When the mole is used, the substance being measured must be specified and may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles.

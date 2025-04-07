@@ -1,0 +1,6 @@
+Nella realtà è difficile trovare esempi di moto uniforme, è invece più frequente il moto vario.
+Si parla di moto vario quando percorrendo una distanza si possono individuare varie velocità.
+La velocità per ogni tratto è data dalla seguente formula: V = S/t la cui unità di misura è Km/h oppure m/s.
+I dati relativi al moto vario si possono raccogliere in una tabella e rappresentare in un sistema di assi cartesiani. Si ottiene un grafico formato da una linea spezzata che rappresenta sempre il moto vario.
+Considerando lo spazio totale percorso si può calcolare la velocità media.
+Per descrivere il moto vario si utilizza l'accelerazione, ossia la variazione di velocità calcolata in un certo intervallo di tempo. In formula: a = (V2 – V1)/t la cui unità di misura è Km/h2 oppure m/s2.

@@ -1,0 +1,11 @@
+Agar.io is an online game created by Brazilian developer Matheus Valadares and published by Miniclip.
+In the game, you play as a circle and you get bigger by eating dots and as you get bigger you can also eat smaller players and absorb them. The aim of the game is to try and get as big as possible.
+Agar.io inspired many other ".io games" such as slither.io, splix.io, ZombsRoyale.io, etc.
+<gallery>
+File:Agar.io App Store.png|The logo of the game
+File:Agar.io gameplay.png|A game of Agar.io
+</gallery>
+
+External links
+
+Official website

@@ -1,0 +1,25 @@
+Il rapporto è un confronto tra due grandezze e numeri.
+
+Rapporto tra grandezze omogenee
+Il rapporto tra due grandezze omogenee è il rapporto tra due grandezze che sono dello stesso tipo. Il risultato è un NUMERO PURO, cioè un numero senza unità di misura.
+Es. 18 cm:3 cm=6
+
+Due grandezze omogenee si possono dire:
+
+Commensurabili se il rapporto è un numero razionale o naturale.
+Incommensurabili se il loro rapporto è un numero irrazionale.
+
+
+
+Rapporto tra grandezze non omogenee
+Il rapporto tra grandezze non omogenee è il rapporto tra due grandezze che non sono dello stesso tipo. Il rapporto è una nuova grandezza detta GRANDEZZA DERIVATA.
+Es. 1m:100s=0,01 m/s
+
+Esempio
+18:3
+
+Termini: 18 e 3 sono i termini del rapporto.
+
+
+Il primo termine (18) prende il nome di ANTECEDENTE.
+Il secondo termine (3) prende il nome di CONSEGUENTE.

@@ -1,0 +1,166 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Sylhetia spinata
+|-
+
+|- colspan=2 style="text-align: center; background-color: pink"
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animalia
+|-
+
+
+
+
+
+
+
+
+| Phylum:
+| Arthropoda
+|-
+
+
+| Subphylum:
+| Hexapoda
+|-
+
+
+
+
+
+
+
+
+| Class:
+| Insecta
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Hemiptera
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Superfamily:
+| Membracoidea
+|-
+| Family:
+| Cicadellidae
+|-
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Sylhetia
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| Sylhetia spinata
+|-
+
+|-
+
+|-
+! colspan=2 style="text-align: center; background-color: pink"  | Binomial name
+|-
+| colspan=2 style="text-align: center" | Sylhetia spinataMathew & Ramakrishnan, 2002
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+Sylheti spinata, scientific name Sylhetia spinata, is an insect species belonging to the genus Sylhetia and the family Cicadellidae. It was first described by Mathew and Ramakrishnan in 2002. (*)  This insect species falls under the order Hemiptera and the class Insecta, showcasing its place in the intricate web of biodiversity.
+
+Taxonomic Classification
+
+- Kingdom: Animalia
+- Phylum: Arthropoda
+- Class: Insecta
+- Order: Hemiptera
+- Family: Cicadellidae
+- Genus: Sylhetia
+- Species: Sylhetia spinata. (*)
+
+Description and Discovery
+
+Sylhetia spinata was first documented by scientists Mathew and Ramakrishnan in the year 2002. The intricate details of its appearance, habitat, and behavior contribute to the broader understanding of biodiversity within the insect world. (*)
+
+References
+
+
+
+
+
+(*) Roskov Y., Kunze T., Orrell T., Abucay L., Paglinawan L., Culham A., Bailly N., Kirk P., Bourgoin T., Baillargeon G., Decock W., De Wever A., Didžiulis V. (ed) (2019). "Species 2000 & ITIS Catalogue of Life: 2019 Annual Checklist.". Species 2000: Naturalis, Leiden, the Netherlands. ISSN 2405-884X. TaxonID: 41197403. http://www.catalogueoflife.org/DCA_Export/zip-fixed/2019-annual.zip. Retrieved 2019-11-11.
+(*) Mathew, M.P., Ramakrishnan, U. (2002) Five new species of Zyginellini (Cicadellidae: Typhlocybinae) from India. , Shashpa. 9(2): 109-120.
+(*) Dmitriev D., Sanborn A. & Takiya D. (2019). 3i Auchenorrhyncha: World Auchenorrhyncha Database (version Nov 2017). In: Species 2000 & ITIS Catalogue of Life, 2019 Annual Checklist (Roskov Y., Ower G., Orrell T., Nicolson D., Bailly N., Kirk P.M., Bourgoin T., DeWalt R.E., Decock W., Nieukerken E. van, Zarucchi J., Penev L., eds.). Digital resource at www.catalogueoflife.org/annual-checklist/2019. Species 2000: Naturalis, Leiden, the Netherlands. ISSN 2405-884X.

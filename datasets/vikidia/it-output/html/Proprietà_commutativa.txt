@@ -1,0 +1,11 @@
+La proprietà commutativa è una delle proprietà che passa più inosservata, dato che siamo molto abituati a usufruirne.
+È quindi importante rendersi conto di quanto ci semplifichi i conti, quando è possibile utilizzarla.
+La proprietà commutativa si usa nelle moltiplicazione e nell'addizione.
+
+Addizione
+Nell'addizione, se cambiamo l' ordine degli addendi il risultato non cambia.
+Esempio    20+10=30      10+20=30
+
+Moltiplicazione
+Nella moltiplicazione, se cambiamo l'ordine dei fattori il risultato non cambia.
+Esempio    5x2=10        2x5=10

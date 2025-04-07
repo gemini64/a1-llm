@@ -1,0 +1,11 @@
+Il polinomio è un espressione algebrica composta da la somma o la differenza  di un monomio.
+Ogni monomio che compone un polinomio è chiamato termine del polinomio.
+
+Esempi
+6x+8x=14x
+Questo polinomio è molto semplice perchè ha la parte letterale uguale.
+Per risolverlo bisogna
+1) Guardare se la parte letterale è uguale (nel nostro caso è x)
+2) Calcolare i coeficenti numericiù
+3) calcolare la parte letteraria
+7ab^2*2a^2b

@@ -1,0 +1,4 @@
+Statistics is a part of mathematics.
+It explains how groups of numbers can be understood.
+These groups of numbers are called data.
+Statistics tells how data are obtained, organized, analyzed, interpreted, and presented.

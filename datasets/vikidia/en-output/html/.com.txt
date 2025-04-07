@@ -1,0 +1,11 @@
+.com is a generic top-level domain that was created as the first group of Internet domains in 1985. (*)
+
+History
+
+References
+
+
+
+
+
+(*) https://datatracker.ietf.org/doc/html/rfc920#page-2

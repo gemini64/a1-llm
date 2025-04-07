@@ -1,0 +1,145 @@
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Common moorhen
+|-
+| colspan=2 style="text-align: center" |
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+! colspan = 2 | Conservation status
+|-
+| colspan = 2 |
+Least Concern  (IUCN 3.1)
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+| Kingdom:
+| Animalia
+|-
+
+
+
+
+
+
+
+
+| Phylum:
+| Chordata
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+| Class:
+| Aves
+|-
+
+
+
+
+
+
+
+
+| Order:
+| Gruiformes
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Family:
+| Rallidae
+|-
+
+
+
+
+
+
+
+
+
+
+| Genus:
+| Gallinula
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Species:
+| G. chloropus
+|-
+
+|-
+
+|-
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+| colspan=2 style="text-align: center" |
+|-
+
+
+
+
+
+
+
+
+|-
+
+|}
+
+The Common moorhen (scientific name : Gallinula chloropus) is a bird of the rail family.
+
+Diet
+The common moorhen's diet consists mostly of aquatic plants, but it also eat insects and fruits.

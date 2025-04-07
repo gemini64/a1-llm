@@ -1,0 +1,1 @@
+A hour is a periode of time of sixty minutes and there are 3600 seconds in an hour. There are 24 hours in a day and 168 hours in a week.

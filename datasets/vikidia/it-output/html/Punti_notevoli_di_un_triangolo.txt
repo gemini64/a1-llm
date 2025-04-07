@@ -1,0 +1,22 @@
+Un punto notevole è un punto che gode di proprietà geometriche rispetto al triangolo.
+Ad esempio il circocentro è il centro della circonferenza circoscritta.
+
+
+Altezza ed ortocentro
+L'altezza è un segmento che parte da un vertice di una determinata figura e che cade perpendicolarmente sul suo lato opposto. Il punto d'incontro delle altezze si dice ortocentro.
+
+Mediana e baricentro
+La mediana è un segmento che parte da un vertice di una figura e cade sul punto medio del lato opposto. Il punto d'incontro delle mediane si chiama baricentro. Esso divide ogni mediana in due parti non congruenti, ma una il doppio dell'altra. Il baricentro è anche il punto d'equilibrio o punto di gravità del triangolo.
+
+Bisettrice ed incentro
+La bisettrice è una semiretta che parte da un vertice di una determinata figura e divide l'angolo in due parti congruenti. In una figura l'incontro delle bisettrici è detto incentro. L'incentro è anche il centro del cerchio inscritto al triangolo.
+
+Asse e circocentro
+L'asse di un lato è una retta che cade perpendicolarmente sul lato di una figura e che lo divide in due parti congruenti. Il punto d'incontro degli assi si chiama circocentro. Il circocentro è anche il centro del cerchio circoscritto al triangolo.
+
+Dove cadono i vari punti notevoli rispetto ai vari triangoli
+
+L'ortocentro cade all'interno del triangolo acutangolo, all'interno del triangolo ottusangolo, all'interno del triangolo equilatero, all'interno del triangolo isoscele, all'esterno del triangolo ottusangolo scaleno e sull'ipotenusa del triangolo rettangolo.
+Il baricentro cade all'interno del triangolo acutangolo, all'interno del triangolo ottusangolo, all'interno del triangolo equilatero, all'interno del triangolo isoscele, all'interno del triangolo ottusangolo scaleno e all'interno del triangolo rettangolo.
+L'incentro cade all'interno del triangolo acutangolo, all'interno del triangolo ottusangolo, all'interno del triangolo equilatero, all'interno del triangolo isoscele, all'interno del triangolo ottusangolo scaleno e all'interno del triangolo rettangolo.
+Il circocentro cade all'interno del triangolo acutangolo, all'esterno del triangolo ottusangolo, all'interno del triangolo equilatero, all'interno del triangolo isoscele, all'esterno del triangolo ottusangolo scaleno e all'interno del triangolo rettangolo.

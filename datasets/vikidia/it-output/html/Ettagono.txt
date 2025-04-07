@@ -1,0 +1,15 @@
+L'ettagono è un poligono regolare con sette angoli e sette lati uguali.
+
+
+Angoli
+L'angolo è  il punto d'incontro tra due lati.
+Gli angoli dell'ettagono sono d'uguale ampiezza e misurano 128,57 gradi.
+
+Diagonali
+Le diagonali sono dei segmenti che dividono delle figure.
+L'ettagono possiede 14 diagonali.
+Le diagonali dell'ettagono partono da vertici opposti, si incontrano al centro e si ritrovano nel centro della figura.
+
+Etimologia
+(L'etimologia è l'origine delle parole)
+L'origine della parola Ettagono deriva dal greco antico Eptàgono cioè figura geometrica con sette angoli.

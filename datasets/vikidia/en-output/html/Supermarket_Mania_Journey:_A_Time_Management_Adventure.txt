@@ -1,0 +1,236 @@
+Supermarket Mania Journey is a video game made by G5 games. As the name says, you run a supermarket and try to serve customers without them leaving. Published in 2008 in April. This game has 14 worlds each with a different theme and items.
+
+People
+
+Grandma
+She is the slowest and patient. She wears pink and green and usually takes 3 items. There is a special event called grannies' bus and only grannies come to your shop.
+
+Stats
+
+Speed:1/5
+Waiting speed: Normal
+Items she takes per shelf:3
+
+
+Man with a brown shirt
+He is a bit slow and kind of impatient. He wears brown and takes 2 items.
+
+Stats
+
+Speed:2/5
+Waiting speed: Slightly short
+Items he takes per shelf:2
+
+
+Teenager
+He is addicted a his phone which sometimes causes him to choose something different. He takes 2 items.
+
+Stats
+
+Speed:2/5
+Waiting Speed:Normal
+Items he takes per shelf:2
+
+
+Hooligan
+She rides a kick scooter. Use your guard to stop her from riding her scooter (prank), If you don't have the guard or you forget to blow the whistle, the kid will scooter and eventually knock somethings down, which may contribute to customers falling down. Pick them up if you see it.
+
+Stats
+
+Speed:3/5
+Waiting Speed: Normal
+Items she takes per shelf:1
+
+
+
+Mother with kid
+This time an orange shirt kid is supervised by her mom. Sometimes the child runs away and you need to bring him to back to his mom.
+
+Stats
+
+Speed:2/5
+Waiting Speed:Normal
+Items She takes per shelf:1
+
+
+
+Visitor Celebrity
+You have to be careful with these people, as they are the fastest and the most impatient.When they come, different music plays and everyone has their phone for taking a picture. There is a day when only celebrities come in, its called stars day and another day called celebrity day.They are also the only customers that you don't have to be at the cashier to get them to pay you.
+
+Stats
+
+Speed:5/5
+Waiting Speed:Very short
+Items he/she takes per shelf:2 or 3.
+
+
+
+Delivery man
+He is the man who comes out in the window of the shop. Take the items to him. He waits very long.
+
+Stats
+
+Speed:?
+Waiting speed:very long
+Items he takes:3
+
+
+Thief
+They like to steal things from the supermarket. You need the guard to make them pay. If you have no shelves open, he will wander around and eventually leave.
+
+Stats
+
+Speed:3/5
+Waiting speed:Very short
+Items they take per shelf:1
+
+
+Mallet man
+If you have a juice maker, pizza maker, milkshake maker. He will smash the machines and you have to fix them. Unfortunately, he can't be stopped by a guard.
+
+Stats
+
+Speed:2/5 (Enter),4/5 (Exit)
+
+
+Guard
+The guard helps you stop kids with scooters, and scare thieves off. You have to buy him with in game coins, you don't automatically start with him.
+
+Price
+Around 40000 coins.
+
+Worlds
+I don't know every world. Your help would be welcomed.
+
+World 1
+In World 1, you start with a regular supermarket and is the most easy. You get an intro to the game here. The casino lies here too, but you need to reach level 9. There are cheeses, sausages, fish, chicken, dressings, tomatoes, broccoli, oranges, pineapples, watermelons, cookies, milkshakes, ice cream, ice cream, juices
+
+World 2
+IN World 2, It is the garden store, well not plants, but foods that come from plants, in the background, it is outside. There are oranges, tomatoes, broccoli, pineapples, bananas, grapes, lettuce, green grapes, blue sodas, juices, apples
+
+World 3
+EV Charging station. Well, it is a store right next to the charging station, it is like the store you see when you get gasoline, it sells magazines, chips, and more. There are chocolates, beef jerky, chocolate bars, magazines, ice cream, blue sodas, coffee, bread
+
+World 4
+Bowling ally, the bowling is right outside the shop. This is going to introduce you to pizza making. It sells some fruit, pizza, chicken, and more. There are apples, pineapples, chocolate, chips, oranges, cheese, chicken, ice cream, juice pizza
+
+World 5
+Gym. This is where advancing to stores is expensive, it cost 70 crystals to go there. There is a gym outside. Your store is like a refreshment area store. There are energy drinks, pineapple, bananas, green grapes, yellow and red sodas. Fruit juice, milk, ice cream, watermelon, yogurt
+
+World 6
+Candy store. This store sells sweets (candy). Levels 82-97. It costs 90 crystals to go there. Your store does not really sell healthy food (except milk).Milkshakes, coffee bread, desserts, chocolate bars, ice cream, milk, soda, yogurt, donuts
+
+World 7
+Cinema. Instead of video taping a movie, you run a store that sells stuff you might get at the movies. This world's levels, for silver it is 4 crystals and for gold, it is 8 There are doughnuts, popcorn, bread, milk, milkshakes, watermelon, coffee, ice cream, red soda, blue soda, chocolate desserts, potato chips, and biscuits
+
+World 8
+Cafe. Seating in the outside bathroom. It has coffee and fruit as well as soda and chips and donuts.
+wo There are juices, milk bread, banana grapes, red and yellow sodas, coffee, oranges, potato chips, desserts
+
+
+
+
+Nine World, which is a school store He sells some fruitMilk juice donuts Bread, oranges, green grapes, purple grapes, potato chips, ice cream, milkshakes, watermelon
+No. 10 World is a Phisa shop, Phisa juice, fragrant belly, cheese, fish, chicken, book donuts, tomatoes, broccoli, orange pineapples, coffee
+No. 11 World Mountaineering Supplies, including Fruit Juice Bread, Milkshake, Fish and Chicken, Cheese, Champ, Chocolate, Soda, Milk, Ice Cream, Banana, Pineapple, Orange, Orchid, Tomato
+
+Currency
+
+Coins
+Coins are currency in the game. It is obtained from the casino, a completed level, and the bank (note the bank costs REAL money). Coins are used to get most upgrades, and buy a new store.
+
+Crystals
+Crystals are like premium currency in the game. The most common ways of obtaining it are: Casino, Playing a level 2 times (2/3/4 crystals) or 5 times (4/6/8 crystals), or bank (Which costs real money). A less common way to get them is to fill in your profile.
+
+Goal
+The Goal is to get enough money in a level by serving customers. That means that customers don't leave and go to checkout. Coffee is optional but will help you achieve your goal. If you don't have enough money at the end, you can choose 1 to lose a life and restart, or 2 buy extra customers (cost 10 crystals).
+
+How Customers Leave
+Customers negatively leaving can reduce the amount of money you have at the end. Too many customers leaving could make you lose a life as your not staying below what is ok.
+
+If their waiting timer ends (When you see the circle bar touch the start of the timer)
+If they fall (That's due to not cleaning your shop)
+
+
+Positive leave
+
+When they checkout (This dosen't count in the leave count)
+For delivery man, after you send a delivery.
+For Thieves, you blowed the whistle before their stealing timer end
+
+
+Secondary goals
+A secondary goal is a goal you must also meet with the other main coin goal. They don't appear in every single level. For 2 secondary goals, they show a number as the max.
+
+No red mood zone. Do not let customers get to the red zone. You can have up to a certain number of red mood zones.
+Don't run out of stock. Don't make your shelves run out of stock. You can have up to a certain number of out of stocks. If grannies come, you need to be careful as they take 3 per shelf. Try upgrading if you have this secondary goal.
+Do not allow kick scooters (Known as pranks in this game). Lucky for you, only 1 type of customer has these scooters, and it is the the girl has yellow hair. But if you do not have the guard, you should quit and save up for him on these levels. Be aware you can 0 scooters.
+Do not allow theft. Thieves sometimes come to your shop and you need Mr. Barefist (Guard) help.
+
+
+Casino
+The casino is an area in supermarket mania journey. It is unlocked after unlocking level 9. At the casino, there are 100,200,500 coin bets. If you are lucky, you might get coins or crystals. The higher the coin bet, the more you get. On the casino. There are 1 coin, 2 coin, 3 coin, 1 crystal,2 crystals,3 crystals. For 500 coin bets, 1 coin is = 750 coins, 2 coins = 1000 coins, 3 coins = 2500, 1 crystal = 10 crystals, 2 crystals = 20 crystals, 3 crystals = 50 crystals.
+
+Special Days
+Special days are different from regular levels (days). They change the store and you can't usually upgrade food shelves. You can tell if a level is special, if on the map you see a blue ring around the level circle.Here are the special days. Also special days usually are related to the world.
+
+World 1
+This world has no special days.
+
+World 2
+
+Children's day (Level 21): "Our shop appreciates customers of all ages. Today, only kids and their moms will visit your shop. Try to make them happy" -Level 21 message.
+Turkey day (Level 25): "You can never have too much celebration. Today Vegetables and chicken are your most in-demand products"- Level 25 message
+Thief Invasion (Level 29): "Don't lose your grip. Thieves have been reported in the area! Make sure your guard is well prepared"- Level 29 message
+Juice day (Level 33): "Rumor has it that juice in your shop is the best in Tinsel town. Customers want to get this incredible drink"-Level 33 message
+
+
+World 3
+
+Granny's bus (Level 37): "A tourist bus of retirees has broken down near the shop and now all the customers want to get some snacks. Be prepared"-Level 37 message. What that means is only grannies come to your shop.
+Marathon (Level 41): "The mayor has decided to hold a marathon. Everybody wants to make it to the end. Today customers are buying only 1 product"-Level 41 message. Coffee and croissants count, so keep them stocked too.
+Traffic Jam (Level 49):"Half of the town is stuck in a Traffic jam right outside your shop. Be ready for extra customers"-Level 49 message
+
+
+World 4
+
+Stars Day (Level 53):"Our Shop has become extremely popular. Now even stars want to visit. Try to match their high status and make all stars happy"-Level 53 message. You should stock on energy drinks or cookies because they have short waiting timers.
+Weekend (Level 57):"The working week is over, now customers want to stock up on food. Today all customers buy more products than usual"-Level 57 message. Each customer takes 3 items.
+Bowling night (Level 61):"Bowling non-stop all night long! To stay awake and full of energy the whole night, customers buy coffee and chocolates"-Level 61 message.
+Family tournament (Level 65):"A family bowling tournament is taking place today. Wait for hungry competitors and may the best bowlers win!"-Level 65 message.
+
+
+
+World 5
+
+Workout (Level 69):"Visitors are thirsty after their workout and are in a hurry to be on their way. Quench their thirst"-Level 69 message. Customers waiting timers are much shorter. Consider stocking up on energy drinks.
+Go Girls (Level 73):"Today only girls visit your shop and they are looking for healthy products. Serve them all"-Level 73 message. Hitch: Grannies do not visit your shop.
+Milkshakes day (Level 77):"Today customers are crazy for milkshakes. Prepare the shakes as usual and remember to stack your shelves in time. Let's get started!"-Level 77 message
+Sports Day (Level 81):"It's time to figure out who's the best. Meanwhile, customers want to grab some juice or a milkshake. Be prepared"-Level 81 message.
+
+
+World 6
+
+Croissant day (Level 85):"What could be better than fresh and crisp pastry. Today customers want croissants more than usual"-Level 85 message
+Keep it cool! (Level 89):"Today only hooligans visit your shop. Be patient and try to maintain order"-Level 89 message
+Sweet tooth day (Level 93):"A new study claims that sugar and sweets are good for your health. Your customers are celebrating, so be ready with extra sweets"-Level 93 message. In real life, this is not true, only for the game
+Big Packages day (Level 97):"Your products are so good that customers want them even more. Today all customers take at least 5 products from shelf"-Level 97 message.
+
+
+World 7
+
+Old Movie Marathon (Level 101):"The Customers can't wait for the movie marathon. Make sure they enjoy their trip to the store as well"-Level 101 message
+Celebrity day (Level 105):"Today is a very important day - famous people are coming to visit the store! There's no time to relax, we need to make the best impression"-Level 105 message
+Children's day (Level 109):"Our store is going to be open for children and their parents.Lets make sure nobody gets lost and all the customers are happy-Level 109 message. Do not get confused with the world 2 children's day.
+Premiere (Level 113):"It's the premiere, so everyone is rushing to get popcorn and soda. Get ready for a crowd of customers"-Level 113 message
+
+
+World 8
+
+Hawaii day (Level 117):"Hawaii is the topic of the day! And that means everyone will want to buy pineapples and juice. Lets make sure the shelves are full of them"-Level 117 message
+At the yacht club, customers should definitely buy fresh fish at the shop
+Customers will buy a lot of supplies for a day in the city
+The shop was decorated for the holiday
+world 9
+The new electronic game that has just come out has attracted a lot of customers
+There are a lot of customers who sell donuts today

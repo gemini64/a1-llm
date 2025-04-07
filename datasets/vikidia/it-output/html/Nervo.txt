@@ -1,0 +1,5 @@
+I nervi sono costituiti da fasci di fibre nervose (o assoni), circondati da tessuto connettivo.
+I nervi possono essere:
+- sensoriali
+- motori
+- misti (cioè raggruppano fibre di neuroni sensoriali e fibre di neuroni motori).

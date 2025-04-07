@@ -1,0 +1,115 @@
+The Sylheti script is a unique writing system belonging to the Brahmic family, with notable similarities to the Kaithi script. Let's explore the distinctive features and characteristics of this script. Due to its multipurpose usage, the script is named after Sylhet city in various languages, such as in Sylheti, Sanskrit, Middle Bengali, Arabic, Urdu, later in French and English for documentation purposes.
+
+Brahmic Family and Kaithi Influences
+
+
+Brahmic Origin
+The Sylheti script shares its roots with the broader Brahmic script family, which includes various South Asian writing systems. This heritage links it to scripts like Kaithi script and others.
+
+Kaithi Connections
+Notably, the Sylheti script exhibits similarities with the Kaithi script, a historical script used for writing various languages in the Indian subcontinent. These connections highlight the script's historical and cultural influences.
+
+Writing System
+Sylheti handwriting by Abu Sayeed.
+
+Abugida Structure
+Similar to other scripts in the Brahmic family, the Sylheti script follows an abugida structure. Consonants are typically combined with inherent vowel sounds, and additional diacritic marks modify these sounds as needed.
+
+Distinctive Characters
+The characters in the Sylheti script have a distinctive appearance, contributing to the script's unique identity. The flowing and cursive nature of the writing style adds an artistic touch to the written form.
+
+Unique Numeral System
+The Sylheti script boasts a unique numeral system that sets it apart. Let's delve into the intriguing world of Sylheti numerals and their connections to the broader Arabic numeral systems.
+
+Distinctive Characters
+Sylheti numerals are characterized by unique symbols that differ from the more familiar Hindu Arabic numerals. These symbols are used for counting and numerical representation in the Sylheti script.
+
+Similarities with Arabic Numerals
+Hindu Arabic numerals.
+While Sylheti numerals have their unique symbols, they share some similarities with both the Eastern and Western Arabic numeral systems. These connections reflect historical interactions and influences in the region.
+
+Comparisons
+
+
+
+Eastern and Western Arabic Systems
+The Sylheti numeral system exhibits both similarities and differences when compared to the Eastern and Western Arabic numeral systems. Recognizing these distinctions enhances our understanding of numerical representation in the Sylheti script.
+
+Cultural Significance
+Inscription in a monument of Sylhet city, captured by Saiba.
+The unique Sylheti numeral system holds cultural significance, serving as a symbol of the region's distinct identity. It reflects the historical and cultural exchanges that have shaped the Sylheti script and its associated numerical symbols.
+
+Learning and Appreciation
+For those interested in exploring the Sylheti numeral system, educational resources and materials are available. These resources aim to provide insight into the unique characters and numerical representations used in the Sylheti script.
+
+Unicode
+James and Sue Lloyd-Williams from Sylheti Translation And Research in London.
+In 2002, a comprehensive proposal for encoding the Sylheti script proposed as Syloti Nagri script in the Basic Multilingual Plane (BMP) was submitted, involving diverse contributors. The requesters included Peter Constable from SIL International, James and Sue Lloyd-Williams from Sylheti Translation And Research in London, Advocate Shamsul Islam Chowdhury and Professor Asaddar Ali from Sylot Academy in Sylhet, Bangladesh, Mohammed Sadique from the Embassy of Bangladesh in Stockholm, Sweden, and Matiar Rahman Chowdhury from Sylot Academy (UK and Europe) in London. This expert contribution was completed and submitted on November 1, 2002, under the reference WG2 Nxxxx (= US L2/02-388). The proposal aimed to secure Unicode encoding for the script and contained the necessary documentation for consideration by the Unicode Consortium's Technical Committee (WG2). The associated document (WG2 Nxxxx = US L2/02-388) is recommended for a more in-depth understanding of the proposal's details and historical context.
+
+Unicode alias
+Syloti Nagri script
+
+Unicode blocks
+
+
+Non Unicode
+
+
+
+Historical Significance
+
+
+Kaithi like Administrative Use
+Kayasth, Calcutta writer.
+Historically, the Kaithi script of Bihar was used for administrative purposes. While the Sylheti script evolved separately, its connections with Chitraguptavanshi Kayasthas highlight the region's historical ties and cultural exchanges. It was used to sign land documents and court registries. Kayasth in Sylheti 'Xaiti', means a person who works in the court register and writes official documents. Other popular uses are religious literature and poetry.
+
+Regional Use
+Religious literature and poetry.
+Historically, the usage of the Sylheti script was concentrated in Srihatta Nagara (Sylhet city). However, with the introduction of printing, the script has proliferated beyond its original confines to encompass the entirety of the Srihatta district, Kachar, Tripura, Chittagong, Mymensingh, and even reaching Dhaka. This expansion signifies its adoption by the Muslim communities across the broader region to the east of the Padma River. In addition to its prevalence among these communities, there exists a distinct Buddhist narrative connected to the Sylheti script. Vikkus, who traversed the Chittagong-Sylhet-Nepal zone, were known to utilize this script in their travels. From a Hindu perspective, Nagar Brahmins, representing the pandits of the Brahmin caste, were practitioners of the Sylheti script. Their usage held cultural and religious significance. Moreover, the script found its place in the religious poetry of the Muslim community. Furthermore, the Sylheti script made inroads into Christian communities, where it was employed for the translation of the Bible. The script played a role in organizing and presenting Christian religious texts in a manner suitable for the linguistic and cultural context of the Sylheti-speaking population.
+
+International Use
+Sylheti exhibition in London, United Kingdom.
+The international use of the Sylheti script saw significant growth within the British colonies, particularly propelled by Sylheti sailors of the British navy, commonly referred to as Lascars. As these seafarers traversed the seas in service of the British Empire, they carried with them the books and menuscripts of the Sylheti script, contributing to its dissemination across various colonies. This widespread adoption reflects the script's role as a means of communication and cultural connection among the Sylheti diaspora in different parts of the world during the era of British naval influence. In contemporary times, Christian missionaries have played a pivotal role in transcribing the Bible into the Sylheti script, ensuring its accessibility to the scattered Sylheti diaspora. This effort has been particularly significant for the stranded Sylheti communities in Myanmar, Pakistan, and various displaced diaspora across the globe. The availability of religious texts in the Sylheti script serves not only as a spiritual resource but also as a cultural link, offering a sense of connection and familiarity to those navigating life in diverse corners of the world.
+
+Learning and Preservation
+
+
+Preserving Cultural Heritage
+Understanding and appreciating the Sylheti writing system contribute to the preservation of cultural heritage. It allows for a deeper appreciation of the linguistic diversity within the Sylheti community. The connections of Sylheti numerals with both Eastern and Western Arabic numeral systems add layers of historical and cultural richness, making the Sylheti script a fascinating subject of study and appreciation.
+
+Preservation Efforts
+An awareness program by United Nations Development Program (UNDP) and MasterPeace Bangladesh.
+Given the cultural significance of the Sylheti script, efforts are underway to preserve and promote its use. Various educational resources and initiatives aim to teach the script to new generations, ensuring its continuity. A program promoting social harmony through awareness of the script, along with the Manipuri and Khasi Language initiative, orchestrated by MasterPeace Bangladesh was financially supported by the United Nations Development Program (UNDP).
+
+Similarities and Distinctions
+Learning the Sylheti script may be of interest to those familiar with other Brahmic scripts, especially Kaithi. Recognizing both the similarities and distinctions can enhance one's understanding of the script's unique characteristics. The Sylheti script, rooted in the Brahmic family with influences from Kaithi, stands as a testament to the cultural and historical richness of the Sylhet region. Its distinctive features and connections provide a fascinating glimpse into the script's evolution and its place in the broader tapestry of South Asian writing systems.
+
+Download fonts
+
+
+Noto Sans Syloti Nagri (from Github)
+The Siloṭi Nagri Surma Unicode Font (from British website)
+WAZU JAPAN's Gallery of Unicode Fonts - Syloti Nagri (from Japanese website)
+
+
+
+List of keyboards
+
+Sylheti keyboard by SIL International https://keyman.com/keyboards/sylheti_nagri
+Online keyboard https://keymanweb.com/?_ga=2.34341538.222587240.1683498424-80854012.1680437418#syl-sylo,Keyboard_sylheti_nagri
+Computer keyboard http://www.sylheti.org.uk/unicode-font
+Google / Gboard / Sylheti (Syloti Nagri)
+Microsoft SwiftKey keyboard (need to download Sylheti extension)
+Syloti Keyboard is available for iOS and Apple devices. https://apps.apple.com/us/app/syloti-keyboard/id1515279890
+
+
+
+External links
+
+ꠤꠟꠐꠤ_ꠟꠤꠙꠤ Read about Sylheti script in the Sylheti Wikipedia.
+Sylheti in Omniglot
+Learn the Sylheti Alphabet (Workbook for kids)
+
+
+
+References

@@ -1,0 +1,25 @@
+Schematizzazione dello spaziotempo. Si noti che per lo spazio sono state usate due dimensioni.In fisica per spaziotempo si intende la struttura dell'Universo nello spazio e nel tempo, pertanto è composto da quattro dimensioni: le tre dello spazio (lunghezza, larghezza e profondità) e il tempo, rappresentante il luogo dove si svolgono i fenomeni fisici.
+
+Definizione
+Lo spaziotempo è un concetto fisico che combina le nostre classiche nozioni tradizionalmente distinte di spazio e di tempo in un'unica entità.
+Affinché questo processo sia possibile è necessario che le grandezze fisiche siano omogenee (sennò, sarebbe come sommare le mele con le pere).
+Le variabili spaziali le si lascia inalterate. Il tempo deve essere "trasformato" in spazio. Scomodando solo la formula per il calcolo della velocità v=s/tovvero velocità uguale allo spazio percorso diviso il tempo impiegato a percorrerlo, e utilizzando come velocità la velocità della luce, una costante che indicheremo con csi ottiene:
+\text{spaziotempo} =
+\begin{cases}
+x \\
+y \\
+z \\
+c \cdot t \Longleftarrow \text{perché } c = \frac{s}{t} \text{ pertanto } s = c \cdot t
+\end{cases}
+In questo modo abbiamo quattro dimensioni tutte definibili come spaziali.
+
+Implicazioni
+Osservando la figura si notano due coni: la loro intersezione è il presente,la parte in basso il passato e la parte in alto il futuro, nella direzione della freccia.
+Se restiamo immobili, il tempo scorre e noi ci spostiamo verso l'alto. Se camminiamo in una direzione, oltre a spostarci nello spazio, ci spostiamo anche nel tempo, quindi (come prima) saliremo e ci sposteremo. Aumentando la velocità (per esempio correndo) il tempo continua a scorrere, ma noi raggiungeremo la destinazione in minor tempo.
+I coni rappresentano la velocità della luce. Pertanto tutto quello che è al di dentro possiamo raggiungerlo (nel futuro) e può averci raggiunto (nel passato). Tutto quello che è esterno ai coni non farà parte della nostra vita, perché – dal passato – avrebbe dovuto viaggiare più velocemente della luce (e questo non è possibile). Allo stesso modo, noi non potremo raggiungerlo nel futuro (se è esterno al cono) perché non potremo mai superare la velocità della luce.Proxima Centauri, ripresa dal telescopio spaziale Hubble
+
+Tre esempi
+
+Il Sole, dista dalla Terra 8 minuti luce. Quando lo osserviamo, osserviamo com'era 8 minuti fa.
+Se un alieno osservasse la Terra da luoghi molto distanti (per esempio, milioni di anni luce) in quest'istante osserverebbe i dinosauri. Il ché complica notevolmente la ricerca spaziale.
+Infine, la prossima volta che osserverete le stelle, pensate che la stella più vicina a noi è Proxima Centauri, e dista oltre 4 anni luce. Pertanto la osservate com'era quattro anni fa. In una notte molto limpida è possibile distinguere a occhio nudo, fino a 3000 stelle. Ma... non è detto che ci siano ancora. Le osserviamo com'erano tanti anni fa.

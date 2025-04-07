@@ -1,0 +1,15 @@
+La cellula di base del sistema nervoso è il neurone.
+I neuroni hanno una struttura ramificata, sono specializzati nella conduzione dell'impulso nervoso . Non si possono riprodurre e hanno la caratteristica di essere in numero definito sin dal primo anno di vita. I neuroni perduti non si possono rimpiazzare. Spesso il sistema nervoso rimedia al danno utilizzando altre vie nervose e creando nuove connessioni fra esse.
+
+Struttura
+Il neurone è formato da :
+
+Il corpo cellulare che contiene il nucleo
+I dendriti , sono i più corti prolungamenti del corpo cellulare e hanno un aspetto ramificato
+Il neurite o assone , si tratta del più lungo prolungamento del corpo cellulare
+La guaina mielinica è il rivestimento del neurite , è costituito da una sostanza grassa e biancastra, la mielina
+
+
+
+Funzione
+Il neurone si occupa di rispondere agli stimoli esterni producendo un impulso nervoso, un segnale di tipo elettrico. L'impulso attraversa il corpo cellulare, per poi passare all'assone. Quest'ultimo conduce il segnale elettrico fino alla sinapsi, cioè le giunzioni che collegano tra loro 2 neuroni ( o un neurone con i muscoli). Qui si trova il bottone sinaptico, che non tocca la cellula vicina: sono infatti separati da uno spazio detto fessura sinaptica. Per inviare l'impulso al neurone vicino il bottone sinaptico rilascia delle molecole dette neurotrasmettitori.

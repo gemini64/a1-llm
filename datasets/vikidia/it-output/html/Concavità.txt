@@ -1,0 +1,5 @@
+Una figura geometrica è concava se esiste un segmento che unisce due suoi punti che non è interno.
+
+Un poligono è concavo se c'è una retta che passando per uno dei lati taglia il poligono.
+
+Un angolo è concavo se contiene i prolungamenti dei suoi lati.

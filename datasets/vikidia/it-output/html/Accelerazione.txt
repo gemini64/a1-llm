@@ -1,0 +1,14 @@
+L'accelerazione è una grandezza vettoriale che esprime la variazione di velocità nel tempo. Ciò significa che maggiore sarà l'accelerazione, maggiore sarà la variazione di velocità.
+
+Storia
+
+
+
+Descrizione
+Nel Sistema internazionale di unità di misura l'accelerazione viene rappresentata in m/s² (metro al secondo quadrato). L'accelerazione media è il rapporto tra la variazione di velocità e la durata del moto e può essere rappresentata colla seguente formula:
+a=\frac {\Delta v}{\Delta t}
+L'accelerazione è istantanea quando l'intervallo di tempo considerato è relativamente breve.
+Se la variazione di velocità avviene in un moto che si dirige verso il suo centro l'accelerazione è detta centripeta. Quando l'accelerazione ha valore negativo si parla di decelerazione o rallentamento.
+
+Accelerazione di gravità
+Quando un corpo è in caduta libera subisce un accelerazione di circa 9,81 m/s². Questo valore è l'accelerazione di gravità (o costante gravitazionale) e viene indicata con la lettera g. La caduta libera è un moto uniformemente accelerato, cioè la velocità cambia sempre della stessa quantità in eguali intervalli di tempo.

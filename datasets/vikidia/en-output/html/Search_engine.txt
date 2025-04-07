@@ -1,0 +1,20 @@
+The web search engine is a technology medium to find any information or image in the world wide web or the world of internet. Search engines collect and display information from various websites. The web search engine collects information through crawler bots.
+
+
+History
+The Internet search engine was launched in December 1990. However, the first search engine was invented by Hewlett-Packard in 1986. The first full text web search engine, web crawler, was launched in 1994.
+
+Search engine list
+
+Google
+Microsoft Bing
+Yahoo
+Baidu
+Yandex
+DuckDuckGo
+Ask.com
+Ecosia
+Aol.com
+Internet Archive
+Pipilika
+Ghoori Search

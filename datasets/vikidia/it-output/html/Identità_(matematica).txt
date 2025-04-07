@@ -1,0 +1,1 @@
+Un'identità, in algebra, è un'uguaglianza tra due espressioni algebriche che è verificata per qualsiasi valore assegnato all'incognità. Un'equazione indeterminata è un'identità.

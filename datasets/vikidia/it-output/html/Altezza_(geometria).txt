@@ -1,0 +1,9 @@
+L'altezza in geometria è la dimensione di una figura della distanza fra l'estremità inferiore a quella superiore. Ma è anche un segmento perpendicolare che va da un vertice all'altro ma a volte lunghezza del segmento  perpendicolare che va dal vertice alla base.
+
+L'altezza nel triangolo
+L'altezza nel triangolo equilatero e rettangolo.
+Nel triangolo equilatero l'altezza parte dal vertice superiore e cade sulla base. Nel triangolo rettangolo la base parte dal vertice superiore ricalca il lato  che cade sull'angolo rettangolo della base.
+
+L'altezza nel trapezio
+
+L'altezza nel trapezio parte da un angolo e arriva al lato opposto.

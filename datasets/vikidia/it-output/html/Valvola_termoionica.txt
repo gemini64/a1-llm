@@ -1,0 +1,30 @@
+Una valvola termoionica, detta comunemente valvola o tubo, (in inglese thermoionic valve, pronuncia termoionic valv) è un dispositivo costituito da un contenitore, spesso di vetro, all'interno del quale è stata tolta l'aria e dove sono posizionati un filamento (molto simile a quello delle vecchie lampadine a incandescenza) detto catodo e una placca normalmente di metallo detta anodo posta a breve distanza attorno al filamento. Tra il filamento e l'anodo possono essere posizionate delle reticelle metalliche dette griglie. La valvola termoionica senza griglie è detta diodo, quella con una sola griglia è detta triodo, quella con quattro griglie è detta tetrodo, quella con cinque griglie è detta pentodo. Nella realtà spesso il filamento non costituisce effettivamente il catodo, ma seve solo a riscaldare un elemento metallico particolare che costituisce l'effettivo catodo.
+La prima valvola termoionica fu un diodo e fu realizzata nel 1904.
+Le valvole termoioniche erano utilizzate per realizzare apparecchiature elettroniche fino circa agli anni '60. Poi sono state soppiantate dai componenti elettronici a stato solido.
+
+Come funziona una valvola termoionica?
+Mentre la spiegazione di come funziona un moderno componente allo stato solido è troppo complicata per ragazzi che per la giovane età non posseggono conoscenze approfondite di fisica, i concetti alla base del funzionamento di una valvola termoionica sono semplici:
+
+
+quando un metallo viene riscaldato oltre il colore rosso corrispondente a circa 800 °C, in presenza di un campo elettrico emette elettroni (effetto termoionico).
+cariche elettriche di segno opposto si attraggono
+gli elettroni sono negativi e nel vuoto viaggiano seguendo le linee del campo elettrico dal polo negativo verso il polo positivo.
+
+Consideriamo la valvola più semplice: il Diodo. Se colleghiamo un generatore di corrente continua (per esempio una pila) al diodo con il positivo dell'alimentatore collegato al filamento e il negativo dell'alimentatore all'anodo della valvola come in Figura 1, nel circuito non circolerà alcuna corrente elettrica. Infatti per circolare corrente la placca che costituisce l'anodo dovrebbe emettere elettroni, ma la placca è fredda, per cui non può emettere elettroni. Il filamento caldo tenderà ad emettere elettroni, ma questi vengono respinti dalla placca che è negativa per cui rimangono attorno al filamento (nube elettronica). Nella figura per chiarezza non è indicato l'alimentatore che serve a tenere caldo il filamento e che può essere una seconda pila.
+Se ora scambiamo i fili di alimentazione (cioè colleghiamo il positivo della pila alla placca) come in Figura 2, si vedrà circolare una corrente elettrica dovuta al fatto che il filamento caldo emette elettroni che viaggiano nel vuoto verso la placca (anodo) positiva. Infatti gli elettroni sono elettricamente negativi e vengono attratti dalla placca positiva. Le frecce in figura indicano il moto degli elettroni che percorrono i fili del circuito. Ricordati che per convezione il verso delle correnti elettriche si assume essere contrario a quello degli elettroni. Cioè alla domanda "qual'è il verso della corrente elettrica in Figura 2?" la risposta è: "il verso è quello contrario a quello indicato dalle frecce".
+Il diodo quindi, lasciando passare corrente solo in un verso, può essere utilizzato per "raddrizzare" una corrente elettrica alternata
+I diodi termoionici non sono praticamente più utilizzati, sostituiti dai diodi allo stato solido. Fanno eccezione particolari tubi termoionici che, pur presentando solo filamento e placca come i diodi, hanno utilizzi molto particolari. Tra questi il più noto è il Magnetron che serve a generare microonde ed è utilizzato nei fornetti domestici a microonde, ma anche in grossi impianti industriali.
+
+Il Triodo
+Il triodo si presenta come un diodo con una reticella metallica (griglia) posta tra filamento e placca. Costituisce la valvola termoionica amplificatrice più semplice e ha un comportamento molto simile agli attuali MOSFET.
+
+La tensione applicata alla grigia consente di bloccare o far passare gli elettroni emessi dal catodo per effetto termoionico.
+La figura 3 rappresenta un triodo con la griglia (rappresentata con una linea tratteggiata vicino al filamento) lasciata non collegata. In queste condizioni la presenza della griglia è ininfluente e gli elettroni passano attraverso essa per raggiungere il catodo esattamente come il diodo di figura 2.
+La figura 4 rappresenta un triodo con la griglia  messa a potenziale negativo rispetto al catodo. In questo caso gli elettroni (negativi) emessi dal catodo vengono respinti dalla griglia negativa e nel circuito non circola corrente.
+Regolando la tensione negativa applicata alla griglia è possibile regolare la corrente che circola nel circuito.
+
+
+Attualmente i triodi sono stati sostituiti da componenti elettronici allo stato solido (il più delle volte da MOSFET e IGBT) ma vengono ancora utilizzati nel campo dei generatori di alta frequenza soprattutto di grossa potenza (fino ai MW). In Figura 5 è possibile vedere un grosso triodo raffreddato ad acqua per queste applicazioni.
+
+Il Tetrodo e il Pentodo
+Il tetrodo e il pentodo (che hanno rispettivamente due e tre griglie) sono tubi utilizzati come amplificatori prima dell'invenzione dei transistor. Permettevano un guadagno più elevato rispetto ai triodi per cui un Pentodo poteva sostituire due o tre diodi, ma oggi non trovano praticamente più applicazioni. Gli amanti del "suono delle valvole" li utilizzano ancora, insieme ai triodi, per amplificatori audio Hi-Fi.

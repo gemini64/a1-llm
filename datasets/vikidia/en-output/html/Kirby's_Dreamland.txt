@@ -1,0 +1,9 @@
+Kirby's Dreamland is a videogame
+
+
+gameplay
+The game is black and white. Kirby himself can walk or if you press the > button twice he can run. Kirby can also do more than just walk. He can also fly or suck in enemies. When you are in the water, he can swim.
+
+plot
+
+The plot is very simple: the story is about a penguin who steals food. That penguin is King Dedede, so Kirby goes to Dreamland (the name of the thorp where Kirby walks).

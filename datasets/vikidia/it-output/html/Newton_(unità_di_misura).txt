@@ -1,0 +1,18 @@
+Il newton è l'unità di misura della forza adottata dal Sistema internazionale di unità di misura, Viene indicato con il simbolo N.  Esso è definito come una forza che applicata ad una massa di 1 kg le fa aumentare la velocità di 1 metro
+1 N = 1 kg x 1 m/s^2
+
+Strumento di Misura
+Il Newton si misura con il dinamometro.
+
+
+
+
+Confronto Newton Kilogrammi
+Un oggetto che pesa 1 kg è sostenuto in aria da una forza di 9,8 Newton, circa 10 Newton.
+
+Secondo principio della dinamica o legge di Newton
+Il secondo principio della dinamica afferma che una forza applicata a un corpo di massa ne produce un'accelerazione che cresce al crescere della forza applicata e diminuisce al crescere della massa del corpo
+
+Esperimenti
+
+se prendiamo tre carrelli di massa uguale a cui sono state applicate tre forze differenti, subiscono un'accelerazione direttamente proporzionale all'intensità della forza applicata

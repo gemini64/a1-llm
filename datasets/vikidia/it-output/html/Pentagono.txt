@@ -1,0 +1,18 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Pentagono (disambigua)
+Il pentagono è un poligono delimitato da 5 lati che formano 5 angoli. Il pentagono può essere regolare o irregolare, può avere più forme, concave o convesse.
+
+Pentagono regolare
+
+È un poligono convesso, i suoi lati e i suoi angoli sono congruenti.
+Considerando che il pentagono è regolare, anche le sue diagonali sono congruenti e si può vedere che formano una stella a cinque punte. Da ogni lato del pentagono (base) si forma un triangolo i cui lati obliqui sono le sue diagonali.
+
+
+
+Formule
+
+Area: perimetro x apotema, cioè perimetro per cinque lati;
+Apotema: numero fisso per lato
+
+
+
+Definizioni

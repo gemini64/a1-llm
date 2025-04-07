@@ -1,0 +1,97 @@
+La tavola periodica è uno schema in cui sono ordinati tutti gli elementi chimici sulla base del loro numero atomico e del numero di  elettroni presenti nelle orbite atomiche.
+La tavola periodica più utilizzata è la tavola periodica di Mendeleev. A differenza di altri contributori alla tavola periodica, Mendeleev fornì un sistema di classificazione che riusciva a prevedere le caratteristiche di elementi non ancora scoperti.
+La tavola periodica è  lo schema  con cui sono ordinati gli elementi chimici sulla base del loro numero atomico e del numero di elettroni presenti nelle orbite atomiche. La tavola periodica dispone gli elementi in funzione del numero atomico.
+
+Tavola periodica degli elementi
+
+
+
+
+
+
+
+
+
+Legenda per i colori dei numeri atomici:
+
+gli elementi numerati in blu sono liquidi in condizioni ordinarie;
+quelli in verde sono gassosi;
+quelli in nero sono solidi;
+quelli in rosso sono artificiali, realizzati dall'uomo e sono tutti solidi. Il tecnezio e il plutonio sono presenti in minime quantità nelle miniere di uranio.
+
+
+
+
+Classificazione degli elementi
+Gli elementi si distinguono in:
+
+Metalli: per completare l'ottetto, tendono a cedere elettroni.
+Non metalli: per completare l'ottetto, tendono ad acquistare elettroni.
+Semimetalli: possono sia cedere sia acquistare elettroni.
+Alogeni
+Gas nobili: hanno il guscio elettronico più esterno completo e perciò non effettuano legami chimici con altri elementi.
+Idrogeno
+Metalli alcalini
+
+
+La tavola periodica classifica gli elementi chimici in base alla loro proprietà chimico-fisiche, che rispecchiano le proprietà degli orbitali. Le proprietà periodiche variano con andamento che si ripete in modo regolare.
+Tra le proprietà periodiche si possono trovare le seguenti grandezze:
+
+energia di prima ionizzazione
+affinità elettronica
+Elettronegatività
+raggio atomico
+
+
+
+Quiz
+<quiz display=simple>
+{Che simbolo si usa per indicare l'idrogeno?
+|type="()"}
+- Hs
++ H
+- He
+{Che simbolo si usa per indicare lo zolfo?
+|type="()"}
+- Zn
++ S
+- Zr
+{Che simbolo si usa per indicare il rame?
+|type="()"}
++ Cu
+- Ra
+- Rb
+{Che simbolo si usa per indicare il palladio?
+|type="()"}
+- Pa
+- Pr
++ Pd
+{Che simbolo si usa per indicare il calcio?
+|type="()"}
++ Ca
+- Cs
+- Cr
+{Che simbolo si usa per indicare il potassio?
+|type="()"}
+- Pd
++ K
+- Pr
+{Che simbolo si usa per indicare il sodio?
+|type="()"}
+- Si
++ Na
+- Ne
+{Che simbolo si usa per indicare il cesio?
+|type="()"}
+- Ce
+- Cr
++ Cs
+</quiz>
+
+
+
+Galleria fotografica
+<gallery>
+File:2009. Марка России block hi12617778614b3533c539657.jpg|Dmitri Mendeleev
+File:Periodic system Tarantola format.svg|nel formato Tarantola
+</gallery>

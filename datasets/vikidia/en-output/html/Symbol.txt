@@ -1,0 +1,21 @@
+A symbol is something people use to write. Some can only be written with Caps Lock or shift.
+
+List of Symbols (KEYBOARD)
+! (WHAT!)
+@ (gmail@)
+# (#ImStupid)
+$ ($500)
+% (50%)
+^ 6^3
+& (Im&Friend)
+* (*Look At The Text)
+( (Look (EXAMPLE))
+) (Look (EXAMPLE))
+_ (5 - 2 = ___)
++ (5 - 2 = ___)
+= (5 - 2 = ___)
+{ (Look {HI})
+} (Look {HI})
+| (Banana|Apple And BananaApple)
+" (Write "1+1")
+' (d'Ascq)

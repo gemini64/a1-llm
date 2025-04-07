@@ -1,0 +1,23 @@
+Le leggi di Mendel sono una scoperta di Gregor Mendel che riguardano le tre leggi dell'ereditarietà.
+Gregor Mendel
+
+Mendel, il primo genetista
+Gregor Johan Mendel nacque a Hyncice nell'attuale Repubblica Ceca nel 1822. Biologo, matematico e frate agostiniano, applicando il metodo scientifico dimostrò che i caratteri dei genitori passano ai figli non a casaccio ma seguendo determinate leggi (ereditarietà dei caratteri).
+Nel monastero egli poté dedicarsi allo studio della botanica e fu coltivando l'orto dell'abbazia che scoprì le caratteristiche variabili delle piante arrivando dopo diversi anni ad enunciare i meccanismi dell'ereditarietà.
+Mendel per verificare le sue ipotesi utilizzò le piantine di pisello perché facili da coltivare e le diverse varietà differiscono un modo netto per ogni tipo di carattere (colore del seme, tegumento del seme e altezza del fusto). Il fiore di questa pianta inoltre avvolge gli organismi sessuali maschili e femminili di solito fino all'autoimpollinazione. Mendel sfruttò questa caratteristica per incrociare le piante come aveva bisogno per raggiungere il suo scopo.
+Toglieva gli stami dal fiore lasciando il pistillo che impollinava artificialmente (usando un pennellino) con pollini di una pianta da lui scelta. In questo modo era sicuro che non ci sarebbero stati incroci accidentali che avrebbero confuso i risultati dei suoi esperimenti.
+
+Le leggi di Mendel
+
+Prima legge
+un esempio di tabella rappresentante la prima legge di mendel
+All'inizio incrociò per più generazioni piante che per un certo carattere erano della stessa varietà (ad es. fiori rossi) fino ad ottenere ceppi puri e lo stesso fece per la varietà fiori bianchi. Quindi impollinò piante pure a fiore rosso con piante pure a fiore bianco. La nuova generazione era tutta a fiore rosso: era come se la varietà a fiore bianco fosse scomparsa. Mendel chiamò fattore dominante la varietà che manifestava "fiori rossi" e fattore recessivo la varietà che sembrava scomparsa "fiori bianchi". Con esperimenti simili scoprì che il colore giallo del seme è dominante su quello verde, il tegumento liscio su quello rugoso, il fusto alto su quello basso. Espresse questi risultati in quella che è nota come "Prima legge di Mendel" o "Legge della dominanza": "Gli individui nati dall'incrocio tra due ceppi puri che differiscono per una coppia di fattori presentato tutti uno solo dei due fattori, quello dominante."
+
+Seconda legge
+Al susseguirsi del primo esperimento, Mendel volle scoprire che fine avesse fatto il carattere recessivo che non si era manifestato, così fece autoimpollinare tra loro i fiori della prima generazione filiale e ne raccolse i semi e li piantó. I tre quarti delle piante cresciute manifestavano un carattere dominante, ovvero il tegumento del fiore rosso mentre in un quarto si manifestava il carattere recessivo. Mendel ottenne i medesimi risultati anche dal punto di vista di altri caratteri ad esempio il colore del seme tegumento ed altezza del fusto. Al susseguirsi dell'esperimento, Mendel ipotizzò come possibile spiegazione che ogni carattere dovesse essere determinato da  una coppia di fattori, uno dei quali era ereditato dalla cellula sessuale materna ed uno da quella paterna. Questa legge prende il nome di "legge di disgiunzione" perché ogni individuo è portatore di due alleli relativi ad una caratteristica genetica ed ogni allele viene separato dall'altro durante il processo della meiosi e ricombinati tra gamete maschile e femminile durante la fecondazione.
+
+Terza legge
+un esempio di tabella rappresentante la terza legge di mendel
+Dopo aver condotto esperimenti sui fiori, Mendel inizia a sperimentare sulle piante di pisello le quali differivano di due caratteri, il colore del seme (G giallo o g verde) e per il tipo del tegumento del seme (L liscio o l rugoso). Così inizió ad incrociare piante col seme giallo e liscio con piante col seme verde e rugoso. Come previsto, la prima generazione filiale presentava caratteri dominanti, ovvero piselli gialli e lisci, ma eterozigoti per quanto riguarda i 2 caratteri.
+Mendel fece impollinare la prima generazione filiale ed ottenne dalle nuove piantine (ovvero dalla seconda generazione filiale) dove apparvero semi gialli e lisci e verdi e rugosi, ma inaspettatamente comparvero anche semi dall'aspetto nuovo rispetto a quelli visti fino a quel momento, ovvero semi verdi e lisci e gialli e rugosi.
+Questa legge prende il nome di "legge dell'indipendenza dei caratteri" nella quale Mendel è riuscito a dedurre che incrociando piante portatrici di caratteri genetici diversi, la trasmissione di un carattere risulta essere indipendente dall'altro.

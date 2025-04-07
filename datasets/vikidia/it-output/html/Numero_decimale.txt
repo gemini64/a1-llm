@@ -1,0 +1,74 @@
+Un numero decimale è un numero costituito da una parte intera e da una parte decimale.
+Nel numero 153,5 la parte intera è 153 e la parte decimale è 5.
+Le cifre dopo la virgola hanno un valore decrescente, esse, ad esempio nel numero 1,356 sono: 3 decimi, 5 centesimi e 6 millesimi
+
+Tipi di numeri decimali
+Esistono molti tipi di numeri decimali:
+
+limitati
+illimitati periodici misti (razionali)
+illimitati periodici semplici (razionali)
+illimitati aperiodici (irrazionali)
+
+
+
+Numeri decimali limitati
+I numeri decimali limitati non presentano mai infinite cifre dopo la virgola. ES: 1,2345 - 4,784
+I numeri decimali limitati non periodici sono numeri che dopo la virgola presentano un finito numero di cifre.
+Nei numeri decimali limitati non periodici il numero è diviso in 2 parti: p. intera e p. decimale.
+
+Dalle frazioni al numero decimale
+
+Consideriamo queste frazioni ordinarie:
+ES. 4/7   8/11    15/7
+Trasformiamole in numeri decimali dividendo il numeratore per il denominatore.
+4/3= 4:3= 1,33333... (il 3 è il periodo)
+8/11= 8:11= 0,727272... (il 72 è il periodo)
+15/7= 15:7= 2,142857142... (il 142857 è il periodo)
+Sono tutti numeri decimali illimitati, perché subito dopo la virgola presentano una cifra o un gruppo di cifre che si ripetono illimitatamente (eseguendo le divisioni in colonna non si troverà mai un resto uguale a zero).
+Il periodo può essere:
+
+semplice (se il periodo è presente subito dopo la virgola )
+misto (se è presente un antiperiodo , ossia uno o più numeri prima del periodo).
+
+
+
+Numeri decimali periodici semplici
+Un numero periodico è chiamato semplice se il periodo inizia subito dopo la virgola. I numeri decimali illimitati periodici semplici sono quei numeri che hanno infinite cifre dopo la virgola che si ripetono all'infinito. La parte che si ripete si chiama periodo e va indicato o con il numero che si ripete in parentesi oppure si può mettere un trattino sopra il periodo.
+Ad esempio: 18,222222222222222...
+si può scrivere 18,(2)
+
+Numeri decimali illimitati periodici misti
+Un numero periodico è chiamato semplice se il periodo inizia subito dopo la virgola, misto se il periodo non inizia subito dopo la virgola
+13/6=13:6= 2,1666...=2,1(6)                 8/15=8:15= 0,5333...
+nel primo esempio possiamo notare che l'uno è l'ANTIPERIODO e il sei è il numero PERIODICO.
+
+Frazione decimali
+Le frazioni con denominatore 10-100-1000 vengono definite decimali.
+Le frazioni con denominatore diverso da 10-100-1000 vengono definite ordinarie.
+Prendiamo come esempio la frazione  20/100 ,
+essa se trasformata in numero decimale darà come risultato 0,2(numero decimale);
+Frazioni come 3/10, se trasformate in numeri decimali, daranno come risultato  o,333....(numero periodico semplice)
+
+Confrontare numeri decimali
+
+Confronta le parti intere
+Se gli interi sono uguali, confronta i decimi
+Se i decimi sono uguali, confronta i centesimi
+Se i centesimi sono uguali, confronta i millesimi.
+
+
+
+Come si ottiene la frazione generatrice  di un numero decimale
+Se il numero è un decimale limitato si scrive al numeratore il numero senza la
+virgola e al denominatore il numero 1 con tanti zeri quante sono le cifre dopo
+la virgola.
+Es: 12,3 = 123/10
+0,12 = 12/100
+13,345 = 13345/1000
+
+
+Numeri decimali illimitati irrazionali
+Questi numeri presentano infinite cifre dopo la virgola non periodiche
+ES:
+(radice)2.

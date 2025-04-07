@@ -1,0 +1,6 @@
+al-Khwarizmi
+al-Khwarizmi was an Islamic mathematician and astronomer.
+He lived from about 780 to about 850 in Baghdad.
+He wrote books about the math discoveries of earlier mathematicians.
+The word algebra comes from his book title Kitab al-jabr wa al-muqabalah.
+The word algorithm comes from his name.

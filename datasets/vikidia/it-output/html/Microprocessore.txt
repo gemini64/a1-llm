@@ -1,0 +1,4 @@
+Esempio di microprocessore
+Il microprocessore è l'elemento del computer che ha il compito di svolgere i comandi che gli sono stati assegnati.
+La velocità del microprocessore influenza la velocità con cui il computer esegue i comandi. Quindi per svolgere comandi più complessi e in maniera più veloce sono necessari microprocessori più potenti.
+I microprocessori attuali sono costituiti da minuscoli circuiti elettronici stampati su piccolissimi frammenti di silicio, che è un materiale semiconduttore, cioè che presente caratteristiche intermedie tra i materiali conduttori (come i metalli) e i materiali isolanti (come il vetro).

@@ -1,0 +1,40 @@
+La sottrazione è l'operazione aritmetica che adopera il segno meno (-). La sottrazione è l'operazione inversa della addizione. Essa ti permette di sottrarre a un numero una quantità e di trovarne il risultato, o specificamente la differenza.
+
+Terminologia
+
+
+5-3=2
+5 è il minuendo
+- è il segno di operazione
+3 è il sottraendo
+= è il segno di uguaglianza
+2 è la differenza
+
+
+
+La sua proprietà
+
+L'unica proprietà di questa operazione è la proprietà invariantiva:
+Se aggiungo o tolgo la stessa quantità al minuendo
+e al sottraendo il risultato non cambia.
+esempio:
+
+5-3=2
+
+
+
+(5+2) - (3+2) = 7-5 = 2
+
+
+
+(7-3) - (5-3) = 4-2 = 2
+
+
+
+
+Sottrazioni particolari
+
+5-0=5
+
+
+se sottrai a qualsiasi numero 0 il risultato è il numero stesso. Lo 0 è l'elemento neutro della sottrazione.

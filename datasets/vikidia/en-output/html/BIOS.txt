@@ -1,0 +1,1 @@
+BIOS stands for Basic Input/Output System and is a computer chip inside the computer that controls everything that's plugged into it. This includes your operating system.

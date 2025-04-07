@@ -1,0 +1,2 @@
+La latitudine è la distanza di un punto dall'Equatore. Si misura in gradi e viene detta nord o sud a seconda della posizione rispetto all'Equatore.
+I paralleli principali

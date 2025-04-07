@@ -1,0 +1,1 @@
+Drag is air friction. Planes have to deal with drag.

@@ -1,0 +1,26 @@
+Il punto è il primo ente geometrico fondamentale.
+
+Caratteristiche
+I punti si rappresentano con le lettere maiuscole dell’ alfabeto (A,B,C...); per dire che due punti sono coincidenti si usa il simbolo:\equiv.
+Per indicare che un punto appartiene a una retta si usa il simbolo: \in ;invece per indicare che il punto non appartiene alla retta si usa il simbolo: \notin .
+
+Assiomi
+https://it.wikipedia.org/wiki/Assioma sito wikipedia assioma
+
+per due punti passa una sola retta
+per tre punti allineati passa una sola retta
+per tre punti non allineati passano tre rette
+per un punto passano infinite rette
+per tre punti non allineati passa un solo piano
+per due punti e una retta passano infiniti piani.
+
+
+
+Il punto nel piano cartesiano
+Si chiama piano cartesiano perché è un insieme infinito di punti dove le dimensioni, lunghezza e larghezza sono rappresentate dagli assi cartesiani (ascisse, ordinate).
+
+Le dimensioni
+Il punto è adimensionale, cioè non ha dimensioni ne forma.
+La retta ha una sola dimensione: la lunghezza.
+Il piano ha due dimensioni: la lunghezza e la larghezza.
+Un solido ha tre dimensioni: la lunghezza, la larghezza e l’ altezza.

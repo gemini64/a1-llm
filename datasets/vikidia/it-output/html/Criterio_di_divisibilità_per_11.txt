@@ -1,0 +1,4 @@
+Come funziona il criterio di divisibilità per 11?
+Un numero è divisibile per 11 se la differenza tra la somma delle cifre di posto dispari e quella delle cifre di posto pari è 0, 11 o un multiplo di 11.
+
+Esempi

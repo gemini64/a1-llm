@@ -1,0 +1,3 @@
+Simbolo del pi greco
+Il pi greco è una costante usata in matematica il cui valore è pari a circa 3,14.
+Tale costante è molto importante in matematica. È presente ad esempio nelle formule per calcolare il perimetro, l'area e il volume di figure circolari (ad esempio cerchio, cilindro, sfera).

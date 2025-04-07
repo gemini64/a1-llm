@@ -1,0 +1,32 @@
+In matematica, il massimo comune divisore (MCD) di due numeri è il numero naturale più grande per il quale possono essere divisi entrambi.
+
+Numeri primi tra loro
+Se due o più numeri hanno solo il numero 1 come divisore comune sono numeri primi tra di loro.
+Es: 18,25 sono primi tra di loro. I numeri primi tra di loro non devono essere per forza primi.
+
+Come trovare l'M.C.D
+Per calcolare l’M.C.D di 2 o più numeri devo:
+
+Fattorizzare i numeri
+Selezionare solo i fattori comuni con l’esponente minore
+Moltiplicarli tra di loro
+
+
+Con la scomposizione in fattori primi si può trovare l'M.C.D di due numeri:
+
+Si scompongono i due numeri in fattori primi
+Si moltiplicano tutti i fattori in comune, prendendoli con l'esponente minore e si ha trovato l'M.C.D di due numeri.
+
+
+Prendiamo per esempio una coppia di numeri naturali:  10 e 8.
+Scriviamo l’insieme dei loro divisori, e sottolineamo quelli comuni:
+D(8)={1-2-4-8}
+D(10)={1-2-5-10}
+Tra i divisori comuni ai due numeri il più grande è 2, che quindi si chiama MASSIMO COMUNE DIVISORE (M.C.D) di 8 e 10 e si indica così: M.C.D(8;10)=2
+
+Osservazioni
+
+Due numeri primi sono sempre primi fra loro; per esempio i numeri 19 e 23 oltre ad essere primi, sono anche primi fra loro perché il loro M.C.D è 1.
+Due numeri consecutivi sono primi fra loro, per esempio: 10 - 11, 24 – 25.
+Due numeri primi fra loro non sono necessariamente numeri primi; infatti 6 e 25 sono primi fra loro, ma non sono numeri primi.
+Se due numeri sono uno multiplo dell’ altro l’ M.C.D è il numero minore e il numero maggiore è l’ m.c.m. Per esempio se considero 15 e 30  M.C.D(15;30)= 15    e    m.c.m(15;30)=30

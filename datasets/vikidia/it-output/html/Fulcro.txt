@@ -1,0 +1,15 @@
+Il fulcro è il punto fisso su cui ruota una leva. Una leva sta in equilibrio sul fulcro quando la potenza il prodotto della potenza per il suo braccio è uguale al prodotto della resistenza per il suo braccio.
+A partire dal fulcro si iniziano a contare le lunghezze dei due bracci.La distanza tra il fulcro e il punto di applicazione della  resistenza si chiama braccio della resistenza invece la distanza tra il fulcro e il punto di applicazione della potenza è chiamato braccio della potenza.
+
+Esempi
+
+leva di 1° genere (forbici) ha il fulcro fra la potenza e la resistenza;
+leva di 2° genere (schiaccianoci) ha la resistenza fra il fulcro e la potenza;
+leva di 3° genere (badile) ha  la potenza fra la resistenza e il fulcro.
+
+
+
+
+Bibbliografia
+
+Scienze Focus,Volume A, Luigi Leopardi, Chiara Cateni, Massimo Temporelli, Francesca Bolognani, Casa editrice: Dea Scuola.

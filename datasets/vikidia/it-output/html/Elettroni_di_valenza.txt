@@ -1,0 +1,2 @@
+Gli elettroni di valenza sono gli elettroni di un determinato elemento che si dispongono sui sottolivelli s e p del livello energetico più esterno nella configurazione elettronica.
+Il numero massimo di elettroni di valenza che possono essere presenti in ogni elemento è 8, questo perchè nel sottolivello s possono essere contenuti massimo 2 elettroni mentre il sottolivello p può contenerne fino a 6.

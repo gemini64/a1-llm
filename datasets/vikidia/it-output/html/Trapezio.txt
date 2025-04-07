@@ -1,0 +1,12 @@
+Il trapezio è un quadrilatero con  due basi parallele, una maggiore e una minore e due lati obliqui.
+Esistono tre tipi di trapezi: trapezio rettangolo, trapezio scaleno e trapezio isoscele.
+
+Il trapezio isoscele ha i lati obliqui uguali. Gli angoli sono a due a due congruenti: due acuti e due ottusi. Le diagonali sono uguali.
+
+
+
+Il trapezio scaleno ha i lati obliqui diversi. Gli angoli sono tutti e quattro diversi: due acuti e due ottusi. Le diagonali sono diverse.
+
+
+
+Il trapezio rettangolo ha due angoli retti opposti.

@@ -1,0 +1,3 @@
+0
+0 (zero) is a number which represents nothing. It comes after –1 and before 1. Multiplying any number by 0 equals 0 and dividing by 0 is undefined.
+Adding zero to or subtracting from a number (𝑥 + 0 or 𝑥 − 0) does not change the number.

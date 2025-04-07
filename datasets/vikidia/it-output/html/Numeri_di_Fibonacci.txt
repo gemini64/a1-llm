@@ -1,0 +1,21 @@
+Bosco del Baj
+I numeri di Fibonacci sono una successione di numeri in cui ciascun numero è la somma dei due numeri che vengono prima nella serie.
+Si parte da 0 e 1, che sono dati in partenza. La successione di Fibonacci quindi è:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+Infatti,
+
+0+1=1
+1+1=2
+1+2=3
+3+2=5
+e così via
+
+
+Come si può intuire, la successione di Fibonacci è infinita, si può continuare a trovare un numero più grande che appartiene alla serie.
+La successione di Fibonacci è chiamata così dal nome del grande matematico italiano Leonardo Fibonacci che l'ha scoperta.
+I numeri di Fibonacci sono strettamente collegati alla sezione aurea: la sezione aurea è la formula per cui dati due lati di un rettangolo a e b, vale questa equivalenza
+a:b=a:(a+b)
+Tra due numeri x e y che fanno parte della successione di Fibonacci, sono consecutivi (sono vicini, "uno accanto all'altro" nella successione: per esempio, 34 e 55 nell'elenco in alto) e x>y (cioè x è il numero successivo a y nella serie di Fibonacci), esiste la proprietà
+\frac{x}{y}=sezione\text{ }aurea
+La costante della sezione aurea è un numero decimale infinito non periodico che si può approssimare con 1,6180.
+Si è anche scoperto che in natura i numeri di Fibonacci ricorrono spessissimo: quasi tutti i fiori hanno tre o 5 o 8 o 13 o 21 o 34 o 55 petali. La margherita, per esempio, ha sempre 55 o 89 petali.

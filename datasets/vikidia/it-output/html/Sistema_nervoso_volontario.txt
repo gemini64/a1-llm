@@ -1,0 +1,8 @@
+Il sistema nervoso periferico volontario è costituito da:
+- 12 paia di nervi cranici che partono dall'encefalo;
+- 31 paia di nervi spinali che partono dal midollo spinale.
+I nervi cranici possono essere:
+- sensoriali: trasportano al cervello le informazioni provenienti dai sensi (vista, udito, ecc)  e dai recettori per le sensazioni tattili come il dolore, il tatto e la temperatura. Sono n. sensoriali il n. ottico, il n. olfattivo, ecc.
+- motori: trasmettono la risposta volontaria elaborata dal SNC ai muscoli scheletrici.
+Alcuni nervi sono misti, ad esempio il nervo trigemino.
+I nervi spinali sono tutti nervi misti. Hanno origine nel midollo spinale, dall'unione tra le fibre motorie e sensoriali che escono rispettivamente dalle corna anteriori e posteriori del midollo spinale.

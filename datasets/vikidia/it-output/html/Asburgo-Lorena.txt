@@ -1,0 +1,207 @@
+Gli Asburgo-Lorena furono la casata di derivazione degli Asburgo d'Austria.<gallery widths="115" heights="120" perrow="2">
+File:Ornamented Coat of Arms of Joseph II, Holy Roman Emperor.svg|Stemma di Giuseppe II
+File:Greater coat of arms of Leopold II and Francis II, Holy Roman Emperors.svg|Stemma di Leopoldo II
+File:Middle Coat of Arms of Francis II, Holy Roman Emperor (1804-1806).png|Stemma di Francesco II
+File:Imperial Coat of Arms of the Empire of Austria (1815).svg|Stemma di Ferdinando I
+File:Coat of Arms of Emperor Franz Joseph I.svg|Stemma di Francesco Giuseppe I
+File:Personal Arms of the Emperor of Austria and King of Hungary (1916).svg|Stemma di Carlo I
+</gallery>
+
+
+
+
+
+Storia
+
+
+Carlo VI (ultimo componente maschio degli Asburgo d'Austria), non avendo figli maschi, nel 1713 firmò la Prammatica Sanzione, attraverso la quale l'Arciducato d'Austria sarebbe passato a sua figlia Maria Teresa d'Austria (ultima donna della casa d'Austria). Ella sposò Francesco I di Lorena, che divenne Sacro Romano Imperatore, e da questo matrimonio ebbe origine la dinastia degli Asburgo-Lorena. In seguito alla guerra di successione austriaca, a Francesco I succedettero i suoi due figli:
+
+Giuseppe II d'Asburgo-Lorena, che regnò sull'impero romano-germanico dal 1765 al 1790;
+Leopoldo II d'Asburgo-Lorena , che governò dal 1790 al 1792.
+
+
+
+In seguito il trono imperiale toccò al figlio di Leopoldo II, Francesco II d'Asburgo-Lorena, che regnò sull'impero dal 1792 al 1806. Intanto, in quegli anni, l' Europa stava attraversando l'età delle guerre napoleoniche, presieduta da Napoleone e dalla Francia. Nel 1805, il Sacro Romano Impero fu sconfitto dall'esercito napoleonico nella battaglia di Austerlitz, e Francesco II fu costretto ad abdicare. In questo modo, nel 1806 dovette sciogliere la millenaria confederazione, accontentandosi del titolo di imperatore d'Austria. Infatti, dal 1804 al 1835 Francesco II regno sull'impero austriaco col nome di Francesco I. Gli succedette il figlio Ferdinando I, che nel 1848 abdicò a favore del nipote Francesco Giuseppe I, che governò per moltissimo tempo, dal 1848 al 1916. In seguito, il titolo di imperatore dell'impero austro-ungarico (l'impero austriaco aveva cambiato nome nel 1867) toccò a Carlo I d'Asburgo-Lorena, che dopo alla sconfitta nella prima guerra mondiale, fu deposto nel 1918.
+<gallery widths="110" heights="110">
+File:Ferdinand I. Bauer Litho.jpg|Ferdinando I d'Austria
+File:Portrait of Franz Joseph I by Franz Xaver Winterhalter.jpg|Francesco Giuseppe I
+File:Emperor Charles I of Austria.jpg|Carlo I d'Austria
+File:Otto von Habsburg.png|Ottone d'Asburgo-Lorena
+File:Karl Habsburg-Lothringen (2022).jpg|Carlo d'Asburgo-Lorena
+</gallery>
+
+Gli Asburgo-lorena dopo la Grande guerra
+Dopo la fine della prima guerra mondiale, l'impero austro-ungarico fu sciolto e di conseguenza Carlo I dovette rinunciare alla carica di imperatore, anche se egli, nel 1921 e nel 1922, cercò di diventare il sovrano del nuovo stato ungherese. Non ci riuscì e morì nell'arcipelago di Madeira nel 1922. Gli succedette il figlio Ottone d'Asburgo-Lorena, che si oppose a Hitler e all'Anschluss e si rifugiò in America durante la seconda guerra mondiale. Morì nel 2011, e nel 2007 passò il titolo a suo figlio Carlo d'Asburgo-Lorena, oggi imprenditore e nobile austriaco.
+
+Rami cadetti
+
+
+ramo granducale di Toscana: incominciato con l'imperatore Leopoldo II, continuò col suo secondo figlio con Ferdinando III, e con il figlio di questi Leopoldo II di Toscana. Questo ramo fu deposto nel 1859, quando la Toscana entrò a fare parte del neonato regno d'Italia;
+ramo ducale di Modena: incominciò con Ferdinando d'Asburgo-Lorena (uno dei tanti figli di Stefano I di Lorena), che si unì in matrimonio con Maria Beatrice d’Este erede di Modena. Continuò con Ferdinando IV e Ferdinando V, che nel 1859 fu deposto poiché Modena entrò nel regno d'Italia;
+ramo imperiale del Messico: ebbe inizio e fine con Massimiliano I del Messico;
+ramo Teschen: incominciò con Carlo d'Asburgo-Teschen;
+ramo palatino d'Ungheria: iniziò con Giuseppe d'Asburgo-Lorena.
+
+
+
+timeline asburgica
+Non sono compresi i principi ereditari, Ottone I e Carlo d'Asburgo-Lorena
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1400 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1745 till:1792                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1745 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1765   color:red     shift:(0,5)  align:center text: Francesco I imperatore del Sacro Romano Impero.
+from:1765   till:1790   color:green     shift:(0,5)  align:center text: Giuseppe II imperatore del Sacro Romano Impero.
+from:1790   till:1792   color:magenta     shift:(0,5)  align:center text: Leopoldo II imperatore del S.R.I.
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1600 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1792 till:1835                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1792 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:1792   till:1806   color:blue     shift:(0,5)  align:center text: Francesco II imperatore del Sacro Romano Impero.
+from:1806   till:1835   color:orange   shift:(0,5)  align:center text: Francesco II imperatore d'Austria.
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1000 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1835 till:1848                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1835 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1848   color:yellow     shift:(0,5)  align:center text: Ferdinando I imperatore d'Austria
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1300 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1848 till:1867                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1848 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1867   color:green     shift:(0,5)  align:center text: Francesco Giuseppe I imperatore d'Austria
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1600 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1867 till:1916                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1867 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1916   color:red     shift:(0,5)  align:center text: Francesco Giuseppe I imperatore d'Austria-Ungheria
+
+fine del codice della timeline
+
+</timeline>
+<timeline>                                                         #questo è il tag di inizio
+ImageSize  = width:1000 height:90                                 #queste sono le dimensioni totali in pixel dell'immagine
+PlotArea   = left:50 right:50 bottom:30 top:30                     #dimensioni dei margini, spazio per le etichette dell'asse del tempo
+DateFormat = yyyy                                                  #formati possibili yyyy, dd/mm/yyyy, mm/dd/yyyy
+Period     = from:1916 till:1918                                   #inizio e fine del periodo considerato, il formato deve essere coerente con DateFormat
+TimeAxis   = orientation:horizontal                                #timeline orizzontale
+ScaleMajor = unit:year increment:1 start:1916 gridcolor:black      # text:year
+
+graduazione alternative:year,month, day; incremento delle etichette ogni anno, etc, colore della griglie
+un campo text: ci permette di dare un nome all'asse
+ScaleMinor = in questa timeline non viene usata
+
+
+PlotData =
+
+ogni riga qui sotto corrisponde a un anno nella timeline, da start (primo anno del Period) a end (ultimo anno)
+per ogni mese, ogni rettangolo colorato, si scegli il colore, scelta possibile tra 32 colori e più
+si usa il comando shift:(x,y) per spostare il testo nel piano in modo da evitare sovrapposizioni
+si può allineare il testo con align: left, right o center
+si scrive il testo usando ~ per andare a capo
+
+from:start   till:1918   color:blue     shift:(0,5)  align:center text: Carlo I imperatore d'Austria-Ungheria
+
+fine del codice della timeline
+
+</timeline>

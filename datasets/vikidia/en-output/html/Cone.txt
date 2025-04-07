@@ -1,0 +1,2 @@
+A Cone from 3D Slash
+A Cone is a Shape.It has a circle on bottom and a point on top. It looks similar to a pyramid only it has 1 face:The circle.

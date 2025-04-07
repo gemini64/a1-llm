@@ -1,0 +1,6 @@
+A plural is a form of a noun in which there is more than one of that noun or zero.
+Plural nouns usually have an "s" at the end of them, so one house and two houses. Except in these cases:
+
+Nouns ending in "s", "x", "z", "ch", or "sh", have "es" added to end. For example "church" becomes "churches".
+A noun ending in "y" which is preceded by a consonant (any letter that is not a vowel ("a", "e", "i", "o", "u") has the "y" changed into "ies". For example, baby becomes babies.
+If a noun ends in "f" or "fe", it is replaced with "ves". For example, half becomes halves.

@@ -1,0 +1,40 @@
+18px|bussola Disambiguazione – Se cercavi altri significati del termine, oppure cercavi un'altra persona, vedi la pagina Similitudine
+
+La similitudine è una trasformazione geometrica che cambia rispetto al rapporto di similitudine.
+Due poligoni sono simili:
+
+Se gli angoli corrispondenti sono congruenti.
+Se il rapporto tra le misure di due lati corrispondenti è costante.
+
+
+
+Figure simili
+Esse hanno:
+
+La stessa forma, ma non la stessa dimensione.
+Gli angoli congruenti (A=A'  B=B'  C=C'  D=D').
+Il rapporto tra le misure di due lati corrispondenti costante, questo rapporto è detto rapporto di similitudine (AB/AB'=BC/BC'=CD/CD'=AD/AD').
+
+
+
+Il rapporto di similitudine
+Il rapporto tra le aree di due figure simili è il quadrato del rapporto di similitudine.
+Il rapporto dei perimetri fra le figure simili è uguale al rapporto di similitudine.
+
+Differenze con le isometrie
+La similitudine si differenzia dall' isometria perché
+
+nella prima si mantiene la forma delle figure e la congruenza fra gli angoli.
+la seconda è  una trasformazione che descrive i movimenti che mantengono uguali le misure degli oggetti.
+
+
+
+Invarianti
+
+Le isometrie sono trasformazione geometriche che conservano sia la forma che la dimensione della figura (lati e angoli sono congruenti).
+
+
+
+Varianti
+
+Le isometrie variano la posizione nel piano geometrico.

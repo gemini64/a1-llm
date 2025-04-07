@@ -1,0 +1,72 @@
+Metric System units of Length
+
+
+Yoctometres
+Too small. It’s equal to a septillionth of a metre. That means 1 septillion of these will equal 1 metre. Symbol is Ym.
+
+Zeptometres
+It’s equal to a sextillionth of a metre. That means 1 sextillion of these are equal to a metre. 1000 yoctometres in 1 zeptometre. Symbol is zm.
+
+Attometres
+Attometres are a quintillionth of a metre. So small. That means 1 quintillion of these is 1 metre. 1000 zeptometres or 1,000,000 yoctometres equal 1 attometre. Symbol is am.
+
+Femtometres
+1 fm in a helium atom
+A Femtometre is equal to 1 quadrillionth of a metre. That means 1 quadrillion of these is 1 metre. 1000 attometers,1,000,000 zeptometres or 1,000,000,000 yoctometres equal this femtometre. Symbol is fm. In the image you can see how small a femtometre is.
+
+Picometres
+A Picometer is 1 trillionth of a metre. That means 1 trillion of these is a metre (40 inches). 1000 femtometres,1,000,000 attometres,1,000,000,000 zeptometres, 1,000,000,000,000 yoctometres is a picometre. In the image. 1 Å = 100 pm. Symbol is pm.
+
+Nanometres
+A Nanometre is 1 billionth of a metre. That means 1 billion of these is a metre (40 inches). 1000 picometres,1,000,000 femtometres,1,000,000,000 attometres,1,000,000,000,000 zeptometres,1,000,000,000,000,000 yoctometres. Symbol is nm.
+
+Micrometres
+A Micrometre is 1 millionth of a metre. That means 1 million of these is a metre. 1000 nanometres, etc is a micrometre. The Symbol is ɥm. 100 micrometres (More expressed 100,000 nanometres) is the thickness of a sheet of paper.
+
+Millimetre
+A Millimetre is 1 thousandth of a metre. It’s 1/10 of a centimetre. That means 1000 of these is 1 metre. You can see a millimetre. Symbol: mm.
+
+Centimetre
+A Centimetre is 1 hundredth of a metre, It’s 1/100 of a metre. 2.5 centimetres (25 millimetres) is 1 inch. Symbol: cm.
+
+Metre
+A Metre is 1/1000 of a kilometre. It’s equal to around 40 inches. This is the base unit. It makes sense to measure your height in cm or m. Symbol is m.
+
+Kilometre
+A Kilometre is 1000 meters, It’s 1/1000 of a megametre. This is used for long distances. Symbol is km. Some stuff above 1000 km (1 Megametre) is still used in kilometres.
+
+Megametre
+A Megametre is 1,000,000 meters. It’s 1/000 of a Gigametre and 1000 kilometres. A lot of people say 1000 kilometres rather than 1 megametre. Symbol: Mm
+
+Gigametre
+A Gigametre is 1 billion meters. It’s 1/1000 of a terametre and 1000 Megametres. Although people say 1,000,000 km instead of 1 Gm. Symbol is: Gm. 149.6 Gm is equal to the distance from the earth to the sun.
+
+Terametre
+A Terametre is 1 trillion meters. It’s 1/1000 of a petametre. 1000 Gigametres. Although people say 1 billion kilometres rather than 1 Tm. Symbol is Tm.
+
+Petametre
+A Petametre is equal to 1 quadrillion meters. It’s 1/1000 of a exametre. 1000 terametres. Although people say 1 trillion kilometres or use light years instead. Symbol is Pm.
+
+Exametre
+A Exametre is equal to 1 quintillion meters. It’s 1/1000 of a zettametre. 1000 petametres. Although people use light years or kilometres instead. Symbol is Em.
+
+Zettametre
+A Zettametre is equal to 1 sextillion meters. It’s 1/1000 of a yottametre and 1000 exametres = 1 zettametre. Although people use light years. Symbol is Zm.
+
+Yottametres
+A Yottametre is equal to 1 septillion meters. It is so big. 1000 zettametres is equal to 1 yottametres. Symbol is Ym.
+
+Imperial Units of length
+
+
+Inch
+An inch is equal to 2.5 centimetres. It is 1/12 of a foot. It’s 1/36 of a yard. The symbol is in.
+
+Foot
+A Foot is 12 inches. It is 1/3 of a yard and 1/5280 of a mile. The symbol is ft.
+
+Yard
+A Yard is 36 inches or 3 feet. It is 1/1760 of a mile. The symbol is yd.
+
+Mile
+A Mile is 5280 feet or 1760 yards. The mile is equal to 1.6 kilometers. The symbol is mi.

@@ -1,0 +1,15 @@
+Seismograph
+The seismograph in an instrument than registers earthquakes: it is constituted by a series of elements that enable the graphic representation of earthquakes.
+
+How it's done
+The seismograph is in fact a pendulum system, formed from a mass suspended to a thread with an inky point.
+
+How  it works
+When an earthquake happens, the mass begins to move and the inky point begins to draw the shake.
+
+History
+A seismoscope of Eastern Han Dynasty (around 200 AD).
+Before seismographs, other systems had been invented that informed people of distant earthquakes without being able to draw them or measure their characteristics. Today we call these antique systems seismoscopes. The first one was created by Zhang Heng.
+In 1703, Jean de Hautefeuille builds a mercury seismograph. In Italy, the first creation was attributed to Andrea Bina,his built to Perugia at the seven hundred one.
+The sensor system in seismographs was initially a vertical pendulum. It has been replaced in time by a horizontal pendulum, sustained from soft with which is possible to build tools of reduced dimension and high sensitivity. Then it moved to an electromagnetic system, created by Luigi Palmieri.
+Now the seismographs have evolved into sensors called seismometers measuring earthquakes characteristics and registering them as numbers into computer systems. The drawings can be done separately afterwards, based on the registered numbers.

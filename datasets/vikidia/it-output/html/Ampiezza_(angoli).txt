@@ -1,0 +1,45 @@
+L'ampiezza degli angoli è l'apertura compresa tra i due lati.
+Si misura in gradi e il simbolo è rappresentato da un cerchietto identico a quello della temperatura ( ° ). Il grado  è la trecentosessantesima parte dell'angolo giro.
+Il grado possiede dei sottomultipli che sono, i primi (la sessantesima parte del grado) e il suo  simbolo è una virgoletta ( ' ). I secondi che è la sessantesima parte del primo e come simbolo ha due virgolette ( " )
+Per segnare l'ampiezza di un angolo, si fa un semicerchio che permette di far capire la sua apertura,(compresa tra i due lati).
+
+Come si misura l'ampiezza
+
+
+Per misurare l'ampiezza degli angoli si utilizza il goniometro ( uno strumento circolare che riporta i gradi), per farlo ci sono dei passaggi precisi da seguire, che sono:
+
+
+
+Prima cosa bisogna  far coincidere il puntatore ( il cerchietto al centro dello strumento) del goniometro con  il vertice (punto 0) che  si forma tra i due lati dell'angolo che abbiamo disegnato.
+
+
+
+Poi bisogna mettere la linea dello zero sul segmento tracciato e seguendo il senso orario  o antiorario ( in base al disegno dell'angolo che si è eseguito), si riuscirà a misurare l'ampiezza.Per farlo bisogna osservare la linea del goniometro e guardare dove coincide,così riesco a vedere la misura in gradi dell'angolo e capirla molto precisamente.
+
+
+
+Le diverse ampiezze
+
+Gli angoli hanno varie grandezze da cui, prendono il nome che sono:
+
+Con una apertura di 90° si dice angolo retto ed è la metà di uno piatto e un quarto di quello giro.
+
+
+
+Di 180° si chiama angolo piatto ed è la metà dell'angolo giro e forma un mezzo cerchio.
+
+
+
+Di 360° si dice angolo giro e rappresenta una circonferenza completa.
+
+
+
+Gli angoli che hanno una ampiezza da 1° fino ad 89° si dicono acuti e sono minori dell'angolo retto (90°).
+
+
+
+Quelli che hanno una ampiezza tra i 91° fino al 179° si dicono ottusi, sono maggiori dell'angolo retto (90°).
+
+
+
+Tutti gli angoli che hanno una ampiezza che parte da 180° e arriva fino a 360° si dicono concavi, mentre quelli compresi tra 0° e 179 prendono il nome di convessi.

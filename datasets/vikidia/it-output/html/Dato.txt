@@ -1,0 +1,8 @@
+Un dato è un elemento o un informazione, di un entità, un fenomeno, una transizione e altro.
+un dato si può presentare in diverse forme:
+
+in un alfabeto
+numeri
+lettere
+statistiche
+immagini in movimento (video, immagini, suono, audio)

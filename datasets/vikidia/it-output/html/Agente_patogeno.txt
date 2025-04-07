@@ -1,0 +1,27 @@
+Un agente patogeno è un essere vivente che causa una malattia al suo ospite.
+
+Tipi
+Sono normalmente classificati come:
+
+Virus;
+Batteri;
+Funghi;
+Protozoi.
+
+I patogeni in più possono essere classificati come:
+
+Patogeni obbligati: la loro presenza causa sempre malattia;
+Patogeni facoltativi o opportunisti: Causano malattie solo ad un ospite "debole".
+
+
+Caratteristiche
+La patogenicità è definita da:
+
+Virulenza: la capacità di causare una malattia nell'ospite;
+Invasività: la capacità di invadere e colonizzare i tessuti dell'ospite.
+
+L'invasività a sua volta è definita da:
+
+La capacità di attaccarsi alle cellule dell'ospite;
+La capacità di produrre enzimi capaci di attaccare i tessuti dell'ospite;
+La capacità di produrre protezioni antifagocitarie.

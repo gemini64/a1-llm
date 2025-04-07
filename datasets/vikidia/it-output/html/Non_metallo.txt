@@ -1,0 +1,17 @@
+Un non metallo è un elemento cattivo conduttore di calore ed elettricità.
+È una delle tre categorie in cui si suddividono gli elementi chimici: metalli, semimetalli e non metalli.
+
+Non metalli
+
+Idrogeno (H)
+Carbonio (C)
+Azoto (N)
+Ossigeno (O)
+Fluoro (F)
+Fosforo (P)
+Cloro (Cl)
+Selenio (Se)
+Bromo (Br)
+Iodio (I)
+Astato (At)
+Zolfo (S)

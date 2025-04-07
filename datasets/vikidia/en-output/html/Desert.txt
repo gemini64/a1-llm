@@ -1,0 +1,20 @@
+The Sahara, the hottest desert on earth
+A desert is an area that is very dry. Deserts cover about one third of the land on earth (*)  and can be found on every continent except Europe.
+The largest desert is Antarctica. The driest desert is the Atacama Desert in western South America. The hottest desert is the Sahara in northern Africa.
+
+
+References
+
+
+
+
+
+
+
+
+es:Desierto
+fr:Désert
+nl:Woestijn
+simple:Desert
+wp:Desert
+(*) http://pubs.usgs.gov/gip/deserts/what/

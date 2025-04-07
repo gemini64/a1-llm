@@ -1,0 +1,8 @@
+The nervous system is a tissue network made of neurones. Its main function is to capture and process the signals which control and coordinate other organs, to interact with the environment. The nervous system's rapid responses are what differentiate animals from other multicellular organisms without a nervous system, such as plants and fungi.
+Neurones are specialised cells that coordinate the actions of animals through chemical and electrical signals.
+
+The human nervous system
+The human nervous system is formed of the central nervous system, which is formed of the brain and the spinal cord, and the peripheral system  (*) . These work together to send messages around the body.
+
+References
+(*) https://simple.wikipedia.org/wiki/Nervous_system

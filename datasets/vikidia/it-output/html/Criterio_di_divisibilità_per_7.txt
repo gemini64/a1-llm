@@ -1,0 +1,6 @@
+Come funziona il criterio di divisibilità per 7?
+Un numero è divisibile per 7 se la differenza fra il numero scritto senza la cifra delle unità e il doppio della cifra delle unità è uguale a 0,7,o un suo multiplo.
+
+Esempi
+Ad esempio: 147 è divisibile per 7 perchè 14-7x2 = 14-14 = 0 che è un multiplo di 7.
+Ad esempio: 91 è divisibile per 7 perchè 9-1x2 = 9-2 = 7 che è un multiplo di 7

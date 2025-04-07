@@ -1,0 +1,8 @@
+The Wayback Machine is a digital archive of the World Wide Web founded by the Internet Archive. It was created on 10 May 1996 but was released to the public on 24 October 2001.
+It was founded by Brewster Kahle and Bruce Gilliat.
+It allows users to see how websites looked in the past.
+As of 3 January 2024, the Wayback Machine has archived more than 860 billion web pages and well over 99 petabytes of data.
+
+External links
+
+Official website

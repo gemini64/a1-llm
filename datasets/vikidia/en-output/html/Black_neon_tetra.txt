@@ -1,0 +1,183 @@
+User:RevolucioBot/CopyWP
+
+{| class="infobox biota" style="text-align: left; width: 200px; font-size: 100%; float: right;"
+|-
+! colspan=2 style="text-align: center; background-color: pink" | PAGENAME
+|-
+| colspan=2 style="text-align: center" |
+|-
+|- colspan=2 style="text-align: center; background-color: pink"
+! colspan = 2 | Conservation status
+|-
+| colspan = 2 |
+Least Concern  (IUCN 3.1)(*)
+|-
+|-
+! colspan=2 style="text-align: center; background-color: pink" | Scientific classification
+|-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|-
+
+|-
+|- style="text-align: center; background-color: pink"
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+|-
+
+
+
+
+
+
+
+
+
+
+|-
+
+|} The black neon tetra (Hyphessobrycon herbertaxelrodi) is a freshwater fish of the characin family (Characidae) of the order Characiformes. (*)  It is native to the Paraguay basin of southern Brazil. They are often found in the aquarium trade, and a feral population has been established in the rio Paraíba do Sul basin due to the trade. (*)
+
+Taxonomy
+The species is named in honor of pet-book publisher Herbert R. Axelrod (1927–2017), whose Tropical Fish Hobbyist magazine published this description and several others by Géry. (*)
+
+Description
+An adult black neon tetraA juvenile black neon tetraThis species is of typical elongated tetra appearance; it is of plain basic coloration, but with two distinct, adjacent, longitudinal stripes; white above black. The eye has two thin but distinctive color bands across the top; red
+above yellow. It grows to a maximum overall length of approximately . (*)  Befitting its common name, it slightly resembles the neon tetra, which belongs to a different genus (Paracheirodon). Females are often larger than males.
+Additionally, the variety named Diamond or Brilliant does not have a white stripe but instead displays more reflective scales around the head.
+The fish's natural diet consists of small invertebrates and plants. (*)
+H. herbertaxelrodi is commonly kept as an aquarium fish by hobbyists.
+The black neon tetra is sometimes called the black tetra, but that name more properly refers to a different species, Gymnocorymbus ternetzi.
+
+In the wild
+Black Neon Tetras are egg-scattering free spawners, and they show no parental care for fry. The black and white stripes on their sides are used to keep the shoal in contact with each other in turbid water.
+As Black Neon Tetras are so widely bred, they are no longer collected from the wild for trading.
+Present in both forest streams and seasonal floodwaters, the Black Neon Tetra is an adaptable species. It prefers acidic habitats with running water and waterlogged debris as well as aquatic plants.
+
+In the aquarium
+Template:Multiple issues
+Black neon tetras are kept in soft acidic water, although captive-bread they can often survive in mature tap water with a range of 5.5 - 7.5. (*)  Aquarists recommend that the water be kept clean at all times; that the tank contain live plants, a darker substrate and open water for swimming; and that the fish  be kept in groups of at least 6, preferably more.  The recommended minimum aquarium volume for a group of 6 is about 15 US gallons (60 L), and for a group of 8–10 fish, about 20 gallons.
+Because black neon tetras swim at the top level of the aquarium, and do not feed from the bottom of the tank, aquarists keep them with bottom dwelling fish (such as pygmy corydoras) so that leftover food is then eaten up off the substrate and not left to waste.
+Black neon tetras are fed a variety of foods, including flake, frozen and freeze dried food, living healthiest on a balanced mix. Small live foods like worms and brine shrimp are said to bring out the fish's colors.
+Contrary to other Tetras, Black Neon Tetras tend to shoal discreetly in aquaria.
+
+Breeding
+Black neon tetras can be spawned rather easily if the water quality is right. Before attempting to breed the black neon tetra, breeders condition the prospective parents with live food. Fish around one year old can be suitable for breeding. The sex of the fish is determined by its body shape, the female being much rounder and more plump than the males. Although the black neon tetra can be kept in water harder and more alkaline than its natural habitat, for breeding it is necessary to be closer to what it would feel like in the Amazon. Breeding the Black neon tetra requires acidic water with no more than four degrees of hardness.
+The black neon tetra is an egg scatterer, laying adhesive (sticky) eggs over plants, etc. One female can produce several hundred eggs. The parents eat their own eggs, so the parents are normally removed after spawning. As with many fish, the black neon tetra often spawns in the early morning. Raising the fry can be more difficult because of their small size. The first food will normally be protozoa (infusoria), then Daphnia. Usually very fine fry food is used, graduating to slightly coarse fry food. At all ages, the black neon tetra benefits from suitably sized live food.
+
+Credit card fraud
+Mutekimaru, a video game live-streaming channel uses motion tracking software to detect the movement of black neon tetras. This movement is coded as inputs into video games, effectively allowing the fish to play video games on livestream, and in 2020 the black neon tetras were able to beat a game after a 3200 hours of play. In 2023, the fish had been playing a Pokemon game and had won several battles, however after five hours the game crashed, which gave the fish access to his main page. Because of the way the movement of the fish was intended to realate to computer imputs, the fish were able to access the Nintendo store and buy $3.85 USD worth of funds and also exposed the channel's credit card details to the public. (*)  (*)
+
+
+References
+
+
+
+
+
+Template:Taxonbar
+(*) Template:cite iucn
+(*) Template:ITIS
+(*) "Hyphessobrycon herbertaxelrodi – Black Neon Tetra — Seriously Fish". https://www.seriouslyfish.com/species/hyphessobrycon-herbertaxelrodi/. Retrieved 2025-02-02.
+(*) "Family ACESTRORHAMPHIDAE Eigenmann 1907 (American Tetras)" (in en-US). 2024-11-27. https://etyfish.org/acestrorhamphidae/. Retrieved 2025-02-02.
+(*) "Black Neon Tetra-Hyphessobrycon herbertaxelrodi" (in en). https://www.fishkeeper.co.uk/fish/freshwater/characins/black-neon-tetra. Retrieved 2025-02-02.
+(*) Template:FishBase
+(*)
+(*) "YouTuber's Pet Fish Streams Pokemon, Then Commits Credit Card Fraud". {{{2}}}. 16 February 2025. https://www.ign.com/articles/youtubers-pet-fish-streams-pokemon-then-commits-credit-card-fraud.
+(*) "Japanese YouTuber's Pet Fish Commit Credit Card Fraud Against Owner While Playing Pokémon". {{{2}}}. 16 February 2025. https://people.com/pets/japanese-youtuber-pet-fish-commits-credit-card-fraud/.

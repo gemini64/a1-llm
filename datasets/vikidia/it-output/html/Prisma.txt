@@ -1,0 +1,10 @@
+Un prisma è un poliedro avente due basi parallele e congruenti e come facce laterali tanti parallelogrammi congruenti quanti sono i lati di una base.
+
+Prisma retto
+
+Un poliedro si dice retto quando i suoi spigoli laterali sono perpendicolari ai lati delle sue basi
+
+Prisma regolare
+Un prisma si dice regolare se la sua base è un poligono regolare.
+
+Formule dei prismi retti universali

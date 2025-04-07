@@ -1,0 +1,27 @@
+Esempi di forze
+La forza è una grandezza fisica che si manifesta quando due corpi interagiscono tra di loro. Ad esempio la forza di gravità è causata dall'interazione tra un corpo e la Terra. Le forze possono deformare un corpo vincolato o modificare la velocità di un corpo libero.
+Le forze sono in genere rappresentate come delle frecce (chiamate "vettori"): la direzione e il verso della freccia indicano la direzione e il verso della forza, mentre la lunghezza della freccia indica l'intensità della forza.
+Secondo le convenzioni fissate dal Sistema internazionale di unità di misura, la forza si esprime in newton (simbolo: N).
+
+Che cos'è la forza?
+
+La forza è la causa fisica capace di mettere in moto un corpo, di formarlo e di deformarlo.
+Le forze :
+
+COMPONENTI sono le singole forze che agiscono su un corpo ( F1 e F2 )
+RISULTANTE è la forza complessiva che si ottiene e produce l'effetto di un corpo ( R )
+
+
+
+
+1° caso : componenti; uguale direzione e uguale verso, punto di applicazione uguale ( R = F1 + F2 )
+2° caso : componenti; uguale direzione e verso opposto ( R = F2 - F1 )
+3° caso : componenti; direzione e verso differenti, punto di applicazione uguale ( R = √F1 + F2 )
+
+
+
+
+Esempi di forze
+Nella vita quotidiana possiamo osservare numerosi esempi di azione delle forze:
+
+forza muscolare, quando spingo il carrello della spesa al supermercato, provocandone quasi un moto rettilineo uniforme

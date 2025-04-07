@@ -1,0 +1,2 @@
+Helicopter
+A helicopter is an aircraft that has a rotating set of blades that makes it fly, by pushing air downwards. It can hover, move up and down vertically and turn in place. This makes it useful for navigating and landing in tight spaces.

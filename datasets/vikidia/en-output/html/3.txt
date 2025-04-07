@@ -1,0 +1,23 @@
+3
+3 (three) is a number. It chronologically comes after two, and is followed by four.
+
+Multiples of 3
+
+3 × 0 = 0
+3 × 1 = 3
+3 × 2 = 6
+3 × 3 = 9
+3 × 4 = 12
+3 x 5 = 15
+3 × 6 = 18
+3 × 7 = 21
+3 × 8 = 24
+3 × 9 = 27
+3 × 10 = 30
+3 × 11 = 33
+3 × 12 = 36
+
+
+
+Division
+3 can be divided by itself to get 1 and by 1 to get 3:

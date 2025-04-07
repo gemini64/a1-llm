@@ -1,0 +1,5 @@
+Addition is the action of adding serval numbers together. It's the inverse of subtraction.
+We use the smybol (+) to make an addition.There are different ways to calculate an addition. An example of addition(A simple way,but not the most easy):
+
+3+6+8+5=22
+65+89+32+13=199

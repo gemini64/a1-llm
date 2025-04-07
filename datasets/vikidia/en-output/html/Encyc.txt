@@ -1,0 +1,40 @@
+Encyc is a free, general-interest encyclopedia written by volunteers using collaborative "wiki" software. It was founded in January 2008 by an experienced Wikipedian. As of December 2021, it has around 3,000 articles.
+
+Founder viewpoints
+Encyc's founder asserts that he loves Wikipedia, and uses it all the time. However, there is a need for more than one wiki encyclopedia. Encyc users state that they make the internet a more diverse and interesting place.  [citation needed] One big website tends to get homogenized, whereas a bunch of little ones can bring unique perspectives.
+
+Nature of the project
+Encyc claims to be a kinder, gentler wiki encyclopedia. However, it was accused of suppressing criticism of one "Leslie Morris Golden". Very few users are blocked or banned, and new articles are usually welcome.
+
+Critical reception
+The project was roundly panned on Wikipedia, Wikipedia Review, and Wikipediocracy. Common criticisms are that it is poorly managed, run by an anonymous person and that it needs to focus on a specialty topic in order to be able to compete with Wikipedia.
+However, in its many years of existence, it has been used by scholars such as Dariusz Jemielniak, who quoted from Encyc in his book, Common Knowledge: An Ethnography of Wikipedia.
+
+Contrast to Wikipedia
+Encyc uses the same MediaWiki software as Wikipedia.  Encyc has fewer articles and far less traffic. Encyc has fewer templates. Overall there are fewer reverts and more edits stand as they are made. Encyc is written at a high school reading level, targeted to read similar to the newspaper USA Today. Encyc is supposedly appropriate for young readers, though as claims were rarely verified, and sources were not required, and as a result, some articles contained hoaxes, conspiracy theories, or right-wing political bias.
+
+Additional information
+
+name = Encyc
+commercial = No
+type = Internet encyclopedia
+registration = Optional
+language = English
+content license =CC-BY-SA 3.0
+author = various
+launch date = January 2008
+revenue = $0
+current status = read-only
+
+
+
+References
+
+Common Knowledge?: An Ethnography of Wikipedia, by Dariusz Jemielniak. Stanford University Press. p53, 278. ISBN 0804791201, 9780804791205. May 14, 2014.
+Genre Analysis of Online Encyclopedias: The Case of Wikipedia, by Anna Tereszkiewic. Wydawnictwo UJ. p241. ISBN 8323328137, 9788323328131. 2013.
+
+
+
+External links
+
+Encyc

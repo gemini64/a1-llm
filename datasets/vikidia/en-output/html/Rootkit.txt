@@ -1,0 +1,1 @@
+A Rootkit is a program that hides other pieces of malware from your anti-virus software. Rootkits make it easier to get malware.

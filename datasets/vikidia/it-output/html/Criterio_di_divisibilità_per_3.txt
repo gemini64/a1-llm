@@ -1,0 +1,8 @@
+Come funziona il criterio di divisibilità per 3? Un numero è divisibile per 3 se la somma delle cifre è un numero divisibile per 3.
+
+Esempi
+69 è un divisore di 3 perché 6 + 9 = 15.
+15 è divisibile per 3 quindi 69 è divisibile .
+
+89  non è un divisore di 3 perché 8 + 9 = 17.
+17 non è divisibile per 3 quindi 89 non è divisibile.
