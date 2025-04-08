@@ -12,12 +12,12 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="a TSV file containing the texts to analyze")
 parser.add_argument("-w", "--wordlist", help="a JSON formatted wordlist to check againsts", required=True)
-parser.add_argument("-s", "--stopwords", help="(optional) a JSON formatted stopwords list", required=False)
-parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
 parser.add_argument("-p", "--postagger", 
                    help="language used to initialize the postagger", 
                    choices=['italian', 'english', 'russian'],
-                   type=str)
+                   type=str, required=True)
+parser.add_argument("-s", "--stopwords", help="(optional) a JSON formatted stopwords list", required=False)
+parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
 parser.add_argument('-o', '--output', help="(optional) output file (TSV)")
 
 # --- validate cli arguments
@@ -67,6 +67,7 @@ def check_text(
     """Check a single text entry against the given
     wordlist."""
     results = {}
+    results["text"] = text
 
     # tag text
     tagged_text = tagger.tag_text(text)
@@ -78,40 +79,130 @@ def check_text(
     if stopwords != None:
         tagged_text = list(filter(lambda x: not word_in_list(x["text"], stopwords), tagged_text))
 
+     # Get all content words (after stopword removal)
+    all_content_words = tagged_text
+    
+    # Track words across all POS types
+    all_words_by_pos = {}
+    for item in all_content_words:
+        pos = item["pos"]
+        if pos not in all_words_by_pos:
+            all_words_by_pos[pos] = []
+        all_words_by_pos[pos].append(item)
+
     # iterate over tiered-vocabulary
     for i in range(0, len(word_lists)):
         level = list(word_lists.keys())[i]
-        vocabulary = merge_dictionaries(word_lists,0,i)
-
+        vocabulary = merge_dictionaries(word_lists, 0, i)
+        
+        # Track metrics across all POS for this level
+        all_words_this_level = []
+        all_conform_this_level = []
+        all_unconform_this_level = []
+        
+        # Track unique words
+        unique_words_this_level = set()
+        unique_conform_this_level = set()
+        
         # iterate over pos-ordered sublists
         for pos in vocabulary.keys():
-            results_percent = None
-            results_conform_list = None
-            results_unconform_list = None
-            
-            words_subsection = list(filter(lambda x: x["pos"] == pos, tagged_text))
+            if pos not in all_words_by_pos:
+                continue
+                
+            words_subsection = all_words_by_pos[pos]
             words_list = [x["text"] for x in words_subsection]
             words_count = len(words_subsection)
+            
+            all_words_this_level.extend(words_list)
+            unique_words_this_level.update([x["lemma"] for x in words_subsection])
 
             if words_count > 0:
                 conform_words = list(filter(lambda x: word_in_list(x["lemma"], vocabulary[pos]), words_subsection))
                 conform_list = [x["text"] for x in conform_words]
                 conform_count = len(conform_words)
                 unconform_list = [x for x in words_list if x not in conform_list]
+                
+                all_conform_this_level.extend(conform_list)
+                all_unconform_this_level.extend(unconform_list)
+                unique_conform_this_level.update([x["lemma"] for x in conform_words])
 
-                results_percent = round((conform_count/words_count*100),2)
-                results_conform_list = sorted(conform_list)
-                results_unconform_list = sorted(unconform_list)
+                # Per POS metrics
+                results[f"{level}_{pos}_percent"] = round((conform_count/words_count*100), 2)
+                results[f"{level}_{pos}_count"] = words_count
+                results[f"{level}_{pos}_conform_count"] = conform_count
+                results[f"{level}_{pos}_unconform_count"] = len(unconform_list)
+                
+                # Only include full word lists if requested
+                results[f"{level}_{pos}_words"] = sorted(words_list)
+                results[f"{level}_{pos}_conform"] = sorted(conform_list)
+                results[f"{level}_{pos}_unconform"] = sorted(unconform_list)
+            else:
+                results[f"{level}_{pos}_percent"] = None
+                results[f"{level}_{pos}_count"] = 0
+                results[f"{level}_{pos}_conform_count"] = 0
+                results[f"{level}_{pos}_unconform_count"] = 0
+                results[f"{level}_{pos}_words"] = []
+                results[f"{level}_{pos}_conform"] = []
+                results[f"{level}_{pos}_unconform"] = []
 
-            # push results
-            results["text"] = text
-            results[f"{level}_{pos}_percent"] = results_percent
-            results[f"{level}_{pos}_words"] = sorted(words_list)
-            results[f"{level}_{pos}_conform"] = results_conform_list
-            results[f"{level}_{pos}_unconform"] = results_unconform_list
+        # Overall level metrics
+        total_words = len(all_words_this_level)
+        total_conform = len(all_conform_this_level)
+        
+        results[f"{level}_overall_percent"] = round((total_conform/total_words*100), 2) if total_words > 0 else None
+        results[f"{level}_all_words"] = sorted(all_words_this_level)
+        results[f"{level}_all_conform"] = sorted(all_conform_this_level)
+        results[f"{level}_all_unconform"] = sorted(all_unconform_this_level)
+        
+        # Unique word coverage
+        unique_total = len(unique_words_this_level)
+        unique_conform = len(unique_conform_this_level)
+        
+        results[f"{level}_unique_percent"] = round((unique_conform/unique_total*100), 2) if unique_total > 0 else None
+        results[f"{level}_unique_count"] = unique_total
+        results[f"{level}_unique_conform_count"] = unique_conform
 
     return results
+
+def reorganize_dataframe(df):
+    # Get all column names
+    all_columns = list(df.columns)
     
+    # Extract percentage columns
+    percentage_columns = [col for col in all_columns if '_percent' in col]
+    
+    # Custom sorting function for percentage columns
+    def sort_key(col_name):
+        parts = col_name.split('_')
+        level = parts[0]
+        # Give priority to "overall" and "unique" metrics
+        if parts[1] == 'overall':
+            pos_priority = 0
+        elif parts[1] == 'unique':
+            pos_priority = 1
+        else:
+            # Order other POS types
+            pos_map = {'n': 2, 'v': 3, 'a': 4, 'r': 5}
+            pos_priority = pos_map.get(parts[1], 6)
+        return (level, pos_priority)
+    
+    # Sort percentage columns
+    percentage_columns.sort(key=sort_key)
+    
+    # Create a new column order
+    other_columns = [col for col in all_columns if col != 'text' and col not in percentage_columns]
+    new_column_order = ['text'] + percentage_columns + other_columns
+    
+    return df[new_column_order]
+
+def assign_percentage_colours_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    # List all columns
+    all_columns = list(df.columns)
+
+    # Get exclusively percentage columns
+    percentage_columns = [col for col in all_columns if '_percent' in col]
+    
+    return df.style.background_gradient(subset=percentage_columns, cmap="RdYlGn", vmin=0.0, vmax=100.0)
 
 def main():
     # Parse and validate arguments
@@ -152,9 +243,15 @@ def main():
     # Add results to dataframe
     eval_df = pd.DataFrame.from_dict(eval_data, orient='columns')
 
+    # Reorganize dataframe colums
+    eval_df = reorganize_dataframe(eval_df)
+
     # Write out
     eval_df.to_csv(output_file, sep="\t", index=False, encoding="utf-8")
 
+    # Write out to XLSX to preserve colors
+    eval_df = assign_percentage_colours_dataframe(eval_df)
+    eval_df.to_excel("styled_output.xlsx", engine="openpyxl", index=False)
 
 if __name__ == "__main__":
     main()
