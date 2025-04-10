@@ -18,7 +18,9 @@ parser.add_argument("-p", "--postagger",
                    type=str, required=True)
 parser.add_argument("-s", "--stopwords", help="(optional) a JSON formatted stopwords list", required=False)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
-parser.add_argument('-o', '--output', help="(optional) output file (TSV)")
+parser.add_argument("-c", "--compare", help="(optional) the label of the column that contains text to compare against", default=None)
+parser.add_argument("-d", "--dropdata", help="(optional) omit pos specific stats from output", action='store_true')
+parser.add_argument('-o', '--output', help="(optional) output file (XLSX)")
 
 # --- validate cli arguments
 def validate_args(args):
@@ -35,7 +37,7 @@ def validate_args(args):
         print("Error: the supplied stopwords file does not exist or is not a supported format!")
         exit(2)
 
-    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_lexical.tsv"
+    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_lexical.xlsx"
     if os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file))):
         print(f"Error: an output file with path '{output_file}' already exists!")
         exit(2)
@@ -64,8 +66,7 @@ def check_text(
     tagger: POSTagger,
     word_lists: dict,
     stopwords: list[str] = None) -> dict:
-    """Check a single text entry against the given
-    wordlist."""
+    """Check a single text entry against the given wordlist."""
     results = {}
     results["text"] = text
 
@@ -79,8 +80,8 @@ def check_text(
     if stopwords != None:
         tagged_text = list(filter(lambda x: not word_in_list(x["text"], stopwords), tagged_text))
 
-     # Get all content words (after stopword removal)
-    all_content_words = tagged_text
+    # Get all content words (after stopword removal)
+    all_content_words = [x for x in tagged_text if x['pos'] in ['n','v','a','r']]
     
     # Track words across all POS types
     all_words_by_pos = {}
@@ -89,19 +90,34 @@ def check_text(
         if pos not in all_words_by_pos:
             all_words_by_pos[pos] = []
         all_words_by_pos[pos].append(item)
-
-    # iterate over tiered-vocabulary
+    
+    # Store all words and counts ONCE (not per level)
+    all_words_allpos = []
+    for pos, words in all_words_by_pos.items():
+        words_list = [x["text"] for x in words]
+        all_words_allpos.extend(words_list)
+        
+        results[f"total_{pos}_count"] = len(words)
+        results[f"total_{pos}_words"] = sorted(words_list)
+    
+    # Store allpos word count and list ONCE
+    results["total_allpos_count"] = len(all_words_allpos)
+    results["total_allpos_words"] = sorted(all_words_allpos)
+    
+    # Store unique words information ONCE - now using lemma+POS pairs
+    unique_words_total = set([(x["lemma"], x["pos"]) for x in all_content_words])
+    results["total_unique_count"] = len(unique_words_total)
+    
+    # iterate over tiered-vocabulary levels
     for i in range(0, len(word_lists)):
         level = list(word_lists.keys())[i]
         vocabulary = merge_dictionaries(word_lists, 0, i)
         
         # Track metrics across all POS for this level
-        all_words_this_level = []
         all_conform_this_level = []
         all_unconform_this_level = []
         
-        # Track unique words
-        unique_words_this_level = set()
+        # Track unique words as lemma+POS pairs
         unique_conform_this_level = set()
         
         # iterate over pos-ordered sublists
@@ -113,10 +129,8 @@ def check_text(
             words_list = [x["text"] for x in words_subsection]
             words_count = len(words_subsection)
             
-            all_words_this_level.extend(words_list)
-            unique_words_this_level.update([x["lemma"] for x in words_subsection])
-
             if words_count > 0:
+                # Check conformity based on lemma in the POS-specific vocabulary
                 conform_words = list(filter(lambda x: word_in_list(x["lemma"], vocabulary[pos]), words_subsection))
                 conform_list = [x["text"] for x in conform_words]
                 conform_count = len(conform_words)
@@ -124,75 +138,91 @@ def check_text(
                 
                 all_conform_this_level.extend(conform_list)
                 all_unconform_this_level.extend(unconform_list)
-                unique_conform_this_level.update([x["lemma"] for x in conform_words])
-
-                # Per POS metrics
-                results[f"{level}_{pos}_percent"] = round((conform_count/words_count*100), 2)
-                results[f"{level}_{pos}_count"] = words_count
-                results[f"{level}_{pos}_conform_count"] = conform_count
-                results[f"{level}_{pos}_unconform_count"] = len(unconform_list)
                 
-                # Only include full word lists if requested
-                results[f"{level}_{pos}_words"] = sorted(words_list)
-                results[f"{level}_{pos}_conform"] = sorted(conform_list)
-                results[f"{level}_{pos}_unconform"] = sorted(unconform_list)
+                # Update unique conform words with lemma+POS pairs
+                unique_conform_this_level.update([(x["lemma"], x["pos"]) for x in conform_words])
+
+                # Per POS metrics - only store conformity data for each level
+                results[f"{level}_{pos}_percent"] = round((conform_count/words_count*100), 2)
+                results[f"{level}_{pos}_count-conform"] = conform_count
+                results[f"{level}_{pos}_count-unconform"] = words_count - conform_count
+                results[f"{level}_{pos}_words-conform"] = sorted(conform_list)
+                results[f"{level}_{pos}_words-unconform"] = sorted(unconform_list)
             else:
                 results[f"{level}_{pos}_percent"] = None
-                results[f"{level}_{pos}_count"] = 0
-                results[f"{level}_{pos}_conform_count"] = 0
-                results[f"{level}_{pos}_unconform_count"] = 0
-                results[f"{level}_{pos}_words"] = []
-                results[f"{level}_{pos}_conform"] = []
-                results[f"{level}_{pos}_unconform"] = []
+                results[f"{level}_{pos}_count-conform"] = 0
+                results[f"{level}_{pos}_count-unconform"] = 0
+                results[f"{level}_{pos}_words-conform"] = []
+                results[f"{level}_{pos}_words-unconform"] = []
 
-        # Overall level metrics
-        total_words = len(all_words_this_level)
+        # Overall level metrics - only store the conformity data
+        total_words = results["total_allpos_count"]
         total_conform = len(all_conform_this_level)
         
-        results[f"{level}_overall_percent"] = round((total_conform/total_words*100), 2) if total_words > 0 else None
-        results[f"{level}_all_words"] = sorted(all_words_this_level)
-        results[f"{level}_all_conform"] = sorted(all_conform_this_level)
-        results[f"{level}_all_unconform"] = sorted(all_unconform_this_level)
+        results[f"{level}_allpos_percent"] = round((total_conform/total_words*100), 2) if total_words > 0 else None
+        results[f"{level}_allpos_count-conform"] = total_conform
+        results[f"{level}_allpos_count-unconform"] = total_words - total_conform
+        results[f"{level}_allpos_words-conform"] = sorted(all_conform_this_level)
+        results[f"{level}_allpos_words-unconform"] = sorted(all_unconform_this_level)
         
-        # Unique word coverage
-        unique_total = len(unique_words_this_level)
+        # Unique word coverage based on lemma+POS pairs
+        unique_total = results["total_unique_count"]
         unique_conform = len(unique_conform_this_level)
         
         results[f"{level}_unique_percent"] = round((unique_conform/unique_total*100), 2) if unique_total > 0 else None
-        results[f"{level}_unique_count"] = unique_total
-        results[f"{level}_unique_conform_count"] = unique_conform
+        results[f"{level}_unique_count-conform"] = unique_conform
+        results[f"{level}_unique_count-unconform"] = unique_total - unique_conform
 
     return results
 
-def reorganize_dataframe(df):
+def reorganize_dataframe(df: pd.DataFrame, levels: list[str], ascending: bool = True, drop_pos_specific: bool = False) -> pd.DataFrame:
     # Get all column names
     all_columns = list(df.columns)
     
     # Extract percentage columns
-    percentage_columns = [col for col in all_columns if '_percent' in col]
+    total_columns = [col for col in all_columns if 'total_' in col]
+    level_specific_columns = [col for col in all_columns if col != 'text' and not col.startswith('total_')]
+
+    # Define level order, we suppose received levels are in ascending order
+    level_order = {x: y for (x,y) in zip(levels, range(0, len(levels)+1, 1))} if ascending else {x: y for (x,y) in zip(levels, range(len(levels),-1,-1))}
+    data_order = {"percent": 0, "words": 1, "words-conform": 2, "words-unconform": 3, "count": 4, "count-conform": 5, "count-unconform": 6 }
     
     # Custom sorting function for percentage columns
     def sort_key(col_name):
         parts = col_name.split('_')
+
         level = parts[0]
-        # Give priority to "overall" and "unique" metrics
-        if parts[1] == 'overall':
+        kind = parts[1]
+        data = parts[2]
+
+        # Set a priority value based on level
+        level_priority = level_order.get(level, 999) # 999 is for unknown levels
+        data_priority = data_order.get(data, 999)
+
+        # Give priority to "allpos" and "unique" metrics
+        if kind == 'allpos':
             pos_priority = 0
-        elif parts[1] == 'unique':
+        elif kind == 'unique':
             pos_priority = 1
         else:
             # Order other POS types
             pos_map = {'n': 2, 'v': 3, 'a': 4, 'r': 5}
-            pos_priority = pos_map.get(parts[1], 6)
-        return (level, pos_priority)
+            pos_priority = pos_map.get(kind, 6)
+        return (data_priority, pos_priority, level_priority)
     
     # Sort percentage columns
-    percentage_columns.sort(key=sort_key)
-    
-    # Create a new column order
-    other_columns = [col for col in all_columns if col != 'text' and col not in percentage_columns]
-    new_column_order = ['text'] + percentage_columns + other_columns
-    
+    total_columns.sort(key=sort_key)
+    level_specific_columns.sort(key=sort_key)
+
+
+    # Check if we need to drop pos specific columns
+    if (drop_pos_specific):
+        new_column_order = total_columns + level_specific_columns
+        new_column_order = [col for col in new_column_order if any(map(lambda x: x in col, ["_allpos_", "_unique_"]))]
+        new_column_order = ['text'] + new_column_order
+    else:
+        new_column_order = ['text'] + total_columns + level_specific_columns
+
     return df[new_column_order]
 
 def assign_percentage_colours_dataframe(df: pd.DataFrame) -> pd.DataFrame:
@@ -203,6 +233,44 @@ def assign_percentage_colours_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     percentage_columns = [col for col in all_columns if '_percent' in col]
     
     return df.style.background_gradient(subset=percentage_columns, cmap="RdYlGn", vmin=0.0, vmax=100.0)
+
+def process_data(data: list[str], tagger, word_list, stopwords_list, drop_pos_specific):
+    data_dicts = []
+    
+    counter = 0
+    for text in data:
+        counter += 1
+        print(f"INFO\t Analyzing sample [{counter}/{len(data)}]")
+
+        results = check_text(text, tagger, word_list, stopwords_list)
+        data_dicts.append(results)
+
+    # Add results to dataframe
+    df = pd.DataFrame.from_dict(data_dicts, orient='columns')
+
+    # Reorganize dataframe colums
+    df = reorganize_dataframe(df, word_list.keys(), drop_pos_specific=drop_pos_specific)
+
+    return df
+
+def alternate_columns_preserve_names(df1, df2, suffix1='_original', suffix2='_paraphrase'):
+    # Make sure columns are the same
+    if set(df1.columns) != set(df2.columns):
+        raise ValueError("Both DataFrames must have the same set of columns")
+    
+    # Rename columns to avoid conflicts
+    df1_renamed = df1.rename(columns={col: f"{col}{suffix1}" for col in df1.columns})
+    df2_renamed = df2.rename(columns={col: f"{col}{suffix2}" for col in df2.columns})
+    
+    # Create a new empty DataFrame
+    result = pd.DataFrame()
+    
+    # Add columns in alternating order
+    for col in df1.columns:
+        result[f"{col}{suffix1}"] = df1_renamed[f"{col}{suffix1}"]
+        result[f"{col}{suffix2}"] = df2_renamed[f"{col}{suffix2}"]
+    
+    return result
 
 def main():
     # Parse and validate arguments
@@ -224,34 +292,27 @@ def main():
         print(f"Error: no column named '{args.label}' exists in '{args.input}'!")
         exit(2)
 
-    # now we drop unneded columns and rename
-    df = df[[args.label]]
-    df.rename(columns={args.label :'text'}, inplace=True)
+    # check if a colum with text to compare againts exists
+    if args.compare != None and args.compare not in df:
+        print(f"Error: a label for optional text comparison named '{args.compare}' was specified, but a column with that name does not exists in '{args.input}'!")
+        exit(2)
     
     # Setup processing pipeline
     tagger = load_pos_tagger(args.postagger)
-    
-    eval_data = []
-    counter = 0
-    for input_text in df['text']:
-        counter += 1
-        print(f"INFO\t Analyzing sample [{counter}/{len(df['text'])}]")
 
-        results = check_text(input_text, tagger, word_list, stopwords_list)
-        eval_data.append(results)
+    # Process data
+    print(f"INFO --- Processing input text")
+    eval_df = process_data(df[args.label], tagger, word_list, stopwords_list, args.dropdata)
 
-    # Add results to dataframe
-    eval_df = pd.DataFrame.from_dict(eval_data, orient='columns')
+    # If a comparision is specified, process also the text to compare against
+    if args.compare != None:
+        print(f"INFO --- Processing comparison text")
+        compare_df = process_data(df[args.compare], tagger, word_list, stopwords_list, args.dropdata)
+        eval_df = alternate_columns_preserve_names(eval_df, compare_df)
 
-    # Reorganize dataframe colums
-    eval_df = reorganize_dataframe(eval_df)
-
-    # Write out
-    eval_df.to_csv(output_file, sep="\t", index=False, encoding="utf-8")
-
-    # Write out to XLSX to preserve colors
+    # Assign colours and output data
     eval_df = assign_percentage_colours_dataframe(eval_df)
-    eval_df.to_excel("styled_output.xlsx", engine="openpyxl", index=False)
+    eval_df.to_excel(output_file, engine="openpyxl", index=False)
 
 if __name__ == "__main__":
     main()
