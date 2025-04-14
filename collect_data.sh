@@ -18,7 +18,8 @@ LEXICAL_OUTPUT="${OUTPUT_DIR}/lexical.tsv";
 
 PARAPHRASE_COL_LABEL="text"; # the column that contains the text to paraphrase, default is "text"
 EVAL_COL_LABEL="paraphrase"; # the column that contains the text to evaluate, default is "text"
-LEXICAL_COL_LABEL="text"; # the column that contains the text to analyze, default is "text"
+LEXICAL_BASE_COL_LABEL="text"; # the column that contains the base text to analyze, default is "text"
+LEXICAL_COMPARE_COL_LABEL="paraphrase"; # the column that contains the text to compare against, default is "paraphrase"
 
 PARAPHRASE_SCRIPT="./paraphrase.py";
 PARAPHRASE_FLAGS="-d -r 1";
@@ -31,6 +32,7 @@ EVAL_TASKS="./analysis_tasks/english_analysis_tasks.json";
 LEXICAL_SCRIPT="./lexical_analyzer.py";
 LEXICAL_WORDLIST="./inventories/word_lists/oxford_3000_plus_5000.json";
 LEXICAL_STOPWORDS="./inventories/stopwords/stopwords_english.json";
+LEXICAL_FLAGS = "-d";
 
 # groq key and model name, used only if paraphrase
 # is called with -g flag
@@ -90,7 +92,11 @@ echo -e "${LIGHT_BLUE}[6/6]${NC} - ${GREEN}Lexical Analysis${NC}";
 if [ "${SKIP_LEXICAL}" = true ]; then
     echo -e "Skipped lexical analysis";
 else
-    python "${LEXICAL_SCRIPT}" "${EVAL_OUTPUT}" -w "${LEXICAL_WORDLIST}" -s "${LEXICAL_STOPWORDS}" -p "${LANGUAGE}" -l "${LEXICAL_COL_LABEL}" -o "${LEXICAL_OUTPUT}";
+    if [ -z "${LEXICAL_FLAGS}" ]; then
+        python "${LEXICAL_SCRIPT}" "${PARAPHRASE_OUTPUT}" -w "${LEXICAL_WORDLIST}" -s "${LEXICAL_STOPWORDS}" -p "${LANGUAGE}" -l "${LEXICAL_BASE_COL_LABEL}" -c "${LEXICAL_COMPARE_COL_LABEL}" -o "${LEXICAL_OUTPUT}";
+    else
+        python "${LEXICAL_SCRIPT}" "${PARAPHRASE_OUTPUT}" -w "${LEXICAL_WORDLIST}" -s "${LEXICAL_STOPWORDS}" -p "${LANGUAGE}" -l "${LEXICAL_BASE_COL_LABEL}" -c "${LEXICAL_COMPARE_COL_LABEL}" -o "${LEXICAL_OUTPUT}" ${LEXICAL_FLAGS};
+    fi
 fi
 
 # exit
