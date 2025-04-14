@@ -10,17 +10,17 @@ parser = argparse.ArgumentParser(
     description="Checks the lexical content of input texts againts a given wordlist."
 )
 
-parser.add_argument("input", help="a TSV file containing the texts to analyze")
+parser.add_argument("input", help="a TSV file containing the texts to check")
 parser.add_argument("-w", "--wordlist", help="a JSON formatted wordlist to check againsts", required=True)
 parser.add_argument("-p", "--postagger", 
                    help="language used to initialize the postagger", 
                    choices=['italian', 'english', 'russian'],
                    type=str, required=True)
-parser.add_argument("-s", "--stopwords", help="(optional) a JSON formatted stopwords list", required=False)
+parser.add_argument("-s", "--stopwords", help="(optional) a JSON formatted stopwords array", required=False)
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
 parser.add_argument("-c", "--compare", help="(optional) the label of the column that contains text to compare against", default=None)
 parser.add_argument("-d", "--dropdata", help="(optional) omit pos specific stats from output", action='store_true')
-parser.add_argument('-o', '--output', help="(optional) output file (XLSX)")
+parser.add_argument('-o', '--output', help="(optional) output file (TSV/XLSX)")
 
 # --- validate cli arguments
 def validate_args(args):
@@ -37,9 +37,14 @@ def validate_args(args):
         print("Error: the supplied stopwords file does not exist or is not a supported format!")
         exit(2)
 
-    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_lexical.xlsx"
+    output_file = args.output if args.output else f"{os.path.splitext(args.input)[0]}_lexical.tsv"
     if os.path.exists(output_file) or not os.path.exists(os.path.dirname(os.path.abspath(output_file))):
         print(f"Error: an output file with path '{output_file}' already exists!")
+        exit(2)
+
+    # check if specified output format is supported
+    if (os.path.splitext(output_file)[-1].lower() not in [".tsv", ".xlsx"]):
+        print(f"Error: an unsupported output file format was speficied. Please use either tsv or xlsx!")
         exit(2)
 
     return output_file
@@ -258,19 +263,26 @@ def alternate_columns_preserve_names(df1, df2, suffix1='_original', suffix2='_pa
     if set(df1.columns) != set(df2.columns):
         raise ValueError("Both DataFrames must have the same set of columns")
     
-    # Rename columns to avoid conflicts
-    df1_renamed = df1.rename(columns={col: f"{col}{suffix1}" for col in df1.columns})
-    df2_renamed = df2.rename(columns={col: f"{col}{suffix2}" for col in df2.columns})
+    # Create pairs of columns with suffixes
+    column_pairs = []
+    renamed_columns = {}
     
-    # Create a new empty DataFrame
-    result = pd.DataFrame()
-    
-    # Add columns in alternating order
     for col in df1.columns:
-        result[f"{col}{suffix1}"] = df1_renamed[f"{col}{suffix1}"]
-        result[f"{col}{suffix2}"] = df2_renamed[f"{col}{suffix2}"]
+        col1 = f"{col}{suffix1}"
+        col2 = f"{col}{suffix2}"
+        column_pairs.extend([col1, col2])
+        renamed_columns[col] = {col1: df1[col], col2: df2[col]}
     
-    return result
+    # Construct the dataframe in one go using a dictionary
+    result_dict = {}
+    for col in df1.columns:
+        col1 = f"{col}{suffix1}"
+        col2 = f"{col}{suffix2}"
+        result_dict[col1] = renamed_columns[col][col1]
+        result_dict[col2] = renamed_columns[col][col2]
+    
+    # Create dataframe from the dictionary (more efficient)
+    return pd.DataFrame(result_dict)
 
 def main():
     # Parse and validate arguments
@@ -310,9 +322,13 @@ def main():
         compare_df = process_data(df[args.compare], tagger, word_list, stopwords_list, args.dropdata)
         eval_df = alternate_columns_preserve_names(eval_df, compare_df)
 
-    # Assign colours and output data
-    eval_df = assign_percentage_colours_dataframe(eval_df)
-    eval_df.to_excel(output_file, engine="openpyxl", index=False)
+    # --- output data
+    # Note: colour is applied only for xlsx outputs.
+    if (os.path.splitext(output_file)[-1].lower() == ".xlsx"):
+        eval_df = assign_percentage_colours_dataframe(eval_df)
+        eval_df.to_excel(output_file, engine="openpyxl", index=False)
+    else:
+        eval_df.to_csv(output_file, sep="\t", index=False, encoding="utf-8")
 
 if __name__ == "__main__":
     main()
