@@ -1,17 +1,19 @@
 # A1 LLM
 
 ## Contents
-- `analysis_tasks/*`: JSON/MD language analysis tasks. Used for automated eval.
+- `analysis_tasks/*`: JSON/MD language analysis tasks. Used for automated grammar/morphological eval.
 - `datasets/*`: Contains utility scripts to reformat and select data from various data-sources.
-- `inventories/*`: Markdown/plain-text language inventories. These are provided in various formats: as list of morphological and syntactical items, as lingustic constraints, plus variants (e.g. w/w-out syntax constraints, w/w-out constraints on verbs...).
-- `schemas/*`: JSON Schemas describing various linguistic objects. Used to validate analysis data.
+- `inventories/*`: JSON/MD/plain-text language inventories. Sub-directories contain various structured lists consisting of language specific vocabularies (used for lexical analysis), and language specific stopwords.
+- `schemas/*`: JSON Schemas describing linguistic objects. These are mainly used to format and validate grammar/morphological analysis data.
 - `tools/*`: External binary tools (this directory is created upon project setup).
 - `paraphrase.py`: Paraphrase script. Used to paraphrase texts. Available for all languages, both full-text and sentence-wise. See the CLI interface for additional details.
 - `eval.py`: Evaluation script. Takes a set of texts, a set of linguistic analysis tasks (language specific), annotates the input's content (using an LLM), then validates it using a rule-based approach. See the CLI interface for additional details.
+- `lexical_analyzer.py`: Lexical analysis script. Takes a set of texts, a wordlist (vocabulary), an optional stopwords list and returns a lexical analysis report. See the CLI interface for additional info.
 - `parsers.py`: Parsers to validate analysis data. Available for EN/IT and based on the respective inventories.
 - `pos_tagger.py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
 - `utils.py`: This module defines various helper function and a set of data parsers chainable with langchain runnables.
 - `fetch_irregular_verbs.py`: (utility script) to collect a list of irregular italian verbs from Wikitionary.
+- `fetch_stopwords.py`: (utility script) to collect stopwords list for a set of given languages (uses the NLTK python module).
 - `tag_sentences.py`: (utility script) to quickly test available POS tagging methods.
 - `udpipe2_client.py`: This is the python UDPipe-2 client. Some functions have been added to fit our POS tagging output format requirements.
 - `install.sh`: Project install script. Sets up the python environment, installs requirements and fetches external tools.
@@ -26,7 +28,7 @@ A setup script `install.sh` is provided to automatically set-up the project.
 This will orderly: create a python virtual environment, activate it, install the required python modules, set-up a `.env` file to store API keys and secrets, and fetch and configure external tools (tint).
 
 Setup requirements:
-- python 3.11 (strongly advised, use either `homebrew` on macOS or `pyenv` to manage and select multiple python installs)
+- python 3.11 (strongly recommended, use either `homebrew` on macOS or `pyenv` to manage and select multiple python installs)
 - curl
 - a macOS or linux host
 
@@ -280,3 +282,51 @@ The tasks **JSON** passed to the **eval** script contains a **collection** of ta
 }
 ```
 
+## Lexical Analyzer
+
+The lexical analysis script `lexical_analyzer.py` uses the **stanza** python module to check texts against a level-stepped vocabulary (referred as wordlist). The final output reports the vocabulary coverage on the given texts.
+
+An optional JSON formatted stopwords list can be specified to pre-filter words from the given input.
+
+Below is its CLI interface:
+```
+usage: lexical_analyzer [-h] -w WORDLIST -p {italian,english,russian} [-s STOPWORDS] [-l LABEL] [-c COMPARE] [-d] [-o OUTPUT] input
+
+Checks the lexical content of input texts againts a given wordlist.
+
+positional arguments:
+  input                 a TSV file containing the texts to check
+
+options:
+  -h, --help            show this help message and exit
+  -w WORDLIST, --wordlist WORDLIST
+                        a JSON formatted wordlist to check againsts
+  -p {italian,english,russian}, --postagger {italian,english,russian}
+                        language used to initialize the postagger
+  -s STOPWORDS, --stopwords STOPWORDS
+                        (optional) a JSON formatted stopwords array
+  -l LABEL, --label LABEL
+                        (optional) the label of the column that contains input data
+  -c COMPARE, --compare COMPARE
+                        (optional) the label of the column that contains text to compare against
+  -d, --dropdata        (optional) omit pos specific stats from output
+  -o OUTPUT, --output OUTPUT
+                        (optional) output file (TSV/XLSX)
+```
+
+The parameters are, briefly:
+- **input**: An **input** file, in **TSV format**, containing the **texts to check**
+- **--wordlist [file]**: A **JSON** formatted vocabulary to check coverage against.
+- **--postagger [enum]**: This will be **used to initialize the postagger**.
+- **--wordlist [file]**: (Optional) A **JSON** string array containing stopwords to pre-filter.
+- **--label [str]**: (Optional) This is the **TSV column label** that will be used to select the texts to evaluate.
+- **--compare [str]**: (Optional) This is the **TSV column label** that will be used to select the texts to compare against. If this arg is set, the output will contain both the coverage for the texts listed under the column named **label** and the **compare** colum, in an alternate fashion.
+- **--dropdata**: (Optional) flag to drop all pos-specific stats. If used the final output will contain only pos-aggregated coverage percentages, word lists and raw counts.
+- **--output [file]**: The evaulation **output**, in **TSV/XLSX format**
+
+The **--dropdata** flag and XLSX output format support have been added to generate more human-readable outputs. XLSX formatted outputs include percentage coverage data coloured using a heatmap. Additionally, the dropdata flag can be used to omit the pos broken down stats, keeping in only the aggregate, level-stepped coverage percentages, word lists, and raw counts.
+
+Assuming we're using as input the output of a paraphrase run, a **call example** would look something like this:
+```bash
+python lexical_analyzer.py input_file.tsv -w ./inventories/word_lists/demauro.json -s ./inventories/stopwords/stopwords_italian.json -p italian -l text -c paraphrase
+```
