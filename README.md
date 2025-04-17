@@ -3,7 +3,7 @@
 ## Contents
 - `analysis_tasks/*`: JSON/MD language analysis tasks. Used for automated grammar/morphological eval.
 - `datasets/*`: Contains utility scripts to reformat and select data from various data-sources.
-- `inventories/*`: JSON/MD/plain-text language inventories. Sub-directories contain various structured lists consisting of language specific vocabularies (used for lexical analysis), and language specific stopwords.
+- `inventories/*`: JSON/MD/plain-text language inventories. Sub-directories contain various structured lists consisting of language specific vocabularies (used for lexical analysis), and language specific stopwords lists.
 - `schemas/*`: JSON Schemas describing linguistic objects. These are mainly used to format and validate grammar/morphological analysis data.
 - `tools/*`: External binary tools (this directory is created upon project setup).
 - `paraphrase.py`: Paraphrase script. Used to paraphrase texts. Available for all languages, both full-text and sentence-wise. See the CLI interface for additional details.
