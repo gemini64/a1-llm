@@ -5,7 +5,7 @@ from langchain_core.messages import AIMessage
 JSON_REGEX_PATTERN =  r"```json\n([\s\S]*?)```"
 ANGLE_REGEX_PATTERN =  r"<([^>]+)>"
 TEXT_TAG_REGEX_PATTERN = r"<text[^>]*>((?:(?!</text>)[\s\S])*)</text>"
-ITALIAN_IRREGULAR_VERBS = "./inventories/word_lists/italian_irregular_verbs.json"
+ITALIAN_IRREGULAR_VERBS = "./inventories/italian_irregular_verbs.json"
 ITALIAN_ALLOWED_IRREGULARS = [ "esserci", "essere", "esservi", "avercela", "avere", "averla", "aversela", "volercene", "volerci", "volere", "volerne", "volersi", "potere", "dovere", "andare", "dare", "darsi", "dire", "dirsi", "fare", "farsi", "sapere", "sapersi", "stare", "venire", "chiudere", "chiudersi", "mettere", "mettersi", "morire", "nascere", "prendere", "prendersi", "scrivere"]
 
 def regex_parser(message: AIMessage, regex: str) -> str | None:
@@ -56,7 +56,14 @@ def strip_string(input: str) -> str:
     """Takes a string as input. Uses regular
     expressions to remove traling and leading white
     spaces + substitutes any newline sequence with
-    a (1) white space. Returns the transformed text."""
+    a (1) white space. Returns the transformed text.
+    
+    Arguments:
+        input (str): The input text to clean
+
+    Returns:
+        str: The string provided with white spaces and new lines stripped
+    """
     transformed = input
     transformed = re.sub(r'^\s*', '', transformed)
     transformed = re.sub(r'\s*$', '', transformed)
@@ -66,6 +73,17 @@ def strip_string(input: str) -> str:
     return transformed
 
 def is_regular_it_verb(verb: str, check_allowed: bool = False) -> bool:
+    """
+    Uses a list of known italian irregular verbs to check if
+    a verb is regular
+
+    Arguments:
+        verb (str): The lemma of the verb to check
+        check_allowed (bool): Add an exception for A1 inventory allowed irregular verbs
+
+    Returns:
+        bool: True if the verb is regular
+    """
     with open(ITALIAN_IRREGULAR_VERBS, "r", encoding="utf-8") as f_in:
         irregular_verbs = json.load(f_in)
 
@@ -77,7 +95,14 @@ def is_regular_it_verb(verb: str, check_allowed: bool = False) -> bool:
 
 def word_in_list(word: str, comparison_list: list[str]) -> bool:
     """Given a string and a string list
-    performs a case-insensitive comparison"""
+    performs a case-insensitive comparison
+    
+    Arguments:
+        word (str): The word to check
+        comparison_list (str): The word list to check against
+        
+    Returns:
+        bool: True if the input word matches (case-insensitive) one of the words in the comparison list"""
     return any(word.lower() == x.lower() for x in comparison_list)
 
 def merge_dictionaries(json_data: dict, start_idx: int, end_idx:int):

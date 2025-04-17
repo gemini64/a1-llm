@@ -1,3 +1,7 @@
+###
+# Conversion Mappings between various POS taggings
+###
+
 upos_to_simple = {
     "NOUN": "n",
     "PROPN": "propn",
@@ -18,6 +22,7 @@ upos_to_simple = {
     "PART": "part"
 }
 
+# oxford 3000/5000 pos
 oxford_to_simple = {
     "adj.": "a", # adjective -> a
     "adv.": "r", # adverb -> r
@@ -36,6 +41,7 @@ oxford_to_simple = {
     "v.": "v" # verb -> v
 }
 
+# perugia word lists pos
 perugia_to_simple = {
     "agg.": "a", # aggettivo -> a (adjective)
     "art.": "d", # articolo -> d (determiner)

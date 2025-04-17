@@ -1,4 +1,4 @@
-import requests, os, json
+import requests, json
 
 ###
 # An Utility script that fetches Italian
@@ -6,6 +6,18 @@ import requests, os, json
 #
 #   output -> a JSON string list
 ###
+
+# --- flags
+output_dir = "./inventories/"
+output_file = "italian_irregular_verbs.json"
+output_path = f"{output_dir}/{output_file}"
+
+web_host = "https://en.wiktionary.org/w/api.php"
+req_params = {
+    "list": "categorymembers",
+    "cmtitle": "Category:Italian_irregular_verbs",
+    "cmtype": "page"
+}
 
 def query(request, host):
     """Recursively queries hosts that conform to wikimedia
@@ -32,16 +44,7 @@ def query(request, host):
             break
         last_continue = result['continue']
 
-output_dir = "./inventories/word_lists"
-output_file = "italian_irregular_verbs.json"
-
-web_host = "https://en.wiktionary.org/w/api.php"
-req_params = {
-    "list": "categorymembers",
-    "cmtitle": "Category:Italian_irregular_verbs",
-    "cmtype": "page"
-}
-
+# Query category pages
 irregular_verbs = []
 for result in query(req_params, web_host):
     pages = result["categorymembers"]
@@ -49,7 +52,6 @@ for result in query(req_params, web_host):
     for page in pages:
         irregular_verbs.append(page["title"])
 
-output_path = f"{output_dir}/{output_file}"
-
+# Write out data
 with open(output_path, 'w', encoding='utf-8') as f_out:
     json.dump(irregular_verbs, f_out, ensure_ascii=False)

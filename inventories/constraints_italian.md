@@ -8,7 +8,4 @@
     - Infinito: presente
     - Imperativo: presente (only 2nd person singular and plural)
     - Condizionale: presente (only 'vorrei' - first person singular of 'volere')
-- Simple clauses may only assume declarative, volitive (using imperative mood), or interrogative functions.
-- Coordinate clauses may only be copulative, adversative, or declarative.
-- Subordinate clauses may only assume causal, temporal, final (in implicit form), hypothetical (introduced by 'se'), or relative functions.
 - Vocabulary: use only basic Italian vocabulary suitable for CEFR A1 level learners (absolute beginners)

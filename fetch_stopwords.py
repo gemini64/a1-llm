@@ -16,6 +16,7 @@ output_file = """stopwords_{lang}.json"""
 # download corpus
 nltk.download('stopwords')
 
+# write out JSON formatted lists
 for language in languages:
     content = stopwords.words(language)
     outfile = output_dir + "/" + output_file.format(lang=language)

@@ -9,6 +9,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# Modified in 2025 for a1-llm to add simplified processing functions
+
 import argparse
 import json
 import os
@@ -84,6 +86,7 @@ def process(args, data):
 
     return response["result"]
 
+# --- EDIT
 def process_text(server_url: str, model: str, data: str) -> list[dict[str,str]]:
     """
     Simplified process function call, sets up default
@@ -120,6 +123,7 @@ def process_text(server_url: str, model: str, data: str) -> list[dict[str,str]]:
     results = conllu_to_dict(response)
     return results
 
+# --- EDIT
 def conllu_to_dict(data: str) -> list[dict[str,str]]:
     """
     Takes a conllu formatted tagging report and

@@ -323,7 +323,7 @@ def main():
         eval_df = alternate_columns_preserve_names(eval_df, compare_df)
 
     # --- output data
-    # Note: colour is applied only for xlsx outputs.
+    # Note: colour is applied only on xlsx outputs.
     if (os.path.splitext(output_file)[-1].lower() == ".xlsx"):
         eval_df = assign_percentage_colours_dataframe(eval_df)
         eval_df.to_excel(output_file, engine="openpyxl", index=False)

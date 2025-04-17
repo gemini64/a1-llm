@@ -1,4 +1,4 @@
-import os, json
+import json
 from pos_tagger import POSTagger, Language, TAGMethod
 
 ###

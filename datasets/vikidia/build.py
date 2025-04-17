@@ -1,7 +1,6 @@
 import re, binascii
 from pathlib import Path
 import pandas as pd
-import numpy as np
 
 # --- flags
 filenames_to_utf8 = False # if True, in-place renames all files that contain hex-encoded special chars
