@@ -11,7 +11,7 @@ from langchain_openai import ChatOpenAI
 # LLM Tagger
 OAI_MODEL = "gpt-4o-2024-11-20"
 OAI_TEMPERATURE = 0.0
-OAI_TOP_P = 0.95
+OAI_TOP_P = 1.00
 
 # Stanza and Spacy (will default to CPU if
 # no compatible GPU is available)

@@ -160,7 +160,7 @@ def setup_llm(use_groq):
     """Configure and return appropriate LLM"""
     model = "gpt-4o-2024-11-20"
     temperature = 0
-    top_p = 0.95
+    top_p = 1.00
 
     if use_groq:
         return ChatGroq(

@@ -92,7 +92,7 @@ def load_evaluator(language, check_syntax):
 def setup_llm():
     model = "gpt-4o-2024-11-20"
     temperature = 0
-    top_p = 0.95
+    top_p = 1.00
 
     return ChatOpenAI(
         model=model,
