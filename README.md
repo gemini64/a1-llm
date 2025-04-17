@@ -349,6 +349,7 @@ These are the sources that were used to build the **wordlists** included in the 
 - **English**
     - **Oxford 3000** and **5000** [Here](https://www.oxfordlearnersdictionaries.com/about/wordlists/oxford3000-5000): These are available in split and merged format, both in the British English and American English format. Words are grouped by CEFR Level [A1 to C1]. Data was extracted from the PDF vocabulary files available on Oxford's website.
 - **Italian**
+    - **Università di Perugia - Profilo della lingua Italiana** [Here](https://www.unistrapg.it/profilo_lingua_italiana/site/index.html): Words are grouped by CEFR Level [A1 to B2]. Data was extracted and cleaned up from the official website.
     - **Il Nuovo vocabolario di base della lingua italiana - Tullio De Mauro** [Here](https://www.internazionale.it/opinione/tullio-de-mauro/2016/12/23/il-nuovo-vocabolario-di-base-della-lingua-italiana): Words are grouped into "Fondamentali", "Alto Uso" and "Alta Disponibilità" categories.
 
 ## Licenses
