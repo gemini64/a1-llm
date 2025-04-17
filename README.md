@@ -1,23 +1,24 @@
 # A1 LLM
 
 ## Contents
-- `analysis_tasks/*`: JSON/MD language analysis tasks. Used for automated grammar/morphological eval.
-- `datasets/*`: Contains utility scripts to reformat and select data from various data-sources.
+- `analysis_tasks/*`: JSON/MD language analysis tasks. Structure and content is described in detail in the "Analysis Task" section of this document. Used for automated grammar/morphology analysis.
+- `datasets/vikidia*`: Contains RAW data extracted from vikidia and properly formatted dataset TSV files, along with some utility scripts.
 - `inventories/*`: JSON/MD/plain-text language inventories. Sub-directories contain various structured lists consisting of language specific vocabularies (used for lexical analysis), and language specific stopwords lists.
-- `schemas/*`: JSON Schemas describing linguistic objects. These are mainly used to format and validate grammar/morphological analysis data.
-- `tools/*`: External binary tools (this directory is created upon project setup).
-- `paraphrase.py`: Paraphrase script. Used to paraphrase texts. Available for all languages, both full-text and sentence-wise. See the CLI interface for additional details.
-- `eval.py`: Evaluation script. Takes a set of texts, a set of linguistic analysis tasks (language specific), annotates the input's content (using an LLM), then validates it using a rule-based approach. See the CLI interface for additional details.
-- `lexical_analyzer.py`: Lexical analysis script. Takes a set of texts, a wordlist (vocabulary), an optional stopwords list and returns a lexical analysis report. See the CLI interface for additional info.
-- `parsers.py`: Parsers to validate analysis data. Available for EN/IT and based on the respective inventories.
+- `schemas/analysis/*`: JSON Schemas describing linguistic objects. These are mainly used to format and validate grammar/morphology analysis data.
+- `tools/*`: External (third-party) binary tools (this directory is created upon project setup).
+- `paraphrase.py`: Paraphrase script. Used to paraphrase texts. Available for all languages, both full-text and sentence-wise. See the "Paraphrase" section of this document for additional details.
+- `eval.py`: Evaluation script. Takes a set of texts, a set of grammar/mophology analysis tasks (language specific), annotates the input's content (using an LLM), then validates it using a rule-based approach. See the "Eval (Grammar/Morphology)" section of this document for additional details.
+- `lexical_analyzer.py`: Lexical analysis script. Takes a set of texts, a wordlist (vocabulary), an optional stopwords list and returns a lexical analysis report. See the "Lexical Analyzer" section of this document for additional details.
+- `parsers.py`: Parsers to validate grammar/mophology analysis data. Available only for EN/IT (and based on the respective A1 inventories).
 - `pos_tagger.py`: A python module that defines a part-of-speech tagger (supports various languages and tagging methods).
 - `utils.py`: This module defines various helper function and a set of data parsers chainable with langchain runnables.
-- `fetch_irregular_verbs.py`: (utility script) to collect a list of irregular italian verbs from Wikitionary.
+- `fetch_irregular_verbs.py`: (utility script) to collect a list of known Italian irregular verbs from Wikitionary.
 - `fetch_stopwords.py`: (utility script) to collect stopwords list for a set of given languages (uses the NLTK python module).
 - `tag_sentences.py`: (utility script) to quickly test available POS tagging methods.
+- `mappings.py`: Various pos taggings mappings to convert between various formats.
 - `udpipe2_client.py`: This is the python UDPipe-2 client. Some functions have been added to fit our POS tagging output format requirements.
 - `install.sh`: Project install script. Sets up the python environment, installs requirements and fetches external tools.
-- `collect_paraphrases.sh`: A bash script to batch collect paraphrases and evaluations. Various configuration parameters are available. See the source for additional info.
+- `collect_paraphrases.sh`: A bash script to batch collect paraphrases and evaluations.
 
 ## Project setup
 
@@ -32,7 +33,7 @@ Setup requirements:
 - curl
 - a macOS or linux host
 
-**Note:** This project uses **spacy**, an NLP python module. At the moment the only version that seems to install and work correcly on somewhat recent python versions is **3.8.4**. Spacy **3.8.4** is unaviable for arm64 linux hosts, expect the automated setup to fail if you're using this combination.
+**Note:** This project uses **spacy**, an NLP python module. At the moment the only version that seems to install and work correcly on somewhat recent python versions is **3.8.4**. Spacy **3.8.4** is unaviable for arm64 linux hosts, expect the automated setup to fail if you're using this host/arch combination.
 
 ### 1. Install
 
@@ -61,7 +62,8 @@ source ./.venv/bin/activate;
 **Note:** If the automated procedure fails during external tools setup (tint), you will get a warning and a message asking you to add the required dependencies manually.
 
 ### 2. API keys and Connection settings
-To run the **paraphrase** and **eval** scripts you will need to set the **OPENAI_API_KEY** and, optionally, **GROQ_API_KEY** and **GROQ_MODEL** environment variables.
+
+To run the included scripts you will need to set an **OPENAI_API_KEY** and, optionally, a **GROQ_API_KEY** and  a **GROQ_MODEL** environment variable.
 
 To do this you can either:
 1. Set all of them manually before running the scripts with (`export VAR="value"`)
@@ -71,17 +73,20 @@ export GROQ_API_KEY="api-key";
 export GROQ_MODEL="model-name";
 ```
 
-2. Set them in the `.env` config file. Then, to make the `python-dotenv` module load them automatically, remeber to set the following environment variable:
+2. Set them in the `.env` config file provided. Then, to make the `python-dotenv` module load them automatically, set the following environment variable:
 ```bash
 export PY_ENV="DEVELOPMENT";
 ```
 
 ## Paraphrase
-The paraphrase script `paraphrase.py` offers a CLI interface to specify various paraphrasing parameters. By default it uses gpt-4o (groq cloud is also available).
+
+The paraphrase script `paraphrase.py` offers a CLI interface to specify various paraphrasing parameters. By default it uses gpt-4o (groq cloud is also available as an option).
 
 Below is its CLI interface:
 ```
-usage: paraphrase [-h] -c CONSTRAINTS [-l LABEL] [-o OUTPUT] [-d] [-g] [-t {fulltext,bysentence,nocot}] [-s {italian,english,russian}] [-r RETRIES] input
+usage: paraphrase [-h] -c CONSTRAINTS [-l LABEL] [-o OUTPUT] [-d] [-g] [-t {fulltext,bysentence,nocot,bysentence_nocot}]
+                  [-s {italian,english,russian}] [-r RETRIES]
+                  input
 
 Given a set of texts as input, performs text transformations to make the input text conform to given linguistic constraints.
 
@@ -98,7 +103,7 @@ options:
                         (optional) output file
   -d, --debug           (optional) log additional information
   -g, --groq            (optional) run on groq cloud
-  -t {fulltext,bysentence,nocot}, --type {fulltext,bysentence,nocot}
+  -t {fulltext,bysentence,nocot,bysentence_nocot}, --type {fulltext,bysentence,nocot,bysentence_nocot}
                         (optional) how the paraphrase should be performed, default is fulltext
   -s {italian,english,russian}, --sentencizer {italian,english,russian}
                         language used to initialize the sentencizer (required if paraphrasing bysentence)
@@ -110,14 +115,14 @@ The parameters are, briefly:
 - **input**: An **input** file, in **TSV format**, containing the **texts to paraphrase**
 - **--constraints [file]**: A plain text/MD **constraints list** to paraphrase against (see the `./inventories` directory)
 - **--label [str]**: This is the **TSV column label** that will be used to select the texts to paraphrase.
-- **--output [file]**: The paraphrase **output**, in **TSV format**
+- **--output [file]**: (Optional) The paraphrase **output**, in **TSV format**
 - **--debug**: (Optional) flag to output **debug data** (full messages dump, token usage, warnings, etc...)
-- **--groq**: (Optional) if set, the script will use a groq hosted model. Remember to set the API key and model name in your environment.
-- **--type**: (Optional) paraphrase type. Can be either fulltext (default), bysentece or nocot (without chain-of-thought prompting).
-- **--sentencizer [enum]**: (Required if paraphrasing by sentence) This will be **used to initialize the sentencizer** (used to split the text into sentences).
+- **--groq**: (Optional) if set, the script will use a groq hosted model. Remember to set a valid API key and model name in your environment.
+- **--type [enum]**: (Optional) paraphrase type. Can be either fulltext (default), bysentece, nocot (without chain-of-thought prompting) or bysentence_nocot.
+- **--sentencizer [enum]**: (Required if paraphrasing by sentence) This will be **used to initialize the SPACY sentencizer** (used to split the text into sentences).
 - **--retries [int]**: (Optional) the maximim number of retries if the model responds with unparsable output. Default is 0.
 
-This is an **input example**, in Italian:
+An **input example**, in Italian:
 ```
 text  language  words
 Ho comprato cinque mele al mercato. italian 6
@@ -127,12 +132,12 @@ Sono arrivato secondo nella gara di nuoto. italian 7
 Ci sono 12 mesi in un anno. italian 7
 ```
 
-And this is a **call example**, using constraints lists stored in `./inventories`:
+And this is a **usage example**, using constraints lists stored in `./inventories`:
 ```bash
-python paraphrase.py input_file.tsv -c "./inventories/constraints_italian_grammar_only.md" -l "text" -s "italian" -t "fulltext" -r 1 -o output_file.tsv
+python paraphrase.py input_file.tsv -c "./inventories/constraints_italian.md" -l "text" -s "italian" -t "fulltext" -r 1 -o output_file.tsv
 ```
 
-### Understanding the retry mechanism
+### Retry Mechanism
 The paraphrase script can be called with an optional **retries** parameter.
 
 If a **number of retries** is set, when the model **responds** with a **malformed output** (in case this means the model fails to wrap the **final response** in `<text></text>` **tags**), the request will be made again at least **retries** times.
@@ -149,10 +154,11 @@ If the **paraphrase** is performed **sentence by sentence**, this behavior is ap
 
 **Closing note:** This mean that the **paraphrases** column of the outputted file will always contain text, being it a valid paraphrase or the original text. To check if something went wrong, check the messages contained in the **warnings** column.
 
-## Eval
-The eval script `eval.py` offers a CLI interface to specify various evaluation parameters. At the moment it uses exclusively gpt-4o.
+## Eval (Grammar/Morphology)
 
-The CLI interface is very similar to our paraphrase script:
+The eval script `eval.py` performs a grammar/morphology analysis and evaluation on the basis of the contents of our A1 language inventories.
+
+The CLI interface is very similar to the paraphrase script:
 ```
 usage: eval [-h] -t TASKS -p {italian,english,russian} [-l LABEL] [-a] [-s] [-d] [-o OUTPUT] [-r RETRIES] input
 
@@ -179,25 +185,25 @@ options:
 ```
 
 The parameters are, briefly:
-- **input**: An **input** file, in **TSV format**, containing the **texts to evaulate**
+- **input**: An **input** file, in **TSV format**, containing the **texts to evaluate**
 - **--tasks [file]**: A **JSON** file defining **analysis tasks** (more info in the next sections)
 - **--postagger [enum]**: This will be **used to initialize the postagger**.
 - **--label [str]**: This is the **TSV column label** that will be used to select the texts to evaluate.
-- **--output [file]**: The evaulation **output**, in **TSV format**
+- **--output [file]**: (Optional) The evaulation **output**, in **TSV format**
 - **--debug**: (Optional) flag to **output debug data** (token usage, warnings, etc...)
-- **--analysis**: (Optional) if set, the script will just perform linguistic data annotation
+- **--analysis**: (Optional) if set, the script will just return linguistic annotations
 - **--syntax**: (Optional) if set, the script will perform both grammar (default) and syntax analysis evaluation tasks.
 - **--retries [int]**: (Optional) the maximim number of retries if the model responds with malformed output. Default is 0.
 
-And this, as before, is a **call example**, using tasks stored in `./analysis_tasks`:
+And this, as before, is a **usage example**, using tasks stored in `./analysis_tasks`:
 ```bash
 python eval.py input_file.tsv -t "./analysis_tasks/italian_analysis_tasks.json" -l "text" -p "italian" -r 1 -o output_file.tsv
 ```
 
-### Understanding the retry mechanism
+### Retry Mechanism
 The eval script can be called with an optional **retries** parameter.
 
-We expect the model to **respond** to each **analysis task** with a **JSON** Schema **compliant output**. If the model's response contains **invalid** or **malformed JSON** data, the request will be repeated **retries** times, and the model will be asked to **correct its last response**.
+We expect the model to **respond** to each **analysis task** with a **JSON Schema compliant output**. If the model's response contains **invalid** or **malformed JSON** data, the request will be repeated **retries** times, and the model will be asked to **correct its last response**.
 
 If the model still **fails** to respond properly after **retries** times, no data will be returned for the sub-task that failed.
 
@@ -205,9 +211,9 @@ Descriptive **warning messages** will be visible in the **outputted TSV** if any
 - **ERROR**: A sub-task failed **retries** times and no data was returned for that sub-task.
 - **WARNING**: A sub-task succeded after **i-retries**.
 
-### Analysis Tasks
+### Analysis Task
 
-An analysis tasks is a **user prompt** template, defining a **morphological information extraction** task, on an **input** text that we assume _has already been POS-tagged_.
+An analysis task is a **user prompt** template, defining a **morphological information extraction** task, on an **input** text that we assume _has already been POS-tagged_.
 
 An **example**, asking the model to **annotate** italian **pronouns**:
 
@@ -284,7 +290,9 @@ The tasks **JSON** passed to the **eval** script contains a **collection** of ta
 
 ## Lexical Analyzer
 
-The lexical analysis script `lexical_analyzer.py` uses the **stanza** python module to check texts against a level-stepped vocabulary (referred as wordlist). The final output reports the vocabulary coverage on the given texts.
+The lexical analysis script `lexical_analyzer.py` uses the **stanza** python module to check texts against a level-stepped vocabulary (referred as wordlist).
+
+The final output reports the vocabulary coverage on the given texts.
 
 An optional JSON formatted stopwords list can be specified to pre-filter words from the given input.
 
@@ -317,16 +325,32 @@ options:
 The parameters are, briefly:
 - **input**: An **input** file, in **TSV format**, containing the **texts to check**
 - **--wordlist [file]**: A **JSON** formatted vocabulary to check coverage against.
-- **--postagger [enum]**: This will be **used to initialize the postagger**.
+- **--postagger [enum]**: This will be **used to initialize the stanza postagger**.
 - **--wordlist [file]**: (Optional) A **JSON** string array containing stopwords to pre-filter.
 - **--label [str]**: (Optional) This is the **TSV column label** that will be used to select the texts to evaluate.
 - **--compare [str]**: (Optional) This is the **TSV column label** that will be used to select the texts to compare against. If this arg is set, the output will contain both the coverage for the texts listed under the column named **label** and the **compare** colum, in an alternate fashion.
 - **--dropdata**: (Optional) flag to drop all pos-specific stats. If used the final output will contain only pos-aggregated coverage percentages, word lists and raw counts.
 - **--output [file]**: The evaulation **output**, in **TSV/XLSX format**
 
-The **--dropdata** flag and XLSX output format support have been added to generate more human-readable outputs. XLSX formatted outputs include percentage coverage data coloured using a heatmap. Additionally, the dropdata flag can be used to omit the pos broken down stats, keeping in only the aggregate, level-stepped coverage percentages, word lists, and raw counts.
+The **--dropdata** flag and XLSX output format support have been added to generate more human-readable outputs. **XLSX** formatted outputs include **percentage coverage data coloured using a heatmap**. Additionally, the dropdata flag can be used to omit the pos broken down stats, keeping in only the aggregate, level-stepped coverage percentages, word lists, and raw counts.
 
-Assuming we're using as input the output of a paraphrase run, a **call example** would look something like this:
+Assuming we're using an input file containing the original and paraphrased texts, a **usage example** would look something like this:
 ```bash
 python lexical_analyzer.py input_file.tsv -w ./inventories/word_lists/demauro.json -s ./inventories/stopwords/stopwords_italian.json -p italian -l text -c paraphrase
 ```
+
+### Vocabularies (Word Lists)
+
+The `lexical_analyzer.py` script uses **level stepped** vocabularies (referred as wordlist), ordered by complexity (either using CEFR levels, or other dictionary specific ).
+
+Wordlists consist of **lemmas** grouped into **nouns**, **verbs**, **adjectives** and **adverbs** sub-categories.
+
+These are the sources that were used to build the **wordlists** included in the `./inventories/word_lists` directory:
+- **English**
+    - **Oxford 3000** and **5000** [Here](https://www.oxfordlearnersdictionaries.com/about/wordlists/oxford3000-5000): These are available in split and merged format, both in the British English and American English format. Words are grouped by CEFR Level [A1 to C1]. Data was extracted from the PDF vocabulary files available on Oxford's website.
+- **Italian**
+    - **Il Nuovo vocabolario di base della lingua italiana - Tullio De Mauro** [Here](https://www.internazionale.it/opinione/tullio-de-mauro/2016/12/23/il-nuovo-vocabolario-di-base-della-lingua-italiana): Words are grouped into "Fondamentali", "Alto Uso" and "Alta Disponibilità" categories.
+
+## Licenses
+- This project includes the `udpipe2_client.py` script, that is part of the [UDPipe](https://github.com/ufal/udpipe/tree/udpipe-2) project. This is released under the Mozilla Public License V2. A full copy of said license is included in the `./licenses` directory.
+- This project uses [Tint](https://dh.fbk.eu/research/tint/). Tint is released under the GNU General Public License (GPL) version 3. A full copy of said license is included in the `./licenses` directory.

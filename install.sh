@@ -46,7 +46,7 @@ echo -e "${LIGHT_BLUE}[4/4]${NC} - ${GREEN}Fetching Tint binaries${NC}";
 mkdir -p "${TOOLS_DIR}";
 
 # added timeout to avoid issues if FBK server does not respond
-if ! curl --max-time 30 -L "${TINT_URL}" -o "${TINT_PKG}" 2>/dev/null; then
+if ! curl --max-time 120 -L "${TINT_URL}" -o "${TINT_PKG}" 2>/dev/null; then
     echo -e "${YELLOW}Warning: Could not download Tint binaries.${NC}";
     echo -e "${YELLOW}Please download Tint manually from:${NC}";
     echo -e "${YELLOW}${TINT_URL}${NC}";
