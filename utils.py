@@ -125,3 +125,19 @@ def merge_dictionaries(json_data: dict, start_idx: int, end_idx:int):
         merged_dict[category_key] = sorted(list(set(merged_list)))
     
     return merged_dict
+
+def compare_texts(text1: str, text2: str) -> bool:
+    """Compares two strings. If their content matches,
+    excluding whitespaces and newlines, returns True
+    
+    Arguments:
+        text1 (str): the first text
+        text2 (str): the second text
+        
+    Returns:
+        bool: whether the two input texts match"""
+    processed_text1 = ' '.join(text1.split())
+    processed_text2 = ' '.join(text2.split())
+    
+    # Compare the processed texts
+    return processed_text1 == processed_text2
