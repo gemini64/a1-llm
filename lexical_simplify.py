@@ -1,7 +1,7 @@
 import os, json, time, argparse
 from dotenv import load_dotenv
 import pandas as pd
-from utils import regex_message_parser, strip_string, TEXT_TAG_REGEX_PATTERN, token_usage_message_parser
+from utils import regex_message_parser, TEXT_TAG_REGEX_PATTERN, token_usage_message_parser
 from langchain_core.runnables import Runnable
 from collections.abc import Callable
 from langchain_core.prompts import ChatPromptTemplate
@@ -20,6 +20,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("input", help="a TSV file containing the texts to simplify")
 parser.add_argument("-l", "--label", help="(optional) the label of the column that contains input data", default="text")
+parser.add_argument("-t", "--target", help="(optional) the target column name for simplified output", default="simplified")
 parser.add_argument('-o', '--output', help="(optional) output file")
 parser.add_argument('-d', '--debug', action='store_true', help="(optional) log additional information")
 parser.add_argument('-g', '--groq', action='store_true', help="(optional) run on groq cloud")
@@ -199,9 +200,8 @@ def main():
         print(f"Error: no column named '{args.label}' exists in '{args.input}'!")
         exit(2)
 
-    # Create a new dataframe with only the text column
-    df_simplified = df[[args.label]].copy()
-    df_simplified.rename(columns={args.label: 'text'}, inplace=True)
+    # Keep all original columns (preserves the structure from paraphrase output)
+    df_simplified = df.copy()
 
     # Setup processing pipeline
     prompt_template = get_prompt_template(args.cefr)
@@ -218,9 +218,9 @@ def main():
     all_warnings = []
 
     counter = 0
-    for input_text in df_simplified['text']:
+    for input_text in df_simplified[args.label]:
         counter += 1
-        print(f"INFO\tSimplifying sample [{counter}/{len(df_simplified['text'])}]")
+        print(f"INFO\tSimplifying sample [{counter}/{len(df_simplified[args.label])}]")
         
         # Process the text with simplification
         simplified, messages, tokens, warnings = simplify_text(
@@ -233,12 +233,12 @@ def main():
         all_warnings.append(warnings)
 
     # Add results to dataframe
-    df_simplified.insert(len(df_simplified.columns), "simplified", simplified_texts)
+    df_simplified[args.target] = simplified_texts
 
     if args.debug:
-        df_simplified.insert(len(df_simplified.columns), "tokens", all_tokens)
-        df_simplified.insert(len(df_simplified.columns), "messages", list(map(lambda x: json.dumps(x, ensure_ascii=False), all_messages)))
-        df_simplified.insert(len(df_simplified.columns), "warnings", list(map(lambda x: json.dumps(x, ensure_ascii=False), all_warnings)))
+        df_simplified[f"{args.target}_tokens"] = all_tokens
+        df_simplified[f"{args.target}_messages"] = list(map(lambda x: json.dumps(x, ensure_ascii=False), all_messages))
+        df_simplified[f"{args.target}_warnings"] = list(map(lambda x: json.dumps(x, ensure_ascii=False), all_warnings))
 
     # Write results
     df_simplified.to_csv(output_file, sep="\t", index=False, encoding="utf-8")
