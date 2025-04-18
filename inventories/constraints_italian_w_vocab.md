@@ -8,3 +8,4 @@
     - Infinito: presente
     - Imperativo: presente (only 2nd person singular and plural)
     - Condizionale: presente (only 'vorrei' - first person singular of 'volere')
+- Vocabulary: use only basic Italian vocabulary suitable for CEFR A1 level learners (absolute beginners)

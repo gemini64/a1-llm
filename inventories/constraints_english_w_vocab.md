@@ -8,3 +8,4 @@
     - imperative
 - Verbs (non-finite forms): all the non-finite forms are allowed
 - Verbs conjugation (voices): verbs in indicative present simple and indicative past simple may be conjugated in either active or passive voice. In all other cases, verbs must be conjugated in active voice.
+- Vocabulary: use only basic English vocabulary suitable for CEFR A1 level learners (absolute beginners)
