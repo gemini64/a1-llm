@@ -33,6 +33,10 @@ parser.add_argument('-c', '--cefr',
                    choices=['A1', 'A2', 'B1', 'B2'],
                    type=str,
                    default='A1')
+parser.add_argument('-p', '--language', 
+                   help="target language for simplification", 
+                   choices=['italian', 'english', 'russian'],
+                   type=str)
 
 def validate_args(args):
     """Validate command line arguments"""
@@ -51,10 +55,11 @@ def validate_args(args):
 
     return output_file
 
-def get_prompt_template(cefr_level: str) -> ChatPromptTemplate:
+def get_prompt_template(language: str, cefr_level: str) -> ChatPromptTemplate:
     """Return appropriate prompt template based on language and CEFR level
     
     Arguments:
+        language (str): Target language for simplification
         cefr_level (str): CEFR level for vocabulary simplification (A1, A2, etc.)
             
     Returns:
@@ -62,7 +67,7 @@ def get_prompt_template(cefr_level: str) -> ChatPromptTemplate:
     """
     # Base prompt template with placeholders for language-specific details
     base_message = """# Task
-Adapt the vocabulary choice of a given text for a target audience of CEFR {cefr_level}-level language learners.
+Adapt the vocabulary choice of a given text for a target audience of CEFR {cefr_level}-level {language} language learners.
 
 # Instructions
 - Aim to use basic, high-frequency vocabulary typical of {cefr_level} level.
@@ -84,6 +89,7 @@ Note: The final version MUST be wrapped in <text> tags, regardless of whether ch
 
     # Format the template with language and CEFR level
     message = base_message.format(
+        language=language,
         cefr_level=cefr_level,
         input_text="{input_text}"  # chain placeholder
     )
@@ -93,6 +99,7 @@ Note: The final version MUST be wrapped in <text> tags, regardless of whether ch
 def setup_llm(use_groq):
     """Configure and return appropriate LLM"""
     model = "gpt-4o-2024-11-20"
+    # model = "gpt-4o-mini-2024-07-18"
     temperature = 0
     top_p = 1.00
 
@@ -204,7 +211,7 @@ def main():
     df_simplified = df.copy()
 
     # Setup processing pipeline
-    prompt_template = get_prompt_template(args.cefr)
+    prompt_template = get_prompt_template(args.language, args.cefr)
     llm = setup_llm(args.groq)
     
     # Setup chain and parsers
