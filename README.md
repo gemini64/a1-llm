@@ -17,8 +17,11 @@
 - `tag_sentences.py`: (utility script) to quickly test available POS tagging methods.
 - `mappings.py`: Various pos taggings mappings to convert between various formats.
 - `udpipe2_client.py`: This is the python UDPipe-2 client. Some functions have been added to fit our POS tagging output format requirements.
+- `collect_data.py`: Used to batch collect paraphrase and analysis data. Uses various scripts as sub-tools.
+- `merge_data.py`: Uses known output structure from `collect_data.py` script to create a single XLSX analysis report.
+- `statistics_descriptive.py`: Calculates descriptive statistics, correlation matrices, and generates graphs.
+- `statistics_tests.py`: Used to run omnibus and post-hoc tests.
 - `install.sh`: Project install script. Sets up the python environment, installs requirements and fetches external tools.
-- `collect_paraphrases.sh`: A bash script to batch collect paraphrases and evaluations.
 
 ## Project setup
 
@@ -33,7 +36,7 @@ Setup requirements:
 - curl
 - a macOS or linux host
 
-**Note:** This project uses **spacy**, an NLP python module. At the moment the only version that seems to install and work correcly on somewhat recent python versions is **3.8.4**. Spacy **3.8.4** is unaviable for arm64 linux hosts, expect the automated setup to fail if you're using this host/arch combination.
+**Note:** This project lists **spacy** as a requirement. At the moment the only version that seems to install and work correcly on somewhat recent python versions is **3.8.4**. Spacy **3.8.4** is unaviable for arm64 linux hosts, expect the automated setup to fail if you're using this host/arch combination.
 
 ### 1. Install
 
@@ -63,12 +66,13 @@ source ./.venv/bin/activate;
 
 ### 2. API keys and Connection settings
 
-To run the included scripts you will need to set an **OPENAI_API_KEY** and, optionally, a **GROQ_API_KEY** and  a **GROQ_MODEL** environment variable.
+To run the included scripts you will need to set an **OPENAI_API_KEY**, an **OPENAI_MODEL**, and, optionally, a **GROQ_API_KEY** and a **GROQ_MODEL** environment variable.
 
 To do this you can either:
 1. Set all of them manually before running the scripts with (`export VAR="value"`)
 ```bash
 export OPENAI_API_KEY="api-key";
+export OPENAI_MODEL="model-name";
 export GROQ_API_KEY="api-key";
 export GROQ_MODEL="model-name";
 ```
@@ -80,7 +84,7 @@ export PY_ENV="DEVELOPMENT";
 
 ## Paraphrase
 
-The paraphrase script `paraphrase.py` offers a CLI interface to specify various paraphrasing parameters. By default it uses gpt-4o (groq cloud is also available as an option).
+The paraphrase script `paraphrase.py` offers a CLI interface to specify various paraphrasing parameters. By default it uses OpenAI models (groq cloud is also available as an option).
 
 Below is its CLI interface:
 ```
@@ -354,4 +358,3 @@ These are the sources that were used to build the **wordlists** included in the 
 
 ## Licenses
 - This project includes the `udpipe2_client.py` script, that is part of the [UDPipe](https://github.com/ufal/udpipe/tree/udpipe-2) project. This is released under the Mozilla Public License V2. A full copy of said license is included in the `./licenses` directory.
-- This project uses [Tint](https://dh.fbk.eu/research/tint/). Tint is released under the GNU General Public License (GPL) version 3. A full copy of said license is included in the `./licenses` directory.
