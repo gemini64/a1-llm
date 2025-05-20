@@ -143,7 +143,7 @@ df = df[df["title"] != ""]
 # remove pages with category prefix
 df = df[~df['title'].apply(has_category_prefix)]
 
-# --- Read text from local files
+# --- read texts from local files
 output_data = []
 for index, row in df.iterrows():
     page_title = row["title"].replace(" ", sep_char)

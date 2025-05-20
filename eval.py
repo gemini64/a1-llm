@@ -203,11 +203,11 @@ def analyze_text(
                         else:
                             # Max retries exceeded
                             analysis_report[key] = []
-                            analysis_warnings.append(f"WARNING: Got an invalid output when processing '{key}' analysis task after {max_retries+1} attempts! Error: {str(e)}")
+                            analysis_warnings.append(f"ERROR: Got an invalid output when processing '{key}' analysis task after {max_retries+1} attempts! Error: {str(e)}")
                 
                 # Log retry information if debug is enabled
                 if retries > 0 and valid_output:
-                    analysis_warnings.append(f"INFO: Task '{key}' succeeded after {retries+1} attempts.")
+                    analysis_warnings.append(f"WARNING: Task '{key}' succeeded after {retries+1} attempts.")
         
         consumed_tokens = cb.total_tokens
 
@@ -284,8 +284,8 @@ def main():
         warnings.append(warning_messages)
 
     # Add results to dataframe
-    df.insert(len(df.columns), "pos_tags", list(map(lambda x : json.dumps(x, ensure_ascii=False), pos_tags)))
-    df.insert(len(df.columns), "analysis_data", list(map(lambda x : json.dumps(x, ensure_ascii=False), analysis_data)))
+    df.insert(len(df.columns), "pos_tags", list(map(lambda x : json.dumps(x, ensure_ascii=False, indent=4), pos_tags)))
+    df.insert(len(df.columns), "analysis_data", list(map(lambda x : json.dumps(x, ensure_ascii=False, indent=4), analysis_data)))
     if args.debug:
         df.insert(len(df.columns), "tokens", tokens)
         df.insert(len(df.columns), "warnings", warnings)

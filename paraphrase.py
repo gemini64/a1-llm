@@ -158,8 +158,7 @@ Check {check_scope} againts ALL the constraints.
 
 def setup_llm(use_groq):
     """Configure and return appropriate LLM"""
-    model = "gpt-4o-2024-11-20"
-    # model = "gpt-4o-mini-2024-07-18"
+    model = os.getenv("OPENAI_MODEL")
     temperature = 0
     top_p = 1.00
 
@@ -231,7 +230,7 @@ def process_text(
             
             # --- this is to keep consumption within free tier limits
             if use_groq:
-                time.sleep(30)
+                time.sleep(5)
             
             # Update token usage
             token_usage += token_parser(results)
