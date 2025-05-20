@@ -105,73 +105,6 @@ def rank_biserial_correlation(s1: pd.Series, s2: pd.Series) -> float:
     
     return abs(r)
 
-def dataframe_to_latex(df, caption="", label="", float_format="%.3f", bold_significant=False):
-    """
-    Convert a pandas DataFrame to a LaTeX table.
-    
-    Arguments:
-        df (DataFrame): The DataFrame to convert
-        caption (str): Caption for the LaTeX table
-        label (str): Label for the LaTeX table
-        float_format (str): Format string for floating point numbers
-        bold_significant (bool): Whether to bold significant values (for p_values < 0.05)
-        
-    Returns:
-        str: LaTeX table code
-    """
-    # Make a copy to avoid modifying the original
-    df_copy = df.copy()
-    
-    # Bold significant p_values if requested
-    if bold_significant and 'p_value' in df_copy.columns and 'significant' in df_copy.columns:
-        df_copy['p_value'] = df_copy.apply(
-            lambda row: f"\\textbf{{{float_format % row['p_value']}}}" if row['significant'] else float_format % row['p_value'],
-            axis=1
-        )
-    
-    # Start LaTeX table
-    latex = "\\begin{table}[htbp]\n\\centering\n"
-    
-    # Add caption and label if provided
-    if caption:
-        latex += f"\\caption{{{caption}}}\n"
-    if label:
-        latex += f"\\label{{{label}}}\n"
-    
-    # Table header
-    latex += "\\begin{tabular}{" + "l" * len(df_copy.columns) + "}\n"
-    latex += "\\hline\n"
-    
-    # Column names
-    latex += " & ".join([col.replace("_", "\\_") for col in df_copy.columns]) + " \\\\\n"
-    latex += "\\hline\n"
-    
-    # Convert rows to LaTeX
-    for _, row in df_copy.iterrows():
-        row_values = []
-        for col, val in row.items():
-            # Skip already formatted cells (like bolded p_values)
-            if isinstance(val, str) and "\\textbf" in val:
-                row_values.append(val)
-            # Format float values
-            elif isinstance(val, float):
-                row_values.append(float_format % val)
-            # Replace underscores in string values
-            elif isinstance(val, str):
-                row_values.append(val.replace("_", "\\_"))
-            # Everything else
-            else:
-                row_values.append(str(val))
-        
-        latex += " & ".join(row_values) + " \\\\\n"
-    
-    # End LaTeX table
-    latex += "\\hline\n"
-    latex += "\\end{tabular}\n"
-    latex += "\\end{table}\n"
-    
-    return latex
-
 def run_statistics_test(metric: str, data: list) -> dict:
     """
     Runs the appropriate omnibus test on input data
@@ -400,169 +333,9 @@ def generate_tests_summary(df, group_by, tests_df, posthocs_dict) -> pd.DataFram
 
     return table
 
-def summary_df_to_latex(df, caption=None, label=None, title=None, notes=None):
-    """
-    Convert a DataFrame to a LaTeX table with proper formatting.
-    - Left-aligns all cell text
-    - Properly positions the caption
-    - Handles newlines in cells and escapes LaTeX special characters
-    - Adds horizontal lines between rows for better readability
-    
-    Parameters:
-    -----------
-    df : pandas.DataFrame
-        The DataFrame to convert to LaTeX
-    caption : str, optional
-        Caption for the table
-    label : str, optional
-        Label for cross-referencing
-    title : str, optional
-        Optional title to display above the column names
-    notes : str, optional
-        Notes to add below the table
-        
-    Returns:
-    --------
-    str : LaTeX code for the table
-    """
-    # Start building the LaTeX table
-    latex_lines = []
-    
-    # Begin table environment
-    latex_lines.append("\\begin{table}[htbp]")
-    latex_lines.append("\\centering")
-    
-    # Add caption if provided (before the tabular for better positioning)
-    if caption:
-        latex_lines.append(f"\\caption{{{escape_latex(caption)}}}")
-    
-    # Add label if provided
-    if label:
-        latex_lines.append(f"\\label{{{label}}}")
-    
-    # Calculate the number of columns (including the index column)
-    num_cols = len(df.columns) + 1
-    
-    # Begin tabular environment
-    # First column left-aligned (for index), last column wider with p{} type for text wrapping
-    column_format = "l" + "l" * (num_cols - 1)
-    latex_lines.append(f"\\begin{{tabular}}{{{column_format}}}")
-    
-    # Add toprule
-    latex_lines.append("\\toprule")
-    
-    # Add title if provided (spanning all columns)
-    if title:
-        latex_lines.append(f"\\multicolumn{{{num_cols}}}{{c}}{{\\textbf{{{title}}}}} \\\\")
-        latex_lines.append("\\midrule")
-    
-    # Add header row (centered headers even though cells are left-aligned)
-    header_cells = []
-    # First add an empty cell for the index column header
-    header_cells.append("")
-    
-    # Then add centered multicolumn cells for each column header
-    for col in df.columns:
-        escaped_col = escape_latex(col)
-        header_cells.append(f"\\multicolumn{{1}}{{c}}{{\\textbf{{{escaped_col}}}}}")
-    
-    header_row = " & ".join(header_cells)
-    latex_lines.append(header_row + " \\\\")
-    latex_lines.append("\\midrule")
-    
-    # Add data rows
-    for idx_num, (idx, row) in enumerate(df.iterrows()):
-        # Start with the index (left column) in bold
-        row_str = f"\\textbf{{{escape_latex(str(idx))}}}"
-        
-        # Add each cell value
-        for col in df.columns:
-            cell_value = row[col]
-            if cell_value is None or pd.isna(cell_value):
-                cell_value = ""
-            else:
-                cell_value = str(cell_value)
-                # Handle multiline cells
-                if "\n" in cell_value:
-                    lines = cell_value.split("\n")
-                    # Escape each line and join with LaTeX newline
-                    escaped_lines = [escape_latex(line) for line in lines]
-                    cell_value = "\\\\ ".join(escaped_lines)
-                    
-                    # For the last column, don't need parbox since we're using p{} column type
-                    if col == df.columns[-1]:  # Last column
-                        cell_value = f"\\parbox[t]{{0.45\\textwidth}}{{{cell_value}}}"
-                    else:
-                        # Other columns still use parbox
-                        cell_value = f"\\parbox[t]{{0.2\\textwidth}}{{{cell_value}}}"
-                else:
-                    cell_value = escape_latex(cell_value)
-            
-            row_str += f" & {cell_value}"
-            
-        # Add the row
-        latex_lines.append(row_str + " \\\\")
-        
-        # Add a horizontal line after each row (except the last one)
-        if idx_num < len(df) - 1:
-            latex_lines.append("\\midrule")
-    
-    # Add bottom rule
-    latex_lines.append("\\bottomrule")
-    
-    # End tabular environment
-    latex_lines.append("\\end{tabular}")
-    
-    # Add notes if provided
-    if notes:
-        latex_lines.append("\\vspace{0.5em}")
-        latex_lines.append("\\begin{flushleft}")
-        latex_lines.append(f"\\small{{\\textit{{Note:}} {escape_latex(notes)}}}")
-        latex_lines.append("\\end{flushleft}")
-    
-    # End table environment
-    latex_lines.append("\\end{table}")
-    
-    return "\n".join(latex_lines)
-
-def escape_latex(text):
-    """
-    Escape LaTeX special characters in a string.
-    """
-    if not isinstance(text, str):
-        text = str(text)
-    
-    # Define LaTeX special characters and their escaped versions
-    special_chars = {
-        '%': '\\%',
-        '&': '\\&',
-        '$': '\\$',
-        '#': '\\#',
-        '_': '\\_',
-        '{': '\\{',
-        '}': '\\}',
-        '~': '\\textasciitilde{}',
-        '^': '\\textasciicircum{}',
-        '\\': '\\textbackslash{}',
-    }
-    
-    # Escape backslash first
-    if '\\' in text:
-        text = text.replace('\\', special_chars['\\'])
-    
-    # Escape all other special characters
-    for char, escape_seq in special_chars.items():
-        if char != '\\' and char in text:
-            text = text.replace(char, escape_seq)
-    
-    return text
-
 # --- i/o references
 INPUT_FILE = "analysis_report.xlsx"
-OUTPUT_DIR = "./tests_100"
-
-# output format
-OUTPUT_LATEX = True
+OUTPUT_DIR = "./statistics_tests_100"
 
 # --- read data
 df = pd.read_excel(INPUT_FILE, header=0)
@@ -632,52 +405,14 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     
     # Save main test results
     tests_stats.to_csv(os.path.join(outdir, "omnibus.tsv"), sep="\t", index=False, encoding="utf-8")
-
-    # Create LaTeX version of omnibus tests
-    if OUTPUT_LATEX:
-        omnibus_latex = dataframe_to_latex(
-            tests_stats, 
-            caption=f"Omnibus Statistical Tests for {idiom} on {group_by}", 
-            label=f"tab:omnibus-{idiom}-{group_by}",
-            bold_significant=True
-        )
-        with open(os.path.join(outdir, "omnibus.tex"), 'w', encoding='utf-8') as f:
-            f.write(omnibus_latex)
     
     # Save integrated results for significant metrics
     for metric in integrated_results.keys():
         integrated_results[metric].to_csv(os.path.join(outdir, f"posthoc_{metric}.tsv"), sep="\t", index=False, encoding="utf-8")
 
-        for metric in integrated_results.keys():
-            integrated_results[metric].to_csv(os.path.join(outdir, f"posthoc_{metric}.tsv"), sep="\t", index=False, encoding="utf-8")
-            
-            # Create LaTeX version of posthoc tests
-            if OUTPUT_LATEX:
-                posthoc_latex = dataframe_to_latex(
-                    integrated_results[metric],
-                    caption=f"Posthoc Tests for {metric} ({idiom} on {group_by})",
-                    label=f"tab:posthoc-{idiom}-{group_by}-{metric.replace('_', '-')}",
-                    bold_significant=True
-                )
-                with open(os.path.join(outdir, f"posthoc_{metric}.tex"), 'w', encoding='utf-8') as f:
-                    f.write(posthoc_latex)
-
     summary_df = generate_tests_summary(sub_df, group_by, tests_stats, integrated_results)
     summary_df.to_csv(os.path.join(outdir, f"significant_effects_summary.tsv"), sep="\t", index=True, encoding="utf-8")
-
-    if OUTPUT_LATEX:
-        latex_code = summary_df_to_latex(
-            summary_df,
-            title="Table Title",
-            caption="Table Caption",
-            label="tab:table_label",
-            notes="* indicates small effect size, ** indicates medium effect size, *** indicates large effect size. 'imp.' stands for improvement rate."
-        )
-
-        # Save to file
-        with open(os.path.join(outdir, f"significant_effects_summary.tex"), "w") as f:
-            f.write(latex_code)
         
-    print(f"Results for [{idiom}/{group_by}] saved to {outdir}")
+    print(f"Results for [{idiom}] x [{group_by}] saved to {outdir}")
 
 print("Analysis complete!")
