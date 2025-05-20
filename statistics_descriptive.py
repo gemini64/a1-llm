@@ -119,7 +119,7 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     descriptive_stats.to_csv(os.path.join(outdir, "descriptive_stats.tsv"), sep="\t", encoding="utf-8", index=False)
     
     # --- figures
-    # --- a. lingustic metrics - boxplots
+    # - a. lingustic metrics - boxplots
     linguistic_y_labels = {
         "diff": "Diff. (0-100)",
         "A1_allpos_percent": "Coverage (%)",
@@ -145,8 +145,8 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     plt.tight_layout()
     plt.savefig(os.path.join(outdir, "linguistic_metrics.png"), dpi=300)
 
-    # --- b. A1 Coverage Delta
-    # Visualization for total errors
+    # - b. A1 Coverage Delta
+    # coverage
     plt.figure(figsize=(12, 5))
 
     # boxplot
@@ -160,40 +160,38 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     ticks_renames = [X_TICKS_RENAMES[group_by].get(x.get_text(),x) for x in ticks_labels]
     ax_1.set_xticklabels(ticks_renames)
 
-    # Error difference plot
+    # Coverage change
     plt.subplot(1, 2, 2)
-    # Group by modality and calculate mean and standard error
     means = pd.Series(descriptive_stats[descriptive_stats["metric"] == "diff_A1_allpos_percent"]["mean"].values, index=descriptive_stats[descriptive_stats["metric"] == "diff_A1_allpos_percent"]["group"])
     stderr = pd.Series(descriptive_stats[descriptive_stats["metric"] == "diff_A1_allpos_percent"]["sem"].values, index=descriptive_stats[descriptive_stats["metric"] == "diff_A1_allpos_percent"]["group"])
 
-    # Create bar chart
+    # create bars
     bars = plt.bar(means.index, means.values)
     plt.errorbar(x=range(len(means)), y=means.values, yerr=stderr.values, 
                 fmt='none', c='black', capsize=5)
     
     plt.xticks(range(len(means.index)), [X_TICKS_RENAMES[group_by].get(x, x) for x in means.index])
 
-    # Color bars based on positive/negative values (negative is better - fewer errors)
+    # assign colors
     for j, bar in enumerate(bars):
         if means.values[j] >= 0:
             bar.set_color('green')
         else:
             bar.set_color('red')
 
-    # Add horizontal line at y=0
+    # horizontal line at y=0
     plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
 
-    # Add labels and title
+    # labels and title
     plt.title("A1 Coverage Change")
     plt.xlabel(GROUP_TABLE_NAME.get(group_by, group_by))
     plt.ylabel("A1 Mean Change (%)")
 
-    # Get current y-axis limits before adding labels
     y_min, y_max = plt.ylim()
 
-    # Add percentage of improvements as text with improved positioning
+    # percentage of improvement as text with improved positioning
     for j, mod in enumerate(sub_df[group_by].unique()):
-        improved_pct = (sub_df[sub_df[group_by] == mod]['diff_errors_total'] >= 0).mean() * 100
+        improved_pct = (sub_df[sub_df[group_by] == mod]['diff_A1_allpos_percent'] >= 0).mean() * 100
         
         # Different positioning strategy based on whether bar is positive or negative
         if means.values[j] <= 0:
@@ -216,8 +214,7 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     plt.tight_layout()
     plt.savefig(os.path.join(outdir, "vocabulary_delta.png"), dpi=300)
 
-    # --- c. Errors Delta
-    # Visualization for total errors
+    # - c. errors delta
     plt.figure(figsize=(12, 5))
 
     # boxplot
@@ -231,30 +228,30 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     ticks_renames = [X_TICKS_RENAMES[group_by].get(x.get_text(),x) for x in ticks_labels]
     ax_1.set_xticklabels(ticks_renames)
 
-    # Error difference plot
+    # errors count change
     plt.subplot(1, 2, 2)
     # Group by modality and calculate mean and standard error
     means = pd.Series(descriptive_stats[descriptive_stats["metric"] == "diff_errors_total"]["mean"].values, index=descriptive_stats[descriptive_stats["metric"] == "diff_errors_total"]["group"])
     stderr = pd.Series(descriptive_stats[descriptive_stats["metric"] == "diff_errors_total"]["sem"].values, index=descriptive_stats[descriptive_stats["metric"] == "diff_errors_total"]["group"])
 
-    # Create bar chart
+    # create bars
     bars = plt.bar(means.index, means.values)
     plt.errorbar(x=range(len(means)), y=means.values, yerr=stderr.values, 
                 fmt='none', c='black', capsize=5)
     
     plt.xticks(range(len(means.index)), [X_TICKS_RENAMES[group_by].get(x, x) for x in means.index])
 
-    # Color bars based on positive/negative values (negative is better - fewer errors)
+    # negative is better - fewer errors
     for j, bar in enumerate(bars):
         if means.values[j] <= 0:
             bar.set_color('green')
         else:
             bar.set_color('red')
 
-    # Add horizontal line at y=0
+    # horizontal line at y=0
     plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
 
-    # Add labels and title
+    # labels and title
     plt.title("Errors Count Change")
     plt.xlabel(GROUP_TABLE_NAME.get(group_by, group_by))
     plt.ylabel("Mean Errors Count Change")
@@ -262,7 +259,7 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     # Get current y-axis limits before adding labels
     y_min, y_max = plt.ylim()
 
-    # Add percentage of improvements as text with improved positioning
+    # percentage of improvements as text with improved positioning
     for j, mod in enumerate(sub_df[group_by].unique()):
         improved_pct = (sub_df[sub_df[group_by] == mod]['diff_errors_total'] >= 0).mean() * 100
         
@@ -273,7 +270,6 @@ for idiom, group_by in itertools.product(idioms, group_labels):
             va = 'top'
         else:
             # For positive bars: place text above the bar with staggered heights
-            # Add a small multiplier to j to stagger the labels
             y_pos = means.values[j] + stderr.values[j] + 0.05 + (j * 0.05)
             va = 'bottom'
         
@@ -289,46 +285,45 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     plt.tight_layout()
     plt.savefig(os.path.join(outdir, "errors_delta.png"), dpi=300)
 
-    # --- e. errors distributions
+    # - e. errors distributions
     plt.figure(figsize=(15, 10))
     for i, error_type in enumerate(errors_metrics):
         plt.subplot(2, 3, i+1)
         
-        # Get clean name for display
+        # table name for display
         if error_type == 'errors_total':
             clean_name = 'Total Errors'
         else:
             clean_name = error_type.replace('errors_', '').capitalize() + " Errors"
         
-        # Get the actual data for this error type to analyze distribution
+        # get the actual data for this error type to analyze distribution
         error_values = sub_df[error_type]
         max_error = int(error_values.max())
         
-        # Create appropriate bins based on actual data distribution
+        # --- create appropriate bins based on actual data distribution
         error_bins = {}
         
-        # Always include 0, 1, 2 as individual bins
+        # include 0, 1, 2 as individual bins
         error_bins["0"] = (0, 0)
         error_bins["1"] = (1, 1)
         error_bins["2"] = (2, 2)
         
-        # For total errors, we may need more granularity
+        # for total errors, append additional bins
         if error_type == 'errors_total':
-            # Only add more specific bins if data actually contains those values
+            # only add more specific bins if data actually contains those values
             if max_error >= 3:
                 error_bins["3"] = (3, 3)
             if max_error >= 4:
-                # If we have values ≥ 4, add a 4+ bin
+                # if we have values > 3
                 error_bins["4+"] = (4, float('inf'))
         else:
-            # For other error types, if max > 2, add a 3+ bin
+            # for other error types, if max > 2
             if max_error > 2:
                 error_bins["3+"] = (3, float('inf'))
         
-        # Compute percentages for each group and each bin
+        # compute percentages for each group and each bin
         percentages_data = []
         
-        # Get unique groups in sorted order to maintain consistency
         unique_groups = sorted(sub_df[group_by].unique())
         
         for group_name in unique_groups:
@@ -344,22 +339,19 @@ for idiom, group_by in itertools.product(idioms, group_labels):
                     'percentage': percentage
                 })
         
-        # Convert to DataFrame for easier plotting
+        # convert to DataFrame
         plot_df = pd.DataFrame(percentages_data)
         
-        # Create pivot table for plotting
+        # convert to pivot table
         pivot_df = plot_df.pivot(index='bin', columns='group', values='percentage')
         
-        # Ensure bins are in the correct order
+        # reorder frequency bins
         pivot_df = pivot_df.reindex(error_bins.keys())
         
-        # Plot the data
+        # plot data
         ax = pivot_df.plot(kind='bar', ax=plt.gca())
         
-        # Rotate x-axis tick labels by 90 degrees
-        plt.xticks(rotation=90)
-        
-        # Rename legend entries
+        # rename legend items
         handles, labels = ax.get_legend_handles_labels()
         renamed_labels = [X_TICKS_RENAMES[group_by].get(label, label) for label in labels]
         ax.legend(handles, renamed_labels, title=GROUP_TABLE_NAME.get(group_by, group_by))
@@ -372,9 +364,9 @@ for idiom, group_by in itertools.product(idioms, group_labels):
     plt.tight_layout()
     plt.savefig(os.path.join(outdir, "errors_frequencies.png"), dpi=300)
 
-    # --- e. correlation matrices
+    # - f. correlation matrices
     metrics_df = sub_df[key_metrics]
-    corr_df = metrics_df.corr(method="spearman")
+    corr_df = metrics_df.corr(method="spearman") # as this seems the most appropriate method
     corr_df = corr_df.style.background_gradient(cmap='coolwarm', axis=None)
 
     corr_df.to_excel(os.path.join(outdir, "correlation_matrix.xlsx"), engine="openpyxl", index=True)
